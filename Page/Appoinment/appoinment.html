@@ -54,7 +54,7 @@
             <nav>
                 <ul>
                     <li class="big-btn"><a href="#">Genaral service</a></li>
-                    <li class="big-btn"><a href="../../Page//Appoinment/appoinment.html" target="_blank">Appoinment</a></li>
+                    <li class="big-btn"><a href="../../Page//Appoinment/appoinment.html">Appoinment</a></li>
                     <li class="big-btn"><a href="#">Process</a></li>
                     <li class="big-btn"><a href="#">History</a></li>
                     <li class="big-btn"><a href="#">Insurance</a></li>
@@ -83,11 +83,11 @@
         <!-- Vehicle type -->
         <div class="vehicle-type">
             <div class="year">
-                <label>VEHICLE YEAR</label><br>
+                <label class="top-head">VEHICLE YEAR</label><br>
                 <input id="vehicle-year" class="chose-year" name="vehicle-year" type="number" value="2008" step="1">
             </div>
             <div class="year">
-                <label>VEHICLE MAKE</label><br>
+                <label class="top-head">VEHICLE MAKE</label><br>
                 <select name="vehicle-make" id="company">
                     <option value="">Choose</option>
                     <option value="">Honda</option>
@@ -102,22 +102,22 @@
                 </select>
             </div>
             <div class="year">
-                <label>VEHICLE MILEAGE</label><br>
+                <label class="top-head">VEHICLE MILEAGE</label><br>
                 <input id="vehicle-mileage" class="mileage" name="vehicle-mileage" type="number" value="" data-value="" placeholder="Vehicle Mileage" required>
             </div>
         </div><br><br>
         <div class="appoinment-section">
             <div class="date">
                 <div class="date-choose">
-                    <label for="appointment-date">APPOINTMENT DATE</label><br>
+                    <label for="appointment-date" class="top-head">APPOINTMENT DATE</label><br>
                     <input type="date" required>
                 </div><br>
                 <div class="date-choose">
-                    <label for="appointment-date">PREFFERED TIME FRAM</label><br>
+                    <label for="appointment-date" class="top-head">PREFFERED TIME FRAM</label><br>
                     <input type="time" required>
                 </div><br>
                 <div class="date-choosing">
-                    <label for="appointment-date">SELECT SERVICES NEEDED</label><br>
+                    <label for="appointment-date" class="top-head">SELECT SERVICES NEEDED</label><br>
                     <div class="list-checkbox">
                       <label for="text" class="checkbox"> <input type="checkbox" class="item"> Air Conditioning</label>
                       <label for="text" class="checkbox"> <input type="checkbox" class="item"> Breakes repair</label>
@@ -130,12 +130,12 @@
                 </div>
             </div>
             <div class="addres">
-                <label for="">CONTACT DETAILS</label><br>
+                <label for="" class="top-head">CONTACT DETAILS</label><br>
                 <input type="text" placeholder="Your Name*" required ><br>
                 <input type="email" placeholder="Your Email*" required><br>
                 <input type="number" placeholder="Your Phone" maxlength="10" required><br>
                 <input id="message" type="message" placeholder="Additional Questions or Comments"><br>
-                <button><a href="">SUBMIT NOW</a></button>
+                <button><a href="../../Page/Appoinment/payment.html">SUBMIT NOW</a></button>
             </div>
            
         </div>

@@ -18,6 +18,7 @@
     --nav-font-size:18px;
     --text-color:#74787c;
     --h1-font: 61px;
+    --big-btn-color: #4ea1f4;
     --complain-hover-color:#d12616;
 }
 /* This is header section */
@@ -101,7 +102,7 @@ button{
     position: sticky;
     top: 0px;
 }
-.email-item,.call-item{
+.email-item{
     display: flex;
     justify-content: space-evenly;
     margin-top: 25px;
@@ -126,6 +127,12 @@ input{
 }
 .main-nav img{
     height: 50px;
+    margin-right: 5PX;
+}
+.call-item a{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
 }
 .call-item a{
      text-decoration: none;
@@ -134,6 +141,10 @@ input{
 span{
     margin-top: 8px;
     margin-left: 10px;
+}
+.bp-item{
+    font-size: var(--nav-font-size);
+    font-weight: 600;
 }
 /*  This is thired nav-b ar*/
 .sub-nav a{
@@ -145,15 +156,15 @@ span{
     display: flex;
     justify-content: space-around;
     font-size: var(--nav-font-size);
-    margin-top: 2px;
+    margin-top: 3px;
 }
 .sub-nav li{
     box-sizing: border-box;
     padding:15px 85px;
-    background-color: #7bb8f5cc;
+    background-color:var(--big-btn-color);
 }
 .sub-nav a{
-    color: black;
+    color: var(--white-color);
 }
 /*  This is Home page animation */
 .home-gallery{
@@ -161,8 +172,9 @@ span{
     height: 745px;
     position: absolute;
     /* left: 50%; */
-    top: 55%;
-    transform: translate(0, -29%);
+    top: 30%;
+    background-attachment: fixed;
+    /* transform: translate(0, -29%); */
     background-image: url(../Images/background-2.jpg);
     background-size: 100% 100%;
     /* box-shadow: 1px 2px 10px 5px black; */
@@ -206,10 +218,13 @@ span{
 .home-contend button{
     margin-top: 20px;
     width: 138px;
+    background-color: var(--big-btn-color);
 }
+
 .big-btn{
     font-size: var(--button-font);
-    color: black;
+    background-color: --var(--big-btn-color);
+    color:var(--white-color);
     font-weight: bold;
     border: none;
     border-radius: 5px;
@@ -296,17 +311,17 @@ footer ul li{
 .support button{
     width: 150px;
     box-sizing: border-box;
-    background-color: var(--white-color);
     color: var(--primary);
+    font-size: var(--nav-font-size);
+    font-weight: 600;
+    background-color: var(--big-btn-color);
 }
 .support button:hover{
     background-color: #892474;
     color:var(--white-color);
-    
 }
 .support span{
     font-size: var(--nav-font-size);
-
 }
 .about{
     margin-top:50px ;

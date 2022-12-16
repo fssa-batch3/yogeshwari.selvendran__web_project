@@ -130,10 +130,10 @@ span{
 .sub-nav li{
    box-sizing: border-box;
    padding:15px 85px;
-   background-color: #7bb8f5cc;
+   background-color: #348de6cc;
 }
 .sub-nav a{
-   color: black;
+   color:var(--white-color);
 }
 .big-btn{
     font-size: var(--button-font);
@@ -148,19 +148,25 @@ span{
     color:var(--white-color);
 }
 /* This is accessories */
-.accessories{
-   background-color: #7803ae; 
-   height: 150px;
+.accessories .head-part{
+   background-color: #1b49a5; 
+   height: 200px;
+   margin-top: 5px;
+   color: var(--white-color);
 }
-.accessories h1{
+.head-part h1{
     text-align: center;
-    padding-top: 60px;
+    padding-top: 80px;
+    letter-spacing: 2px;
+    font-size: 60;
+    line-height: 56px;
 }
 .options{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(189, 189, 189);
     margin-top: 55px;
+    margin-left: 120px;
+    margin-right: 100px;
 }
 .bike-car ul{
     display: flex;
@@ -168,12 +174,18 @@ span{
     justify-content: space-evenly;
 }
 .bike-car li{
-    padding: 19px 30px;
-    font-size: var(--button-font);
-    font-weight: bolder;
+    font-size: 20px;
+    font-weight: bold;
     letter-spacing: 1px;
-    background-color: #24893f;
     margin-right: 1px;
+}
+.bike-car a{
+    color: black;
+}
+select{
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 16px;
 }
 /* This is product section */
 .product{
@@ -195,14 +207,16 @@ span{
     display: flex;
     justify-content: space-between;
 }
-.product h4{
+.product .y27{
+    font-size: 20px;
+    font-weight: 600;
     text-align: center;
     margin-top: 20px;
 }
-h5{
- padding: 10px 20px;
- font-size: medium;
- 
+.hsp{
+   padding: 10px 20px;
+   font-size: 16px;
+   font-weight: 600;
 }
 i{
     padding: 4px;
@@ -210,17 +224,25 @@ i{
 .amount span{
     display: flex; 
     justify-content: space-around;
-    padding: 10px 20px;
+    padding: 9px 20px;
 }
 .product img{
     height: 300px;
     width: 200px;
     /* background-color: #74787c; */
 }
+.detail-section a{
+    text-decoration: none;
+    color: var(--white-color);
+    font-weight: bold;
+}
 .product button{
     width: 200px;
     border-style: none;
     margin-left: 20px;
+}
+.product button:hover{
+    background-color: rgb(11, 141, 13);
 }
 /* This is product-condainer */
 .product-container{
@@ -230,12 +252,29 @@ i{
     margin-left: 110px;
     margin-top: 50px;
 }
+.page-collection ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 70px;
+}
+.page-collection li{
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white-color);
+    background-color: #2d74e6;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+.page-collection li:hover{
+    background-color: #093478;
+    transform: scale(1.1);
+}
 .main-foot{
-    border: 2px solid black;
-    width: 100%;
-    height: 400px;
-    position: relative;
-    top: 2100px;
+   margin-top: 700px;
 }
 /*  This is Footer */
 footer{
@@ -282,7 +321,7 @@ footer ul li{
     color: var(--primary);
 } */
 .big-btn:hover{
-    background-color: #892474;
+    background-color: #2d74e6;
     color:var(--white-color);
 }
 .support span{
@@ -322,4 +361,54 @@ footer ul li{
     height: 130px;
    position: relative;
    right: 40px;
+}
+/* This is product-tidails-page */
+.user{
+    margin-top: 2.2%;
+    margin-right: 13%;
+}
+.user ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.user li{
+   padding: 15px;
+}
+.user, .profile{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 9px;
+}
+.search-bar{
+    margin-top: 25px;
+    margin-left: 150px;
+}
+input{
+    padding-left: 20px;
+    height: 50px;
+    width: 500px;
+    font-size:var(--button-font);
+    color: var(--text-color);
+    border-radius: 7px;
+    border-style: none;
+    background-color: rgba(255, 255, 255, 0.982);
+}
+.search-bar i{
+    color: var(--text-color);
+    position: relative;
+    right: 40px;
+}
+/* product-details */
+.engine{
+    height: 400px;
+
+}
+.products{
+    
+}
+.products, ul img{
+   height: 200px;
 }

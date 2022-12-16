@@ -18,6 +18,7 @@
     --nav-font-size:18px;
     --text-color:#74787c;
     --btn-color:#82b440;
+    --btn-hover: #892474;
     --h1-font:61px;
     --complain-hover-color:#d12616;
 }
@@ -77,13 +78,13 @@ ul li::after{
 .contact a{
     margin-left: 15px;
 }
-button{
-    padding: 8px 20px;
+.contact button{
     border-radius: 6px;
+    font-weight: var(--nav-font-size);
     background-color: var(--btn-color);
     color: var(--white-color);
     font-size: var(--button-font);
-
+    margin-top: 2.2%;
 }
 /* This is first section */
 main{
@@ -112,16 +113,19 @@ main{
     line-height: 25px;
     margin-top: 3%;
 }
-.left-item a{
-    
-}
 .big-btn{
     font-size: var(--button-font);
-    font-weight: bold;
+    font-weight: 600;
     border: none;
+    background-color: var(--btn-color);
+    color: var(--white-color);
     border-radius: 5px;
-    padding: 9px 18px;
+    padding: 9px 20px;
     margin-top: 8%;
+}
+.big-btn:hover{
+    background-color: var(--btn-hover);
+    color:var(--white-color);
 }
 .right-item img{
     background-color:var(--secondary);
@@ -150,6 +154,7 @@ main{
 .item img{
     height: 90px;
 }
+
 .item{
     width: 369px;
     height: 150px;
@@ -179,10 +184,6 @@ main{
    background-blend-mode: multiply;
 }
 form{
-    /* position: relative;
-    top: 10%;
-    left: 50%;
-    transform: translate(-14%, 1%); */
    margin-left: 450px;
    
 }
@@ -295,10 +296,6 @@ footer ul li{
     background-color: var(--white-color);
     color: var(--primary);
 } */
-.big-btn:hover{
-    background-color: #892474;
-    color:var(--white-color);
-}
 .support span{
     font-size: var(--nav-font-size);
 
