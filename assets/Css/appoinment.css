@@ -149,7 +149,7 @@ span{
 /* Booking Appointment */
 .booking-app{
     height: 400px;
-    background-color: #4a7bdc;
+    background-color: #7293d4;
 }
 .book-page{
     display: flex;
@@ -163,6 +163,7 @@ span{
 .booking-app p{
     font-size:20px;
     margin-top: 30px;
+    font-weight: medium;
 }
 .booking-app hr{
     margin-top: 30px;
@@ -274,11 +275,11 @@ span{
 #message{
     height: 150px;
 }
-button a{
+.addres a{
     text-decoration: none;
     color: var(--white-color);
 }
-button{
+.addres button{
     padding: 8px 20px;
     border-radius: 6px;
     height: 50px;
@@ -287,6 +288,8 @@ button{
     color: white;
     font-weight: 600;
     letter-spacing: 1px;
+    width: 600px;
+    cursor: pointer;
 }
 button:hover{
     background-color: #094887;

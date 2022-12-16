@@ -7,30 +7,30 @@
     <title> TORKAN-Service</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../../assets/Images/tittle-logo.png">
     <link rel="stylesheet" href="../../assets/Css/appoinment.css">
-    <script src="https://kit.fontawesome.com/a9b709470e.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
 <body>
     <div class="little-footer">
         <div class="contact-item">
             <span>
-                <i class="fa fa-phone" aria-hidden="true"></i>(506)272 8115
+                <i class="fa-solid fa-phone"></i>506)272 8115
+            
+            <span>
+                <i class="fa-solid fa-envelope"></i> torkanservice@gmail.com
             </span>
             <span>
-                <i class="fa fa-envelope" aria-hidden="true"></i> torkanservice@gmail.com
-            </span>
-            <span>
-                <i class="fa fa-clock-o" aria-hidden="true"></i>24/7 Service
+              <i class="fa-regular fa-clock"></i>24/7 Service
             </span>
         </div>
         <div class="logo-item">
             <nav class=".nav">
                 <ul>
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                    <i class="fa fa-pinterest" aria-hidden="true"></i>
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                   <li> <i class="fa-brands fa-facebook-f"></i></li>
+                   <li><i class="fa-brands fa-instagram"></i></li> 
+                   <li><i class="fa-brands fa-twitter"></i></li> 
+                    <li><i class="fa-brands fa-pinterest"></i></li>
+                   <li><i class="fa-solid fa-magnifying-glass"></i></li> 
+                   <li><i class="fa-solid fa-cart-shopping"></i></li> 
                 </ul>
             </nav>
         </div>
@@ -84,7 +84,7 @@
         <div class="vehicle-type">
             <div class="year">
                 <label class="top-head">VEHICLE YEAR</label><br>
-                <input id="vehicle-year" class="chose-year" name="vehicle-year" type="number" value="2008" step="1">
+                <input id="vehicle-year" class="chose-year" name="vehicle-year" type="number" value="2008" step="1"  aria-label="Phone">
             </div>
             <div class="year">
                 <label class="top-head">VEHICLE MAKE</label><br>
@@ -103,39 +103,40 @@
             </div>
             <div class="year">
                 <label class="top-head">VEHICLE MILEAGE</label><br>
-                <input id="vehicle-mileage" class="mileage" name="vehicle-mileage" type="number" value="" data-value="" placeholder="Vehicle Mileage" required>
+                <input id="vehicle-mileage" class="mileage" name="vehicle-mileage" type="number" value="" data-value="" placeholder="Vehicle Mileage" required aria-label="mileage">
             </div>
         </div><br><br>
+        <!-- This is appoinment section -->
         <div class="appoinment-section">
             <div class="date">
                 <div class="date-choose">
                     <label for="appointment-date" class="top-head">APPOINTMENT DATE</label><br>
-                    <input type="date" required>
+                    <input type="date" required aria-label="date">
                 </div><br>
                 <div class="date-choose">
                     <label for="appointment-date" class="top-head">PREFFERED TIME FRAM</label><br>
-                    <input type="time" required>
+                    <input type="time" required aria-label="time" required >
                 </div><br>
                 <div class="date-choosing">
                     <label for="appointment-date" class="top-head">SELECT SERVICES NEEDED</label><br>
                     <div class="list-checkbox">
-                      <label for="text" class="checkbox"> <input type="checkbox" class="item"> Air Conditioning</label>
-                      <label for="text" class="checkbox"> <input type="checkbox" class="item"> Breakes repair</label>
-                      <label for="text" class="checkbox"> <input type="checkbox" class="item"> Engine Diagnostics</label>
-                      <label for="text" class="checkbox"> <input type="checkbox" class="item"> Heating & Cooling </label>
-                      <label for="text" class="checkbox"> <input type="checkbox" class="item"> Oil, Lube & Filters </label>
-                      <label for="text" class="checkbox"> <input type="checkbox" class="item"> Steering & Supension</label>
-                      <label for="text" class="checkbox"> <input type="checkbox" class="item"> Transmission</label>
+                      <label for="text" class="checkbox"> <input type="checkbox" class="item" aria-label="checkbox"> Air Conditioning</label>
+                      <label for="text" class="checkbox"> <input type="checkbox" class="item" aria-label="checkbox"> Breakes repair</label>
+                      <label for="text" class="checkbox"> <input type="checkbox" class="item" aria-label="checkbox"> Engine Diagnostics</label>
+                      <label for="text" class="checkbox"> <input type="checkbox" class="item" aria-label="checkbox"> Heating & Cooling </label>
+                      <label for="text" class="checkbox"> <input type="checkbox" class="item"aria-label="checkbox"> Oil, Lube & Filters </label>
+                      <label for="text" class="checkbox"> <input type="checkbox" class="item"aria-label="checkbox"> Steering & Supension</label>
+                      <label for="text" class="checkbox"> <input type="checkbox" class="item"aria-label="checkbox"> Transmission</label>
                     </div>
                 </div>
             </div>
             <div class="addres">
                 <label for="" class="top-head">CONTACT DETAILS</label><br>
-                <input type="text" placeholder="Your Name*" required ><br>
-                <input type="email" placeholder="Your Email*" required><br>
-                <input type="number" placeholder="Your Phone" maxlength="10" required><br>
-                <input id="message" type="message" placeholder="Additional Questions or Comments"><br>
-                <button><a href="../../Page/Appoinment/payment.html">SUBMIT NOW</a></button>
+                <input type="text" placeholder="Your Name*" required aria-label="name"><br>
+                <input type="email" placeholder="Your Email*" required aria-label="email"><br>
+                <input type="number" placeholder="Your Phone" maxlength="10" required aria-label="Phone"><br>
+                <input id="message" type="message" placeholder="Additional Questions or Comments" aria-label="message"><br>
+                <a href="../../Page/Appoinment/payment.html"><button>SUBMIT NOW</button></a>
             </div>
            
         </div>
