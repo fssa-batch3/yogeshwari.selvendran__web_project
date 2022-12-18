@@ -53,7 +53,7 @@
     font-weight: medium;
     cursor: pointer;
 }
-li a{
+a{
     text-decoration: none;
     color: var(--white-color);
 }
@@ -83,7 +83,6 @@ button{
     background-color: var(--btn-color);
     color: var(--white-color);
     font-size: var(--button-font);
-
 }
 /* This is little footer */
 .little-footer{
@@ -116,32 +115,27 @@ span{
     margin-right:10px;
 }
 /*  This is thired nav-b ar*/
-.sub-nav a{
-    text-decoration: none;
-  
-}
 .sub-nav ul{
    list-style: none;
    display: flex;
    justify-content: space-around;
    font-size: var(--nav-font-size);
-   margin-top: 3px;
+   margin-top: 5px;
 }
 .sub-nav li{
    box-sizing: border-box;
-   padding:15px 85px;
+   padding:15px 75px;
    background-color: #348de6cc;
 }
-.sub-nav a{
-   color:var(--white-color);
-}
 .big-btn{
-    font-size: var(--button-font);
+    font-size: 18;
     color: black;
     font-weight: bold;
     border: none;
     border-radius: 5px;
-    padding: 9px 20px;
+    padding: 9px 18px;
+    letter-spacing: 1px;
+
 }
 .big-btn:hover{
     background-color: #1480de;
@@ -231,12 +225,10 @@ i{
     width: 200px;
     /* background-color: #74787c; */
 }
-.detail-section a{
-    text-decoration: none;
-    color: var(--white-color);
-    font-weight: bold;
-}
 .product button{
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
     width: 200px;
     border-style: none;
     margin-left: 20px;
@@ -274,7 +266,7 @@ i{
     transform: scale(1.1);
 }
 .main-footer{
-   margin-top: 700px;
+   margin-top: 90px;
 }
 /*  This is Footer */
 footer{
@@ -293,10 +285,6 @@ footer ul{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-}
-footer a{
-    color: var(--white-color);
-    text-decoration: none;
 }
 footer ul li{
     list-style: none;
@@ -320,13 +308,8 @@ footer ul li{
     background-color: var(--white-color);
     color: var(--primary);
 } */
-.big-btn:hover{
-    background-color: #2d74e6;
-    color:var(--white-color);
-}
 .support span{
     font-size: var(--nav-font-size);
-
 }
 .about{
     margin-top:50px ;
@@ -366,6 +349,11 @@ footer ul li{
 .user{
     margin-top: 2.2%;
     margin-right: 13%;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 9px;
 }
 .user ul{
     list-style: none;
@@ -374,13 +362,6 @@ footer ul li{
 }
 .user li{
    padding: 15px;
-}
-.user, .profile{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    position: relative;
-    bottom: 9px;
 }
 .search-bar{
     margin-top: 25px;
@@ -401,7 +382,11 @@ input{
     position: relative;
     right: 40px;
 }
-/* product-details */
+/* product-details section */
+.product-section{
+    display: flex;
+    justify-content: space-around;
+}
 .engine{
     height: 400px;
     /* margin-left: 50px; */
@@ -417,11 +402,75 @@ input{
    box-sizing: border-box;
    box-shadow: var(--box-shadow2);
 }
+.products .engine{
+    margin-left: 50px;
+}
 .products ul{
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
+    margin-left: 120px;
 }
 ul img{
    height: 100px;
+   padding: 20px;
+}
+.products .list{
+    margin-left: 20px;
+}
+.products .list li{
+    margin-right: 5px;
+}
+.products .list button{
+    width: 190px;
+    border: none;
+    padding: 10px;
+    font-weight: 600;
+}
+.products .list button i{
+    padding-right: 10px;
+}
+.product-ditails{
+    margin-top: 50px;
+    margin-bottom: 90px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.radio{
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+    font-size:var(--button-font);
+    color: var(--text-color);
+    border-radius: 7px;
+    border-style: none;
+    background-color: rgba(255, 255, 255, 0.982);
+}
+form{
+   box-sizing: border-box; 
+   border: 1px solid gray;
+   width: 500px;
+   height: 100px;
+
+}
+label{
+    font-size: 18px;
+    padding: 50px;
+}
+form span{
+    padding-left: 80px;
+}
+.product-ditails .star{
+    display: flex;
+    background-color: #1a9b2d;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--white-color);
+    padding: 5px 5px;
+    width: 45px;
+    border-radius: 5px;
+}
+.star i{
+    height: 10px;
 }

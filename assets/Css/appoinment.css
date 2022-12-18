@@ -50,7 +50,7 @@ header{
     font-weight: medium;
     cursor: pointer;
 }
-.center li a{
+a{
     text-decoration: none;
     color: var(--white-color);
 }
@@ -80,9 +80,6 @@ ul li::after{
    padding: 15px;
 }
 /* This is thired nav bar */
-.sub-nav a{
-    text-decoration: none;
-}
 .sub-nav ul{
    list-style: none;
    display: flex;
@@ -94,9 +91,11 @@ ul li::after{
    box-sizing: border-box;
    padding:15px 80px;
    background-color: #7bb8f5cc;
+   font-weight: bold;
 }
-.sub-nav a{
-   color: black;
+.big-btn:hover{
+    background-color: #0f72f4;
+    color:var(--white-color);
 }
 /* This is little footer */
 .little-footer{
@@ -148,28 +147,34 @@ span{
 }
 /* Booking Appointment */
 .booking-app{
-    height: 400px;
+    height: 350px;
     background-color: #7293d4;
 }
 .book-page{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    height: 190px;
-    padding-top: 190px;
+    justify-content: space-between;
     color: var(--white-color);
+    /* padding-top: 60px; */
 }
-.booking-app p{
+.booking-app span{
+    margin-top: 60px;
+    font-size: 50px;
+    font-weight: 600;
+}
+.book-page p{
     font-size:20px;
-    margin-top: 30px;
+    margin-top: 20px;
     font-weight: medium;
+    /* padding-top: 30px; */
+    /* line-height: 30px; */
 }
 .booking-app hr{
-    margin-top: 30px;
+    margin-top: 20px;
     width: 350px;
     line-height: 5px;
-    list-style: inherit;
+    
 }
 /* vehicle year  */
 .vehicle-type{
@@ -275,10 +280,10 @@ span{
 #message{
     height: 150px;
 }
-.addres a{
+/* .addres a{
     text-decoration: none;
     color: var(--white-color);
-}
+} */
 .addres button{
     padding: 8px 20px;
     border-radius: 6px;
@@ -327,24 +332,24 @@ footer ul li{
     margin-top:50px ;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 250px;
     height: 200px;
     margin-left: 100px;
 }
-/* .support button{
-    width: 150px;
-    box-sizing: border-box;
-    background-color: var(--white-color);
-    color: var(--primary);
-} */
-.big-btn:hover{
-    background-color: #892474;
-    color:var(--white-color);
+.support button{
+    font-size: var(--button-font);
+    color: var(--white-color);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 9px 20px;
+    background-color: #4a7bdc;
 }
+
 .support span{
     font-size: var(--nav-font-size);
-
+    margin-top: 0px;
 }
 .about{
     margin-top:50px ;
@@ -381,9 +386,11 @@ footer ul li{
    right: 40px;
 }
 /* This is payment-section */
-.payment-section h1{
+.payment-section p{
     text-align: center;
     margin-top: 0px;
+    font-size: 50px;
+    font-weight: 600;
 }
 form{
     margin-left: 550px;
@@ -419,6 +426,13 @@ fieldset{
     width: 300px; 
     margin-top: 50px;
     margin-left: 50px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    font-size: var(--button-font);
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: rgb(14, 136, 243);
 }
 .back-page{
    width: 40px;

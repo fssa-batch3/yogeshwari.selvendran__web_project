@@ -65,7 +65,6 @@ ul li::after{
     width: 0%;
     margin: auto;
     transition: 0.3s;
-
 }
 .center li:hover::after{
     width: 100%;
@@ -83,7 +82,14 @@ button{
     background-color: var(--btn-color);
     color: var(--white-color);
     font-size: var(--button-font);
-
+    border-style: none;
+    background-color: #0f80f1eb;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+button:hover{
+    background-color: #094887;
 }
 /* This is little footer */
 .little-footer{
@@ -237,19 +243,6 @@ button a{
     text-decoration: none;
     color: var(--white-color);
 }
-button{
-    padding: 8px 20px;
-    border-radius: 6px;
-    height: 50px;
-    border-style: none;
-    background-color: #0f80f1eb;
-    color: white;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-button:hover{
-    background-color: #094887;
-}
 /* Complain page */
 .complain{
     display: flex;
@@ -343,13 +336,8 @@ footer ul li{
     background-color: var(--white-color);
     color: var(--primary);
 } */
-.big-btn:hover{
-    background-color: #892474;
-    color:var(--white-color);
-}
 .support span{
     font-size: var(--nav-font-size);
-
 }
 .about{
     margin-top:50px ;
@@ -384,7 +372,4 @@ footer ul li{
     height: 130px;
    position: relative;
    right: 40px;
-}
-.aakash{
-    background-color: red;
 }
