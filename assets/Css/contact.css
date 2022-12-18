@@ -79,12 +79,10 @@ ul li::after{
 button{
     padding: 8px 20px;
     border-radius: 6px;
-    background-color: var(--btn-color);
     color: var(--white-color);
     font-size: var(--button-font);
     border-style: none;
     background-color: #0f80f1eb;
-    color: white;
     font-weight: 600;
     letter-spacing: 1px;
 }
