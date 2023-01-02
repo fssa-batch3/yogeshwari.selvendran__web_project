@@ -22,7 +22,7 @@
 }
 /* This is header section */
 header{
-    background-color:var(--primary);
+    background-color:#163891;
     color:var(--white-color);
     display: flex;
     justify-content: space-evenly;
@@ -62,7 +62,6 @@ ul li::after{
     width: 0%;
     margin: auto;
     transition: 0.3s;
-
 }
 .center li:hover::after{
     width: 100%;
@@ -85,16 +84,24 @@ ul li::after{
    display: flex;
    justify-content: space-around;
    font-size: var(--nav-font-size);
-   margin-top: 3px;
+   margin-top: 2px;
 }
 .sub-nav li{
-   box-sizing: border-box;
-   padding:15px 80px;
-   background-color: #7bb8f5cc;
-   font-weight: bold;
+    box-sizing: border-box;
+    padding:15px 85px;
+    background-color:#0f53e6;
+}
+.big-btn{
+    font-size: var(--button-font);
+    color:var(--white-color);
+    font-weight: bold;
+    border: none;
+    box-shadow: inset 1px 1px 10px rgba(1, 0, 0, 0.683);
+    border-radius: 5px;
+    padding: 9px 20px;
 }
 .big-btn:hover{
-    background-color: #0f72f4;
+    background-color: #103fa5;
     color:var(--white-color);
 }
 /* This is little footer */
@@ -129,7 +136,7 @@ span{
 }
 /* This is appointment */
 .appoinment{
-    background-color: #4a7bdc;
+    background-color: #08245e;
     height: 200px;
     margin-top: 2px;
     color: var(--white-color);
@@ -148,7 +155,7 @@ span{
 /* Booking Appointment */
 .booking-app{
     height: 350px;
-    background-color: #7293d4;
+    background-color: #08245e;
 }
 .book-page{
     display: flex;

@@ -22,7 +22,7 @@
     --complain-hover-color:#d12616;
 }
 .header{
-    background-color:var(--primary);
+    background-color:#163891;
     color:var(--white-color);
     display: flex;
     justify-content: space-between;
@@ -120,32 +120,31 @@ span{
    display: flex;
    justify-content: space-around;
    font-size: var(--nav-font-size);
-   margin-top: 5px;
+   margin-top: 2px;
 }
 .sub-nav li{
-   box-sizing: border-box;
-   padding:15px 75px;
-   background-color: #348de6cc;
+    box-sizing: border-box;
+    padding:15px 85px;
+    background-color:#0f53e6;
 }
 .big-btn{
-    font-size: 18;
-    color: black;
+    font-size: var(--button-font);
+    color:var(--white-color);
     font-weight: bold;
     border: none;
+    box-shadow: inset 1px 1px 10px rgba(1, 0, 0, 0.683);
     border-radius: 5px;
-    padding: 9px 18px;
-    letter-spacing: 1px;
-
+    padding: 9px 20px;
 }
 .big-btn:hover{
-    background-color: #1480de;
+    background-color: #103fa5;
     color:var(--white-color);
 }
 /* This is accessories */
 .accessories .head-part{
-   background-color: #1b49a5; 
+   background-color: #08245e; 
    height: 200px;
-   margin-top: 5px;
+   margin-top: 2px;
    color: var(--white-color);
 }
 .head-part h1{
@@ -159,8 +158,8 @@ span{
     display: flex;
     justify-content: space-between;
     margin-top: 55px;
-    margin-left: 120px;
-    margin-right: 100px;
+    margin-left: 150px;
+    margin-right: 135px;
 }
 .bike-car ul{
     display: flex;
@@ -176,6 +175,9 @@ span{
 .bike-car a{
     color: black;
 }
+.bike-car a:hover{
+    color: #052b78;
+}
 select{
     width: 200px;
     padding: 10px 20px;
@@ -186,29 +188,34 @@ select{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #eff1f3;
-    width: 250px;
-    height: 420px;
+    background-color: #ffffffc3;
+    width: 200px;
+    height: 300px;
     box-shadow: 0px 0px 10px 5px rgb(0,0,0,0.1);
 }
 .detail-section{
-    background-color: #74787c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #0e7cea;
+    color: var(--white-color);
     height: 150px;
-    width: 250px;
+    width: 200px;
     box-shadow: 0px 0px 10px 5px rgb(0,0,0,0.1);
+    padding-top: 0px;
 }
 .amount{
     display: flex;
     justify-content: space-between;
 }
 .product .y27{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 .hsp{
-   padding: 10px 20px;
+   padding: 5px 30px;
    font-size: 16px;
    font-weight: 600;
 }
@@ -218,30 +225,31 @@ i{
 .amount span{
     display: flex; 
     justify-content: space-around;
-    padding: 9px 20px;
+    padding: 5px 30px;
 }
 .product img{
-    height: 300px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     /* background-color: #74787c; */
 }
 .product button{
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 1px;
-    width: 200px;
+    width: 130px;
     border-style: none;
-    margin-left: 20px;
+    margin-left: 38px;
+    background-color: #1b49a5;
 }
 .product button:hover{
-    background-color: rgb(11, 141, 13);
+    background-color: rgb(8, 28, 111);
 }
 /* This is product-condainer */
 .product-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-row-gap: 50px;
-    margin-left: 110px;
+    grid-row-gap: 100px;
+    margin-left: 150px;
     margin-top: 50px;
 }
 .page-collection ul{
@@ -386,21 +394,19 @@ input{
 .product-section{
     display: flex;
     justify-content: space-around;
+    height: 700px;
+    width: 1200px;
+    margin-top: 50px;
+    margin-left: 150px;
+    border-radius: 10px;
+    background-color: #ffffff57;
+    box-sizing: border-box;
+    box-shadow: var(--box-shadow2);
 }
 .engine{
     height: 400px;
     /* margin-left: 50px; */
     padding: 50px;
-}
-.product-section{
-   height: 700px;
-   width: 1200px;
-   margin-top: 50px;
-   margin-left: 150px;
-   border-radius: 10px;
-   background-color: #ffffff57;
-   box-sizing: border-box;
-   box-shadow: var(--box-shadow2);
 }
 .products .engine{
     margin-left: 50px;

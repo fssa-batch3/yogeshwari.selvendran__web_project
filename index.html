@@ -8,6 +8,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/Images/tittle-logo.png">
     <link rel="stylesheet" href="./assets/Css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    
 </head>
 <body>
     <header>
@@ -16,17 +18,17 @@
         </div> 
         <div class="center">
             <ul>
-                <li><a href="./Page/Home/home.html" target="_blank">HOME</a></li>
+                <li><a href="./Page/Home/home.html">HOME</a></li>
                 <li><a href="">ABOUT</a></li>
-                <li><a href="">SERVICES</a></li>
+                <li><a href="../../Page/Home/services.html">SERVICES</a></li>
                 <li><a href="">PARTENERS</a></li>
                 <!-- in this place i'm add a few feachers parteners, blog -->
             </ul>
         </div>
         <div class="contact">
             <ul>
-                <a href="signin.html"><button class="big-btn">Signin</button></a>
-                <a href="./Page/contact.html" target="_blank" ><button class="big-btn">+9394959697</button></a>
+                <a href="./Page/Home/signin.html"><button class="big-btn">Signin</button></a>
+                <a href="./Page/Contact/contact.html"><button class="big-btn">+9394959697</button></a>
             </ul>
         </div>
     </header>
@@ -39,7 +41,7 @@
                 <a href="cll.html"><button class="big-btn">GET SERVICE</button></a>
               </div>
               <div class="right-item">
-                 <img src="./assets/Images/Top-section1.jpg" alt="">
+                 <img src="./assets/Images/support-bg1.jpg" alt="">
               </div>
         </div>
         <!-- This is Second section -->
@@ -47,28 +49,29 @@
             <h1>Why Chose Us?</h1>
             <div class="item-gallary">
                 <div class="item">
-                    <img src="./assets/Icons/24-hours.png" alt="24/7 service"><br>
-                    <h3>24/7 support</h3>
-                </div>
-                <div class="item">
-                    <img src="https://static.gobumpr.com/offers-imgs/svg_icons_revamp/tracking.svg" alt="USP4" data-reactid="142"><br>
-                    <h3>Real-time tracking</h3>
-                </div>
-                <div class="item">
-                    <img src="https://static.gobumpr.com/offers-imgs/svg_icons_revamp/transparentpricing.svg" alt="USP0" data-reactid="126"><br>
-                    <h3>Upto 50% Saving</h3>
-                </div>
-                <div class="item">
-                    <img src="./assets/Icons/delivery1.jpg" alt="door delivery" class="door"><br>
-                    <h3>Door step service</h3>
+                    <ul >
+                        <li><img src="./assets/Icons/24-hours.png" alt="24/7 service"></li>
+                        <li><img src="./assets/Icons/tracking-pic.png" alt="real time tracking" class="door"></li>
+                        <li><img src="https://static.gobumpr.com/offers-imgs/svg_icons_revamp/transparentpricing.svg" alt="USP0" data-reactid="126"></li>
+                        <li><img src="./assets/Icons/door-service.png" alt="door delivery" class="door"></li>
+                    </ul>
+                    <ul class="list">
+                        <li>24/7 support</li><br>
+                        <li>Real-time tracking</li>
+                        <li>Upto 50% Saving</li>
+                        <li>Door step service</li>
+                       </ul>
                 </div>
             </div>
-           
+        </div>
+        <!-- This is Adversnment -->
+        <div class="ad">
+            <img src="https://tpc.googlesyndication.com/simgad/9464432608718276770" width="970" height="90" alt="" class="img_ad">
         </div>
         <!-- Book appoinment -->
         <div class="booking">
-            <div class="appoinment">
-                <h1>Make An Appoinment</h1>
+            <h1>Make An Appoinment</h1>
+            <div class="appoinment"> 
                 <!-- <img src="./assets/Images/app-1.jpg" alt=""> -->
                 <form action="./Page/Appoinment/appoinment.html">
                     <fieldset>
@@ -83,71 +86,106 @@
                             <option value=""> Mechanic</option>
                             <option value=""> Need Drivar</option>
                         </select>
-                        <button  class="booking-btn"><a href="./Page/Appoinment/appoinment.html">Book Now</a></button>
+                        <button class="booking-btn"><a href="./Page/Appoinment/appoinment.html">Book Now</a></button>
                     </fieldset>
                 </form>
+                <div class="booking-service">
+                    <img src="./assets/Images/app-1234.jpg" alt="">
+                </div>
+                <!-- <img class="booking-service" src="./assets/Images/book-service.jpg" alt="booking service">  -->
             </div>
         </div>
         <!-- This is third section -->
         <div class="thired-section">
             <h1>Customer review</h1>
-            <div class="review-page">
-                <div class="review">
-                    <div class="customar">
-                        <img src="./assets/Images/image-emily.jpg" alt="profile" class="girl">
-                        <h5>YOGI</h5>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from </p>
-                        <img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
+            <div class="love-us">
+                <img class="replay" src="./assets/Icons/reply-arrow.png" alt="reply-arrow">
+                    <img class="forward"  src="./assets/Icons/forward-arrow.png" alt="forward-arrow">
+                <div class="review-page">
+                    <div class="review">
+                        <div class="customar">
+                            <p>We at Autozang, focus on automating and improving the process of vehicle service and address the pain points within the user's journey. Just book an appointment with the App/Website, and then relax,</p>
+                            <div class="people">
+                                <img src="./assets/Images/image-emily.jpg" alt="profile">
+                                <span>
+                                    <h5>YOGI</h5><img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
+                                </span>
+                            </div>
+                         </div>
+                         <div class="customar">
+                            <p>We at Autozang, focus on automating and improving the process of vehicle service and address the pain points within the user's journey. Just book an appointment with the App/Website, and then relax,</p>
+                            <div class="people">
+                                <img src="./assets/Images/image-emily.jpg" alt="profile">
+                                <span>
+                                    <h5>YOGI</h5><img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
+                                </span>
+                            </div>
+                         </div>
+                         <div class="customar">
+                            <p>We at Autozang, focus on automating and improving the process of vehicle service and address the pain points within the user's journey. Just book an appointment with the App/Website, and then relax,</p>
+                            <div class="people">
+                                <img src="./assets/Images/image-emily.jpg" alt="profile">
+                                <span>
+                                    <h5>YOGI</h5><img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
+                                </span>
+                            </div>
+                         </div>
+                         <div class="customar">
+                            <p>We at Autozang, focus on automating and improving the process of vehicle service and address the pain points within the user's journey. Just book an appointment with the App/Website, and then relax,</p>
+                            <div class="people">
+                                <img src="./assets/Images/image-emily.jpg" alt="profile">
+                                <span>
+                                    <h5>YOGI</h5><img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
+                                </span>
+                            </div>
+                         </div>
+                         <div class="customar">
+                            <p>We at Autozang, focus on automating and improving the process of vehicle service and address the pain points within the user's journey. Just book an appointment with the App/Website, and then relax,</p>
+                            <div class="people">
+                                <img src="./assets/Images/image-emily.jpg" alt="profile">
+                                <span>
+                                    <h5>YOGI</h5><img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
+                                </span>
+                            </div>
+                         </div>
+                         <div class="customar">
+                            <p>We at Autozang, focus on automating and improving the process of vehicle service and address the pain points within the user's journey. Just book an appointment with the App/Website, and then relax,</p>
+                            <div class="people">
+                                <img src="./assets/Images/image-emily.jpg" alt="profile">
+                                <span>
+                                    <h5>YOGI</h5><img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
+                                </span>
+                            </div>
+                         </div>
+                         <div class="customar">
+                            <p>We at Autozang, focus on automating and improving the process of vehicle service and address the pain points within the user's journey. Just book an appointment with the App/Website, and then relax,</p>
+                            <div class="people">
+                                <img src="./assets/Images/image-emily.jpg" alt="profile">
+                                <span>
+                                    <h5>YOGI</h5><img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
+                                </span>
+                            </div>
+                         </div>
+                         <div class="customar">
+                            <p>We at Autozang, focus on automating and improving the process of vehicle service and address the pain points within the user's journey. Just book an appointment with the App/Website, and then relax,</p>
+                            <div class="people">
+                                <img src="./assets/Images/image-emily.jpg" alt="profile">
+                                <span>
+                                    <h5>YOGI</h5><img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
+                                </span>
+                            </div>
+                         </div>
+                         <div class="customar">
+                            <p>We at Autozang, focus on automating and improving the process of vehicle service and address the pain points within the user's journey. Just book an appointment with the App/Website, and then relax,</p>
+                            <div class="people">
+                                <img src="./assets/Images/image-emily.jpg" alt="profile">
+                                <span>
+                                    <h5>YOGI</h5><img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
+                                </span>
+                            </div>
+                         </div>
+                      
                     </div>
-                    <div class="customar">
-                        <img src="./assets/Images/image-emily.jpg" alt="profile" class="girl">
-                        <h5>YOGI</h5>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from </p>
-                        <img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
-                    </div>
-                    <div class="customar">
-                        <img src="./assets/Images/image-emily.jpg" alt="profile" class="girl">
-                        <h5>YOGI</h5>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from </p>
-                        <img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
-                    </div>
-                    <div class="customar">
-                        <img src="./assets/Images/image-emily.jpg" alt="profile" class="girl">
-                        <h5>YOGI</h5>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from </p>
-                        <img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
-                    </div>
-                    <div class="customar">
-                        <img src="./assets/Images/image-emily.jpg" alt="profile" class="girl">
-                        <h5>YOGI</h5>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from </p>
-                        <img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
-                    </div>
-                    <div class="customar">
-                        <img src="./assets/Images/image-emily.jpg" alt="profile" class="girl">
-                        <h5>YOGI</h5>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from </p>
-                        <img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
-                    </div>
-                    <div class="customar">
-                        <img src="./assets/Images/image-emily.jpg" alt="profile" class="girl">
-                        <h5>YOGI</h5>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from </p>
-                        <img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
-                    </div>
-                    <div class="customar">
-                        <img src="./assets/Images/image-emily.jpg" alt="profile" class="girl">
-                        <h5>YOGI</h5>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from </p>
-                        <img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
-                    </div>
-                    <div class="customar">
-                        <img src="./assets/Images/image-emily.jpg" alt="profile" class="girl">
-                        <h5>YOGI</h5>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from </p>
-                        <img src="./assets/Icons/rating1.png" alt="ratting" class="ratting">
-                    </div>
-                  
                 </div>
             </div>
         </div>
@@ -157,14 +195,14 @@
     <footer>
         <div class="bottom">
             <div class="support">
-                <img src="./assets/Images/logo1.png" alt="">
+                <img src="../../assets/Images/logo1.png" alt="">
                 <p>Every service is rigorously screened and constantly rated to ensure you get the best service.</p>
                 <span>support center 24/7</span>
-                <button class="big-btn">+8272050611</button>
+                <button>+8272050611</button>
                 
             </div>
             <div class="about">
-                <h4>About Us</h4>
+                <h3>About Us</h3>
                 <ul>
                     <li><a href="">About us</a></li>
                     <li><a href="">Our team</a></li>
@@ -173,7 +211,7 @@
                 </ul>
             </div>
             <div class="popular">
-                <h4>Popular services</h4>
+                <h3>Popular services</h3>
                 <ul>
                     <li><a href="">Tire repair</a></li>
                     <li><a href="">Brake repair</a></li>
@@ -182,16 +220,17 @@
                 </ul>
             </div>
             <div class="follow">
-                <h4>Followed by:</h4>
+                <h3>Followed by:</h3>
                 <div class="application">
-                    <img src="./assets/Icons/icons8-linkedin.svg" alt="">
-                    <img src="./assets/Icons/icons8-whatsapp.svg" alt="">
-                    <img src="./assets/Icons/icons8-instagram.svg" alt="">
-                    <img src="./assets/Icons/icons8-facebook-circled.svg" alt="">
+                    <img src="../../assets/Icons/icons8-linkedin.svg" alt="">
+                    <img src="../../assets/Icons/icons8-whatsapp.svg" alt="">
+                    <img src="../../assets/Icons/icons8-instagram.svg" alt="">
+                    <img src="../../assets/Icons/icons8-facebook-circled.svg" alt="">
                 </div>
-                <img src="./assets/Icons/androidios.png" alt="" class="app">
+                <img src="../../assets/Icons/androidios.png" alt="" class="app">
             </div>
         </div>
     </footer>
+    
 </body>
 </html>

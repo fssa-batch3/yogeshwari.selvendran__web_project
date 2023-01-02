@@ -160,197 +160,58 @@ a{
     display: flex;
     justify-content: space-around;
     font-size: var(--nav-font-size);
-    margin-top: 3px;
-}
-.sub-nav li{
-    box-sizing: border-box;
-    padding:15px 85px;
-    background-color:#0f53e6;
-}
-/*  This is Home page animation */
-.home-gallery{
-    width: 100%;
-    height: 700px;
-    position: relative;
-    /* background-attachment: fixed; */
-    background-image: url(../Images/background-2.jpg);
-    background-size: 100% 100%;
-    /* box-shadow: 1px 2px 10px 5px black; */
-    animation: slider 10s infinite linear;
-    background-color: rgba(0, 0, 0, 0.594);
-    background-blend-mode: multiply;
-}
-@keyframes slider{
-    0%{ background-image: url(../Images/background-2.jpg); }
-    /* 10%{ background-image: url(../Images/background-2.jpg);} */
-    40%{ background-image: url(../Images/background-3.jpg);}
-}
-.home-contend{
-   margin-top: 3px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.home-contend h1{
-   margin-top: 300px;
-    font-size:var(--h1-font) ;
-    /* max-width: 500px; */
-    line-height: 68px;
-    color: var(--white-color);
-}
-.home-contend p{
-    font-size: 20px;
-    line-height: 25px;
-    color: var(--white-color);
-    margin-top: 35px;
-    /* margin-left: 295px; */
-}
-.home-contend span{
-    font-size: 20px;
-    line-height: 25px;
-    color: var(--white-color);
-    margin-top: 10px;
-    /* margin-left: 450px; */
-}
-.home-contend button{
-    margin-top: 20px;
-    width: 138px;
-    background-color: #0f53e6;
-}
-.big-btn{
-    font-size: var(--button-font);
-    color:var(--white-color);
-    font-weight: bold;
-    border: none;
-    box-shadow: inset 1px 1px 10px rgba(1, 0, 0, 0.683);
-    border-radius: 5px;
-    padding: 9px 20px;
-}
-.big-btn:hover{
-    background-color: #103fa5;
-    color:var(--white-color);
-}
-/* This is our service */
-.service-page{
-    background-color: #f4f4f4;
-    /* position: relative;
-    top: 100px; */
-    height: 400px;
-}
-.service-page h2{
-    text-align: center;
-    font-size: 35px;
-    padding-top: 50px;
-}
-.our-service{
+    margin-top: 2px;
+ }
+ .sub-nav li{
+     box-sizing: border-box;
+     padding:15px 85px;
+     background-color:#0f53e6;
+ }
+ .big-btn{
+     font-size: var(--button-font);
+     color:var(--white-color);
+     font-weight: bold;
+     border: none;
+     box-shadow: inset 1px 1px 10px rgba(1, 0, 0, 0.683);
+     border-radius: 5px;
+     padding: 9px 20px;
+ }
+ .big-btn:hover{
+     background-color: #103fa5;
+     color:var(--white-color);
+ }
+ /* This is little footer */
+.little-footer{
     display: flex;
     justify-content: space-between;
-    margin: 30px 100px;
+    height: 30px;
 }
-.bike-service{
-    width: 300px;
-    height: 200px;
+.logo-item{
+   margin-right: 50px;
+}
+.contact-item{
+    margin-left: 50px;
+}
+.logo-item ul{
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
 }
-.bike-service img{
-    height: 130px;
-    width: 130px;
-    /* background-color: #88c5cc; */
-    border-radius: 5px;
-    margin-top: 50px;
+.logo-item i{
+   padding: 14px;
 }
-.bike-service .lube{
-   height: 125px;
-   width: 125px;
-   padding-bottom: 10px;
-   background-color: #0a3d7f;
-   border-radius: 60px;
-}
-.bike-service .pic{
-    height: 150px;
-    width: 150px;
-   
-}
-.our-service h3{
-    text-align: center;
-    margin-top: 20px;
-}
-/* This is product section */
-.product-page{
-    margin-top: 50px;
-}
-.product-page h3{
-    text-align: center;
+span{
+    font-size: var(--button-font);
     font-weight: 600;
-    font-size: 40px;
 }
-.products-list{
-    display: flex;
-    gap: 50px;
-    overflow: hidden;
-    overflow-x: scroll;
-    margin: 20px;
-    margin-top: 100px;
+.contact-item, span{
+    padding:14px 14px ;
 }
-.products-list::-webkit-scrollbar{
-    display: none;
+.contact-item i{
+    margin-right:10px;
 }
-.product{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #eff1f3;
-    width: 350px;
-    height: 320px;
-    box-shadow: 0px 0px 10px 5px rgb(0,0,0,0.1);
-}
-.product img{
-    height: 200px;
-    width: 220px;
-    background: var(--white-color);
-    padding: 50px;
-}
-.detail-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: #195fa6;
-    height: 120px;
-    box-shadow: 0px 0px 10px 5px rgb(0,0,0,0.1);
-    color: var(--white-color);
-    width: 220px;
-}
-.detail-section, h4, a{
-    text-align: center;
-}
-.part{
-    display: flex;
-    justify-content: space-around;
-}
-.product-page .page{
-    position: relative;
-    top: 50px;
-    left: 700px;
-    color: var(--white-color);
-}
-.product-page button{
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding: 10px 20px;
-    width: 110px;
-    border-style: none;
-    margin-left: 20px;
-    color: var(--white-color);
-    background-color:#1f7cd8;
-}
-.product-page button:hover{
-    background-color: #195fa6;
-}
+ /* This is our service page */
+
 /* This is footer */
 footer{
     background-color: var(--primary);
