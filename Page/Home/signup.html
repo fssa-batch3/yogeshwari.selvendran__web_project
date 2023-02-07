@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live On - Too Fast Too Quick</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/Icons/live-on.png">
+    <link rel="stylesheet" href="../../assets/Css/signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <div class="container2">
+            <div class="more">
+                <img src="../../assets/Images/red-car.png" alt="">
+            </div>
+            <div class="form-page1">
+                <h1>Sign Up</h1>
+                <p>Use either your email or a verified phone number</p>
+                <label for="user-name">
+                    <input class="name" id="user-name" type="text" name="user name" placeholder="User Name" value="">
+                </label>
+                <form action="" class="ra-btn"><br>
+                    <label for="male"><input class="radio" type="radio" name="male">Male</label>
+                    <label for="female"><input class="radio" type="radio" name="male">Female</label>
+                    <label for="others"><input class="radio" type="radio" name="male">Others</label>
+                </form>
+                <label for="user-number">
+                    <input class="name" id="mobile-number" type="number" name="user number"
+                        placeholder="Enter Phone number" value="">
+                </label>
+                <label for="user-email">
+                    <input class="name" id="user-email" type="email" name="user email" placeholder="name@gmail.com"
+                        value="">
+                </label>
+                <label for="user-password">
+                    <input class="name" id="user-password" type="password" name="user password"
+                        placeholder="Enter password">
+                </label>
+                <label for="user-address">
+                    <input class="name" id="user-address" type="number" name="user address"
+                        placeholder="Pincode">
+                </label>
+                <a href="/Page/Home/home.html"><button class="name" onclick="getData()" type="submit">submit</button></a>
+                <!-- <p>OR SIGN IN WITH</p> -->
+                <!-- <div class="opptions">
+                    <img src="../../assets/Icons/google-icon.jpg" alt="google icon">
+                    <img class="fb" src="../../assets/Icons/fb-icon.jpg" alt="face book">
+                    <img src="../../assets/Icons/linkedin-icon.jpg" alt="linkedin icon">
+                    <img src="../../assets/Icons/apple-icon.jpg" alt="">
+                 </div> -->
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+
+          function getData(){
+            const user_name = document.getElementById("user-name").value
+            const user_number = document.getElementById("mobile-number").value
+            const user_email = document.getElementById("user-email").value
+            const user_password = document.getElementById("user-password").value
+            const user_address = document.getElementById("user-address").value
+            
+
+            let user_records= new Array();
+ user_records= JSON.parse(localStorage.getItem("user_details"))
+ ?JSON.parse(localStorage.getItem("user_details"))
+ :[]
+ user_records.push(
+    {
+        "user_name":user_name,
+        "user_email":user_email,
+        "user_Phoneno":user_number,
+        "user_Password":user_password,
+        "user-address":user_address
+
+    }
+ )
+ localStorage.setItem("user_details",JSON.stringify(user_records));
+          }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

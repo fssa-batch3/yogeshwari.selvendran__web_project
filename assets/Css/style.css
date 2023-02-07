@@ -23,7 +23,7 @@
     --complain-hover-color:#d12616;
 }
 header{
-    background-color:#163891;
+    background-color:#040405;
     color:var(--white-color);
     display: flex;
     justify-content: space-between;
@@ -45,9 +45,13 @@ header{
 .logo{
     margin-top: 2.5%;
 }
-.logo img{
-    width: 110px;
-    margin-left: 35%;
+.live-on{
+    width: 40px;
+    margin-left: 20px;
+}
+.live{
+    width: 100px;
+    filter: invert(100%) sepia(33%) saturate(7125%) hue-rotate(187deg) brightness(130%) contrast(96%);
 }
 .center{
     margin-top: 2.5%;
@@ -468,7 +472,7 @@ footer  li{
         display: block;
         align-items: center;
         text-align: center;
-        
+        margin-top: 20px;
     }
     footer{
         height: auto;
@@ -513,5 +517,21 @@ footer  li{
     }
     .item-gallary{
         margin-bottom: 400px;
+    }
+    .center ul li{
+        font-size: 10px;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+       padding: 5px;
+    }
+    .margin ul{
+        margin-left: 20px;
+    }
+    .logo{
+        width: 90px;
+    }
+    header{
+        height: 50px;
     }
 }

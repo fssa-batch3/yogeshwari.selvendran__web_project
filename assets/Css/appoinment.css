@@ -285,7 +285,16 @@ span{
     color: #303030;
 }
 #message{
-    height: 150px;
+    height: 100px;
+    width: 600px;
+    margin-top: 10px;
+    border: 1px solid #EBEBEB;
+    background: #FFF;
+    font-family: 'Raleway', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 12px 15px;
+    color: #303030;
 }
 /* .addres a{
     text-decoration: none;

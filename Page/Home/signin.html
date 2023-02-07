@@ -4,20 +4,24 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> TORKAN-Service</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/Images/tittle-logo.png">
+        <title>Live On - Too Fast Too Quick</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/Icons/live-on.png">
         <link rel="stylesheet" href="../../assets/Css/signin.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 <body>
     <header>
-        <a href=""><h1>TORKAN</h1></a>
+        <div class="logo">
+            <img class="live-on" src="../../assets/Icons/live-on.png" alt="">
+            <img class="live" src="../../assets/Icons/text-liveon-removebg-preview.png" alt="">
+        </div>
+        <!-- <a href=""><h1>TORKAN</h1></a> -->
         <div class="search-bar">
             <input type="text" class="search" placeholder="Search here">
             <i class="fa fa-search" aria-hidden="true"></i>
         </div>
         <div class="menu">
-            <a href=""><button>LOGIN</button></a>
+            <a href="../Home/signup.html"><button>SIGNUP</button></a>
             <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
             <a href=""><i class="fa-solid fa-bars"></i></a>
         </div>
@@ -31,18 +35,69 @@
                 <h1>Sign In</h1>
                 <p>Use either your email or a verified phone number</p>
                 <label for="user-name">
-                    <input class="name" type="text" name="user name" placeholder="Enter Email or Phone number">
+                    <input class="name" id="email" type="text" name="user name" placeholder="Enter Email or Phone number" value="yogeshwari28@gmail.com">
                 </label>
-                <a href="../../Page/Home/home.html"><button class="name">Continue</button></a>
+                <label for="user-password">
+                    <input class="name" id="user-password" type="password" name="user password" placeholder="Enter password" >
+                </label>
+                <button class="name" onclick="getValu()" type="submit">Continue</button>
                 <p>OR SIGN IN WITH</p>
                  <div class="opptions">
                     <img src="../../assets/Icons/google-icon.jpg" alt="google icon">
                     <img class="fb" src="../../assets/Icons/fb-icon.jpg" alt="face book">
                     <img src="../../assets/Icons/linkedin-icon.jpg" alt="linkedin icon">
                     <img src="../../assets/Icons/apple-icon.jpg" alt="">
+                    <script src="../../assets/sweetalert.min.js"></script>
                  </div>
             </div>
         </div>
     </main>
+    <script>
+
+        function getValu(){
+            const user_email = document.getElementById("email").value
+            const user_password = document.getElementById("user-password").value
+
+        //     console.log(user_name )
+        // console.log(user_password)
+
+        let data = JSON.parse(localStorage.getItem("user_details"))
+
+        let res;
+        data.find(element =>{
+            if(element["user_email"] == user_email && element["user_Password"] == user_password){
+                return res=1;
+            }
+            else{
+                return res=0;
+            }
+        });
+        if(res==1){
+            swal("Good job!", "You clicked the button!", "success");
+            window.location.href ="../Home/home.html"
+
+            }
+            else{
+                swal("Oops!", "wrong password!", "error");
+
+            }
+        
+        // {
+        //     if(user_password == get_password)
+        //     {
+        //      window.location.href="../../Page/Home/home.html";
+        //     }
+        //     else
+        //     {
+        //         alert("incorrect password")
+        //     }
+        // }
+        // else
+        // {
+        //     alert("invalid details");
+        // }
+        }
+        
+    </script>
 </body>
 </html>

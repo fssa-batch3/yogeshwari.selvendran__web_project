@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> TORKAN-Service</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/Images/tittle-logo.png">
+    <title>Live On - Too Fast Too Quick</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/Icons/live-on.png">
     <link rel="stylesheet" href="../../assets/Css/appoinment.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
 <body>
     <div class="little-footer">
         <div class="contact-item">
             <span>
                 <i class="fa-solid fa-phone"></i>506)272 8115
-            
-            <span>
-                <i class="fa-solid fa-envelope"></i> torkanservice@gmail.com
-            </span>
-            <span>
-              <i class="fa-regular fa-clock"></i>24/7 Service
-            </span>
+
+                <span>
+                    <i class="fa-solid fa-envelope"></i> torkanservice@gmail.com
+                </span>
+                <span>
+                    <i class="fa-regular fa-clock"></i>24/7 Service
+                </span>
         </div>
         <div class="logo-item">
             <nav class=".nav">
                 <ul>
-                   <li> <i class="fa-brands fa-facebook-f"></i></li>
-                   <li><i class="fa-brands fa-instagram"></i></li> 
-                   <li><i class="fa-brands fa-twitter"></i></li> 
+                    <li> <i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
                     <li><i class="fa-brands fa-pinterest"></i></li>
-                   <li><i class="fa-solid fa-magnifying-glass"></i></li> 
-                   <li><i class="fa-solid fa-cart-shopping"></i></li> 
+                    <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li><i class="fa-solid fa-cart-shopping"></i></li>
                 </ul>
             </nav>
         </div>
@@ -68,32 +72,33 @@
         </div>
         <!-- This is live location section -->
         <div class="live-location">
-           <img src="../../assets/Images/Live-location.png" alt=""> 
+            <img src="../../assets/Images/Live-location.png" alt="">
         </div>
         <!-- Booking appoinment -->
         <div class="booking-app">
-            <div class="book-page"> 
+            <div class="book-page">
                 <span>BOOKING AN APPOINTMENT</span>
                 <hr>
                 <p>We are one of the leading auto repair shops serving customers in Tucson.</p>
                 <p>All mechanic services are performed by highly qualified mechanics.</p>
             </div>
-           
+
         </div><br><br>
         <!-- Vehicle type -->
         <div class="vehicle-type">
             <div class="year">
                 <label class="top-head">VEHICLE YEAR</label><br>
-                <input id="vehicle-year" class="chose-year" name="vehicle-year" type="number" value="2008" step="1"  aria-label="Phone">
+                <input id="vehicleyear" class="chose-year" name="vehicle-year" type="number" step="1"
+                    aria-label="Phone">
             </div>
             <div class="year">
                 <label class="top-head">VEHICLE MAKE</label><br>
                 <select name="vehicle-make" id="company">
                     <option value="">Choose</option>
                     <option value="">Honda</option>
-                    <option value="">Honda</option>
-                    <option value="">Honda</option>
-                    <option value="">Honda</option>
+                    <option value="">TVS</option>
+                    <option value="">TATA</option>
+                    <option value="">AUDY</option>
                     <option value="">Honda</option>
                     <option value="">Honda</option>
                     <option value="">Honda</option>
@@ -103,7 +108,8 @@
             </div>
             <div class="year">
                 <label class="top-head">VEHICLE MILEAGE</label><br>
-                <input id="vehicle-mileage" class="mileage" name="vehicle-mileage" type="number" value="" data-value="" placeholder="Vehicle Mileage" required aria-label="mileage">
+                <input id="vehiclemileage" class="mileage" name="vehicle-mileage" type="number"
+                    placeholder="Vehicle Mileage" required aria-label="mileage">
             </div>
         </div><br><br>
         <!-- This is appoinment section -->
@@ -111,45 +117,55 @@
             <div class="date">
                 <div class="date-choose">
                     <label for="appointment-date" class="top-head">APPOINTMENT DATE</label><br>
-                    <input type="date" required aria-label="date">
+                    <input id="date" type="date" required aria-label="date">
                 </div><br>
                 <div class="date-choose">
                     <label for="appointment-date" class="top-head">PREFFERED TIME FRAM</label><br>
-                    <input type="time" required aria-label="time" required >
+                    <input id="time" type="time" required aria-label="time" required>
                 </div><br>
                 <div class="date-choosing">
                     <label for="appointment-date" class="top-head">SELECT SERVICES NEEDED</label><br>
                     <div class="list-checkbox">
-                      <label for="text" class="checkbox"> <input type="checkbox" class="item" aria-label="checkbox"> Air Conditioning</label>
-                      <label for="text" class="checkbox"> <input type="checkbox" class="item" aria-label="checkbox"> Breakes repair</label>
-                      <label for="text" class="checkbox"> <input type="checkbox" class="item" aria-label="checkbox"> Engine Diagnostics</label>
-                      <label for="text" class="checkbox"> <input type="checkbox" class="item" aria-label="checkbox"> Heating & Cooling </label>
-                      <label for="text" class="checkbox"> <input type="checkbox" class="item"aria-label="checkbox"> Oil, Lube & Filters </label>
-                      <label for="text" class="checkbox"> <input type="checkbox" class="item"aria-label="checkbox"> Steering & Supension</label>
-                      <label for="text" class="checkbox"> <input type="checkbox" class="item"aria-label="checkbox"> Transmission</label>
+                        <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
+                                aria-label="checkbox"> Air Conditioning</label>
+                        <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
+                                aria-label="checkbox"> Breakes repair</label>
+                        <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
+                                aria-label="checkbox"> Engine Diagnostics</label>
+                        <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
+                                aria-label="checkbox"> Heating & Cooling </label>
+                        <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
+                                aria-label="checkbox"> Oil, Lube & Filters </label>
+                        <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
+                                aria-label="checkbox"> Steering & Supension</label>
+                        <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
+                                aria-label="checkbox"> Transmission</label>
                     </div>
                 </div>
             </div>
             <div class="addres">
                 <label for="" class="top-head">CONTACT DETAILS</label><br>
-                <input type="text" placeholder="Your Name*" required aria-label="name"><br>
-                <input type="email" placeholder="Your Email*" required aria-label="email"><br>
-                <input type="number" placeholder="Your Phone" maxlength="10" required aria-label="Phone"><br>
-                <input id="message" type="message" placeholder="Additional Questions or Comments" aria-label="message"><br>
-                <a href="../../Page/Appoinment/payment.html"><button>SUBMIT NOW</button></a>
+                <input type="text" id="contactname" placeholder="Your Name*" required aria-label="name"><br>
+                <input type="email" id="contactemail" placeholder="Your Email*" required aria-label="email"><br>
+                <input type="number" id="contactphone" placeholder="Your Phone" maxlength="10" required
+                    aria-label="Phone"><br>
+                    <textarea name="" id="message" cols="30" rows="3" placeholder="Additional Questions or Comments"></textarea><br><br>
+                <!-- <input id="message" id="contactmessage" type="message" placeholder="Additional Questions or Comments"
+                    aria-label="message"><br> -->
+                <button onclick="button()">SUBMIT NOW</button>
             </div>
-           
+
         </div>
     </main>
-     <!-- This is footer section -->
-     <footer>
+    <!-- This is footer section -->
+    <footer>
         <div class="bottom">
             <div class="support">
                 <img src="../../assets/Images/logo1.png" alt=""><br>
                 <p>Every service is rigorously screened and constantly rated to ensure you get the best service.</p>
                 <span>support center 24/7</span>
                 <button>+8272050611</button>
-                
+
             </div>
             <div class="about">
                 <h3>About Us</h3>
@@ -181,5 +197,33 @@
             </div>
         </div>
     </footer>
+    <script>
+        function button() {
+            const vehicleyear = document.getElementById("vehicleyear").value
+            const vehiclemileage = document.getElementById("vehiclemileage").value
+            const date = document.getElementById("date").value
+            const time = document.getElementById("time").value
+            const company = document.getElementById("company").value
+            const check = document.getElementById("check").value
+            const contactname = document.getElementById("contactname").value
+            const contactemail = document.getElementById("contactemail").value
+            const contactphone = document.getElementById("contactphone").value
+            const contactmessage = document.getElementById("contactmessage").value
+            console.log(vehicleyear)
+            console.log(vehiclemileage)
+            console.log(date)
+            console.log(time)
+            console.log(company)
+            console.log(check)
+            console.log(contactname)
+            console.log(contactemail)
+            console.log(contactphone)
+            console.log(contactmessage)
+
+            window.location.href = "../../Page/Appoinment/payment.html"
+        }
+
+    </script>
 </body>
+
 </html>
