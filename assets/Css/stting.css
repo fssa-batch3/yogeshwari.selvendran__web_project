@@ -34,9 +34,12 @@
 .logo{
     margin-top: 2.5%;
 }
-.logo img{
-    width: 110px;
-    margin-left: 55%;
+.live-on{
+    width: 40px;
+    margin-left: 20px;
+}
+.live{
+    width: 100px;
 }
 .center{
     margin-top: 2.5%;

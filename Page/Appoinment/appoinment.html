@@ -38,34 +38,44 @@
                 </ul>
             </nav>
         </div>
-    </div><br>
+    </div>
     <header>
         <div class="logo">
-            <img src="../../assets/Images/logo1.png" alt="">
+            <img class="live-on" src="../../assets/Icons/live-on.png" alt="">
+            <img class="live" src="../../assets/Icons/text-liveon-removebg-preview.png" alt="">
         </div>
         <div class="center">
+            <ul class="cen-ul">
+                <li class="list"><a href="../../Page/Home/home.html">HOME</a></li>
+                <li class="list"><a href="../Home/about.html">ABOUT</a></li>
+                <li>
+                    <button class="service list"><a href="">SERVICES<i class="fa-solid fa-caret-down"></i></a>
+                        <div class="sub-service">
+                            <ul>
+                                <li><a class="sub-service1" href="../../Page/Appoinment/appoinment.html"
+                                        target="_blank">Appoinment</a>
+                                </li>
+                                <li><a class="sub-service1"
+                                        href="../../Page/Accesssories/accessories.html">Accesssories</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </button>
+                </li>
+                <li class="list"><a href="">PARTENERS</a></li>
+            </ul>
+        </div>
+        <div class="user">
             <ul>
-                <li><a href="../../Page/Home/home.html">HOME</a></li>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="../../Page/Home/services.html">SERVICES</a></li>
-                <li><a href="">PARTENERS</a></li>
+                <!-- <li><i class="fa-solid fa-location-dot"></i></li> -->
+                <li><i class="fa-solid fa-bell"></i></li>
+                <li><i class="fa-solid fa-gear"></i></li>
+                <li><a href=""><img class="profile" src="../../assets/Images/image-emily.jpg" alt="profile image"></a>
+                </li>
             </ul>
         </div>
     </header>
     <main>
-        <!-- Thired navbar -->
-        <div class="sub-nav">
-            <nav>
-                <ul>
-                    <li class="big-btn"><a href="#">Genaral service</a></li>
-                    <li class="big-btn"><a href="../../Page//Appoinment/appoinment.html">Appoinment</a></li>
-                    <li class="big-btn"><a href="#">Process</a></li>
-                    <li class="big-btn"><a href="#">History</a></li>
-                    <li class="big-btn"><a href="#">Insurance</a></li>
-                    <li class="big-btn"><a href="../../Page/Accesssories/accessories.html">Accesssories</a></li>
-                </ul>
-            </nav>
-        </div>
         <!-- This is appoinment page -->
         <div class="appoinment">
             <h1>APPOINTMENT</h1>
@@ -140,6 +150,8 @@
                                 aria-label="checkbox"> Steering & Supension</label>
                         <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
                                 aria-label="checkbox"> Transmission</label>
+                                <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
+                                    aria-label="checkbox"> Others</label>
                     </div>
                 </div>
             </div>
@@ -152,76 +164,97 @@
                     <textarea name="" id="message" cols="30" rows="3" placeholder="Additional Questions or Comments"></textarea><br><br>
                 <!-- <input id="message" id="contactmessage" type="message" placeholder="Additional Questions or Comments"
                     aria-label="message"><br> -->
-                <button onclick="button()">SUBMIT NOW</button>
+                <button>SUBMIT NOW</button>
             </div>
 
         </div>
     </main>
     <!-- This is footer section -->
     <footer>
-        <div class="bottom">
-            <div class="support">
-                <img src="../../assets/Images/logo1.png" alt=""><br>
-                <p>Every service is rigorously screened and constantly rated to ensure you get the best service.</p>
-                <span>support center 24/7</span>
-                <button>+8272050611</button>
-
-            </div>
-            <div class="about">
-                <h3>About Us</h3>
-                <ul>
-                    <li><a href="">About us</a></li>
-                    <li><a href="">Our team</a></li>
-                    <li><a href="">Our works</a></li>
-                    <li><a href="">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="popular">
-                <h3>Popular services</h3>
-                <ul>
-                    <li><a href="">Tire repair</a></li>
-                    <li><a href="">Brake repair</a></li>
-                    <li><a href="">Engin repair</a></li>
-                    <li><a href="">Charging repair</a></li>
-                </ul>
-            </div>
-            <div class="follow">
-                <h3>Followed by:</h3>
-                <div class="application">
-                    <img src="../../assets/Icons/icons8-linkedin.svg" alt="">
-                    <img src="../../assets/Icons/icons8-whatsapp.svg" alt="">
-                    <img src="../../assets/Icons/icons8-instagram.svg" alt="">
-                    <img src="../../assets/Icons/icons8-facebook-circled.svg" alt="">
+        <div class="footer-item">
+            <div class="main-item">
+                <div class="logo">
+                    <img class="live-on" src="../../assets/Icons/live-on.png" alt="">
+                    <img class="live" src="../../assets/Icons/text-liveon-removebg-preview.png" alt="">
                 </div>
-                <img src="../../assets/Icons/androidios.png" alt="" class="app">
+                <div class="disicription">
+                    <p>Live-On don't simply think about your vehicle, we care about you, therefore, provide doorstep
+                        bike repair & services at your place. We provide FREE Pickup and Drop service from your
+                        home,
+                        office, or anywhere, Transparent Pricing, Roadside Breakdown services at the best price.</p>
+                </div>
+            </div>
+            <div class="sub-item">
+                <div class="about-item">
+                    <p>About Us</p>
+                    <ul>
+                        <li>About Live-On</li>
+                        <li>Become a partner</li>
+                        <li>Offers</li>
+                        <li>Cupons</li>
+                        <li>Corporates</li>
+                    </ul>
+                </div>
+                <div class="about-item">
+                    <p>Our Services</p>
+                    <ul>
+                        <li>Yearly Live-On Packages</li>
+                        <li>Door step Service</li>
+                        <li>Accidental Repairs</li>
+                        <li>Cupons</li>
+                        <li>Breakedown Assistance</li>
+                    </ul>
+                </div>
+                <div class="about-item">
+                    <p>Services</p>
+                    <ul>
+                        <li>Yearly Live-On Packages</li>
+                        <li>Door step Service</li>
+                        <li>Accidental Repairs</li>
+                        <li>Cupons</li>
+                        <li>Breakedown Assistance</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contact-item">
+                <p>Contact</p>
+                <div class="application">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
             </div>
         </div>
     </footer>
+    <div class="copy-right">
+        <p> &copy;Copyright 2023 Carservice Theme by my won design</p>
+    </div>
     <script>
-        function button() {
-            const vehicleyear = document.getElementById("vehicleyear").value
-            const vehiclemileage = document.getElementById("vehiclemileage").value
-            const date = document.getElementById("date").value
-            const time = document.getElementById("time").value
-            const company = document.getElementById("company").value
-            const check = document.getElementById("check").value
-            const contactname = document.getElementById("contactname").value
-            const contactemail = document.getElementById("contactemail").value
-            const contactphone = document.getElementById("contactphone").value
-            const contactmessage = document.getElementById("contactmessage").value
-            console.log(vehicleyear)
-            console.log(vehiclemileage)
-            console.log(date)
-            console.log(time)
-            console.log(company)
-            console.log(check)
-            console.log(contactname)
-            console.log(contactemail)
-            console.log(contactphone)
-            console.log(contactmessage)
+        // function button() {
+        //     const vehicleyear = document.getElementById("vehicleyear").value
+        //     const vehiclemileage = document.getElementById("vehiclemileage").value
+        //     const date = document.getElementById("date").value
+        //     const time = document.getElementById("time").value
+        //     const company = document.getElementById("company").value
+        //     const check = document.getElementById("check").value
+        //     const contactname = document.getElementById("contactname").value
+        //     const contactemail = document.getElementById("contactemail").value
+        //     const contactphone = document.getElementById("contactphone").value
+        //     const contactmessage = document.getElementById("contactmessage").value
+        //     console.log(vehicleyear)
+        //     console.log(vehiclemileage)
+        //     console.log(date)
+        //     console.log(time)
+        //     console.log(company)
+        //     console.log(check)
+        //     console.log(contactname)
+        //     console.log(contactemail)
+        //     console.log(contactphone)
+        //     console.log(contactmessage)
 
-            window.location.href = "../../Page/Appoinment/payment.html"
-        }
+        //     window.location.href = "../../Page/Appoinment/payment.html"
+        // }
 
     </script>
 </body>

@@ -34,9 +34,13 @@
 .logo{
     margin-top: 2.5%;
 }
-.logo img{
-    width: 110px;
-    margin-left: 55%;
+.live-on{
+    width: 40px;
+    margin-left: 20px;
+}
+.live{
+    width: 100px;
+    filter: invert(100%) sepia(33%) saturate(7125%) hue-rotate(187deg) brightness(130%) contrast(96%);
 }
 .center{
     margin-top: 2.5%;

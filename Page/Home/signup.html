@@ -16,80 +16,160 @@
 <body>
     <main>
         <div class="container2">
-            <div class="more">
+            <!-- <div class="more">
                 <img src="../../assets/Images/red-car.png" alt="">
-            </div>
-            <div class="form-page1">
-                <h1>Sign Up</h1>
-                <p>Use either your email or a verified phone number</p>
-                <label for="user-name">
-                    <input class="name" id="user-name" type="text" name="user name" placeholder="User Name" value="">
-                </label>
-                <form action="" class="ra-btn"><br>
-                    <label for="male"><input class="radio" type="radio" name="male">Male</label>
-                    <label for="female"><input class="radio" type="radio" name="male">Female</label>
-                    <label for="others"><input class="radio" type="radio" name="male">Others</label>
-                </form>
-                <label for="user-number">
-                    <input class="name" id="mobile-number" type="number" name="user number"
-                        placeholder="Enter Phone number" value="">
-                </label>
-                <label for="user-email">
+            </div> -->
+            <h1>Sign Up</h1><br>
+            <p>Create a account and touch with Live-On</p><br>
+
+            <form id="form-page1" >
+
+                <div class="first-name">
+                    <input class="name" id="user-firstname" type="text" pattern="[A-Za-z]{1,32}" name="user name" title="First name connot contain spaces" placeholder="First Name" value="" required="true">
+                </div>
+
+               <div class="last-name">
+                    <input class="name" id="user-lastname" type="text" name="user name" pattern="[A-Za-z]{1,32}" placeholder="Last Name" value="" title="Last name connot contain spaces" required="true">
+                </div>
+                <div class="ra-btn">
+
+                    <div class="male">
+                        <input class="radio" type="radio" id="male" name="male" required="true" value="male">
+                        <label for="male">Male</label>
+                    </div>
+
+                    <div class="male">
+                        <input class="radio" type="radio" id="male" name="male" required="true">
+                        <label for="female">Female</label>
+                    </div>
+
+                    <div class="male">
+                        <input class="radio" type="radio" id="male" name="male" required="true">
+                        <label for="others">Others</label>
+                    </div>
+                </div>
+
+                <div class="email">
                     <input class="name" id="user-email" type="email" name="user email" placeholder="name@gmail.com"
-                        value="">
-                </label>
-                <label for="user-password">
-                    <input class="name" id="user-password" type="password" name="user password"
-                        placeholder="Enter password">
-                </label>
-                <label for="user-address">
-                    <input class="name" id="user-address" type="number" name="user address"
-                        placeholder="Pincode">
-                </label>
-                <a href="/Page/Home/home.html"><button class="name" onclick="getData()" type="submit">submit</button></a>
-                <!-- <p>OR SIGN IN WITH</p> -->
-                <!-- <div class="opptions">
-                    <img src="../../assets/Icons/google-icon.jpg" alt="google icon">
-                    <img class="fb" src="../../assets/Icons/fb-icon.jpg" alt="face book">
-                    <img src="../../assets/Icons/linkedin-icon.jpg" alt="linkedin icon">
-                    <img src="../../assets/Icons/apple-icon.jpg" alt="">
-                 </div> -->
-            </div>
+                        value="" required="true" title="First name connot contain spaces">
+                </div>
+
+                <div class="password">
+                    <input class="name" id="user-password" type="password" pattern="[A-Za-z0-9]{6,20}" name="user password"
+                        placeholder="Enter password" required="true" title="password connot contain spaces">
+                </div>
+
+                <div class="confirm-password">
+                    <input class="name" id="confirm-password" type="password" pattern="[A-Za-z0-9]{6,20}" name="user password"
+                        placeholder="Confirm password" required="true"  title="Confirm password contain match us password">
+                </div>
+
+                <div class="address">
+                    <input class="name" id="user-address" type="text" pattern="[A-za-z0-9]{6,50}" name="user address"
+                       placeholder="Pincode" required="true">
+                </div>
+
+                <div> 
+                    <button  type="submit" class="name" onclick="getData()" >Submit</button>
+                </div>
+                <a href="../Home/signin.html">Already have an account</a>
+ 
+            </form>
         </div>
 
     </main>
 
     <script>
+        function getData(){
 
-          function getData(){
-            const user_name = document.getElementById("user-name").value
-            const user_number = document.getElementById("mobile-number").value
-            const user_email = document.getElementById("user-email").value
-            const user_password = document.getElementById("user-password").value
-            const user_address = document.getElementById("user-address").value
+            //This is for get a data in form
+            const firstName = document.getElementById("user-firstname").value;
+            const lastName = document.getElementById("user-lastname").value;
+            const gender = document.getElementById("male").value;
+            const email = document.getElementById("user-email").value;
+            const password = document.getElementById("user-password").value;
+            const address = document.getElementById("user-address").value;
+
+            //This is for store data in localstorage
+
+            let data={
+                "user_Firstname" :firstName,
+                "user_lastname":lastName,
+                "gender":gender,
+                "email":email,
+                "password":password,
+                "address":address
+
+
+            }
+            let arr=[];  //obj{},
+
+            arr=JSON.parse(localStorage.getItem("array"))?
+            JSON.parse(localStorage.getItem("array")):[]
+
+
+            if(arr.some((v)=>{})){
+                alert("email id already taken")
+            }
+            else{
+                arr.push(data
+                )   
+            }
+           
+            localStorage.setItem("array",JSON.stringify(arr));
+
+            console.log(arr)
+        }
+        
+// const formsData=document.getElementById("form-page1")
+// formsData.addEventListener('submit',e=>{
+//     e.preventDefault();
+//     getUserData();
+// })
+
+
+//           function getUserData(){
+
+
+//             const nameEl = document.getElementById("user-firstname").value
+//             const last_nameEl = document.getElementById("user-lastname").value
+//             const maleEl = document.getElementById("male").value
+//             const femaleEl = document.getElementById("female").value
+//             const othersEl = document.getElementById("others").value
+//             const numberEl = document.getElementById("mobile-number").value
+//             const emailEl = document.getElementById("user-email").value
+//             const passwordEl = document.getElementById("user-password").value
+//             const addressEl = document.getElementById("user-address").value
             
+// let user_data= new Array();
+// user_data=JSON.parse(localStorage.getItem("person_details"))?JSON.parse(localStorage.getItem("person_details")):[]
+// if (user_data.some((y)=>{return y.userEmail==emailEl})){
+//     alert("email is already taken")
+// }
+// else{
 
-            let user_records= new Array();
- user_records= JSON.parse(localStorage.getItem("user_details"))
- ?JSON.parse(localStorage.getItem("user_details"))
- :[]
- user_records.push(
-    {
-        "user_name":user_name,
-        "user_email":user_email,
-        "user_Phoneno":user_number,
-        "user_Password":user_password,
-        "user-address":user_address
+//     user_data.push ( 
+//         {
+//         "userFirstname":nameEl,
+//         "userLastName":last_nameEl,
+//         "gender":maleEl,
+//         "gender":femaleEl,
+//         "gender":othersEl,
+//         "userEmail":emailEl,
+//         "userPhonen":numberEl,
+//         "userPassword":passwordEl,
+//         "userAddress":addressEl
+        
+//     });
 
-    }
- )
- localStorage.setItem("user_details",JSON.stringify(user_records));
-          }
+// }
+
+// localStorage.setItem("person_details",JSON.stringify(user_data))
+
+//           }
 
 
-
-
-    </script>
+    </script> 
 
 </body>
 
