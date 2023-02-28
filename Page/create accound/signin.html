@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live On - Too Fast Too Quick</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/Icons/live-on.png">
+    <link rel="stylesheet" href="../../assets/Css/Login-Pages/signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- <header>
+        <div class="logo">
+            <img class="live-on" src="../../assets/Icons/live-on.png" alt="">
+            <img class="live" src="../../assets/Icons/text-liveon-removebg-preview.png" alt="">
+        </div>
+        <a href=""><h1>TORKAN</h1></a> -->
+    <!-- <div class="search-bar">
+            <input type="text" class="search" placeholder="Search here">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+        <div class="menu">
+            <a href="../Home/signup.html"><button>SIGNUP</button></a>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href=""><i class="fa-solid fa-bars"></i></a>
+        </div>
+    </header>  -->
+    <main>
+        <div class="container">
+            <div class="more">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus esse et earum quos!
+                    Necessitatibus ducimus ipsam quis, numquam, nostrum harum sunt officiis ex dolores iste delectus
+                    consectetur inventore omnis dolore Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Voluptatibus esse et earum quos! Necessitatibus ducimus ipsam quis, numquam, nostrum harum sunt
+                    officiis ex dolores iste delectus consectetur inventore omnis dolore Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit. Voluptatibus esse et earum quos! Necessitatibus ducimus ipsam quis,
+                    numquam, nostrum harum sunt officiis ex dolores iste delectus consectetur inventore omnis dolore
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus esse et earum quos!
+                    Necessitatibus ducimus ipsam quis, numquam, nostrum harum sunt officiis ex dolores iste delectus
+                    consectetur inventore omnis dolore
+                </p>
+            </div>
+
+
+
+            <div class="form-page">
+                <!-- <form id="form"> -->
+                    <h1>Sign In</h1>
+                    <p>Use either your email or a verified phone number</p>
+                    <label for="user-name">
+                        <input class="name" id="user-email" type="text" name="user name"
+                            placeholder="Enter Email or Phone number" value=" ">
+                    </label>
+                    <label for="user-password">
+                        <input class="name" id="user-password" type="password" name="user password"
+                            placeholder="Enter password">
+                    </label>
+                    <button class="name" type="submit" onclick="yogi()">Continue</button>
+                    <!-- <input type="button" onclick="yogi" class="name"> -->
+                    <p>OR SIGN IN WITH</p>
+                    <div class="opptions">
+                        <img src="../../assets/Icons/google-icon.jpg" alt="google icon">
+                        <img class="fb" src="../../assets/Icons/fb-icon.jpg" alt="face book">
+                        <img src="../../assets/Icons/linkedin-icon.jpg" alt="linkedin icon">
+                        <img src="../../assets/Icons/apple-icon.jpg" alt="">
+                        <script src="../../assets/sweetalert.min.js"></script>
+                    </div>
+                    <a href="../../Page/create accound/user-signup.html">Create a account</a>
+                <!-- </form> -->
+            </div>
+
+
+        </div>
+    </main>
+
+
+    <script>
+
+       
+        function yogi() {
+
+            let emaiL = document.getElementById("user-email").value;
+            let passworD = document.getElementById("user-password").value;
+
+            let array = JSON.parse(localStorage.getItem("array"))
+
+            let res;
+            array.find(element =>{
+                if(element["email"] == emaiL && element["password"] == passworD){
+                    // let constant = element
+                    // localStorage.setItem("profile",JSON.stringify (constant))
+                    return res = 1;
+                }
+                else{
+                    return res=0;
+                }
+            });
+            if(res==1){
+                swal("Yep!", "you logged in bruh!", "success");
+                 window.location.href="../../Page/Home/profile.html"
+            }
+            else{
+                swal("Oops!", "email or password is not correct!", "error");
+            }
+
+            // array.find(function (element) {
+            //     if (emaiL == element["email"]) {
+            //         alert("success")
+            //     }
+            //     else{
+            //         alert(exsist)
+            //     }
+            // })
+            // let data = {
+            //     "umail": emaiL,
+            //     "uPass": passworD
+            // };
+          
+
+// let json=JSON.parse(localStorage.getItem("array"))
+
+// if(json==true){
+//     json=JSON.parse(localStorage.getItem("array"))
+// }
+// else{
+//     details = [];
+// }
+
+
+//             details.push(data);
+
+//             localStorage.setItem("array",JSON.stringify(json))
+        }
+        // console.log(data);
+        // document.getElementById("form").innerHTML = form;
+
+
+    </script>
+</body>
+
+</html>
