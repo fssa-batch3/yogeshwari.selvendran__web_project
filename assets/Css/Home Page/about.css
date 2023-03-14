@@ -150,7 +150,7 @@ header {
     font-size: 18px;
     font-weight: 500;
     border-radius: 5px;
-    display: none;
+    /* display: none; */
 }
 
 .cen-ul :nth-child(3) i {
@@ -181,8 +181,8 @@ header {
 /* This is about head section */
 .about-us{
     background: #6a3093;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background: -webkit-linear-gradient(to right, #a044ff, #6a3093);   Chrome 10-25, Safari 5.1-6  */
+    /*background: linear-gradient(to right, #a044ff, #6a3093);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 14em;
     color: white;
     border: solid;
