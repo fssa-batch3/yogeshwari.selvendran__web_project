@@ -147,7 +147,7 @@ header {
     font-size: 18px;
     font-weight: 500;
     border-radius: 5px;
-    display: none;
+    /* display: none; */
 }
 
 .cen-ul :nth-child(3) i {
@@ -262,7 +262,6 @@ header {
     justify-content: space-evenly;
     align-items: center;
     margin-right: 80px;
-    align-items: center;
     margin-top: 18px;
 }
 

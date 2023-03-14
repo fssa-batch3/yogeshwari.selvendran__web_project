@@ -212,7 +212,7 @@ button {
     font-size: var(--sub-p);
     line-height: 25px;
     margin-top: 1%;
-    line-height: 150%;
+    /* line-height: 150%; */
     animation: head 2.5s ease-in-out;
 }
 
