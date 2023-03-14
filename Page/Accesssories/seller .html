@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live On - Too Fast Too Quick</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../../assets/Icons/live-on.png">
-    <link rel="stylesheet" href="../../assets/Css/Accessories-Page/accessories.css">
+    <link rel="stylesheet" href="../../assets/Css/Accessories-Page/seller.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -34,7 +34,7 @@
                 </ul>
             </nav>
         </div>
-    </div>
+    </div><br>
     <header>
         <div class="logo">
             <img class="live-on" src="../../assets/Icons/live-on.png" alt="">
@@ -99,7 +99,34 @@
     </div>
  
     <!-- This is product-details -->
-    <div class="product-section">
+    <div class="product-detail">
+        <div class="uplode-item">
+            <form action="">
+                <div class="pic-uplode">
+                    <label for="">Product Image</label>
+                    <input type="url" id="picture" placeholder="Uplode product image">
+                </div>
+                <div class="product-name">
+                    <label for="">Product Name</label>
+                    <input type="text" id="Name" placeholder=" product Name">
+                </div>
+                <div class="product-price">
+                    <label for="">Product Price</label>
+                    <input type="text" id="Price" placeholder=" product Price">
+                </div>
+                <div class="product-descripition">
+                    <label for="">Descripition</label>
+                    <input type="text" id="Descripition" placeholder="product Descripition">
+                </div>
+                <div class="product-btn">
+                    <button id="Product_btn">Submit</button>
+                 
+                 </div>
+            </form>
+            
+        </div>
+    </div>
+    <!-- <div class="product-section">
         <div class="products">
             <img src="../../assets/Images/bike-engine1.png" alt="engine image" class="engine">
             <ul>
@@ -128,9 +155,9 @@
             <h3>Descripition</h3><br>
             <p>With this HP laptop, whose astounding features can stun you, you can enjoy seamless operation and elevate your visual experience. This laptop's stylish design and large 35.56 cm (14) display enable you to flaunt it wherever you go while still getting work done. Furthermore, your multitasking abilities reach the next level thanks to Intel Graphics and Processor. Moreover, you can benefit from lightning-fast data transfers and the exceptional performance of this laptop considering the SSD support of up to 256 GB.</p>
            </div>
-           <a href="../../Page/Accesssories/seller .html">seller</a>
+
         </div>
-    </div>
+    </div> -->
     <footer>
         <div class="footer-item">
             <div class="main-item">
@@ -191,6 +218,50 @@
     <div class="copy-right">
         <p> &copy;Copyright 2023 Carservice Theme by my won design</p>
     </div>
-    
+    <form action="">
+        <div class="pic-uplode">
+            <label for="">Product Image</label>
+            <input type="url" id="picture" placeholder="Uplode product image">
+        </div>
+        <div class="product-name">
+            <label for="">Product Name</label>
+            <input type="text" id="Name" placeholder=" product Name">
+        </div>
+        <div class="product-price">
+            <label for="">Product Price</label>
+            <input type="text" id="Price" placeholder=" product Price">
+        </div>
+        <div class="product-descripition">
+            <label for="">Descripition</label>
+            <input type="text" id="Descripition" placeholder="product Descripition">
+        </div>
+        
+    </form>
+    <script>
+
+        const btn = document.getElementById("Product_btn")
+
+        
+        btn.addEventListener( "click", function productData(e){
+
+            e.preventDefault();
+             const pPic = document.getElementById("picture").value;
+            const pName = document.getElementById("Name").value;
+            const pPrice = document.getElementById("Price").value;
+            const pDescripition = document.getElementById("Descripition").value;
+
+        let str = new Array();
+        str = JSON.parse(localStorage.getItem("surway")) ? JSON.parse(localStorage.getItem("surway")) :[]
+        
+            str.push({
+                "product_Pic": pPic,
+                "product_Name": pName,
+                "product_Price": pPrice,
+                 "product_Descripition": pDescripition
+            })
+            localStorage.setItem("surway", JSON.stringify(str))
+        })
+       
+    </script>
 </body>
 </html>

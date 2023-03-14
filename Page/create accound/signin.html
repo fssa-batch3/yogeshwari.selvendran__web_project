@@ -31,57 +31,65 @@
         </div>
     </header>  -->
     <main>
-        <div class="container">
-            <div class="more">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus esse et earum quos!
-                    Necessitatibus ducimus ipsam quis, numquam, nostrum harum sunt officiis ex dolores iste delectus
-                    consectetur inventore omnis dolore Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Voluptatibus esse et earum quos! Necessitatibus ducimus ipsam quis, numquam, nostrum harum sunt
-                    officiis ex dolores iste delectus consectetur inventore omnis dolore Lorem ipsum dolor, sit amet
-                    consectetur adipisicing elit. Voluptatibus esse et earum quos! Necessitatibus ducimus ipsam quis,
-                    numquam, nostrum harum sunt officiis ex dolores iste delectus consectetur inventore omnis dolore
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus esse et earum quos!
-                    Necessitatibus ducimus ipsam quis, numquam, nostrum harum sunt officiis ex dolores iste delectus
-                    consectetur inventore omnis dolore
-                </p>
-            </div>
-
-
-
-            <div class="form-page">
-                <!-- <form id="form"> -->
-                    <h1>Sign In</h1>
-                    <p>Use either your email or a verified phone number</p>
-                    <label for="user-name">
-                        <input class="name" id="user-email" type="text" name="user name"
-                            placeholder="Enter Email or Phone number" value=" ">
-                    </label>
-                    <label for="user-password">
-                        <input class="name" id="user-password" type="password" name="user password"
-                            placeholder="Enter password">
-                    </label>
-                    <button class="name" type="submit" onclick="yogi()">Continue</button>
-                    <!-- <input type="button" onclick="yogi" class="name"> -->
-                    <p>OR SIGN IN WITH</p>
-                    <div class="opptions">
-                        <img src="../../assets/Icons/google-icon.jpg" alt="google icon">
-                        <img class="fb" src="../../assets/Icons/fb-icon.jpg" alt="face book">
-                        <img src="../../assets/Icons/linkedin-icon.jpg" alt="linkedin icon">
-                        <img src="../../assets/Icons/apple-icon.jpg" alt="">
-                        <script src="../../assets/sweetalert.min.js"></script>
+        <div class="context">
+            <!-- <div class="container2"> -->
+                <div class="container">
+                    <div class="more">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus esse et earum quos!
+                            Necessitatibus ducimus ipsam quis, numquam, nostrum harum sunt officiis ex dolores iste
+                            delectus
+                            consectetur inventore omnis dolore Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Voluptatibus esse et earum quos! Necessitatibus ducimus ipsam quis, numquam, nostrum harum
+                            sunt
+                            officiis ex dolores iste delectus consectetur inventore omnis dolore Lorem ipsum dolor, sit
+                            amet
+                            consectetur adipisicing elit. Voluptatibus esse et earum quos! Necessitatibus ducimus ipsam
+                            quis,
+                            numquam, nostrum harum sunt officiis ex dolores iste delectus consectetur inventore omnis
+                            dolore
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus esse et earum quos!
+                            Necessitatibus ducimus ipsam quis, numquam, nostrum harum sunt officiis ex dolores iste
+                            delectus
+                            consectetur inventore omnis dolore
+                        </p>
                     </div>
-                    <a href="../../Page/create accound/user-signup.html">Create a account</a>
-                <!-- </form> -->
-            </div>
 
 
+
+                    <div class="form-page">
+                        <!-- <form id="form"> -->
+                        <h1>Sign In</h1>
+                        <p>Use either your email or a verified phone number</p>
+                        <label for="user-name">
+                            <input class="name" id="user-email" type="text" name="user name"
+                                placeholder="Enter Email or Phone number" value=" ">
+                        </label>
+                        <label for="user-password">
+                            <input class="name" id="user-password" type="password" name="user password"
+                                placeholder="Enter password">
+                        </label>
+                        <button class="name" type="submit" onclick="yogi()">Continue</button>
+                        <!-- <input type="button" onclick="yogi" class="name"> -->
+                        <p>OR SIGN IN WITH</p>
+                        <div class="opptions">
+                            <img src="../../assets/Icons/google-icon.jpg" alt="google icon">
+                            <img class="fb" src="../../assets/Icons/fb-icon.jpg" alt="face book">
+                            <img src="../../assets/Icons/linkedin-icon.jpg" alt="linkedin icon">
+                            <img src="../../assets/Icons/apple-icon.jpg" alt="">
+                            <script src="../../assets/sweetalert.min.js"></script>
+                        </div>
+                        <a href="../../Page/create accound/user-signup.html">Create a account</a>
+                        <!-- </form> -->
+                    </div>
+                </div>
+            <!-- </div> -->
         </div>
     </main>
 
 
     <script>
 
-       
+
         function yogi() {
 
             let emaiL = document.getElementById("user-email").value;
@@ -90,21 +98,21 @@
             let array = JSON.parse(localStorage.getItem("array"))
 
             let res;
-            array.find(element =>{
-                if(element["email"] == emaiL && element["password"] == passworD){
-                    // let constant = element
-                    // localStorage.setItem("profile",JSON.stringify (constant))
+            array.find(element => {
+                if (element["email"] == emaiL && element["password"] == passworD) {
+                    let constant = element
+                    localStorage.setItem("profile", JSON.stringify(constant))
                     return res = 1;
                 }
-                else{
-                    return res=0;
+                else {
+                    return res = 0;
                 }
             });
-            if(res==1){
+            if (res == 1) {
                 swal("Yep!", "you logged in bruh!", "success");
-                 window.location.href="../../Page/Home/profile.html"
+                window.location.href = "../../Page/Home/profile.html"
             }
-            else{
+            else {
                 swal("Oops!", "email or password is not correct!", "error");
             }
 
@@ -120,21 +128,21 @@
             //     "umail": emaiL,
             //     "uPass": passworD
             // };
-          
-
-// let json=JSON.parse(localStorage.getItem("array"))
-
-// if(json==true){
-//     json=JSON.parse(localStorage.getItem("array"))
-// }
-// else{
-//     details = [];
-// }
 
 
-//             details.push(data);
+            // let json=JSON.parse(localStorage.getItem("array"))
 
-//             localStorage.setItem("array",JSON.stringify(json))
+            // if(json==true){
+            //     json=JSON.parse(localStorage.getItem("array"))
+            // }
+            // else{
+            //     details = [];
+            // }
+
+
+            //             details.push(data);
+
+            //             localStorage.setItem("array",JSON.stringify(json))
         }
         // console.log(data);
         // document.getElementById("form").innerHTML = form;

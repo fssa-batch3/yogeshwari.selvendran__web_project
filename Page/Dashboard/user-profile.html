@@ -18,7 +18,8 @@
     <div class="account-section">
         <div class="side-item">
             <div class="page">
-                <img src="../../assets/New_collection/image-emily.jpg" alt="">
+                <span></span>
+                <!-- <img src="../../assets/New_collection/image-emily.jpg" alt=""> -->
                 <div>
                     <h4>Yogesh_yogi</h4>
                     <small>Customer_ID</small>
@@ -39,16 +40,20 @@
                             <span>Appointments</span></a>
                     </li>
                     <li>
-                        <a href="" class="active"><span class="fa-solid fa-circle-user"></span>
+                        <a href="" class="active"><span class="fa-solid fa-bookmark"></span>
                             <span>Wishlist</span></a>
                     </li>
                     <li>
-                        <a href="" class="active"><span class="fa-solid fa-circle-user"></span>
+                        <a href="" class="active"><span class="fa-solid fa-tags"></span>
                             <span>Offers</span></a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="" class="active"><span class="fa-solid fa-calendar-check"></span>
                             <span>History</span></a>
+                    </li> -->
+                    <li>
+                        <a href="" class="active"><span class="fa-solid fa-right-from-bracket"></span>
+                            <span id="log" onclick="deleted()">Logout</span></a>
                     </li>
 
                 </ul>
@@ -92,145 +97,157 @@
             <!-- This is profile update section-->
             <div class="user-condainer">
                 <div class="head-item">
-
+                    <img src="" alt="">
+                    <input type="file">
                 </div>
                 <div class="information">
-                <form >
-                    <!-- This is First name  -->
-                    <div class="first-name" id="align-num">
-                        <label class="more"> First Name</label>
-                        <input class="name" id="user-firstname" type="text" pattern="[A-Za-z]{1,32}" name="user name"
-                            title="First name connot contain spaces" placeholder="First Name" value="" required="true">
+                    <form id="form">
+                        <!-- This is First name  -->
+                        <div class="first-name" id="align-num">
+                            <label class="more"> First Name</label>
+                            <input class="name" id="user-firstname" type="text" pattern="[A-Za-z]{1,32}"
+                                name="user name" title="First name connot contain spaces" placeholder="First Name"
+                                value="" required="true" disabled>
 
-                    </div>
-                    <!-- This is Last name  -->
-                    <div class="last-name" id="align-num">
-                        <label class="more"> Last Name</label>
-                        <input class="name" id="user-lastname" type="text" name="user name" pattern="[A-Za-z]{1,32}"
-                            placeholder="Last Name" value="" title="Last name connot contain spaces" required="true">
+                        </div>
+                        <!-- This is Last name  -->
+                        <div class="last-name" id="align-num">
+                            <label class="more"> Last Name</label>
+                            <input class="name" id="user-lastname" type="text" name="user name" pattern="[A-Za-z]{1,32}"
+                                placeholder="Last Name" value="" title="Last name connot contain spaces" required="true"
+                                disabled>
 
-                    </div>
-                    <!-- This is gender male /female / others -->
-                    <div class="ra-btn">
+                        </div>
+                        <!-- This is email input  -->
+                        <div class="email" id="align-num">
+                            <label class="more"> Email</label>
+                            <input class="name" id="user-email" type="email" name="user email"
+                                placeholder="name@gmail.com" value="" required="true"
+                                title="First name connot contain spaces" disabled>
 
-                        <div class="male">
-                            <input class="radio" type="radio" id="male" name="male" required="true" value="male">
-                            <label for="male">Male</label>
                         </div>
 
-                        <div class="male">
-                            <input class="radio" type="radio" id="male" name="male" required="true">
-                            <label for="female">Female</label>
+                        <!-- This is user mobile number -->
+                        <div class="number" id="align-num">
+                            <label class="more"> Number</label>
+                            <input class="name" id="user-number" type="text" pattern="[0-9]{10,25}" name="user mobile"
+                                placeholder="+91 8923456789" required="true" disabled>
                         </div>
-                    </div>
-                    <!-- This is email input  -->
-                    <div class="email" id="align-num">
-                        <label class="more"> Email</label>
-                        <input class="name" id="user-email" type="email" name="user email" placeholder="name@gmail.com"
-                            value="" required="true" title="First name connot contain spaces">
 
-                    </div>
-                    <!-- This is password input  -->
-                    <div class="password" id="align-num">
-                        <label class="more"> Password</label>
-                        <input class="name" id="user-password" type="password" pattern="[A-Za-z0-9]{6,20}"
-                            name="user password" placeholder="Enter password" required="true"
-                            title="password connot contain spaces">
 
-                    </div>
-                    <!-- This is Address input  -->
-                    <div class="address" id="align-num">
-                        <label class="more"> Address</label>
-                        <input class="name" id="user-address" type="text" pattern="[A-za-z0-9]{6,90}"
-                            name="user address" placeholder="Pincode" required="true">
 
-                    </div>
-                    <div>
-                        <button type="update" class="name">Submit</button>
-                    </div>
-                </form>
+
+
+                        <!-- This is districk -->
+                        <div class="address" id="align-num">
+                            <label class="more"> Address</label>
+
+                            <input class="name" id="user-address" type="text" pattern="[A-za-z0-9]{6,90}"
+                                name="user address" placeholder="Add Address" required="true" disabled>
+
+                        </div>
+                        <!-- This is Address input  -->
+                        <div class="address" id="align-num">
+                            <label class="more"> Pincode</label>
+                            <input class="name" id="user-pincode" type="text" pattern="[A-za-z0-9]{6,90}"
+                                name="user address" placeholder="Pincode" required="true" disabled>
+
+                        </div>
+                        <!-- This is update button -->
+                        <div>
+                            <button type="button" id="btn" class="name">Edit</button>
+                        </div>
+                        <!-- This is delete button -->
+                        <!-- <div>
+                            <button type="button" class="name" onclick="clearData()">Delete</button>
+                        </div> -->
+                    </form>
                 </div>
             </div>
 
-            <!-- <main>
-                <div class="cards">
-                    <div class="single-card">
-                        <div>
-                            <h1>54</h1>
-                            <span>Customer</span>
-                        </div>
-                        <div>
-                            <span class="fa-solid fa-bag-shopping"></span>
-                        </div>
-                    </div>
-                    <div class="single-card">
-                        <div>
-                            <h1>50</h1>
-                            <span>Customer</span>
-                        </div>
-                        <div>
-                            <span class="fa-solid fa-bag-shopping"></span>
-                        </div>
-                    </div>
-                    <div class="single-card">
-                        <div>
-                            <h1>79</h1>
-                            <span>Customer</span>
-                        </div>
-                        <div>
-                            <span class="fa-solid fa-bag-shopping"></span>
-                        </div>
-                    </div>
-                    <div class="single-card">
-                        <div>
-                            <h1>79</h1>
-                            <span>Customer</span>
-                        </div>
-                        <div>
-                            <span class="fa-solid fa-bag-shopping"></span>
-                        </div>
-                    </div>
-                </div>
-               </main> -->
+
         </div>
     </div>
-    <!-- <div class="personal-information">
-        <div class="information">
-            
-            <label for="" class="more"> User Name<br><br>
-                <input class="name" id="user-firstname" type="text" pattern="[A-Za-z]{1,32}" name="user name" title="First name connot contain spaces" placeholder="First Name" value="" required="true">
-            </label><br>
-            
-            <form action="">
-                <p class="more">Your Gender</p><br>
-                <label for=""><input type="radio" name="male" id="male">Male</label>
-                <label for=""><input type="radio" name="male" id="male">Female</label>
-            </form><br>
-            <label id ="label_email"for="" class="more">Email Address <br><br>
-                <input type="email" placeholder="Email Address" class="user-name"></label><br>
-            <label id="label_pass "for="" class="more">Password <br><br>
-                <input type="password" placeholder="Password" class="user-name"></label><br>
-            <label for="" class="more">Mobile Number<br><br><input type="number" placeholder="+9087654534"
-                    class="user-name"></label><br><br>
-            <button>Submit</button><br><br> -->
-    <!-- <h3>FAQs</h3>
-            <p class="question">What happens when I update my email address (or mobile number)?</p>
-            <p>Your login email id (or mobile number) changes, likewise. You'll receive all your account related
-                communication on your updated email address (or mobile number).</p>
-            <p class="question">When will my Flipkart account be updated with the new email address (or mobile
-                number)?</p>
-            <p>It happens as soon as you confirm the verification code sent to your email (or mobile) and save the
-                changes.</p>
-            <p class="question">What happens to my existing Flipkart account when I update my email address (or
-                mobile number)?</p>
-            <p>Updating your email address (or mobile number) doesn't invalidate your account. Your account remains
-                fully functional. You'll continue seeing your Order history, saved information and personal details.
-            </p>
-            <p class="question">Does my Seller account get affected when I update my email address?</p>
-            <p>Flipkart has a 'single sign-on' policy. Any changes will reflect in your Seller account also.</p>
-            <span>Deactivate Account</span> -->
-    </div>
 
+    </div>
+    <script>
+
+        const user = JSON.parse(localStorage.getItem("profile"))
+
+        //This is for get a data in form
+        const firstName = document.getElementById("user-firstname");
+        const lastName = document.getElementById("user-lastname");
+        const email = document.getElementById("user-email");
+        // const password = document.getElementById("user-password");
+        //const confirmPassword = document.getElementById("confirm-password").value;
+        const userMobile = document.getElementById("user-number");
+        const address = document.getElementById("user-address");
+        const pincodeAddress = document.getElementById("user-pincode");
+
+        //console.log();
+        //This is for store data in localstorage
+        firstName.value = user["user_Firstname"]
+        lastName.value = user["user_lastname"]
+        email.value = user["email"]
+        userMobile.value = user["mobile"]
+        address.value = user["address1"]
+        pincodeAddress.value = user["pinaddress"]
+
+        // localStorage.setItem("profile",JSON.stringify(user))
+
+
+        const btn = document.getElementById("btn")
+
+        btn.addEventListener("click", function () {
+
+            if (btn.innerHTML == "save") {
+                btn.innerHTML = "edit"
+                firstName.setAttribute("disabled", "")
+                lastName.setAttribute("disabled", "")
+
+                userMobile.setAttribute("disabled", "")
+                address.setAttribute("disabled", "")
+                pincodeAddress.setAttribute("disabled", "")
+
+            }
+            else if (btn.innerHTML = "edit") {
+                btn.innerHTML = "save"
+                firstName.removeAttribute("disabled")
+                lastName.removeAttribute("disabled")
+
+                userMobile.removeAttribute("disabled")
+                address.removeAttribute("disabled")
+                pincodeAddress.removeAttribute("disabled")
+            }
+
+            const userid = JSON.parse(localStorage.getItem("array"))
+            // const userlist = JSON.parse(localStorage.getItem("profile"))
+            userid.find(element => {
+                if (email.value == element["email"]) {
+
+                    element["user_Firstname"] = firstName.value
+                    element["user_lastname"] = lastName.value
+                    element["mobile"] = userMobile.value
+                    element["address1"] = address.value
+                    element["pinaddress"] = pincodeAddress.value
+                    localStorage.setItem("array", JSON.stringify(userid))
+                    localStorage.setItem("profile", JSON.stringify(element))
+                }
+            })
+        })
+
+        const log = document.getElementById("log")
+
+        log.addEventListener("click", function () {
+            const som = JSON.parse(localStorage.getItem("profile"))
+
+            const erase = delete som
+            localStorage.setItem("profile", JSON.stringify(erase))
+
+
+        })
+
+    </script>
 
 </body>
 

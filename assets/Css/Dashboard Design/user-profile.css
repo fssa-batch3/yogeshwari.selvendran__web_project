@@ -31,11 +31,11 @@
    justify-content: space-between;
     margin-top: 10%;
 }
-.page img{
+.page span{
     height: 200px;
     width: 200px;
     border-radius: 50%;
-
+    background-color: #fff;
 }
 .side-menu{
     margin-top: 3rem;
@@ -161,17 +161,26 @@ color: var(--color-dark);
     border: 0.5px solid #ccc;
     
  }
- .male .radio{
-    height: 16px;
-    width: 16px;
- }
- .male{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
- }
+
  form label{
     font-size: 1.1em;
+    padding-bottom: 1rem;
+ }
+ form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 100px;
+    gap: 40px;
+ }
+ button{
+    padding: 1rem;
+    width: 20em;
+    color: #fff;
+   background-color:var(--main-color);
+ }
+ button:hover{
+    color: #fff;
+    background-color:orange;
  }
 /* .user-war{
     display: flex;

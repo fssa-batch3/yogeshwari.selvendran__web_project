@@ -315,26 +315,27 @@ span{
 }
 
 /* This is accessories */
-.accessories .head-part{
+.head-part{
     /* background-image: url(../../assets/New_collection/Bik-part/poster-img.png);
     /* background-size: cover; */
-    /* height: 40vh;
+    /* 
     width: auto;  */
+    height: 50vh;
     background: #6a3093;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
-   height: 200px;
+   /* height: 200px; */
    margin-top: 2px;
    color: var(--white-color);
 }
-.head-part h1{
+/* .head-part h1{
     text-align: center;
     padding-top: 80px;
     letter-spacing: 2px;
     font-size: 60;
     line-height: 56px;
-}
+} */
 .options{
     display: flex;
     justify-content: space-between;
