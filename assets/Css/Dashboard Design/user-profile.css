@@ -9,7 +9,7 @@
 }
 /* variable declarations */
 :root{
-    --main-color: #9fa417;
+    --main-color: #8441b4;
     --color-dark:#1D2231;
     --text-grey:#8390A2;
 }
@@ -68,76 +68,43 @@ padding-left: 2rem;
 .main-item{
     margin-left: 345px;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    height: 90px;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+.side-menu button{
+   border: none;
+   border-radius: 30px 0px 0px 30px;
+}
+.side-menu li button{
+    width: 100%;
+    margin-bottom: 1.3rem;
+    padding-left: 0rem;
+    }
+.side-menu button{
+    display: block;
+    padding-left: 0rem;
+    color: #fff;
+    background-color:var(--main-color) ;
+    font-size: 1.1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 11rem;
+}
+.side-menu button.active:hover{
+    background: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--main-color);
+    border-radius: 30px 0px 0px 30px;
+}
+.side-menu button span:first-child{
+    font-size: 1.5rem;
+    padding-right: 1rem;
+
+}
+.user-container{
+    margin-top: 5px;
+    padding: 4rem ;
+    background: #fff;
     position: fixed;
     left: 345px;
-    width: calc(100% - 345px);
-    top: 0;
-    z-index: 100;
-}
-.logo{
-    display: flex;
-    padding-right: 1rem;
-}
-.live-on{
-    width: 30px;
-    height: 25px;
-}
-.live{
-    width:80px;
-    height: 25px;
-}
-/* .header h2{
-    color: #222;
-}
-.header label span{
-  font-size: 1.7rem;
-  padding-right: 1rem;
-} */
-.search-bar{
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    height: 40px;
-    width: 20rem;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-.search-bar span{
-    display: inline-block;
-    padding: 0rem .5rem;
-  font-size: .9rem;
-  color: var(--text-grey);
-}
-.search-bar input{
-    border: none;
-    outline: none;
-    padding: .5rem;
-    height: 80%;
-}
-.call-item a{
-    display: flex;
-    align-items: center;
-}
-.call-item a span{
-    font-size: 2.5em;
-    margin-right: 1rem;
-    color: var(--color-dark);
-}
-.em-list {
-    display: inline-block;
-color: var(--color-dark);
-}
-.user-condainer{
-    margin-top: 95px;
-    padding: 2rem 1.5rem;
-    background: #f1f5f9;
     min-height: calc(100vh - 90px);
 }
 .information{
@@ -172,13 +139,14 @@ color: var(--color-dark);
     margin: 100px;
     gap: 40px;
  }
- button{
+#form button{
+
     padding: 1rem;
     width: 20em;
     color: #fff;
    background-color:var(--main-color);
  }
- button:hover{
+ #form button:hover{
     color: #fff;
     background-color:orange;
  }

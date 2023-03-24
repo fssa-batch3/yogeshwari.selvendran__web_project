@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live On - Too Fast Too Quick</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/Icons/live-on.png">
+    <link rel="stylesheet" href="../../assets/Css/Login-Pages/signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <div class="context">
+            <!-- <div class="container2"> -->
+            <div class="container">
+                <!-- <div class="more">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus esse et earum quos!
+                            Necessitatibus ducimus ipsam quis, numquam, nostrum harum sunt officiis ex dolores iste
+                            delectus
+                            consectetur inventore omnis dolore Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Voluptatibus esse et earum quos! Necessitatibus ducimus ipsam quis, numquam, nostrum harum
+                            sunt
+                            officiis ex dolores iste delectus consectetur inventore omnis dolore Lorem ipsum dolor, sit
+                            amet
+                            consectetur adipisicing elit. Voluptatibus esse et earum quos! Necessitatibus ducimus ipsam
+                            quis,
+                            numquam, nostrum harum sunt officiis ex dolores iste delectus consectetur inventore omnis
+                            dolore
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus esse et earum quos!
+                            Necessitatibus ducimus ipsam quis, numquam, nostrum harum sunt officiis ex dolores iste
+                            delectus
+                            consectetur inventore omnis dolore
+                        </p>
+                    </div> -->
+
+
+                <div class="form-page">
+                    <!-- <form id="form"> -->
+                    <h1>Sign In</h1>
+                    <p>Use either your email or a verified phone number</p>
+
+                    <input class="name" id="user-email" type="email" name="user email" placeholder="Enter email">
+
+
+                    <input class="name" id="user-password" type="password" name="user password"
+                        placeholder="Enter password">
+
+                    <button class="name btn1" type="submit" onclick="yogi()">Continue</button>
+                    <!-- <input type="button" onclick="yogi" class="name"> -->
+                    <a href="../create_accound/user-signup.html">Create a account</a>
+                    <!-- </form> -->
+                </div>
+
+            </div>
+            <!-- </div> -->
+        </div>
+    </main>
+
+
+    <script>
+
+
+        function yogi() {
+
+            let useremail = document.getElementById("user-email").value;
+            let userpassword = document.getElementById("user-password").value;
+
+            let arraydetails = JSON.parse(localStorage.getItem("user_data"))
+
+            let result;
+            arraydetails.find(element => {
+                if (element["user_email"] == useremail && element["password"] == userpassword) {
+                    return result = 1;
+                }
+                else {
+                    return result = 0;
+                }
+            });
+            if (result == 1) {
+
+                // swal("Yep!", "you logged in bruh!", "success");
+                window.location.href = "../../Page/Dashboard/user-profile.html"
+                alert(" success")
+                localStorage.setItem("sign_in", useremail)
+
+            }
+            else {
+                alert(" failure")
+                // swal("Oops!", "email or password is not correct!", "error");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

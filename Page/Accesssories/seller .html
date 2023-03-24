@@ -99,7 +99,7 @@
     </div>
  
     <!-- This is product-details -->
-    <div class="product-detail">
+    <!-- <div class="product-detail">
         <div class="uplode-item">
             <form action="">
                 <div class="pic-uplode">
@@ -113,19 +113,19 @@
                 <div class="product-price">
                     <label for="">Product Price</label>
                     <input type="text" id="Price" placeholder=" product Price">
-                </div>
-                <div class="product-descripition">
+                </div> -->
+                <!-- <div class="product-descripition">
                     <label for="">Descripition</label>
                     <input type="text" id="Descripition" placeholder="product Descripition">
-                </div>
-                <div class="product-btn">
+                </div> -->
+                <!-- <div class="product-btn">
                     <button id="Product_btn">Submit</button>
                  
                  </div>
             </form>
             
         </div>
-    </div>
+    </div> -->
     <!-- <div class="product-section">
         <div class="products">
             <img src="../../assets/Images/bike-engine1.png" alt="engine image" class="engine">
@@ -158,6 +158,42 @@
 
         </div>
     </div> -->
+        <form>
+          <div class="container">
+            <div>
+              <p>Product Name</p><input type="text" class="inputs" id="pr_name">
+            </div>
+            <div>
+              <p>About product</p><input type="text" class="inputs" id="about_product">
+            </div>
+            <div>
+              <p>product price </p><input type="number" class="inputs" id="product_price">
+            </div>
+            <div>
+              <p>rating </p><input type="number" class="inputs" id="rating">
+            </div>
+            <div class="product-img">
+              <div>
+                <p>Upload image urls</p><input type="url" class="inputs" id="pr_img_1">
+              </div>
+              <div><input type="url" class="inputs" id="pr_img_2"></div>
+              <div><input type="url" class="inputs" id="pr_img_3"></div>
+              <div><input type="url" class="inputs" id="pr_img_4"></div>
+            </div>
+            <div>
+              <p>Highlights</p><input type="text" id="high">
+            </div>
+            <div>
+              <p>description</p><input type="text" id="description">
+            </div>
+            <div class="buttons">
+              <button type="button" class="pr_btn" id="sub">SUBMIT</button>
+              <button type="button" class="pr_btn" id="edit">EDIT</button>
+              <button type="button" class="pr_btn" id="delete">DELETE</button>
+            </div>
+          </div>
+        </form>
+      
     <footer>
         <div class="footer-item">
             <div class="main-item">
@@ -218,25 +254,7 @@
     <div class="copy-right">
         <p> &copy;Copyright 2023 Carservice Theme by my won design</p>
     </div>
-    <form action="">
-        <div class="pic-uplode">
-            <label for="">Product Image</label>
-            <input type="url" id="picture" placeholder="Uplode product image">
-        </div>
-        <div class="product-name">
-            <label for="">Product Name</label>
-            <input type="text" id="Name" placeholder=" product Name">
-        </div>
-        <div class="product-price">
-            <label for="">Product Price</label>
-            <input type="text" id="Price" placeholder=" product Price">
-        </div>
-        <div class="product-descripition">
-            <label for="">Descripition</label>
-            <input type="text" id="Descripition" placeholder="product Descripition">
-        </div>
-        
-    </form>
+<!-- 
     <script>
 
         const btn = document.getElementById("Product_btn")
@@ -252,8 +270,11 @@
 
         let str = new Array();
         str = JSON.parse(localStorage.getItem("surway")) ? JSON.parse(localStorage.getItem("surway")) :[]
+
+        const uid = Math.floor(Math.random() * 1000)
         
             str.push({
+                "product_id":uid,
                 "product_Pic": pPic,
                 "product_Name": pName,
                 "product_Price": pPrice,
@@ -262,6 +283,8 @@
             localStorage.setItem("surway", JSON.stringify(str))
         })
        
+    </script> -->
+    <script src="../../Page/JS files/seller.js">
     </script>
 </body>
 </html>

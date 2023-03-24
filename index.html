@@ -42,7 +42,7 @@
         <div class="contact">
             <ul>
                 <li>
-                    <a href="./Page/create accound/signin.html"><button> Signin </button></a>
+                    <a href="./Page/create_accound/signin.html"><button> Signin </button></a>
                 </li>
                 <li>
                     <a href="./Page/Contact/contact.html"><button> +9394959697 </button></a>
@@ -258,7 +258,7 @@
             <p>	&copy;Copyright 2023 Carservice Theme by my won design</p>
         </div>
     </div>
-    <script>
+    <script src="./Page/JS files/index.js">
         // $(document).ready(function(){
         //     $(".counter").counterUp({
         //         delay: 10,
@@ -296,50 +296,7 @@
         // contactBtn.addEventListener("click", () => {
         //     window.location.href = "./Page/Contact/contact.html";
         // });
-        var project = setInterval(projectDone, 10)
-        var cities = setInterval(happyCities, 10)
-        var service = setInterval(vehicle, 10)
-        var rodeside = setInterval(clients, 10)
-        let count1 = 1;
-        let count2 = 1;
-        let count3 = 1;
-        let count4 = 1;
-
-        function projectDone() {
-            count1++;
-            document.querySelector("#number1").innerHTML = count1;
-
-            if (count1 == 500) {
-                clearInterval(project)
-            }
-        }
-
-        function happyCities() {
-            count2++;
-            document.querySelector("#number2").innerHTML = count2;
-
-            if (count2 == 180) {
-                clearInterval(cities)
-            }
-        }
-
-        function vehicle() {
-            count3++;
-            document.querySelector("#number3").innerHTML = count3;
-
-            if (count3 == 1300) {
-                clearInterval(service)
-            }
-        }
-
-        function clients() {
-            count4++;
-            document.querySelector("#number4").innerHTML = count4;
-
-            if (count4 == 1500) {
-                clearInterval(rodeside)
-            }
-        }
+       
 
     </script>
 </body>
