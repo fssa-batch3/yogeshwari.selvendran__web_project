@@ -1,4 +1,5 @@
 # Project-Service
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fssa-batch3_yogeshwari.selvendran__web_project&metric=bugs)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_yogeshwari.selvendran__web_project)
  100day-project
  Problem statement: https://docs.google.com/document/d/19LGnTdCs0kGmoGGwDGwwVyFNCGGL_OSKpt34GczCVmI/edit
 
