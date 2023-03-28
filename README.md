@@ -36,3 +36,6 @@ The user is redirected to the profile page.
 Click Edit 
 There you can update your information except email:
 
+### Your Profile logout:
+Click logout 
+Directly go to signin page:
