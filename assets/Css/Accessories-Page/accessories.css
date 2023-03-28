@@ -111,17 +111,27 @@ header {
     justify-content: space-between;
 }
 
-.user li {
-    padding: 15px;
+/* .user li {
+    padding: 0px;
+} */
+.user:nth-child(3) img{
+    /* height: 50px;
+    width: 40px; */
+    position: relative;
+    bottom:28px;
+   border-radius: 50%;
+   height: 80px;
+   width: 80px;
 }
-
-/* .user,
+/* .user, a, .profile{
+    height: 40px;
+    width: 40px;
+} */
+/* .user, li 
 .profile {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    position: relative;
-    bottom: 9px;
 } */
 /* This is drop down menu nave bar */
 .service {
@@ -328,13 +338,15 @@ span {
 
 /* This is accessories head section  */
 .accessories{
-    margin: 2%;
+    margin: 3%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.head-part{
-    display: flex;
+.head-part img{
+    width: 900px;
+    height: 320px;
+    /* display: flex;
     align-items: center;
     justify-content: space-around;
     height: 30vh;
@@ -342,9 +354,9 @@ span {
     background: linear-gradient(to right, #a044ff, #6a3093);
     margin-top: 2px;
     color: var(--white-color);
-    border-radius: 2px;
+    border-radius: 2px; */
 }
-.left-align img{
+/* .left-align img{
    height: 25vh;
 }
 .right-align{
@@ -352,12 +364,21 @@ span {
     flex-direction: column;
     justify-content: space-between;
     height: 20vh;
-}
+} */
 .side-item{
     display: flex;
     flex-direction: column;
+    width: 390px;
 }
-.side-item,.part{
+.top-pic img{
+    height: 150px;
+    width: 100%
+}
+.sec-pic img{
+    height: 160px;
+    width: 390px;
+}
+/* .side-item,.part{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -366,13 +387,13 @@ span {
     background: linear-gradient(to right, #a044ff, #6a3093);
     margin-top: 2px;
     color: var(--white-color);
-}
-.part,.left-alignment img{
+} */
+/* .part,.left-alignment img{
     height: 13vh;
  }
  .part span{
 
- }
+ } */
 /* This is option section */
 .options {
     display: flex;
@@ -565,25 +586,6 @@ select {
     font-weight: 600;
 }
 
-.ratting {
-    font-size: 0.9rem;
-}
-
-.ratting :nth-child(1) {
-    color: gold;
-}
-
-.ratting :nth-child(2) {
-    color: gold;
-}
-
-.ratting :nth-child(3) {
-    color: gold;
-}
-
-.ratting :nth-child(4) {
-    color: rgb(204, 199, 199);
-}
 
 .page-collection ul {
     list-style: none;
@@ -757,10 +759,10 @@ input{
 .product-section {
     display: flex;
     justify-content: space-around;
-    height:450px;
+    height:550px;
     width: 1000px;
     margin-top: 50px;
-    margin-left: 250px;
+    margin-left: 100px;
     border-radius: 10px;
     background-color: #ffffff57;
     box-sizing: border-box;
@@ -768,25 +770,34 @@ input{
 
 }
 .products{
-    margin-top: 4%;
+    margin-top: 5%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 450px;
+    justify-content: space-between;
+    /* align-items: center; */
 }
 .engine {
-    height: 250px;
-  
+    height: 290px;
+    padding: 10px;
+  margin-left: 2%;
+  margin-top: 15%;
 }
 .products ul {
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 5%;
+    /* justify-content: space-evenly; */
  
 }
 ul img {
     height: 120px;
     width: 120px;
-    padding: 20px;
+    padding: 7px;
+}
+ul img:hover{
+    height: 140px;
+    width: 140px;
 }
 .list-btn{
     display: inline-block;
@@ -806,7 +817,7 @@ padding: 10px;
 }
 .product-ditails {
     margin-top: 4%;
-     height: 350px;
+     height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -815,14 +826,21 @@ padding: 10px;
 .product-ditails p{
     font-size: 16px;
 }
-.star span{
-    background-color: #1a9b2d;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--white-color);
-    padding: 6px 0px 6px 7px;
+.star1 span{
+    
+    font-size: 17px;
+    font-weight: bolder;
+    
     width: 55px;
+   
+  
+}
+.star1{
+    background-color: #1a9b2d;
+    color: var(--white-color);
+    padding: 5px 0px 5px 8px;
     border-radius: 5px;
+
 }
 .description1{
     width: 450px;

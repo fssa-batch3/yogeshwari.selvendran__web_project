@@ -39,8 +39,9 @@ header {
     height: 100px;
     box-sizing: border-box;
     box-shadow: 5px 0px 5px 0px #0000002c;
-    /* position: sticky;
-    top: 0; */
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .logo {
@@ -133,7 +134,7 @@ header {
 
 .sub-service ul {
     list-style: none;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
@@ -148,7 +149,7 @@ header {
     font-size: 18px;
     font-weight: 500;
     border-radius: 5px;
-    /* display: none; */
+    display: none;
 }
 
 .cen-ul :nth-child(3) i {
@@ -169,7 +170,7 @@ header {
     height: 130px;
     position: absolute;
     right: 570px;
-    top: 130px;
+    top: 80px;
     z-index: 3;
     border-style: groove;
     font-size: 18px;
@@ -211,11 +212,15 @@ span{
     margin-right:10px;
 }
 /* This is appointment */
-.appoinment{
-    background-color: #3F0071;
+.appoinment img{
+    height: 300px;
+    width: 1450px;
+    margin-left: 20px;
+    margin-top: 10px;
+    /* background-color: #3F0071;
     height: 200px;
     margin-top: 2px;
-    color: var(--white-color);
+    color: var(--white-color); */
 }
 .appoinment h1{
     text-align: center;
@@ -228,42 +233,10 @@ span{
 .live-location img{
     height: 793px;
 }
-/* Booking Appointment */
-.booking-app{
-    height: 350px;
-    background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-   margin-left: 5%;
-   margin-right: 5%;
-   border-radius: 1em;
-    
+/* This is my user booking a vehicle service    */
+.app-align{
+    margin-top: 5%;
 }
-.book-page{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--white-color);
-    /* padding-top: 60px; */
-}
-.booking-app span{
-    margin-top: 60px;
-    font-size: 50px;
-    font-weight: 600;
-}
-.book-page p{
-    font-size:20px;
-    margin-top: 20px;
-    font-weight: medium;
-    /* padding-top: 30px; */
-    /* line-height: 30px; */
-}
-.booking-app hr{
-    margin-top: 20px;
-    width: 350px;
-    line-height: 5px;
-    
-}
-/* vehicle year  */
 .vehicle-type{
     display: flex;
     justify-content: space-around;
@@ -395,9 +368,45 @@ span{
 /* button:hover{
     background-color: #094887;
 } */
+
+/* Booking Appointment */
+.booking-app{
+    height: 350px;
+    background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   margin-left: 5%;
+   margin-right: 5%;
+   border-radius: 1em;
+    margin-top: 40%;
+}
+.book-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-color);
+    /* padding-top: 60px; */
+}
+.booking-app span{
+    margin-top: 60px;
+    font-size: 50px;
+    font-weight: 600;
+}
+.book-page p{
+    font-size:20px;
+    margin-top: 20px;
+    font-weight: medium;
+    /* padding-top: 30px; */
+    /* line-height: 30px; */
+}
+.booking-app hr{
+    margin-top: 20px;
+    width: 350px;
+    line-height: 5px;
+    
+}
 /*  This is Footer */
 footer {
-    margin-top: 50%;
+    margin-top: 5%;
     height: 30vh;
 }
 

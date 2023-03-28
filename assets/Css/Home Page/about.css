@@ -135,7 +135,7 @@ header {
 
 .sub-service ul {
     list-style: none;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
@@ -150,7 +150,7 @@ header {
     font-size: 18px;
     font-weight: 500;
     border-radius: 5px;
-    /* display: none; */
+    display: none;
 }
 
 .cen-ul :nth-child(3) i {
@@ -180,23 +180,25 @@ header {
 }
 /* This is about head section */
 .about-us{
-    background: #6a3093;  /* fallback for old browsers */
+    /* background: #6a3093;  fallback for old browsers */
     /* background: -webkit-linear-gradient(to right, #a044ff, #6a3093);   Chrome 10-25, Safari 5.1-6  */
     /*background: linear-gradient(to right, #a044ff, #6a3093);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 14em;
+    /* height: 14em;
     color: white;
-    border: solid;
+    border: solid; */
 }
-.about{
-   display: flex;
+.about img{
+    width: 1480px;
+    height: 500px;
+   /* display: flex;
    flex-direction: column;
    justify-content: space-between;
    align-items: center;
    border: solid;
-   padding-top: 4%;
+   padding-top: 4%; */
 }
-.about h2{
-    /* margin-top: 1em; */
+/* .about h2{
+ 
     font-size: 2em;
     text-align: center;
 }
@@ -206,7 +208,7 @@ header {
     font-weight: 500;
     width: 50%;
     padding-top: 1%;
-}
+} */
 /* This is our first section */
 .first-part{
     display: flex;
@@ -247,7 +249,7 @@ font-weight: 700;
 letter-spacing: 0.05em;
 border-radius: 0.6em;
 box-sizing: border-box;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.372);
+box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.372);
 }
 .live-phara:hover{
     background-color: #6a3093;
@@ -256,26 +258,20 @@ font-weight: normal;
 }
 .a-head{
     font-size: 2em;
-    font-weight: 600;
-   
+    font-weight: 600;  
 }
 .b-head{
     width: 22em;
-    /* padding: 0em 1em; */
     font-size: 1em;
     letter-spacing: 0.05em;
     text-align: center;
-
 }
-
-
 /* This Over view split part */
 main{
-    background: #fedbba64;
+    /* background: #fedbba64; */
 }
 .contaion{
     /* background-color: #f8c28f64; */
-    
 }
 .contaion-item{
     margin-top: 5%;
@@ -283,16 +279,14 @@ main{
     justify-content: space-between;
     margin-left: 5%;
     margin-right: 5%;
-    /* border: solid; */
     height: 40vh;
-    /* width: 85rem; */
 }
 .min-phara{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 27vh;
-   border: solid;
+   border: 1px solid;
    border-radius: 6px;
    margin-top: 3em;
    padding: 1em 1em;
@@ -301,7 +295,6 @@ main{
 }
 .min-phara p{
     width: 43em;
-    /* border: solid; */
 }
 .big-phara{
     display: flex;
@@ -309,28 +302,23 @@ main{
     border: solid;
     align-items: center;
     justify-content: space-evenly;
-   border: solid;
+   border: 1px solid;
    background-color: white;
    margin-top: 3em;
    padding: 0em 1em;
    width: 33em;
    height: 27vh;
    border-radius: 6px;
-   margin-right: 2em;
-    /* float: right; */
-    
+   margin-right: 2em; 
 }
 .big-phara .sub-text {
     font-size: 2.5em;
     font-weight: 600;
 }
 .big-phara p{
-    /* width: 30%; */
-    /* border: solid; */
     font-size: 1rem;
 }
 /* This is our Advantage section */
-
 .advantages{
     background-color: #f8a858;
     height: 70vh;
@@ -355,7 +343,6 @@ display: flex;
 align-items: center;
 width: 28rem;
 padding: 0px 40px ;
-/* padding-left: 2.5em; */
 }
 .content{
 display: flex;
@@ -371,8 +358,6 @@ height: 14vh;
 }
 .content p{
    text-align: center;
-   /* padding-top: 0.5em; */
-    /* font-size: 0.3em; */
 }
 /* This is footer */
 footer {
@@ -384,11 +369,9 @@ footer {
     display: flex;
     margin-left: 4%;
     margin-right: 7%;
-    /* border: solid; */
 }
 
 .sub-item {
-    /* border: solid; */
     display: flex;
     justify-content: space-between;
     width: 1400px;
@@ -396,8 +379,7 @@ footer {
 }
 
 .main-item .logo {
-
-    margin-left: 15%;
+  margin-left: 15%;
 }
 
 .main-item {
@@ -406,12 +388,9 @@ footer {
     justify-content: space-between;
     align-items: start;
 }
-
 .disicription p {
     width: 300px;
     margin-top: 6%;
-    /* text-align: start;
-    width: 25%; */
 }
 
 .main-item .live-on {
@@ -424,7 +403,6 @@ footer {
 
 .about-item, .contact-item p {
     font-size: 1.5rem;
-    /* font-weight: 600; */
 }
 
 .about-item{
@@ -432,7 +410,6 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-/* height: 20vh; */
 }
 .contact-item p{
     margin-left: 23%;

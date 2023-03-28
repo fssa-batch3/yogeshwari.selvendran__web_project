@@ -46,7 +46,8 @@
                 <!-- <li><i class="fa-solid fa-location-dot"></i></li> -->
                 <li><i class="fa-solid fa-bell"></i></li>
                 <li><i class="fa-solid fa-gear"></i></li>
-                <li><a href=""><img class="profile" src="../../assets/Images/image-emily.jpg" alt="profile image"></a>
+                <li><a href="../../Page/Home/profile.html"><img class="profile"
+                            src="../../assets/New_collection/profile-cover.jpg" alt="profile image"></a>
                 </li>
             </ul>
         </div>
@@ -81,9 +82,26 @@
     <!-- This is main page top section -->
     <main>
         <div class="home-top">
+            <!-- <div class="main-top">
+                <div class="slides-container">
+                    <div class="slide" data-slide> <img src="../../assets/New_collection/appoinment cover.png">
+                    </div>
+                    <div class="slide" data-slide> <img src="../../assets/New_collection/About-cover.png"
+                            alt="Image">
+                        <div>
+
+                            <button class="btn previous" data-button="previous"> <span
+                                    class="fas fa-chevron-circle-left"></span>
+                            </button> <button class="btn next" data-button="next"> <span
+                                    class="span fas fa-chevron-circle-right"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
             <div class="home-gallery">
-                <img src="../../assets/Images/background-2.jpg" alt="background image">
-                <div id="photo">
+                          <img src="../../assets/Images/background-2.jpg" alt="background image">
+              
                     <div class="home-contend">
                         <h1>MAINTENANCE & REPAIR SERVICE</h1>
                         <p>Promotors is one of the leading units specializing in providing car care equipment and tools
@@ -91,12 +109,19 @@
                         <span> Need to buy car care tools, accessories, this will be a useful choice. </span><br>
                         <button class="big-btn">Start</button>
                     </div>
-                </div>
-            </div>
+            
+                          </div>
             <!-- This is our Services -->
             <div class="over_flow">
                 <h2>OUR SERVICES</h2>
                 <div class="service-section">
+                    <div class="service-page">
+                        <p id="headding">Services</p>
+                        <p>Get professional periodic bike service, bike repair, engine work, wheel and tyre care
+                            services bike insurance and much more done at best prices in Delhi,Gurgaon,Noida,
+                            Faridabad & Ghaziabad.Get professional periodic bike service,bike repair,engine work
+                        </p>
+                    </div>
                     <div class="genral-item">
                         <div class="first-item">
                             <div class="servicess">
@@ -106,7 +131,8 @@
                                 </div>
                                 <div class="content">
                                     <p>Genaral Service</p>
-                                    <span>Get professional periodic bike service, bikeNeed to buy car care tools,
+                                    <span>Get professional periodic bike service, bikeNeed to buy car care
+                                        tools,
                                         accessories, this will be a useful choice</span>
                                 </div>
                             </div>
@@ -117,7 +143,8 @@
                                 </div>
                                 <div class="content">
                                     <p>Genaral Service</p>
-                                    <span>Get professional periodic bike service, bikeNeed to buy car care tools,
+                                    <span>Get professional periodic bike service, bikeNeed to buy car care
+                                        tools,
                                         accessories, this will be a useful choice</span>
                                 </div>
                             </div>
@@ -128,7 +155,8 @@
                                 </div>
                                 <div class="content">
                                     <p>Genaral Service</p>
-                                    <span>Get professional periodic bike service, bikeNeed to buy car care tools,
+                                    <span>Get professional periodic bike service, bikeNeed to buy car care
+                                        tools,
                                         accessories, this will be a useful choice</span>
                                 </div>
                             </div>
@@ -139,7 +167,8 @@
                                 </div>
                                 <div class="content">
                                     <p>Genaral Service</p>
-                                    <span>Get professional periodic bike service, bikeNeed to buy car care tools,
+                                    <span>Get professional periodic bike service, bikeNeed to buy car care
+                                        tools,
                                         accessories, this will be a useful choice</span>
                                 </div>
                             </div>
@@ -150,7 +179,8 @@
                                 </div>
                                 <div class="content">
                                     <p>Genaral Service</p>
-                                    <span>Get professional periodic bike service, bikeNeed to buy car care tools,
+                                    <span>Get professional periodic bike service, bikeNeed to buy car care
+                                        tools,
                                         accessories, this will be a useful choice</span>
                                 </div>
                             </div>
@@ -161,33 +191,23 @@
                                 </div>
                                 <div class="content">
                                     <p>Genaral Service</p>
-                                    <span>Get professional periodic bike service, bikeNeed to buy car care tools,
+                                    <span>Get professional periodic bike service, bikeNeed to buy car care
+                                        tools,
                                         accessories, this will be a useful choice</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="service-page">
-                        <p id="headding">Services</p>
-                        <p>Get professional periodic bike service, bike repair, engine work, wheel and tyre care
-                            services bike insurance and much more done at best prices in Delhi,Gurgaon,Noida,
-                            Faridabad & Ghaziabad.Get professional periodic bike service,bike repair,engine work</p>
-                    </div>
+
                 </div>
 
-                <!-- <div class="collection">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div> -->
             </div>
             <!-- How our Webside works -->
 
             <div class="process">
                 <h1>Book Live On - Too Fast Too Quick</h1>
-                <p>No time to go to a bike workshop or Scooter Service Center? No worries! With one tap in the app, we
+                <p>No time to go to a bike workshop or Scooter Service Center? No worries! With one tap in the
+                    app, we
                     bring the two wheeler workshop to you.</p>
                 <div class="progress">
                     <div class="timing">
@@ -429,6 +449,54 @@
             button.innerHTML = "ADD TO CART"
             document.querySelector(".detail").append(button)
         }
+
+
+
+        const slides = document.querySelectorAll("[data-slide]"); 
+        const buttons = document.querySelectorAll("[data-button)");
+        let currslide = 0;
+        let maxslide = slides.length - 1;
+        const updateCarousel = (number = 0) => {
+            slides.forEach((slide, index) => {
+                slide.style.transform =`= translateX(${(index - number) * 126}%)`;
+            });
+        };
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                button.dataset.button == "next" ? ++currSlide : -currSlide;
+                if (currSlide > maxSlide) {
+                    currslide = 0;
+                } else if (currslide < 0) {
+                    currslide = maxSlide;
+                    updateCarousel(currslide);
+                }
+            updateCarousel(currslide);
+
+            });
+        });
+        updateCarousel();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // <li id="service"><a href="../../Page/Home/services.html">SERVICES</a>
         //             <div class="sub-service">
         //                 <ul>

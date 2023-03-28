@@ -28,7 +28,7 @@ const submitbut = document.getElementById("sub")
         "description":description
       })
       localStorage.setItem("product_detail", JSON.stringify(product_arr));
-      //
+      
     })
     function delete_product() {
       let get_array = JSON.parse(localStorage.getItem("product_detail"));

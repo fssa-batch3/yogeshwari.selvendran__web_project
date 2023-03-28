@@ -70,7 +70,9 @@
                 <!-- <li><i class="fa-solid fa-location-dot"></i></li> -->
                 <li><i class="fa-solid fa-bell"></i></li>
                 <li><i class="fa-solid fa-gear"></i></li>
-                <li><i class="fa-solid fa-gear"></i></li>
+                <li><a href="../../Page/Home/profile.html"><img class="profile"
+                            src="../../assets/New_collection/profile-cover.jpg" alt="profile image"></a>
+                </li>
             </ul>
         </div>
     </header>
@@ -105,20 +107,21 @@
     <!-- This is product-details -->
     <div class="product-section">
         <div class="products">
-            <img id="product_main-image" src="../../assets/Images/bike-engine1.png" alt="engine image" class="engine">
             <ul>
-                <li><img id="sub_pic1" src="../../assets/Images/engine-part.jpg" alt="engine"></li>
-                <li><img id="sub_pic2" src="../../assets/Images/parts-69.webp" alt="parts"></li>
-                <li><img id="sub_pic3" src="../../assets/Images/parts-69.webp" alt="parts"></li>
+                <li><img id="sub_pic1" src="" alt="engine"></li>
+                <li><img id="sub_pic2" src="" alt="parts"></li>
+                <li><img id="sub_pic3" src="" alt="parts"></li>
             </ul>
-
+            <img id="product_main-image" src="" alt="engine image" class="engine">
         </div>
         <div class="product-ditails">
-            <h2 id="product_name">Product name</h2>
-            <span id="product_price" class="fa-solid fa-indian-rupee-sign">33,990</span>
+            <p class="Highlights" id="about_product"></p>
+            <h2 id="product_name"></h2>
+            <p id="product_price" class="fa-solid fa-indian-rupee-sign"></p>
             <p id="product_offer">27% 0ff</p>
-            <div class="star">
-                <span id="product_ratting" class="fa-solid fa-star">4.2</span>
+            <div class="star1">
+                <i class="fa-solid fa-star"></i>
+                <span id="product_ratting"></span>
             </div>
             <div class="list-btn">
                 <a href="../../Page/Accesssories/admin.html"><button id="add_card"><span
@@ -127,9 +130,13 @@
                             class="fa-sharp fa-solid fa-bag-shopping"></span>Buy Now</button></a>
             </div>
             <div class="description1">
+                <h3>Highlight:</h3>
+                <p id="add_highlight">
+                </p>
+            </div>
+            <div class="description1">
                 <h3>Descripition</h3>
-                <p id="add_card">With this HP laptop, whose astounding features can stun you, you can enjoy seamless operation and
-                    elevate your visual experience. This laptop's stylish design and large 35.56 cm (14) display enable
+                <p id="pro_description">
                 </p>
             </div>
         </div>
@@ -195,8 +202,69 @@
         <p> &copy;Copyright 2023 Carservice Theme by my won design</p>
     </div>
     <script>
-        const pr_price = document.getElementById("price")
-        pr_price.innerText = "10000000"
+
+        const url = window.location.search
+        const urlparams = new URLSearchParams(url);
+        const product_id = urlparams.get("prod_id")
+
+
+        const pro_array = JSON.parse(localStorage.getItem("product_detail"))
+
+
+        const search = pro_array.find(function (obj) {
+            if (obj["productid"] + "" === product_id) {
+                return true
+            }
+            else {
+                return false
+            }
+        })
+        // console.log(search);
+
+        // get side product 1st  images
+        const pr_image1 = document.getElementById("sub_pic1");
+        pr_image1.setAttribute("src", search["pr_img_1"]);
+
+        // get side product 2st  images
+        const pr_image2 = document.getElementById("sub_pic2");
+        pr_image2.setAttribute("src", search["pr_img_2"]);
+
+        // get side product 3rd  images
+        const pr_image3 = document.getElementById("sub_pic3");
+        pr_image3.setAttribute("src", search["pr_img_3"]);
+
+        // get main product  images
+        const pr_main = document.getElementById("product_main-image");
+        pr_main.setAttribute("src", search["pr_img_4"]);
+
+        // get product highlights
+        // const pr_highlight = document.getElementById("Highlights");
+        // pr_highlight.innerText = search["highlights"]
+
+        // get product name
+        const pr_name = document.getElementById("product_name");
+        pr_name.innerText = search["product_name"]
+
+        // get About product 
+        const pr_about = document.getElementById("about_product");
+        pr_about.innerText = search["about_product"]
+
+        // get product price
+        const pr_price = document.getElementById("product_price");
+        pr_price.innerText = search["product_price"]
+
+        // get product price
+        const pr_highlight = document.getElementById("add_highlight");
+        pr_highlight.innerText = search["highlights"]
+
+        // get product description
+        const pr_description = document.getElementById("pro_description");
+        pr_description.innerText = search["description"]
+
+        // get product ratting
+        const pr_ratting = document.getElementById("product_ratting");
+        pr_ratting.innerText = search["rating"]
+        
         // 1st  create a div for details-page
         //const product1 = document.createElement("div")
         // product1.setAttribute("class", "products")
