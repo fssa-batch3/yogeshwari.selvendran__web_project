@@ -100,17 +100,17 @@
                 </div>
             </div> -->
             <div class="home-gallery">
-                          <img src="../../assets/Images/background-2.jpg" alt="background image">
-              
-                    <div class="home-contend">
-                        <h1>MAINTENANCE & REPAIR SERVICE</h1>
-                        <p>Promotors is one of the leading units specializing in providing car care equipment and tools
-                            worldwide.</p>
-                        <span> Need to buy car care tools, accessories, this will be a useful choice. </span><br>
-                        <button class="big-btn">Start</button>
-                    </div>
-            
-                          </div>
+                <img src="../../assets/Images/background-2.jpg" alt="background image">
+
+                <div class="home-contend">
+                    <h1>MAINTENANCE & REPAIR SERVICE</h1>
+                    <p>Promotors is one of the leading units specializing in providing car care equipment and tools
+                        worldwide.</p>
+                    <span> Need to buy car care tools, accessories, this will be a useful choice. </span><br>
+                    <button class="big-btn">Start</button>
+                </div>
+
+            </div>
             <!-- This is our Services -->
             <div class="over_flow">
                 <h2>OUR SERVICES</h2>
@@ -249,7 +249,41 @@
                 <!-- <a class="page" href="../../Page/Accesssories/accessories.html"><button>MORE</button></a> -->
             </div>
         </div>
-        <!-- This is how our webside working -->
+
+        <!-- This is customer review -->
+        <div class="cus-review">
+            <section class="container">
+                <div class="title">
+                    <h2>our reviews</h2>
+                </div>
+                <article class="review">
+                    <div class="img-container">
+                        <img src="http://siga-aluminio.com.mx/wp-content/uploads/2019/01/person2.jpg" alt="person-1"
+                            id="person-img">
+                    </div>
+
+                    <h4 id="author">Sara Jones</h4>
+                    <!-- <p id="job">UX DESIGNER</p> -->
+                    <p id="info">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus eveniet nemo, at quibusdam
+                        facere laboriosam error a animi voluptatem placeat?
+                    </p>
+                    <!-- prev next buttons -->
+                    <div class="button-container">
+                        <button class="prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <!-- random button-->
+                    <!-- <button class="random-btn">Surprise Me</button>
+                    <div class="quote"><i class="fa-solid fa-quote-right" id="quote"></i></div>
+                    <div class="underline"></div> -->
+                </article>
+            </section>
+        </div>
     </main>
     <!-- Tist is footer section -->
     <footer>
@@ -449,32 +483,133 @@
             button.innerHTML = "ADD TO CART"
             document.querySelector(".detail").append(button)
         }
+// This is customer review 
+        // const reviews = [
+        //     {
+        //         id: 0,
+        //         name: 'Sara Jones',
+        //         job: 'UX DESIGNER',
+        //         img: 'http://siga-aluminio.com.mx/wp-content/uploads/2019/01/person2.jpg',
+        //         text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus eveniet nemo, at quibusdam facere laboriosam error a animi voluptatem placeat?',
+
+        //     },
+        //     {
+        //         id: 1,
+        //         name: 'susan smith',
+        //         job: 'web developer',
+        //         img: 'https://www.masslive.com/resizer/kNl3qvErgJ3B0Cu-WSBWFYc1B8Q=/arc-anglerfish-arc2-prod-advancelocal/public/W5HI6Y4DINDTNP76R6CLA5IWRU.jpeg',
+        //         text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus eveniet nemo, at quibusdam facere laboriosam error a animi voluptatem placeat?',
+
+        //     },
+        //     {
+        //         id: 2,
+        //         name: 'anna johnson',
+        //         job: 'web designer',
+        //         img: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
+        //         text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus eveniet nemo, at quibusdam facere laboriosam error a animi voluptatem placeat?',
+
+        //     },
+        //     {
+        //         id: 3,
+        //         name: 'peter jones',
+        //         job: 'intern',
+        //         img: 'http://siga-aluminio.com.mx/wp-content/uploads/2019/01/person4.jpg',
+        //         text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus eveniet nemo, at quibusdam facere laboriosam error a animi voluptatem placeat?',
+        //     },
+        //     {
+        //         id: 4,
+        //         name: 'bill anderson',
+        //         job: 'the boss',
+        //         img: 'https://www.admenergy.com.mx/wp-content/uploads/person6.jpg',
+        //         text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus eveniet nemo, at quibusdam facere laboriosam error a animi voluptatem placeat?',
+        //     },
+        // ];
+
+        // // select items
+
+        // const img = document.getElementById('person-img');
+        // const author = document.getElementById('author');
+        // // const job = document.getElementById('job');
+        // const info = document.getElementById('info');
 
 
+        // const prevBtn = document.querySelector('.prev-btn');
+        // const nextBtn = document.querySelector('.next-btn');
+        // // const randomBtn = document.querySelector('.random-btn');
 
-        const slides = document.querySelectorAll("[data-slide]"); 
-        const buttons = document.querySelectorAll("[data-button)");
-        let currslide = 0;
-        let maxslide = slides.length - 1;
-        const updateCarousel = (number = 0) => {
-            slides.forEach((slide, index) => {
-                slide.style.transform =`= translateX(${(index - number) * 126}%)`;
-            });
-        };
-        buttons.forEach((button) => {
-            button.addEventListener("click", () => {
-                button.dataset.button == "next" ? ++currSlide : -currSlide;
-                if (currSlide > maxSlide) {
-                    currslide = 0;
-                } else if (currslide < 0) {
-                    currslide = maxSlide;
-                    updateCarousel(currslide);
-                }
-            updateCarousel(currslide);
+        // // set starting item 
 
-            });
-        });
-        updateCarousel();
+        // // let currentItem = 0;
+
+        // // load initial item 
+        // // window.addEventListener('DOMContentLoaded', function () {
+        // //     showPerson();
+        // // });
+
+        // // show person based on item 
+        // let reviewsPage = JSON.parse(localStorage.getItem("user_review"))
+        // reviewsPage.forEach(e => {
+        //     showPerson(e);
+        // });
+
+        // function showPerson(item) {
+        //     const item = reviews["user_review"];
+        //     img.src = item.img;
+        //     author.textContent = item.name;
+        //     // job.textContent = item.job;
+        //     info.textContent = item.text;
+        // }
+
+        // // show next person 
+
+        // nextBtn.addEventListener('click', function () {
+        //     currentItem++;
+        //     if (currentItem > reviews.length - 1) {
+        //         currentItem = 0;
+        //     }
+        //     showPerson(currentItem);
+        // });
+        // // show prev person 
+        // prevBtn.addEventListener('click', function () {
+        //     currentItem--;
+        //     if (currentItem < 0) {
+        //         currentItem = reviews.length - 1;
+        //     }
+
+        //     showPerson(currentItem);
+        // });
+
+        // show random person
+
+        // randomBtn.addEventListener('click', function () {
+        //     currentItem = Math.floor(Math.random() * reviews.length);
+        //     console.log(currentItem);
+        //     showPerson();
+        // });
+
+        // const slides = document.querySelectorAll("[data-slide]");
+        // const buttons = document.querySelectorAll("[data-button)");
+        // let currslide = 0;
+        // let maxslide = slides.length - 1;
+        // const updateCarousel = (number = 0) => {
+        //     slides.forEach((slide, index) => {
+        //         slide.style.transform = `= translateX(${(index - number) * 126}%)`;
+        //     });
+        // };
+        // buttons.forEach((button) => {
+        //     button.addEventListener("click", () => {
+        //         button.dataset.button == "next" ? ++currSlide : -currSlide;
+        //         if (currSlide > maxSlide) {
+        //             currslide = 0;
+        //         } else if (currslide < 0) {
+        //             currslide = maxSlide;
+        //             updateCarousel(currslide);
+        //         }
+        //         updateCarousel(currslide);
+
+        //     });
+        // });
+        // updateCarousel();
 
 
 

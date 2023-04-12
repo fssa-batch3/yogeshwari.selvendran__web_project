@@ -313,103 +313,13 @@ span{
 
 }
 
-/* This is accessories */
-.head-part{
-    /* background-image: url(../../assets/New_collection/Bik-part/poster-img.png);
-    /* background-size: cover; */
-    /* 
-    width: auto;  */
-    height: 50vh;
-    /* background: #6a3093;   fallback for old browsers */
-    /* background: -webkit-linear-gradient(to right, #a044ff, #6a3093);   Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-   /* height: 200px; */
-   margin-top: 2px;
-   color: var(--white-color);
-}
-
-.options{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 55px;
-    margin-left: 150px;
-    margin-right: 135px;
-}
-.bike-car ul{
-    display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-}
-.bike-car li{
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-right: 1px;
-}
-.bike-car a{
-    color: black;
-    text-decoration: none;
-}
-.bike-car a:hover{
-    color: #052b78;
-}
-select{
-    width: 200px;
-    padding: 10px 20px;
-    font-size: 16px;
-}
-
-/* How our webside works */
-.progress{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-/* .progress:nth-child(2){
-   
-} */
-.timing{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 15em;
-    border: solid;
-    height: 20em;
-    border-radius: 8px;
-    color: var(--white-color);
-    background: #6a3093;  
-}
-.pic-item {
-    background-color: var(--white-color);
-    padding: 0.5em 1em;
-    border-radius: 1em;
-}
-.pic-item img{
-    height: 6em;
-    width: 6em;
-
-}
-.pec-part h4{
-    font-size: 1.2em;
-    text-align: center;
-}
-.pec-part p{
-    text-align: center;
-}
-.pec-part{
-    /* width: 70%; */
-}
-
 
 /* This is product section */
-.product-countainer{
+.product-countainer {
     margin-left: 30%;
 }
-.container{
+
+.container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 100px;
@@ -417,13 +327,16 @@ select{
     /* flex-wrap: wrap; */
     /* justify-content: space-between; */
 }
-.product{
+.container a{
+    text-decoration: none;
+}
+.product {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-   width:85%;
-   height:40vh;
+    width: 85%;
+    height: 40vh;
     margin-top: 10%;
     background-color: var(--white-color);
     border: solid 0.5px;
@@ -431,8 +344,9 @@ select{
     border-radius: 5px;
     box-sizing: border-box;
 }
-.product:hover{
-   /* width:90%;
+
+.product:hover {
+    /* width:90%;
    height:42vh;
     margin-top: 10%;
     background-color: var(--white-color); */
@@ -444,37 +358,45 @@ select{
     box-sizing: border-box;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.372);
 }
-.pic-part{
+
+.pic-part {
     margin-top: 10%;
 }
-.pic-part img{
+
+.pic-part img {
     height: 150px;
 }
-.detail .part-name{
-   font-size: 1.2rem;
-   font-weight: 600;
+
+.detail .part-name {
+    font-size: 1.2rem;
+    font-weight: 600;
 }
-.rupee{
+
+.rupee {
     display: flex;
     align-items: center;
 }
-.rupee p{
+
+.rupee p {
     font-size: 1.3rem;
     font-weight: 600;
     padding-left: 4px;
 }
-.cost-rate{
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   align-items: center;
-   height: 5.5vh;
+
+.cost-rate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.5vh;
 }
-.rupee i{
+
+.rupee i {
     font-size: 1.2rem;
     padding-top: 5px;
- }
-.detail{
+}
+
+.detail {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -483,7 +405,8 @@ select{
     width: 100%;
     padding-bottom: 10px;
 }
-.detail button{
+
+.detail button {
     padding: 8px 20px;
     border: none;
     border-radius: 6px;
@@ -492,13 +415,14 @@ select{
     font-size: 0.9rem;
     font-weight: medium;
 }
-.detail button:hover{
+
+.detail button:hover {
     background-color: rgb(255, 128, 0);
     color: var(--white-color);
     font-size: 0.9rem;
     font-weight: 600;
 }
-.ratting{
+/* .ratting{
     font-size: 0.9rem;
 }
 .ratting :nth-child(1){
@@ -512,7 +436,7 @@ select{
 }
 .ratting :nth-child(4){
     color: rgb(204, 199, 199);
-}
+} */
 .page-collection ul{
     list-style: none;
     display: flex;

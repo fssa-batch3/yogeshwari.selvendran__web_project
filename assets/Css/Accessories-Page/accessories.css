@@ -492,7 +492,10 @@ select {
     /* flex-wrap: wrap; */
     /* justify-content: space-between; */
 }
-
+.container a{
+    text-decoration: none;
+    color: #0d0c22;
+}
 .product {
     display: flex;
     flex-direction: column;

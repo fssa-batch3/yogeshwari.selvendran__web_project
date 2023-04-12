@@ -18,20 +18,20 @@
     position: fixed;
     left: 0;
     top: 0;
-    height: 100vh;
+    height: 100%;
     background-color: var(--main-color);
     z-index: 1;
 }
-.page{
+/* .page{
     margin-top: 3rem;
     margin-left: 2%;
 }
 .page img{
     height: 220px;
 
-}
+} */
 .side-menu{
-    margin-top: 5rem;
+    margin-top: 9rem;
 }
 .side-menu li{
 width: 100%;
@@ -58,9 +58,9 @@ padding-left: 2rem;
     padding-right: 1rem;
 
 }
-.main-item{
+/* .main-item{
     margin-left: 345px;
-}
+} */
 /* .header{
     display: flex;
     justify-content: space-between;
@@ -307,6 +307,7 @@ main{
     padding: 2rem 1.5rem;
     background: #f1f5f9;
     min-height: calc(100vh - 90px);
+    margin-left: 345px;
 }
 
 .cards{

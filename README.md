@@ -9,4 +9,5 @@ User flow: https://fwbuzz.slack.com/files/U041V5KE0UT/F04CZ1FUSUU/screenshot__8_
 Wireframe: https://drive.google.com/file/d/1a86JZ82bJRrjJy6LJHxFh0a9QP0PCM8O/view?usp=sharing
 
 
-User(CRUD) - Compleated
+
+

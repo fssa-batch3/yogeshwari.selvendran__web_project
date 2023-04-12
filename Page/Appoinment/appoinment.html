@@ -70,7 +70,8 @@
                 <!-- <li><i class="fa-solid fa-location-dot"></i></li> -->
                 <li><i class="fa-solid fa-bell"></i></li>
                 <li><i class="fa-solid fa-gear"></i></li>
-                <li><a href="../../Page/Home/profile.html"><img class="profile" src="../../assets/New_collection/profile-cover.jpg" alt="profile image"></a>
+                <li><a href="../../Page/Home/profile.html"><img class="profile"
+                            src="../../assets/New_collection/profile-cover.jpg" alt="profile image"></a>
                 </li>
             </ul>
         </div>
@@ -81,84 +82,97 @@
             <img src="../../assets/New_collection/appoinment cover.png" alt="">
         </div>
         <!-- Booking appoinment -->
-        <div class="app-align">
-            <!-- Vehicle type -->
-            <div class="vehicle-type">
-                <div class="year">
-                    <label class="top-head">VEHICLE YEAR</label><br>
-                    <input id="vehicleyear" class="chose-year" name="vehicle-year" type="number" step="1"
-                        aria-label="Phone">
-                </div>
-                <div class="year">
-                    <label class="top-head">VEHICLE MAKE</label><br>
-                    <select name="vehicle-make" id="company">
-                        <option value="">Choose</option>
-                        <option value="">Honda</option>
-                        <option value="">TVS</option>
-                        <option value="">TATA</option>
-                        <option value="">AUDY</option>
-                        <option value="">Honda</option>
-                        <option value="">Honda</option>
-                        <option value="">Honda</option>
-                        <option value="">Honda</option>
-                        <option value="">Honda</option>
-                    </select>
-                </div>
-                <div class="year">
-                    <label class="top-head">VEHICLE MILEAGE</label><br>
-                    <input id="vehiclemileage" class="mileage" name="vehicle-mileage" type="number"
-                        placeholder="Vehicle Mileage" required aria-label="mileage">
-                </div>
-            </div><br><br>
-            <!-- This is appoinment section -->
-            <div class="appoinment-section">
-                <div class="date">
-                    <div class="date-choose">
-                        <label for="appointment-date" class="top-head">APPOINTMENT DATE</label><br>
-                        <input id="date" type="date" required aria-label="date">
-                    </div><br>
-                    <div class="date-choose">
-                        <label for="appointment-date" class="top-head">PREFFERED TIME FRAM</label><br>
-                        <input id="time" type="time" required aria-label="time" required>
-                    </div><br>
-                    <div class="date-choosing">
-                        <label for="appointment-date" class="top-head">SELECT SERVICES NEEDED</label><br>
-                        <div class="list-checkbox">
-                            <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
-                                    aria-label="checkbox"> Air Conditioning</label>
-                            <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
-                                    aria-label="checkbox"> Breakes repair</label>
-                            <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
-                                    aria-label="checkbox"> Engine Diagnostics</label>
-                            <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
-                                    aria-label="checkbox"> Heating & Cooling </label>
-                            <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
-                                    aria-label="checkbox"> Oil, Lube & Filters </label>
-                            <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
-                                    aria-label="checkbox"> Steering & Supension</label>
-                            <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
-                                    aria-label="checkbox"> Transmission</label>
-                            <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item"
-                                    aria-label="checkbox"> Others</label>
+
+        <div class="app-align" id="app-book">
+            <form>
+                <!-- Vehicle type -->
+                <div class="vehicle-type">
+                    <div class="year">
+                        <label class="top-head">VEHICLE YEAR</label><br>
+                        <input id="vehicleyear" class="chose-year" name="vehicle-year" type="text" step="1"
+                            pattern="[0-9]{4,10}" title="First name connot contain spaces" placeholder="vehicle-year"
+                            value="" aria-label="Phone">
+                    </div>
+                    <div class="year">
+                        <label class="top-head">VEHICLE MAKE</label><br>
+                        <select name="vehicle-make" id="company">
+                            <option value="">Choose</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Tvs">TVS</option>
+                            <option value="TATA">TATA</option>
+                            <option value="AUDY">AUDY</option>
+                            <option value=">Honda">Honda</option>
+                            <!-- <option value="">Honda</option>
+                            <option value="">Honda</option>
+                            <option value="">Honda</option>
+                            <option value="">Honda</option> -->
+                        </select>
+                    </div>
+                    <div class="year">
+                        <label class="top-head">VEHICLE MILEAGE</label><br>
+                        <input id="vehiclemileage" class="mileage" name="vehicle-mileage" type="text"
+                            pattern="[a-zA-Z0-9]{3,10}" placeholder="Vehicle Mileage" required aria-label="mileage">
+                    </div>
+                </div><br><br>
+                <!-- This is appoinment section -->
+                <div class="appoinment-section">
+                    <div class="date">
+                        <div class="date-choose">
+                            <label for="appointment-date" class="top-head">APPOINTMENT DATE</label><br>
+                            <input id="date" type="date" required aria-label="date">
+                        </div><br>
+                        <div class="date-choose">
+                            <label for="appointment-date" class="top-head">PREFFERED TIME FRAM</label><br>
+                            <input id="time" type="time" required aria-label="time" required>
+                        </div><br>
+                        <div class="date-choosing">
+                            <label for="appointment-date" class="top-head">SELECT SERVICES NEEDED</label><br>
+                            <div class="list-checkbox">
+                                <label for="text" class="checkbox"> <input type="checkbox" id="check"  value="Air Conditioning" class="item"
+                                        name="check" aria-label="checkbox"> Air Conditioning</label>
+                                <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Breakes repair"
+                                        name="check" aria-label="checkbox"> Breakes repair</label>
+                                <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Engine Diagnostics"
+                                        name="check" aria-label="checkbox"> Engine Diagnostics</label>
+                                <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Heating & Cooling"
+                                        name="check" aria-label="checkbox"> Heating & Cooling </label>
+                                <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Oil, Lube & Filters "
+                                        name="check" aria-label="checkbox"> Oil, Lube & Filters </label>
+                                <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Service"
+                                        name="check" aria-label="checkbox">Service</label>
+                                <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Steering & Supension"
+                                        name="check" aria-label="checkbox"> Steering & Supension</label>
+                                <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Transmission"
+                                        name="check" aria-label="checkbox"> Transmission</label>
+
+                                <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" 
+                                        name="check" aria-label="checkbox"> Others</label> -->
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="addres">
-                    <label for="" class="top-head">CONTACT DETAILS</label><br>
-                    <input type="text" id="contactname" placeholder="Your Name*" required aria-label="name"><br>
-                    <input type="email" id="contactemail" placeholder="Your Email*" required aria-label="email"><br>
-                    <input type="number" id="contactphone" placeholder="Your Phone" maxlength="10" required
-                        aria-label="Phone"><br>
-                    <textarea name="" id="message" cols="30" rows="3"
-                        placeholder="Additional Questions or Comments"></textarea><br><br>
-                    <!-- <input id="message" id="contactmessage" type="message" placeholder="Additional Questions or Comments"
+                    <div class="addres">
+                        <label for="" class="top-head">CONTACT DETAILS</label><br>
+                        <input type="text" id="contactname" placeholder="Your Name*" required aria-label="name"><br>
+                        <input type="email" id="contactemail" placeholder="Your Email*" required aria-label="email"><br>
+                        <input type="text" id="contactphone" placeholder="Your Phone" maxlength="10" required
+                            pattern="[0-9]{3,12}" aria-label="Phone"><br>
+                        <!-- <input type="text" id="address" placeholder="vehicle Pickup address" maxlength="10" required pattern="[a-zA-Z0-9]{3,80}"
+                        aria-label="Phone"> -->
+                        <textarea name="" id="message" cols="30" rows="3"
+                            placeholder="Additional Questions or Comments"></textarea><br><br>
+                        <!-- <input id="message" id="contactmessage" type="message" placeholder="Additional Questions or Comments"
                     aria-label="message"><br> -->
-                    <button>SUBMIT NOW</button>
+                        <button type="submit">SUBMIT NOW</button>
+                        <!-- <button>SUBMIT NOW</button> -->
+                    </div>
+
                 </div>
 
-            </div>
+            </form>
         </div>
+
     </main>
+
     <div class="booking-app">
         <div class="book-page">
             <span>BOOKING AN APPOINTMENT</span>
@@ -166,6 +180,75 @@
             <p>We are one of the leading auto repair shops serving customers in Tucson.</p>
             <p>All mechanic services are performed by highly qualified mechanics.</p>
         </div>
+
+    </div>
+    <div class="cust-review">
+        <h2> Add Your Review </h2>
+        <form id="Reviews">
+            <div class="review-uplode">
+                <div>
+                    <input type="text" id="review-username" placeholder="Enter Your Name">
+                </div>
+                <div class="input-group">
+                    <textarea aria-label="With textarea" rows="4" cols="50" id="rewiew_message" placeholder="Message"
+                        required></textarea>
+                </div>
+                <div>
+                    <input type="file" name="listing_faq-question" id="review-userimage" >
+                </div>
+                <div>
+                    <button type="submit" >submit your reviw</button>
+                </div>
+        </form>
+    </div>
+    <!-- <section class="faq_dynamic-main">
+            <div class="container">
+                <div class="listing__faq py-4">
+                    <div class="faq_inner-listing">
+                        <h2 class="secondary-color py-2 f-24"> Add Your Review </h2>
+                        <div class="faq_box-wrapper">
+                            <div class="faq_form-box-inner border border-1 border-secondary rounded p-3"><input
+                                    type="text" name="listing_faq-question" id="review-username" placeholder="Name"
+                                    class="w-100 py-2 form-control rounded-0" required>
+                                <div class="input-group"><textarea aria-label="With textarea" rows="4" cols="50"
+                                        id="rewiew_message" placeholder="Message"
+                                        class="form-control mt-3 w-100 rounded-0" required></textarea>
+                                    </div>
+                                <div class="list_add-faq pt-4">
+                                    <div class="input-group align-items-center">
+                                        <input type="file" name="listing_faq-question" id="review-userimage"
+                                            placeholder="Name" class=" py-2  rounded-0 " required>
+                                        <div class="list_add-review-cta p-3 rounded bg-secondary pointer">
+                                            <h3 class="text-dark f-16 fw-semibold m-0"><i
+                                                    class="fa fa-plus fa-solid fa-sharp text-dark pe-2 f-20"></i>Add
+                                                Another </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+    <!-- <section class="content-wrapper-faq py-5">
+            <div class="container">
+                <h3 class="main-head text-center"> Yet Working On It</h3>
+                <div class="main_reviews-container">
+                    <div class="border py-3 my-2 border-dark rounded reviews_inner container">
+                        <div class="accordian-link d-flex align-items-center pointer py-2 ">
+                            <img src="https://source.unsplash.com/random/2200x1200/?person"
+                                class="user_image">
+                            <h3 class="reveiew_user_name ps-3">Dj The Lucifier</h3>
+                        </div>
+                        <p class="review_answer">Lorem ipsumt animi recusandae quasi cumque.Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Eum quas esse odit voluptatem consectetur debitis vero magni
+                            facere. Laudantium quia architecto ratione accusamus ea dicta incidunt animi recusandae
+                            quasi cumque.</p>
+                    </div>
+                </div>
+        </section> -->
 
     </div>
     <!-- This is footer section -->
@@ -230,30 +313,102 @@
         <p> &copy;Copyright 2023 Carservice Theme by my won design</p>
     </div>
     <script>
-        // function button() {
-        //     const vehicleyear = document.getElementById("vehicleyear").value
-        //     const vehiclemileage = document.getElementById("vehiclemileage").value
-        //     const date = document.getElementById("date").value
-        //     const time = document.getElementById("time").value
-        //     const company = document.getElementById("company").value
-        //     const check = document.getElementById("check").value
-        //     const contactname = document.getElementById("contactname").value
-        //     const contactemail = document.getElementById("contactemail").value
-        //     const contactphone = document.getElementById("contactphone").value
-        //     const contactmessage = document.getElementById("contactmessage").value
-        //     console.log(vehicleyear)
-        //     console.log(vehiclemileage)
-        //     console.log(date)
-        //     console.log(time)
-        //     console.log(company)
-        //     console.log(check)
-        //     console.log(contactname)
-        //     console.log(contactemail)
-        //     console.log(contactphone)
-        //     console.log(contactmessage)
+        const appData = document.getElementById("app-book")
+        appData.addEventListener('submit', (s) => {
+            s.preventDefault();
+            collectData();
+        })
+        function collectData() {
+            const vehicleYear = document.getElementById("vehicleyear").value;
+            const vehicleMileage = document.getElementById("vehiclemileage").value;
+            const date1 = document.getElementById("date").value;
+            const time1 = document.getElementById("time").value;
+            const company1 = document.getElementById("company").value;
 
-        //     window.location.href = "../../Page/Appoinment/payment.html"
+            const contactName = document.getElementById("contactname").value;
+            const contactEmail = document.getElementById("contactemail").value;
+            const contactPhone = document.getElementById("contactphone").value;
+
+
+let checkValue;
+            // check box
+
+      const check1 = document.querySelectorAll("input[type=checkbox]")
+      check1.forEach((e)=>{
+        if(e.checked){
+            checkValue=e.value
+        }
+      })
+            // const contactMessage = document.getElementById("contactmessage").value;
+
+            //This is for store data in localstorage
+            let cusBook = new Array();
+            cusBook = JSON.parse(localStorage.getItem("book_data")) ?
+                JSON.parse(localStorage.getItem("book_data")) : []
+            if (cusBook.some((s) => { return s.customer_email == contactEmail })) {
+                alert("already booked")
+            }
+            else {
+                cusBook.push({
+                    "vehicle_year": vehicleYear,
+                    "vehicle_mileage": vehicleMileage,
+                    "Booking_date": date1,
+                    "Booking_time": time1,
+                    "vehicle_company": company1,
+                    "Booking_service": checkValue,
+                    "customer_name": contactName,
+                    "customer_email": contactEmail,
+                    "customer_phone": contactPhone
+                    // "customer_message": contactmessage
+                })
+                window.location.href = "../../Page/Appoinment/payment.html"
+            }
+            localStorage.setItem("book_data", JSON.stringify(cusBook));
+        }
+
+        // This is custamor review
+
+        // sessionStorage.setItem('added', 0);
+        // var status_add = sessionStorage.getItem('added');
+        // $('.list_add-review-cta').click(function () {
+        //     sessionStorage.setItem('added', 1);
+        //     console.log(status_add);
+        //     let username = document.getElementById("review-username").value;
+        //     let message = document.getElementById("rewiew_message").value;
+        //     let userimage = $("#review-userimage").val();
+        //     $('.main_reviews-container').append('<div class="border py-3 my-2 border-dark rounded faq_inner container"><div class="accordian-link d-flex align-items-center pointer py-2"><img src="https://source.unsplash.com/random/2200x1200/?person" class="img-fluid user_image"><h3 class="reveiew_user_name ps-3">' + username + '</h3></div><p class="review_answer">' + message + '</p></div>');
+        //     clearvalues();
+        // });
+        // function clearvalues() {
+        //     document.getElementById("review-username").value = "";
+        //     document.getElementById("rewiew_message").value = "";
+        //     $('#review-userimage').val('');
         // }
+
+
+        const reviewData = document.getElementById("Reviews")
+        reviewData.addEventListener('submit',(p) => {
+            p.preventDefault();
+            addData();
+        })
+function addData(){
+    let username = document.getElementById("review-username").value;
+            let message = document.getElementById("rewiew_message").value;
+            // let userimage = $("#review-userimage").val(); 
+    let review = new Array();
+    review = JSON.parse(localStorage.getItem("user_review")) ?
+    JSON.parse(localStorage.getItem("user_review")) : []
+    if(review.some((p) => {return p.cust_name == username})){
+        alert("already booked")
+    }
+    else{
+review.push({
+    "cust_name" : username,
+    "cust_message" : message
+})
+    }
+    localStorage.setItem("user_review",JSON.stringify(review));
+}
 
     </script>
 </body>
