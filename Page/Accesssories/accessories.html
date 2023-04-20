@@ -105,7 +105,7 @@
                 </a>
             </div>
         </div>
-        <hr>
+    
     </div>
     <!-- Thired navbar -->
     <!-- <div class="sub-nav">
@@ -173,7 +173,16 @@
                 </div> -->
             </div>
         </div>
-        <div class="options">
+        <!-- This is product uplode page -->
+        <div class="uplode">
+            <!-- <div class="uplode-pro">
+                <a href="../../Page/Accesssories/seller .html"><button>Uplode Product</button></a>
+            </div> -->
+            <div class="admin-page">
+                <a href="../../Page/Accesssories/admin.html"><button>Admin Page</button></a>
+            </div>
+        </div>
+        <!-- <div class="options">
             <div class="bike-car">
                 <ul>
                     <li><a href="">Bike</a></li>
@@ -189,7 +198,7 @@
                 <option value="">Sort by price: low to high</option>
                 <option value="">Sort by price: high to low</option>
             </select>
-        </div>
+        </div> -->
         <!-- This is products-section -->
         <div class="product-container">
             <div class="container">
@@ -527,7 +536,7 @@
 
             // Create a p tag foe cost price
             const costPrice = document.createElement("p")
-            costPrice.innerHTML = "₹ " + item["product_price"]
+            costPrice.innerHTML ="Price:" + "    " + "₹ " + item["product_price"]
             document.querySelector(".rupee").append(costPrice)
 
             // Create a ratting div
@@ -549,24 +558,10 @@
 
             }
             icon.append(stars);
-            // const iconStar1 = document.createElement("i")
-            // iconStar1.setAttribute("class", "fa-solid fa-star")
-            // document.querySelector(".ratting").append(iconStar1)
-
-            // const iconStar2 = document.createElement("i")
-            // iconStar2.setAttribute("class", "fa-solid fa-star")
-            // document.querySelector(".ratting").append(iconStar2)
-
-            // const iconStar3 = document.createElement("i")
-            // iconStar3.setAttribute("class", "fa-solid fa-star")
-            // document.querySelector(".ratting").append(iconStar3)
-
-            // const iconStar4 = document.createElement("i")
-            // iconStar4.setAttribute("class", "fa-solid fa-star")
-            // document.querySelector(".ratting").append(iconStar4)
+ 
             // Create a  button tag
             const button = document.createElement("button")
-            button.innerHTML = "ADD TO CART"
+            button.innerHTML = "More"
             document.querySelector(".detail").append(button)
         }
 

@@ -16,8 +16,8 @@ const submitbut = document.getElementById("sub")
       let product_arr = JSON.parse(localStorage.getItem("product_detail")) ?? []
 
 
-if(product_arr.some((s) => {return s.product_name == pro_name})){
-  alert("please")
+if(product_arr.some((s) => {return s.product_name == pro_name && s.pr_img_1 ==pr_img_1 })){
+  alert("Already Saved")
 }
 
 else{
@@ -34,18 +34,17 @@ else{
     "pr_img_4": pr_img_4,
     "highlights": highlights,
     "rating": rating,
-    "description":description
+    "description":description,
+    "status":true
   })
 
   
-}
+// }
 localStorage.setItem("product_detail", JSON.stringify(product_arr));
       
-
+alert("Successfully Uplode")
       
-    });
-
-
+    }});
 
     //
     function delete_product() {
@@ -57,3 +56,7 @@ localStorage.setItem("product_detail", JSON.stringify(product_arr));
         }
       }
     }
+
+
+
+    

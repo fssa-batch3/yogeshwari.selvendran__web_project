@@ -230,9 +230,9 @@
                 </div><br><br><br><br>
                 
                 <div class="buttons">
-                    <button type="button" class="pr_btn" id="sub">SUBMIT</button>
-                    <!-- <button type="button" class="pr_btn" id="edit">EDIT</button>
-                    <button type="button" class="pr_btn" id="delete">DELETE</button> -->
+                    <!-- <button type="button" class="pr_btn" id="sub">SUBMIT</button> -->
+                    <button type="button" class="pr_btn" id="edit">SAVE</button>
+                    <button type="button" class="pr_btn" id="delete">DELETE</button>
                 </div>
             </div>
         </form>
@@ -297,37 +297,8 @@
     <div class="copy-right">
         <p> &copy;Copyright 2023 Carservice Theme by my won design</p>
     </div>
-    <!-- 
-    <script>
-
-        const btn = document.getElementById("Product_btn")
-
-        
-        btn.addEventListener( "click", function productData(e){
-
-            e.preventDefault();
-             const pPic = document.getElementById("picture").value;
-            const pName = document.getElementById("Name").value;
-            const pPrice = document.getElementById("Price").value;
-            const pDescripition = document.getElementById("Descripition").value;
-
-        let str = new Array();
-        str = JSON.parse(localStorage.getItem("surway")) ? JSON.parse(localStorage.getItem("surway")) :[]
-
-        const uid = Math.floor(Math.random() * 1000)
-        
-            str.push({
-                "product_id":uid,
-                "product_Pic": pPic,
-                "product_Name": pName,
-                "product_Price": pPrice,
-                 "product_Descripition": pDescripition
-            })
-            localStorage.setItem("surway", JSON.stringify(str))
-        })
-       
-    </script> -->
-    <script src="../../Page/JS files/seller.js">
+   
+    <script src="../../Page/JS files/update.js">
     </script>
 </body>
 

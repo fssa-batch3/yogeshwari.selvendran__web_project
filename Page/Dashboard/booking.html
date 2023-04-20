@@ -144,7 +144,83 @@
             <!-- </div> -->
             <!-- This is cardsection -->
             <main>
-                <div class="cards">
+                <div class="booking_appoinment">
+                <form>
+                    <!-- Vehicle number -->
+                    <div class="vehicle-number" id="align-num">
+                        <label class="more"> Vehicle Number</label>
+                        <input class="name" id="vehicle-number" type="text" pattern="[A-za-z0-9]{1,32}" name="user name"
+                            placeholder="vehicle-number" value="" required="true"
+                            >
+
+                    </div>
+                    <!-- from Address -->
+                    <div class="vehicle-number" id="align-num">
+                        <label class="more"> Vehicle Number</label>
+                        <input class="name" id="from-address" type="text" pattern="[A-za-z0-9]{1,32}" name="user name"
+                            placeholder="rom Address" value="" required="true"
+                            >
+
+                    </div>
+                    <!-- to Address -->
+                    <div class="vehicle-number" id="align-num">
+                        <label class="more"> Vehicle Number</label>
+                        <input class="name" id="to-address" type="text" pattern="[A-za-z0-9]{1,32}" name="user name"
+                            placeholder="to Address" value="" required="true"
+                            >
+
+                    </div>
+                    <!-- date  -->
+                    <div class="vehicle-number" id="align-num">
+                        <label class="more"> Date</label>
+                        <input class="name" id="date" type="date" name="user name"
+                            placeholder="date" value="" required="true"
+                            >
+
+                    </div>
+                    <!-- time -->
+                    <div class="vehicle-number" id="align-num">
+                        <label class="more"> time</label>
+                        <input class="name" id="vehicle-time" type="time" name="user name"
+                            placeholder="time" value="" required="true"
+                            >
+
+                    </div>
+                    <!--customar number -->
+                    <div class="vehicle-number" id="align-num">
+                        <label class="more"> customar Number</label>
+                        <input class="name" id="cus-num" type="text" pattern="[A-za-z0-9]{1,32}" name="user name"
+                            placeholder="cantact number" value="" required="true"
+                            >
+
+                    </div>
+                    <!-- customar name -->
+                    <div class="vehicle-number" id="align-num">
+                        <label class="more"> customar name</label>
+                        <input class="name" id="cus-name" type="text" pattern="[A-za-z0-9]{1,32}" name="user name"
+                            placeholder="customer number" value="" required="true"
+                            >
+
+                    </div>
+                    <!-- service -->
+                    <div class="vehicle-number" id="align-num">
+                        <label class="more"> Vehicle service</label>
+                        <input class="name" id="vehicle-service" type="text" name="user name"
+                            placeholder="service" value="" required="true"
+                            >
+
+                    </div>
+                    <!-- <div class="vehicle-number" id="align-num">
+                        <label class="more"> Vehicle Number</label>
+                        <input class="name" id="vehicle-number" type="text" pattern="[A-za-z0-9]{1,32}" name="user name"
+                            placeholder="vehicle-number" value="" required="true"
+                            disabled>
+
+                    </div> -->
+                    
+                </form>
+                </div>
+                <!-- <div class="cards">
                     <div class="single-card">
                         <div>
                             <h1>11</h1>
@@ -181,13 +257,21 @@
                             <span class="fa-solid fa-bag-shopping"></span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </main>
             
         </div>
     </div>
     <script>
         const book = JSON.parse(localStorage.getItem("book_data"))
+
+        const vehicleNumber = document.getElementById("vehicle-number");
+        const fromAddress = document.getElementById("from-address");
+        const toAddress = document.getElementById("to-address");
+        const date = document.getElementById("data");
+        const time = document.getElementById("vvehicle-time");
+        const contactNumber = document.getElementById("vehicle-number");
+        const cusName = document.getElementById("vehicle-number");
 
     </script>
 

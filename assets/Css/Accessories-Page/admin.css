@@ -277,7 +277,12 @@ header {
     font-size: 1.2rem;
     font-weight: 600;
 }
-
+.uplode{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around;
+    
+}
 /* This is little footer */
 .little-footer{
     display: flex;

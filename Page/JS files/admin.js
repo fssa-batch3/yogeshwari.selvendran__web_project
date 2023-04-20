@@ -1,6 +1,17 @@
 let products = JSON.parse(localStorage.getItem("product_detail"))
 console.log(products)
-products.forEach(e => {
+
+
+
+let filterProducts=products.filter((data)=>{
+    if(data["status"]==true){
+        return true 
+    }
+    else{
+        return false
+    }
+})
+filterProducts.forEach(e => {
     productCard(e);
 });
 // for (i = 0; i <productlist.length; i++) 
@@ -71,24 +82,10 @@ function productCard(item) {
 
     }
     icon.append(stars);
-    // const iconStar1 = document.createElement("i")
-    // iconStar1.setAttribute("class", "fa-solid fa-star")
-    // document.querySelector(".ratting").append(iconStar1)
-
-    // const iconStar2 = document.createElement("i")
-    // iconStar2.setAttribute("class", "fa-solid fa-star")
-    // document.querySelector(".ratting").append(iconStar2)
-
-    // const iconStar3 = document.createElement("i")
-    // iconStar3.setAttribute("class", "fa-solid fa-star")
-    // document.querySelector(".ratting").append(iconStar3)
-
-    // const iconStar4 = document.createElement("i")
-    // iconStar4.setAttribute("class", "fa-solid fa-star")
-    // document.querySelector(".ratting").append(iconStar4)
+ 
 
     const forwed = document.createElement("a")
-    forwed.setAttribute("href", "../../Page/Accesssories/seller .html?prod_id=" + item["productid"])
+    forwed.setAttribute("href", "../../Page/Accesssories/update_product.html?prod_id=" + item["productid"])
     icon.append(stars)
     document.querySelector(".detail").append(forwed)
     // Create a  button tag
@@ -96,78 +93,3 @@ function productCard(item) {
     button.innerHTML = "Update"
     forwed.append(button)
 }
-
-
-
-
-
-// let products = JSON.parse(localStorage.getItem("product_detail"))
-// console.log(products)
-// products.forEach(e => {
-//     productCard(e);
-// });
-// function productCard(item) {
-//     // let anchor_1 = document.createElement("a");
-//     // anchor_1.setAttribute("href", "../../product_detail.html?name=" + item["productid"]);
-//     let gallery_box = document.createElement("div")
-//     gallery_box.setAttribute("class", "gallery_box")
-
-//     let anchor_1 = document.createElement("a");
-//     anchor_1.setAttribute("href", "../product/product_detail.html?prod_id=" + item["productid"]);
-//     gallery_box.append(anchor_1);
-
-//     let gallery_imgs = document.createElement("img")
-//     gallery_imgs.setAttribute("class", "gallery_imgs")
-//     gallery_imgs.setAttribute("src", item["pr_img_1"])
-//     gallery_imgs.setAttribute("alt", "antique")
-// // document.querySelector(".gallery_box").append(gallery_imgs)
-//     anchor_1.append(gallery_imgs);
-
-//     let heading_2 = document.createElement("h2")
-//     heading_2.setAttribute("class", "product_name");
-//     heading_2.innerText = item["product_name"];
-//     // document.querySelector(".gallery_box").append(heading_2)
-//     anchor_1.append(heading_2);
-
-//     let paragraph_1 = document.createElement("p")
-//     paragraph_1.setAttribute("class", "detail")
-//     paragraph_1.innerText = item["highlights"]
-//     // document.querySelector(".gallery_box").append(paragraph_1)
-//     anchor_1.append(paragraph_1);
-
-//     let rating = document.createElement("div")
-//     rating.setAttribute("class", "rating")
-//     // document.querySelector(".gallery_box").append(rating)
-//     anchor_1.append(rating);
-
-//     let icon = document.createElement("div")
-//     icon.setAttribute("class", "star")
-//     // document.querySelector(".rating").append(icon)
-//     rating.append(icon);
-    
-//     let products_star = item
-//     let rating_round = Math.round(products_star.rating);
-//     let stars = "";
-//     for (let j = 0; j < rating_round; j++) {
-//         stars += "⭐";
-        
-//     }
-//     icon.append(stars);
-//     //     ratings_div = document.createElement("div");
-//     // ratings_div.setAttribute("class", "product-ratings");
-//     // product_card_div.append(ratings_div);
-//     //     let products_star = products[i];
-//     // let rating_round = Math.round(products_star.ratings);
-//     // let stars = "";
-//     // for (let j = 0; j < rating_round; j++) {
-//     //     stars += ":star:";
-//     // }
-//     // ratings_div.append(stars);
-//     let paragraph_2 = document.createElement("p")
-//     paragraph_2.innerText = "₹ " + item["product_price"]
-//     paragraph_2.setAttribute("class", "price")
-//     // document.querySelector(".gallery_box").append(paragraph_2)
-//     anchor_1.append(paragraph_2);
-//     document.querySelector(".product_page").append(gallery_box);
-//     console.log(gallery_box);
-// }
