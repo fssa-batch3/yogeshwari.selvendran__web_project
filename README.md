@@ -18,16 +18,23 @@ Wireframe: https://drive.google.com/file/d/1a86JZ82bJRrjJy6LJHxFh0a9QP0PCM8O/vie
 
 # User Module
 Register - Finished
+
 Login - Finished
+
 Update - Finished
+
 Logout - Finished
 
----------------------------------------------------------
+
 
 # Product Module
+
 Uplode - Finished
+
 View - Finished
+
 Update - Finished
+
 Delete - Finished
 
 ___________________________________________________________________________________________  
@@ -67,7 +74,7 @@ There you can update your information except email:
 Click logout 
 Directly go to signin page:
 
-__________________________________________________________________________________________________
+____________________________________________________________________________________________
 
 ## Uplode products(completed ✅)
 
@@ -86,7 +93,8 @@ Steps:
 
 ## Expected Result:
 Successfully Uplode
-_____________________________________________________________________________________
+
+
 ## View product(completed ✅)
 Scenario 1: Successfully view product details
 
@@ -102,7 +110,7 @@ Scenario 1: Successfully view product details
 ## Expected Result:
 The user can view the details of the selected product.
 
-______________________________________________________________________________________
+
 
 ## Update product(completed ✅)
 Scenario 1: Successfully updated
@@ -119,7 +127,7 @@ Scenario 1: Successfully updated
 ## Expected Result:
 The product is updated
 
-____________________________________________________________________________________
+
 
 ## Delete product(completed ✅)
 Scenario 1: Successfully Deleted
