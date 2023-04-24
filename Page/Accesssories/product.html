@@ -70,7 +70,8 @@
                 <!-- <li><i class="fa-solid fa-location-dot"></i></li> -->
                 <li><i class="fa-solid fa-bell"></i></li>
                 <li><i class="fa-solid fa-gear"></i></li>
-                <li><a href="../../Page/Home/profile.html"><img class="profile"
+                <li><a href="../../Page/Home/profile.html">
+                    <img class="profile"
                             src="../../assets/New_collection/profile-cover.jpg" alt="profile image"></a>
                 </li>
             </ul>
@@ -107,12 +108,13 @@
     <!-- This is product-details -->
     <div class="product-section">
         <div class="products">
+            <img id="product_main-image" src="" alt="engine image" class="engine">
             <ul>
                 <li><img id="sub_pic1" src="" alt="engine"></li>
                 <li><img id="sub_pic2" src="" alt="parts"></li>
                 <li><img id="sub_pic3" src="" alt="parts"></li>
             </ul>
-            <img id="product_main-image" src="" alt="engine image" class="engine">
+            
         </div>
         <div class="product-ditails">
             <p class="Highlights" id="about_product"></p>
@@ -124,7 +126,7 @@
                 <span id="product_ratting"></span>
             </div>
             <div class="list-btn">
-                <a href="../../Page/Accesssories/admin.html"><button id="add_card"><span
+                <a href="../../Page/Dashboard/wishlist.html"><button id="add_card"><span
                             class="fa-sharp fa-solid fa-cart-shopping"></span>Add to card</button></a>
                 <a href="../../Page/Accesssories/admin.html"><button id="buy_now"><span
                             class="fa-sharp fa-solid fa-bag-shopping"></span>Buy Now</button></a>
@@ -219,7 +221,7 @@
                 return false
             }
         })
-        // console.log(search);
+
 
         // get side product 1st  images
         const pr_image1 = document.getElementById("sub_pic1");
@@ -237,9 +239,6 @@
         const pr_main = document.getElementById("product_main-image");
         pr_main.setAttribute("src", search["pr_img_4"]);
 
-        // get product highlights
-        // const pr_highlight = document.getElementById("Highlights");
-        // pr_highlight.innerText = search["highlights"]
 
         // get product name
         const pr_name = document.getElementById("product_name");
@@ -369,6 +368,47 @@
         // star.prepend(span4)
 
 
+
+        let btn_cart = document.getElementById("add_card");
+
+        btn_cart.addEventListener("click", (element)=>{
+        let user = JSON.parse(localStorage.getItem("active_user"));
+        let addcart = JSON.parse(localStorage.getItem("cart")) ?? [];
+
+
+        let check;
+
+        addcart.find((e)=>{
+          
+            if(
+                e["productid"] == search["productid"] &&
+                e["user_email"] == user ["user_email"]
+            ){
+                return (check = 1);
+            } else{
+                return (check = 0);
+            }
+           })
+
+           if(check == 1){
+            alert("already added");
+           }
+           else{
+             let product = {};
+           
+             product["pr_img_1"] = search["pr_img_1"];
+             product["product_price"] = search["product_price"];
+             product["rating"] = search["rating"];
+             product["product_name"] = search["product_name"];
+             product["user_email"] = user["user_email"];
+             product["productid"]=search["productid"]
+
+
+             addcart.push(product);
+             localStorage.setItem("cart",JSON.stringify(addcart));
+             alert("added");
+            }
+          })
 
     </script>
 </body>

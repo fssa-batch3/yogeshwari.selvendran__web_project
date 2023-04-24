@@ -116,16 +116,16 @@
                     <!-- This is First name  -->
                     <div class="first-name" id="align-num">
                         <label class="more"> First Name</label>
-                        <input class="name" id="user-firstname" type="text" pattern="[A-Za-z]{1,32}" name="user name"
-                            title="First name connot contain spaces" placeholder="First Name" value="" required="true"
+                        <input class="name" id="user-firstname" type="text" pattern=^[a-zA-Z]{3,20}$ title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." name="user name"
+                            placeholder="First Name" value="" required="true"
                             disabled>
 
                     </div>
                     <!-- This is Last name  -->
                     <div class="last-name" id="align-num">
                         <label class="more"> Last Name</label>
-                        <input class="name" id="user-lastname" type="text" name="user name" pattern="[A-Za-z]{1,32}"
-                            placeholder="Last Name" value="" title="Last name connot contain spaces" required="true"
+                        <input class="name" id="user-lastname" type="text" name="user name" pattern=^[a-zA-Z]{3,20}$ title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                            placeholder="Last Name" value="" required="true"
                             disabled>
 
                     </div>
@@ -140,7 +140,7 @@
                     <!-- This is user mobile number -->
                     <div class="number" id="align-num">
                         <label class="more"> Number</label>
-                        <input class="name" id="user-number" type="text" pattern="[0-9]{10,25}" name="user mobile"
+                        <input class="name" id="user-number" type="text" pattern="[0-9]{10}" title="PLease enter 10 digit number" name="user mobile"
                             placeholder="+91 8923456789" required="true" disabled>
                     </div>
 
@@ -148,20 +148,20 @@
                     <div class="address" id="align-num">
                         <label class="more"> Address</label>
 
-                        <input class="name" id="user-address" type="text" pattern="[A-za-z0-9]{6,90}"
+                        <input class="name" id="user-address" type="text" pattern="^[a-zA-Z0-9!@#\$%\^&\*\(\)\-_=\+\\|\{\}\[\]:;\"
                             name="user address" placeholder="Add Address" required="true" disabled>
 
                     </div>
                     <!-- This is Address input  -->
                     <div class="address" id="align-num">
                         <label class="more"> Pincode</label>
-                        <input class="name" id="user-pincode" type="text" pattern="[A-za-z0-9]{6,90}"
+                        <input class="name" id="user-pincode" type="text" pattern="[0-9]{6}" maxlength="6"
                             name="user address" placeholder="Pincode" required="true" disabled>
 
                     </div>
                     <!-- This is update button -->
                     <div>
-                        <button type="button" id="btn" class="name">Edit</button>
+                        <button type="submit" id="btn" class="name">Edit</button>
                     </div>
                     <!-- This is delete button -->
                     <!-- <div>
@@ -208,30 +208,38 @@
 
         // localStorage.setItem("profile",JSON.stringify(user))
 
+const formBtn= document.getElementById("form");
 
         const btn = document.getElementById("btn")
 
-        btn.addEventListener("click", function () {
+        formBtn.addEventListener("submit", (e)=> {
+            e.preventDefault();
+            
 
-            if (btn.innerHTML == "save") {
-                btn.innerHTML = "edit"
-                firstName.setAttribute("disabled", "")
-                lastName.setAttribute("disabled", "")
+            if (btn.innerHTML == "Edit") {
+                btn.innerHTML = "Save"
+                // firstName.setAttribute("disabled", "")
+                // lastName.setAttribute("disabled", "")
 
-                userMobile.setAttribute("disabled", "")
-                address.setAttribute("disabled", "")
-                pincodeAddress.setAttribute("disabled", "")
-
-            }
-            else if (btn.innerHTML = "edit") {
-                btn.innerHTML = "save"
+                // userMobile.setAttribute("disabled", "")
+                // address.setAttribute("disabled", "")
+                // pincodeAddress.setAttribute("disabled", "")
                 firstName.removeAttribute("disabled")
                 lastName.removeAttribute("disabled")
 
                 userMobile.removeAttribute("disabled")
                 address.removeAttribute("disabled")
                 pincodeAddress.removeAttribute("disabled")
+
             }
+            else if (btn.innerHTML = "Edit") {
+             firstName.setAttribute("disabled", "")
+                lastName.setAttribute("disabled", "")
+
+                userMobile.setAttribute("disabled", "")
+                address.setAttribute("disabled", "")
+                pincodeAddress.setAttribute("disabled", "")
+            
 
             const userid = JSON.parse(localStorage.getItem("user_data"))
             // const userlist = JSON.parse(localStorage.getItem("profile"))
@@ -247,6 +255,7 @@
                     // localStorage.setItem("profile", JSON.stringify(element))
                 }
             })
+        }
         })
 
         const log = document.getElementById("log")

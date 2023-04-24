@@ -44,7 +44,7 @@
                     <h1>Sign In</h1>
                     <p>Use either your email or a verified phone number</p>
 
-                    <input class="name" id="user-email" type="email" name="user email" placeholder="Enter email">
+                    <input class="name" id="user-email" type="email" name="user email" pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Enter email">
 
 
                     <input class="name" id="user-password" type="password" name="user password"
@@ -75,6 +75,9 @@
             let result;
             arraydetails.find(element => {
                 if (element["user_email"] == useremail && element["password"] == userpassword) {
+                let active_user = element;
+                console.log(active_user);
+                localStorage.setItem("active_user",JSON.stringify(active_user))
                     return result = 1;
                 }
                 else {

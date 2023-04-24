@@ -87,13 +87,13 @@
             <form>
                 <!-- Vehicle type -->
                 <div class="vehicle-type">
-                    <div class="year">
+                    <!-- <div class="year">
                         <label class="top-head">VEHICLE YEAR</label><br>
                         <input id="vehicleyear" class="chose-year" name="vehicle-year" type="text" step="1"
                             pattern="[0-9]{4,10}" title="First name connot contain spaces" placeholder="vehicle-year"
                             value="" aria-label="Phone">
-                    </div>
-                    <div class="year">
+                    </div> -->
+                    <!-- <div class="year">
                         <label class="top-head">VEHICLE MAKE</label><br>
                         <select name="vehicle-make" id="company">
                             <option value="">Choose</option>
@@ -102,17 +102,17 @@
                             <option value="TATA">TATA</option>
                             <option value="AUDY">AUDY</option>
                             <option value=">Honda">Honda</option>
-                            <!-- <option value="">Honda</option>
                             <option value="">Honda</option>
                             <option value="">Honda</option>
-                            <option value="">Honda</option> -->
+                            <option value="">Honda</option>
+                            <option value="">Honda</option>
                         </select>
-                    </div>
-                    <div class="year">
+                    </div> -->
+                    <!-- <div class="year">
                         <label class="top-head">VEHICLE MILEAGE</label><br>
                         <input id="vehiclemileage" class="mileage" name="vehicle-mileage" type="text"
                             pattern="[a-zA-Z0-9]{3,10}" placeholder="Vehicle Mileage" required aria-label="mileage">
-                    </div>
+                    </div> -->
                 </div><br><br>
                 <!-- This is appoinment section -->
                 <div class="appoinment-section">
@@ -156,10 +156,11 @@
                         <input type="email" id="contactemail" placeholder="Your Email*" required aria-label="email"><br>
                         <input type="text" id="contactphone" placeholder="Your Phone" maxlength="10" required
                             pattern="[0-9]{3,12}" aria-label="Phone"><br>
+                            <input class="name" id="address" type="text" pattern="[A-za-z0-9]{6,90}"
+                            name="user address" placeholder="Add Address" required="true">
                         <!-- <input type="text" id="address" placeholder="vehicle Pickup address" maxlength="10" required pattern="[a-zA-Z0-9]{3,80}"
                         aria-label="Phone"> -->
-                        <textarea name="" id="message" cols="30" rows="3"
-                            placeholder="Additional Questions or Comments"></textarea><br><br>
+                        <br><br>
                         <!-- <input id="message" id="contactmessage" type="message" placeholder="Additional Questions or Comments"
                     aria-label="message"><br> -->
                         <button type="submit">SUBMIT NOW</button>
@@ -357,6 +358,7 @@ let checkValue;
                     "Booking_time": time1,
                     "vehicle_company": company1,
                     "Booking_service": checkValue,
+                    
                     "customer_name": contactName,
                     "customer_email": contactEmail,
                     "customer_phone": contactPhone

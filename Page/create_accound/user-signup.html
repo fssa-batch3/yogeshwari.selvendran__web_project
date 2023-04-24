@@ -22,13 +22,13 @@
             <form id="form-page1">
 
                 <div class="first-name">
-                    <input class="name" id="user-firstname" type="text" pattern="[A-Za-z]{3,32}" name="user name"
-                        title="First name connot contain spaces" placeholder="First Name" value="" required>
+                    <input class="name" id="user-firstname" type="text" pattern=^[a-zA-Z]{3,20}$ title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." name="user name"
+                         placeholder="First Name" value="" required>
                 </div>
 
                 <div class="last-name">
-                    <input class="name" id="user-lastname" type="text" name="user name" pattern="[A-Za-z]{1,32}"
-                        placeholder="Last Name" value="" title="Last name connot contain spaces" required>
+                    <input class="name" id="user-lastname" type="text" name="user name" pattern=^[a-zA-Z]{3,20}$ title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                        placeholder="Last Name" value=""  required>
                 </div>
                 <div class="ra-btn">
 
@@ -49,30 +49,30 @@
                 </div>
 
                 <div class="email">
-                    <input class="name" id="user-email" type="email" name="user email" placeholder="name@gmail.com"
+                    <input class="name" id="user-email" type="email" name="user email" pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="name@gmail.com"
                         value="" required>
                 </div>
 
                 <div class="password">
-                    <input class="name" id="user-password" type="password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="password" required>
+                    <input class="name" id="user-password" type="password" name="psw" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n\s])(?=.*[A-Z])(?=.*[a-z]).*$" title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters and white space character" placeholder="password" required>
                 </div>
 
                 <div class="confirm-password">
-                    <input class="name" id="confirm-password" type="password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="confirm-password" required>
+                    <input class="name" id="confirm-password" type="password" name="psw" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n\s])(?=.*[A-Z])(?=.*[a-z]).*$" title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters and white space character" placeholder="confirm-password" required>
                 </div>
 
                 <div class="number">
-                    <input class="name" id="user-number" type="tel" pattern="[0-9]{10}" name="user mobile"
+                    <input class="name" id="user-number" type="tel" pattern="[0-9]{10}" title="PLease enter 10 digit number" name="user mobile"
                         placeholder="Enter your Number" required="true">
                 </div>
                 <div class="address">
 
-                    <input class="name" id="user-address" type="text" pattern="[(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,90}" name="user address"
-                        placeholder="Home Address" required>
+                    <input class="name" id="user-address" type="text" pattern="^[a-zA-Z0-9!@#\$%\^&\*\(\)\-_=\+\\|\{\}\[\]:;\"
+                required>
 
                 </div>
                 <div class="address">
-                    <input class="name" id="user-pincode" type="text" pattern="[0-9]{6}" name="user address"
+                    <input class="name" id="user-pincode" type="text" pattern="[0-9]{6}" maxlength="6" name="user address"
                         placeholder="Pincode" required>
                 </div>
 
