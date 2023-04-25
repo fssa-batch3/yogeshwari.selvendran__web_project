@@ -2,7 +2,7 @@ if (JSON.parse(localStorage.getItem("product_detail"))) {
 
 }
 else {
-    localStorage.setItem("product_detail".JSON.stringify([
+    localStorage.setItem("product_detail",JSON.stringify([
         {
             about_product
                 :
