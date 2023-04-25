@@ -54,6 +54,7 @@
     <hr>
     <!-- Second navbar -->
     <div class="nav-container">
+        
         <div class="main-nav">
             <div class="email-item">
                 <img src="../../assets/Icons/envelope.png" alt="e3mail image">
@@ -80,187 +81,177 @@
     </div>
     <!-- This is Cart section -->
     <div class="card-section">
-        <h2>My collection</h2>
-        <div class="top-head">
-            <!-- <div class="cart"> -->
-            <!-- <h3>Shopping cart</h3> -->
-            <!-- <div class="first-cart">
-                    <img id="sub-pic" src="../../assets/New_collection/Bik-part/Air filter.png" alt="">
-                </div>
-                <div class="second-cart">
-                    <p id="name"></p> -->
-            <!-- <div class="star">
-                        <span>
-                            <i class="fa-solid fa-star"></i>
-                            <p id="product_ratting"></p>
-                        </span>
+        
+        <div class="pro-collection">
+            <h2>My collection</h2>
+            <div class="top-head">
+                <!-- <div class="cart"> -->
+                <!-- <div class="first-cart">
+                        <img id="sub-pic" src="../../assets/New_collection/Bik-part/Air filter.png" alt="">
+                    </div>
+                    <div class="second-cart">
+                        <p id="name"></p> -->
+                <!-- <div class="star">
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <p id="product_ratting"></p>
+                            </span>
+                        </div> -->
+                <!-- <p id="price"></p>
+                        
+                            <div class="count">
+                                <span class="minus">-</span>
+                                <span class="num">0</span>
+                                <span class="plus">+</span>
+                            </div>
+                        
+                    </div>
+                    
+                    <div class="remove">
+                        <button>
+                            <span><i class="fa-solid fa-trash"></i></span></button>
                     </div> -->
-            <!-- <p id="price"></p>
-                    
-                        <div class="count">
-                            <span class="minus">-</span>
-                            <span class="num">0</span>
-                            <span class="plus">+</span>
-                        </div>
-                    
+            </div></div>
+        
+        <div class="collection">
+            <div class="bit-collection">
+                <div class="total"></div>
+
+            <div class="price">
+                <h3 id="product">Price Details</h3>
+                <div class="total1">
+                    <p>Total Product Price :</p>
+                    <p id="total_count"></p>
                 </div>
-                
-                <div class="remove">
-                    <button>
-                        <span><i class="fa-solid fa-trash"></i></span></button>
-                </div> -->
+                <div class="order">
+                    <p>Order Total :</p>
+                    <p id="total_count1"></p>
+                </div>
+    
+    
+            </div>
+            </div>
+            
         </div>
         <hr>
-        <div class="total"></div>
-
-        <div class="price">
-            <h2 id="product">Price Details()</h2>
-            <div class="total">
-                <p>Total Product Price :</p>
-                <p id="total_count"></p>
-            </div>
-            <div class="order">
-                <p>Order Total :</p>
-                <p id="total_count1"></p>
-            
-
-    </div>
-
-
-    </div>
-
-
-    <script>
-        let cart_sample = JSON.parse(localStorage.getItem("cart"));
-        let user = JSON.parse(localStorage.getItem("active_user"));
         
-        let total=0;
-        // cart_sample.find((e) => {
-        for (let i = 0; i < cart_sample.length; i++) {
-            if (user["user_email"] == cart_sample[i]["user_email"]) {
-                // for(let i=0; i<=cart.length; i++){
-                // Create First div
-                total += Number(cart_sample[i]["product_price"])
 
-                const cart = document.createElement("div")
-                cart.setAttribute("class", "cart")
-                document.querySelector(".top-head").prepend(cart)
 
-                const first = document.createElement("div")
-                first.setAttribute("class", "first-cart")
-                cart.prepend(first)
+        <script>
+            let cart_sample = JSON.parse(localStorage.getItem("cart"));
+            let user = JSON.parse(localStorage.getItem("active_user"));
 
-                // Create a img tag
-                const picture = document.createElement("img")
-                picture.setAttribute("src", cart_sample[i]["pr_img_1"])
-                first.append(picture)
-                console.log(picture)
-                // Create a second cart
-                const second = document.createElement("div")
-                second.setAttribute("class", "second-cart")
-                document.querySelector(".cart").append(second)
-                // Product name
-                const name1 = document.createElement("p")
-                name1.setAttribute("id", "name")
-                name1.innerHTML = cart_sample[i]["product_name"]
-                second.append(name1)
-                // Product price
-                const price = document.createElement("p")
-                price.setAttribute("id", "price")
-                price.innerHTML = "price:" + cart_sample[i]["product_price"]
-                second.append(price)
-                // create a count
-                const countquantity = document.createElement("div")
-                countquantity.setAttribute("class", "count")
-                second.append(countquantity)
-                // Create minus
-                const minus1 = document.createElement("span")
-                minus1.setAttribute("class", "minus")
-                minus1.innerHTML = "-"
-                countquantity.append(minus1)
-                // Create num count 
-                const numcount = document.createElement("span")
-                numcount.setAttribute("class", "num")
-                numcount.innerHTML = "0"
-                countquantity.append(numcount)
-                // Create plus count
-                plus1 = document.createElement("span")
-                plus1.setAttribute("class", "plus")
-                plus1.innerHTML = "+"
-                countquantity.append(plus1)
-                // Create a remove btn
-                const remove1 = document.createElement("div")
-                remove1.setAttribute("class", "removebtn ")
-                document.querySelector(".cart").append(remove1)
-                // Create btn
-                const btn1 = document.createElement("button")
-                // btn1.setAttribute("class",)
-                remove1.append(btn1)
-                // create span
-                const top1 = document.createElement("span")
-                btn1.append(top1)
-                // create Icon 
-                const icon1 = document.createElement("i")
-                icon1.setAttribute("class", "fa-solid fa-trash")
-                btn1.append(icon1)
+            let total = 0;
+            // cart_sample.find((e) => {
+            for (let i = 0; i < cart_sample.length; i++) {
+                if (user["user_email"] == cart_sample[i]["user_email"]) {
+                    // for(let i=0; i<=cart.length; i++){
+                    // Create First div
+                    total += Number(cart_sample[i]["product_price"])
 
-                remove1.addEventListener("click", (e) => {
-                    for (let j = 0; j < cart_sample.length; j++) {
-                        if (user["user_email"] == cart_sample[i]["user_email"]) {
-                            cart_sample.splice(i, 1);
+                    const cart = document.createElement("div")
+                    cart.setAttribute("class", "cart")
+                    document.querySelector(".top-head").prepend(cart)
+
+                    const first = document.createElement("div")
+                    first.setAttribute("class", "first-cart")
+                    cart.prepend(first)
+
+                    // Create a img tag
+                    const picture = document.createElement("img")
+                    picture.setAttribute("src", cart_sample[i]["pr_img_1"])
+                    first.append(picture)
+                    console.log(picture)
+                    // Create a second cart
+                    const second = document.createElement("div")
+                    second.setAttribute("class", "second-cart")
+                    document.querySelector(".cart").append(second)
+                    // Product name
+                    const name1 = document.createElement("p")
+                    name1.setAttribute("id", "name")
+                    name1.innerHTML = cart_sample[i]["product_name"]
+                    second.append(name1)
+                    // Product price
+                    const price = document.createElement("p")
+                    price.setAttribute("id", "price")
+                    price.innerHTML = "price:" + cart_sample[i]["product_price"]
+                    second.append(price)
+                    // create a count
+                    const countquantity = document.createElement("div")
+                    countquantity.setAttribute("class", "count")
+                    second.append(countquantity)
+                    // Create minus
+                    const minus1 = document.createElement("span")
+                    minus1.setAttribute("class", "minus")
+                    minus1.innerHTML = "-"
+                    countquantity.append(minus1)
+                    // Create num count 
+                    const numcount = document.createElement("span")
+                    numcount.setAttribute("class", "num")
+                    numcount.innerHTML = "0"
+                    countquantity.append(numcount)
+                    // Create plus count
+                    plus1 = document.createElement("span")
+                    plus1.setAttribute("class", "plus")
+                    plus1.innerHTML = "+"
+                    countquantity.append(plus1)
+                    // Create a remove btn
+                    const remove1 = document.createElement("div")
+                    remove1.setAttribute("class", "removebtn ")
+                    document.querySelector(".cart").append(remove1)
+                    // Create btn
+                    const btn1 = document.createElement("button")
+                    // btn1.setAttribute("class",)
+                    remove1.append(btn1)
+                    // create span
+                    const top1 = document.createElement("span")
+                    btn1.append(top1)
+                    // create Icon 
+                    const icon1 = document.createElement("i")
+                    icon1.setAttribute("class", "fa-solid fa-trash")
+                    top1.append(icon1)
+
+                    remove1.addEventListener("click", (e) => {
+                        for (let j = 0; j < cart_sample.length; j++) {
+                            if (user["user_email"] == cart_sample[i]["user_email"]) {
+                                cart_sample.splice(i, 1);
+                                localStorage.setItem("cart", JSON.stringify(cart_sample));
+                                alert("Are you sure remove cart");
+                            location.reload();
+                            break;
+                            }
+                           
                         }
-                        localStorage.setItem("cart", JSON.stringify(cart_sample));
-                        location.reload();
-                    }
-                })
+                    })
 
-                // }
+                    // }
+                }
             }
-        }
-
-        // console.log(user["user_email"]);
 
 
 
-        // get product image
-        // let pr_image1 = document.getElementById("sub-pic");
-        // pr_image1.setAttribute("src", e["pr_img_1"]);
-
-        // // get product name
-        // let pr_name = document.getElementById("name");
-        // pr_name.innerText = e["product_name"]
-
-        // // get product price
-        // let pr_price = document.getElementById("price");
-        // pr_price.innerText = e["product_price"]
-
-        // get product ratting
-        // let pr_ratting = document.getElementById("product_ratting");
-        // pr_ratting.innerText = e["rating"]
+            const plus = document.querySelectorAll(".plus"),
+                minus = document.querySelectorAll(".minus"),
+                num = document.querySelectorAll(".num");
 
 
-        const plus = document.querySelectorAll(".plus"),
-            minus = document.querySelectorAll(".minus"),
-            num = document.querySelectorAll(".num");
+            let totalAmount = document.getElementById("total_count");
+            totalAmount.innerText = total;
+            let totalAmount1 = document.getElementById("total_count1");
+            totalAmount1.innerText = total;
+            let a = 1;
+            plus.forEach((plusbtn) => {
 
+                plusbtn.addEventListener("click", () => {
 
-        let totalAmount = document.getElementById("total_count");
-        totalAmount.innerText = total;
-        let totalAmount1 = document.getElementById("total_count1");
-        totalAmount1.innerText = total;
-        let a = 1;
-        plus.forEach((plusbtn) => {
+                    a++;
+                    a = (a < 5) ? a : a;
+                    num.innerText = a;
+                    console.log(a);
 
-            plusbtn.addEventListener("click", () => {
+                });
 
-                a++;
-                a = (a < 5) ? a : a;
-                num.innerText = a;
-                console.log(a);
-
-            });
-
-        })
+            })
 
 
         // minus.addEventListener('click', () => {
@@ -275,7 +266,7 @@
 
 
 
-    </script>
+        </script>
 
 </body>
 
