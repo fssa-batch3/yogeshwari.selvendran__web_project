@@ -373,8 +373,14 @@
         let products = JSON.parse(localStorage.getItem("product_detail"))
         console.log(products);
 
+        let filterProducts;
 
-        let filterProducts=products.filter((data)=>{
+    if(products==null){
+
+    }
+
+    else{
+        filterProducts=products.filter((data)=>{
     if(data["status"]==true){
         return true 
     }
@@ -382,6 +388,8 @@
         return false
     }
 })
+    }
+
         filterProducts.forEach(e => {
             productCard(e);
         });
