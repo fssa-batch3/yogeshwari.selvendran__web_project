@@ -390,9 +390,16 @@
 })
     }
 
-        filterProducts.forEach(e => {
+
+    if(filterProducts==null){
+
+}
+else{
+    filterProducts.forEach(e => {
             productCard(e);
         });
+}
+    
         // for (i = 0; i <productlist.length; i++) 
         function productCard(item) {
             const product = document.createElement("div")
