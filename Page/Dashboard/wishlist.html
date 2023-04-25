@@ -140,10 +140,14 @@
         <script>
             let cart_sample = JSON.parse(localStorage.getItem("cart"));
             let user = JSON.parse(localStorage.getItem("active_user"));
-
             let total = 0;
+            if(cart_sample==null){
+
+            }
+else{
+
             // cart_sample.find((e) => {
-            for (let i = 0; i < cart_sample.length; i++) {
+                for (let i = 0; i < cart_sample.length; i++) {
                 if (user["user_email"] == cart_sample[i]["user_email"]) {
                     // for(let i=0; i<=cart.length; i++){
                     // Create First div
@@ -229,6 +233,8 @@
             }
 
 
+}
+         
 
             const plus = document.querySelectorAll(".plus"),
                 minus = document.querySelectorAll(".minus"),
