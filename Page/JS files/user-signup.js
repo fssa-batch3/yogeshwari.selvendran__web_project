@@ -17,6 +17,7 @@ function getData() {
     const address = document.getElementById("user-address").value;
     const pincodeAddress = document.getElementById("user-pincode").value;
     const password2 = document.getElementById("confirm-password").value;
+    let userid = Math.floor(Math.random() * 100)
 
     //This is for store data in localstorage
     let userRecords = new Array();
@@ -28,14 +29,17 @@ function getData() {
     }
      else{
         userRecords.push({
-         "user_Firstname": firstName,
+            "user_id":userid,
+            "user_Firstname": firstName,
             "user_lastname": lastName,
             "gender": gender,
             "user_email": email,
             "password": password,
             "mobile": number,
             "address1": address,
-            "pinaddress": pincodeAddress
+            "pinaddress": pincodeAddress,
+            "imagename":"",
+            "url":""
 
         })
         window.location.href = "../create_accound/signin.html"

@@ -17,7 +17,7 @@
     <div class="little-footer">
         <div class="contact-item">
             <span>
-                <i class="fa-solid fa-phone"></i>506272 8115
+                <i class="fa-solid fa-phone"></i>50627758115
 
                 <span>
                     <i class="fa-solid fa-envelope"></i> torkanservice@gmail.com
@@ -69,7 +69,7 @@
             <ul>
                 <!-- <li><i class="fa-solid fa-location-dot"></i></li> -->
                 <li><i class="fa-solid fa-bell"></i></li>
-                <li><i class="fa-solid fa-gear"></i></li>
+                <li><a href="../../Page/Dashboard/wishlist.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li><a href="../../Page/Home/profile.html"><img class="profile"
                             src="../../assets/New_collection/profile-cover.jpg" alt="profile image"></a>
                 </li>
@@ -140,10 +140,10 @@
                                         name="check" aria-label="checkbox"> Oil, Lube & Filters </label>
                                 <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Service"
                                         name="check" aria-label="checkbox">Service</label>
-                                <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Steering & Supension"
-                                        name="check" aria-label="checkbox"> Steering & Supension</label>
-                                <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Transmission"
-                                        name="check" aria-label="checkbox"> Transmission</label>
+                                <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Steering & Supension"
+                                        name="check" aria-label="checkbox"> Steering & Supension</label> -->
+                                <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Transmission"
+                                        name="check" aria-label="checkbox"> Transmission</label> -->
 
                                 <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" 
                                         name="check" aria-label="checkbox"> Others</label> -->
@@ -185,7 +185,7 @@
     </div>
     <div class="cust-review">
         <h2> Add Your Review </h2>
-        <form id="Reviews">
+        <form id="reviews">
             <div class="review-uplode">
                 <div>
                     <input type="text" id="review-username" placeholder="Enter Your Name">
@@ -194,9 +194,9 @@
                     <textarea aria-label="With textarea" rows="4" cols="50" id="rewiew_message" placeholder="Message"
                         required></textarea>
                 </div>
-                <div>
+                <!-- <div>
                     <input type="file" name="listing_faq-question" id="review-userimage" >
-                </div>
+                </div> -->
                 <div>
                     <button type="submit" >submit your reviw</button>
                 </div>
@@ -313,106 +313,8 @@
     <div class="copy-right">
         <p> &copy;Copyright 2023 Carservice Theme by my won design</p>
     </div>
-    <script>
-        const appData = document.getElementById("app-book")
-        appData.addEventListener('submit', (s) => {
-            s.preventDefault();
-            collectData();
-        })
-        function collectData() {
-            const vehicleYear = document.getElementById("vehicleyear").value;
-            console.log(vehicleYear);
-            const vehicleMileage = document.getElementById("vehiclemileage").value;
-            const date1 = document.getElementById("date").value;
-            const time1 = document.getElementById("time").value;
-            const company1 = document.getElementById("company").value;
-
-            const contactName = document.getElementById("contactname").value;
-            const contactEmail = document.getElementById("contactemail").value;
-            const contactPhone = document.getElementById("contactphone").value;
-
-
-let checkValue;
-            // check box
-
-      const check1 = document.querySelectorAll("input[type=checkbox]")
-      check1.forEach((e)=>{
-        if(e.checked){
-            checkValue=e.value
-        }
-      })
-            // const contactMessage = document.getElementById("contactmessage").value;
-
-            //This is for store data in localstorage
-            let cusBook = new Array();
-            cusBook = JSON.parse(localStorage.getItem("book_data")) ?
-                JSON.parse(localStorage.getItem("book_data")) : []
-            if (cusBook.some((s) => { return s.customer_email == contactEmail })) {
-                alert("already booked")
-            }
-            else {
-                cusBook.push({
-                    "vehicle_year": vehicleYear,
-                    "vehicle_mileage": vehicleMileage,
-                    "Booking_date": date1,
-                    "Booking_time": time1,
-                    "vehicle_company": company1,
-                    "Booking_service": checkValue,
-                    
-                    "customer_name": contactName,
-                    "customer_email": contactEmail,
-                    "customer_phone": contactPhone
-                    // "customer_message": contactmessage
-                })
-                window.location.href = "../../Page/Appoinment/payment.html"
-            }
-            localStorage.setItem("book_data", JSON.stringify(cusBook));
-        }
-
-        // This is custamor review
-
-        // sessionStorage.setItem('added', 0);
-        // var status_add = sessionStorage.getItem('added');
-        // $('.list_add-review-cta').click(function () {
-        //     sessionStorage.setItem('added', 1);
-        //     console.log(status_add);
-        //     let username = document.getElementById("review-username").value;
-        //     let message = document.getElementById("rewiew_message").value;
-        //     let userimage = $("#review-userimage").val();
-        //     $('.main_reviews-container').append('<div class="border py-3 my-2 border-dark rounded faq_inner container"><div class="accordian-link d-flex align-items-center pointer py-2"><img src="https://source.unsplash.com/random/2200x1200/?person" class="img-fluid user_image"><h3 class="reveiew_user_name ps-3">' + username + '</h3></div><p class="review_answer">' + message + '</p></div>');
-        //     clearvalues();
-        // });
-        // function clearvalues() {
-        //     document.getElementById("review-username").value = "";
-        //     document.getElementById("rewiew_message").value = "";
-        //     $('#review-userimage').val('');
-        // }
-
-
-        const reviewData = document.getElementById("Reviews")
-        reviewData.addEventListener('submit',(p) => {
-            p.preventDefault();
-            addData();
-        })
-function addData(){
-    let username = document.getElementById("review-username").value;
-            let message = document.getElementById("rewiew_message").value;
-            // let userimage = $("#review-userimage").val(); 
-    let review = new Array();
-    review = JSON.parse(localStorage.getItem("user_review")) ?
-    JSON.parse(localStorage.getItem("user_review")) : []
-    if(review.some((p) => {return p.cust_name == username})){
-        alert("already booked")
-    }
-    else{
-review.push({
-    "cust_name" : username,
-    "cust_message" : message
-})
-    }
-    localStorage.setItem("user_review",JSON.stringify(review));
-}
-
+    <script src="../../Page/JS files/appoinment.js">
+       
     </script>
 </body>
 

@@ -73,11 +73,13 @@
             let arraydetails = JSON.parse(localStorage.getItem("user_data"))
 
             let result;
+
+            let active_user;
             arraydetails.find(element => {
                 if (element["user_email"] == useremail && element["password"] == userpassword) {
-                let active_user = element;
+                active_user = element;
                 console.log(active_user);
-                localStorage.setItem("active_user",JSON.stringify(active_user))
+                // localStorage.setItem("active_user",JSON.stringify(active_user))
                     return result = 1;
                 }
                 else {
@@ -89,7 +91,8 @@
                 // swal("Yep!", "you logged in bruh!", "success");
                 window.location.href = "../../Page/Dashboard/user-profile.html"
                 alert(" success")
-                localStorage.setItem("sign_in", useremail)
+                localStorage.setItem("active_user",JSON.stringify(active_user))
+                // localStorage.setItem("sign_in", useremail)
 
             }
             else {

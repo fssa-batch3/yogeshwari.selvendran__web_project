@@ -56,8 +56,6 @@ function productCard(item) {
     rupee1.setAttribute("class", "rupee")
     document.querySelector(".cost-rate").append(rupee1)
 
-    
-
     // Create a p tag foe cost price
     const costPrice = document.createElement("p")
     costPrice.innerHTML = "₹ " + item["product_price"]
@@ -85,7 +83,7 @@ function productCard(item) {
  
 
     const forwed = document.createElement("a")
-    forwed.setAttribute("href", "../../Page/Accesssories/update_product.html?prod_id=" + item["productid"])
+    forwed.setAttribute("href", "../../Page/Admin/update_product.html?prod_id=" + item["productid"])
     icon.append(stars)
     document.querySelector(".detail").append(forwed)
     // Create a  button tag

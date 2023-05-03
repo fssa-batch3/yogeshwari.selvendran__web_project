@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live On - Too Fast Too Quick</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/Icons/live-on.png">
+    <link rel="stylesheet" href="../../assets/Css/Admin/seller.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="live-on" src="../../assets/Icons/live-on.png" alt="">
+            <img class="live" src="../../assets/Icons/text-liveon-removebg-preview.png" alt="">
+        </div>
+        
+        <div class="user">
+            <ul>
+                <!-- <li><i class="fa-solid fa-location-dot"></i></li> -->
+                <li><i class="fa-solid fa-bell"></i></li>
+                <li><a href="../../Page/Dashboard/wishlist.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="../../Page/Home/profile.html"><img class="profile" src="../../assets/New_collection/profile-cover.jpg" alt="profile image"></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="account-section">
+        <div class="side-item">
+            <div class="side-menu">
+                <ul>
+                    <li>
+                        <a href="../../Page/Admin/admin.html" class="active"><span
+                                class="fa-solid fa-circle-user"></span>
+                            <span>Products</span></a>
+                    </li>
+                    <li>
+                        <a href="" class="active"><span class="fa-solid fa-calendar-check"></span>
+                            <span>Appointments</span></a>
+                    </li>
+
+                    <li>
+                        <a href="" class="active"><span class="fa-solid fa-bag-shopping"></span>
+                            <span>Orders</span></a>
+                    </li>
+                    
+                    <li>
+                        <a href="" class="active"><span class="fa-solid fa-bookmark"></span>
+                            <span>Customer Reviews</span></a>
+                    </li>
+                    <li>
+                        <a href="" class="active"><span class="fa-solid fa-tags"></span>
+                            <span>Offers</span></a>
+                    </li>
+                    <!-- <li>
+                        <a href="" class="active"><span class="fa-solid fa-calendar-check"></span>
+                            <span>History</span></a>
+                    </li> -->
+                    <li>
+                        <!-- <a href=""  id="log" class="active"><span class="fa-solid fa-right-from-bracket"></span>
+                            <span>Logout</span></a> -->
+                        <button id="log" class="active"><span class="fa-solid fa-right-from-bracket"></span>
+                            <span>Logout</span></button>
+                    </li>
+                    <!-- <li>
+                        <a href="../../Page/Home/home.html" class="active"><span class="fa-solid fa-left-long"></span>
+                            <span>Exit</span></a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="sell-contain">
+            <div class="back">
+                <a href="../../Page/Admin/admin.html"><i class="fa-solid fa-arrow-left-long" style="color: #000000;"></i></a>
+            </div>
+            <form>
+                <div class="container">
+                    <div class="pro-price">
+                        <p class="head">Product-Details</p><br><br><br>
+                        <div class="pro-price1">
+                            <div>
+                                <label>Product Name</label><br><br>
+                                <input type="text" class="inputs" id="pr_name" required>
+                            </div>
+                            
+                            <div>
+                                <label>product price</label><br><br>
+                                <input type="text" class="inputs" id="product_price" required>
+                            </div>
+                            <div>
+                                <label id="add">Product Rating</label><br><br>
+                                <input type="text" class="inputs" id="rating" required>
+                            </div>
+                        </div>
+                        
+                    </div><br><br><br>
+                    
+                    <div class="product-img">
+                        <p class="head">Product-Details</p><br><br><br>
+                        <div class="pro-img1">
+                            <div>
+                                <label>Uplode image URL </label><br><br>
+                                <input type="url" class="inputs" id="pr_img_1">
+                            </div>
+                            <div>
+                                <label>Uplode image URL</label><br><br>
+                                <input type="url" class="inputs" id="pr_img_2">
+                            </div>
+                            <div>
+                                <label>Uplode image URL</label><br><br>
+                                <input type="url" class="inputs" id="pr_img_3">
+                            </div>
+                            <div>
+                                <label>Uplode image URL</label><br><br>
+                                <input type="url" class="inputs" id="pr_img_4">
+                            </div>
+                        </div><br><br><br>
+                        
+                    </div>
+                    <div class="high-pro">
+                        <p class="head">Product-Details</p><br><br><br>
+                        <div class="high-pro1">
+                            <div>
+                                <label>About product</label><br><br>
+                                <input type="text" class="inputs" id="about_product" required>
+                            </div>
+                            <div>
+                                <label id="add1">Highlights</label><br><br>
+                                <input type="text" id="high" required>
+                            </div>
+                            <div>
+                                <label id="add2">Description</label><br><br>
+                                <input type="text" id="description" required>
+                            </div>
+                        </div>
+                        
+                    </div><br><br><br>
+                    
+                    <div class="buttons">
+                        <!-- <button type="button" class="pr_btn" id="sub">SUBMIT</button> -->
+                        <button type="button" class="pr_btn" id="edit">SAVE</button>
+                        <button type="button" class="pr_btn" id="delete">DELETE</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="../../Page/JS files/update.js">
+    </script>
+</body>
+
+</html>

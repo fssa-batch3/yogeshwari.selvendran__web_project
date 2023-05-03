@@ -27,14 +27,14 @@
                     <a href="./Page/Home/home.html">HOME</a>
                 </li>
                 <li>
-                    <a href="">ABOUT</a>
+                    <a href="#aboutpage">ABOUT</a>
                 </li>
                 <li>
-                    <a href="../../Page/Home/services.html">SERVICES<a>
+                    <a href="#service">SERVICES<a>
 
                 </li>
                 <li>
-                    <a href="">PARTENERS</a>
+                    <a href="#partners">CUSTOMERS</a>
                 </li>
                 <!-- in this place i'm add a few feachers parteners, blog -->
             </ul>
@@ -66,10 +66,11 @@
         </div>
         <!-- This Achivement Section -->
         <div class="achivement">
+            <div id="aboutpage">
             <h1>Grow your Business with Live-On</h1>
             <!-- This is customers animetion -->
 
-            <div class="project-counter-wrp">
+            <div class="project-counter-wrp" >
                 <ul>
                     <li>
                         <p class="number" id="number1">+500</p>
@@ -93,8 +94,9 @@
                     </li>
                 </ul>
             </div>
+        </div>
             <!-- This is Second section -->
-            <div class="second-section">
+            <div class="second-section" id="service">
                 <h1>Why Chose Us?</h1>
                 <div class="item-gallary">
                     <div class="item">
@@ -123,7 +125,7 @@
 
 
             <!-- This is third section -->
-            <div class="thired-section">
+            <div class="thired-section" id="partners">
                 <h1>Happy Clients</h1>
                 <div class="customer">
                     <h3>"Trusted Vlad and our team with our branding and website - we did not disappoint."</h3>
@@ -260,55 +262,7 @@
     </div>
     <!-- <script src="./main.js"></script> -->
     <script src="./Page/JS files/index.js">
-       var project = setInterval(projectDone, 10)
-var cities = setInterval(happyCities, 10)
-var service = setInterval(vehicle, 10)
-var rodeside = setInterval(clients, 10)
-let count1 = 1;
-let count2 = 1;
-let count3 = 1;
-let count4 = 1;
-
-function projectDone() {
-    count1++;
-    document.querySelector("#number1").innerHTML = count1;
-
-    if (count1 == 500) {
-        clearInterval(project)
-    }
-}
-
-function happyCities() {
-    count2++;
-    document.querySelector("#number2").innerHTML = count2;
-
-    if (count2 == 180) {
-        clearInterval(cities)
-    }
-}
-
-function vehicle() {
-    count3++;
-    document.querySelector("#number3").innerHTML = count3;
-
-    if (count3 == 1300) {
-        clearInterval(service)
-    }
-}
-
-function clients() {
-    count4++;
-    document.querySelector("#number4").innerHTML = count4;
-
-    if (count4 == 1500) {
-        clearInterval(rodeside)
-    }
-}
-
-
-       
-
-    </script>
+      </script>
     <script src="./main.js"></script>
 
 </body>

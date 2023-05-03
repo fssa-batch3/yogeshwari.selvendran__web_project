@@ -69,7 +69,7 @@
             <ul>
                 <!-- <li><i class="fa-solid fa-location-dot"></i></li> -->
                 <li><i class="fa-solid fa-bell"></i></li>
-                <li><i class="fa-solid fa-gear"></i></li>
+                <li><a href="../../Page/Dashboard/wishlist.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li><a href="../../Page/Home/profile.html">
                     <img class="profile"
                             src="../../assets/New_collection/profile-cover.jpg" alt="profile image"></a>
@@ -126,9 +126,9 @@
                 <span id="product_ratting"></span>
             </div>
             <div class="list-btn">
-                <a href="../../Page/Dashboard/wishlist.html"><button id="add_card"><span
+                <a><button id="add_card"><span
                             class="fa-sharp fa-solid fa-cart-shopping"></span>Add to card</button></a>
-                <a href="../../Page/Accesssories/admin.html"><button id="buy_now"><span
+                <a id="order-nav"><button id="buy_now"><span
                             class="fa-sharp fa-solid fa-bag-shopping"></span>Buy Now</button></a>
             </div>
             <div class="description1">
@@ -203,213 +203,9 @@
     <div class="copy-right">
         <p> &copy;Copyright 2023 Carservice Theme by my won design</p>
     </div>
-    <script>
+    <script src="../../Page/JS files/product-detail.js">
 
-        const url = window.location.search
-        const urlparams = new URLSearchParams(url);
-        const product_id = urlparams.get("prod_id")
-
-
-        const pro_array = JSON.parse(localStorage.getItem("product_detail"))
-
-
-        const search = pro_array.find(function (obj) {
-            if (obj["productid"] + "" === product_id) {
-                return true
-            }
-            else {
-                return false
-            }
-        })
-
-
-        // get side product 1st  images
-        const pr_image1 = document.getElementById("sub_pic1");
-        pr_image1.setAttribute("src", search["pr_img_1"]);
-
-        // get side product 2st  images
-        const pr_image2 = document.getElementById("sub_pic2");
-        pr_image2.setAttribute("src", search["pr_img_2"]);
-
-        // get side product 3rd  images
-        const pr_image3 = document.getElementById("sub_pic3");
-        pr_image3.setAttribute("src", search["pr_img_3"]);
-
-        // get main product  images
-        const pr_main = document.getElementById("product_main-image");
-        pr_main.setAttribute("src", search["pr_img_4"]);
-
-
-        // get product name
-        const pr_name = document.getElementById("product_name");
-        pr_name.innerText = search["product_name"]
-
-        // get About product 
-        const pr_about = document.getElementById("about_product");
-        pr_about.innerText = search["about_product"]
-
-        // get product price
-        const pr_price = document.getElementById("product_price");
-        pr_price.innerText = search["product_price"]
-
-        // get product price
-        const pr_highlight = document.getElementById("add_highlight");
-        pr_highlight.innerText = search["highlights"]
-
-        // get product description
-        const pr_description = document.getElementById("pro_description");
-        pr_description.innerText = search["description"]
-
-        // get product ratting
-        const pr_ratting = document.getElementById("product_ratting");
-        pr_ratting.innerText = search["rating"]
-        
-        // 1st  create a div for details-page
-        //const product1 = document.createElement("div")
-        // product1.setAttribute("class", "products")
-        // document.querySelector(".product-section").prepend(product1)
-
-        // // 2nd create a img tag
-        // const picture1 = document.createElement("img")
-        // picture1.setAttribute("src", "../../assets/New_collection/Bik-part/Automotive Brake Part-1.png")
-        // picture1.setAttribute("alt", "Automotive Brake Part")
-        // document.querySelector(".products").append(picture1)
-
-        // // 3rd create ul tag
-        // const unorder = document.createElement("ul")
-        // document.querySelector(".products").append(unorder)
-        // console.log(unorder)
-
-
-        // // 4th create a li tag
-        // const list = document.createElement("li")
-        // unorder.prepend(list)
-
-        // // 5th create a img tag
-        // const picture2 = document.createElement("img")
-        // picture2.setAttribute("src", "../../assets/Images/engine-part.jpg")
-        // picture2.setAttribute("alt", "Automotive Brake Part")
-        // list.prepend(picture2)
-
-        // // Again create a li tag
-        // const list1 = document.createElement("li")
-        // unorder.prepend(list1)
-
-        // // Again create a img tag
-        // const picture3 = document.createElement("img")
-        // picture3.setAttribute("src", "../../assets/Images/parts-69.webp")
-        // picture3.setAttribute("alt", "Automotive Brake Part")
-        // list1.prepend(picture3)
-
-        // // Create a div
-        // const list_btn = document.createElement("div")
-        // list_btn.setAttribute("class", "list-btn")
-        // product1.prepend(list_btn)
-
-        // // Create a tag
-        // const move = document.createElement("a")
-        // move.setAttribute("href", "../../Page/Accesssories/admin.html")
-        // list_btn.prepend(move)
-
-        // // create a button tag
-        // const btn_1 = document.createElement("button")
-        // btn_1.innerHTML = "ADD TO CART"
-        // move.prepend(btn_1)
-        // //  Create a span tag
-        // const span1 = document.createElement("span")
-        // span1.setAttribute("class", "fa-sharp fa-solid fa-cart-shopping")
-        // btn_1.prepend(span1)
-
-        // // Create a 2nd a tag
-        // const move1 = document.createElement("a")
-        // move1.setAttribute("href", "../../Page/Accesssories/admin.html")
-        // list_btn.prepend(move1)
-
-        // // create a 2nd button tag
-        // const btn_2 = document.createElement("button")
-        // btn_2.innerHTML = "ADD TO CART"
-        // move1.prepend(btn_2)
-
-        // //  Create a 2nd span tag
-        // const span2 = document.createElement("span")
-        // span1.setAttribute("class", "fa-sharp fa-solid fa-cart-shopping")
-        // btn_2.prepend(span2)
-
-        // // create a product detail right side section
-        // const detail = document.createElement("div")
-        // details.setAttribute("class", "product-ditails")
-        // document.querySelector(".product-section").prepend(details)
-
-        // // create a h2 tag
-        // const head_tag = document.createElement("h2")
-        // head_tag.innerHTML = "Bike Part"
-        // detail.prepend(head_tag)
-
-        // // create a span tag to show my price
-        // const span3 = document.createElement("span")
-        // span3.setAttribute("class", "fa-sharp fa-solid fa-cart-shopping")
-        // span3.innerHTML = "2000"
-        // detail.prepend(span3)
-
-        // // create a p tag for offer of the product
-        // const offer = document.createElement("p")
-        // offer.innerHTML = "30%"
-        // detail.prepend(offer)
-
-        // // create a div for ratting
-        // const star = document.createElement("div")
-        // star.setAttribute("class", "star")
-        // detail.prepend(star)
-
-        // // create a span for ratting
-        // const span4 = document.createElement("span")
-        // span4.setAttribute("class", "fa-solid fa-star")
-        // span4.innerHTML = "4.2"
-        // star.prepend(span4)
-
-
-
-        let btn_cart = document.getElementById("add_card");
-
-        btn_cart.addEventListener("click", (element)=>{
-        let user = JSON.parse(localStorage.getItem("active_user"));
-        let addcart = JSON.parse(localStorage.getItem("cart")) ?? [];
-
-
-        let check;
-
-        addcart.find((e)=>{
-          
-            if(
-                e["productid"] == search["productid"] &&
-                e["user_email"] == user ["user_email"]
-            ){
-                return (check = 1);
-            } else{
-                return (check = 0);
-            }
-           })
-
-           if(check == 1){
-            alert("already added");
-           }
-           else{
-             let product = {};
-           
-             product["pr_img_1"] = search["pr_img_1"];
-             product["product_price"] = search["product_price"];
-             product["rating"] = search["rating"];
-             product["product_name"] = search["product_name"];
-             product["user_email"] = user["user_email"];
-             product["productid"]=search["productid"]
-
-
-             addcart.push(product);
-             localStorage.setItem("cart",JSON.stringify(addcart));
-             alert("added");
-            }
-          })
-
+       
     </script>
 </body>
 

@@ -18,12 +18,13 @@
     <div class="account-section">
         <div class="side-item">
             <div class="page">
-                <span></span>
-
-                <div>
+                <img class="pro_image" src="../../assets/New_collection/Acc-cover.png" alt="profile">
+                <label for="upload-file"><i class="fa-solid fa-camera" style="color: #a322ee;"></i></label>
+                <input type="file" accept="image/jpeg,image/png,image/jpg" id="upload-file">
+                <!-- <div>
                     <h4>Yogesh_yogi</h4>
                     <small>Customer_ID</small>
-                </div>
+                </div> -->
             </div>
             <div class="side-menu">
                 <ul>
@@ -65,68 +66,70 @@
                     </li>
                 </ul>
             </div>
-          
+
         </div>
 
         <div class="main-item">
-            <!-- This is header section -->
-            <!-- <div class="header">
+            <header>
                 <div class="logo">
-                    <a href="">
-                        <img class="live-on" src="../../assets/Icons/live-on.png" alt="">
-                        <img class="live" src="../../assets/Icons/text-liveon-removebg-preview.png" alt="">
-                    </a>
-
-                </div> -->
-            <!-- This is searchbar -->
-            <!-- <div class="search-bar">
-                    <span class="fa-solid fa-magnifying-glass"></span>
-                    <input type="search" placeholder="Search here">
-                </div> -->
-            <!-- This is user profile -->
-            <!-- <div class="call-item">
-                    <a href="../../Page/Contact/contact.html">
-                        <span class="fa-solid fa-headset"></span>
-                        <div class="em-list">
-                            <p class="bp-item">Call us 24/7</p>
-                            <p>444-92728056</p>
-                        </div>
-                    </a>
-                </div> -->
-            <!-- <div class="user-war">
-                    <img src="../../assets/Images/image-emily.jpg" alt="">
-                    <div>
-                        <h4>Yogi</h4>
-                        <small>Customer_ID</small>
-                    </div>
-                </div> -->
+                    <img class="live-on" src="../../assets/Icons/live-on.png" alt="">
+                    <img class="live" src="../../assets/Icons/text-liveon-removebg-preview.png" alt="">
+                </div>
+                <div class="center">
+                    <ul class="cen-ul">
+                        <li class="list"><a href="../../Page/Home/home.html">HOME</a></li>
+                        <li class="list"><a href="../Home/about.html">ABOUT</a></li>
+                        <li>
+                            <button class="service list"><a href="">SERVICES<i class="fa-solid fa-caret-down"></i></a>
+                                <div class="sub-service">
+                                    <ul>
+                                        <li><a class="sub-service1" href="../../Page/Appoinment/appoinment.html"
+                                                target="_blank">Appoinment</a>
+                                        </li>
+                                        <li><a class="sub-service1"
+                                                href="../../Page/Accesssories/accessories.html">Accesssories</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </button>
+                        </li>
+                        <li class="list"><a href="">PARTENERS</a></li>
+                    </ul>
+                </div>
+                <div class="user">
+                    <ul>
+                        <!-- <li><i class="fa-solid fa-location-dot"></i></li> -->
+                        <li><i class="fa-solid fa-bell"></i></li>
+                        <li><a href="../../Page/Dashboard/wishlist.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a href="../../Page/Home/profile.html"><img class="profile" src="../../assets/New_collection/profile-cover.jpg" alt="profile image"></a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
         </div>
         <!-- This is profile update section-->
         <div class="user-container">
-            <!-- <div class="head-item">
-                    <img src="" alt="">
-                    <input type="file">
-                </div> -->
+
             <div class="information">
                 <form id="form">
                     <!-- This is image uplode   -->
-                    <div class="pro-file">
-                        <input type="file">
-                    </div>
+                    <!-- <div class="pro-file">
+                        
+                    </div> -->
                     <!-- This is First name  -->
                     <div class="first-name" id="align-num">
-                        <label class="more"> First Name</label>
-                        <input class="name" id="user-firstname" type="text" pattern=^[a-zA-Z]{3,20}$ title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." name="user name"
-                            placeholder="First Name" value="" required="true"
-                            disabled>
+                        <label class="more">First Name</label>
+                        <input class="name" id="user-firstname" type="text" pattern=^[a-zA-Z]{3,20}$
+                            title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                            name="user name" placeholder="First Name" value="" required="true" disabled>
 
                     </div>
                     <!-- This is Last name  -->
                     <div class="last-name" id="align-num">
-                        <label class="more"> Last Name</label>
-                        <input class="name" id="user-lastname" type="text" name="user name" pattern=^[a-zA-Z]{3,20}$ title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
-                            placeholder="Last Name" value="" required="true"
-                            disabled>
+                        <label class="more">Last Name</label>
+                        <input class="name" id="user-lastname" type="text" name="user name" pattern=^[a-zA-Z]{3,20}$
+                            title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                            placeholder="Last Name" value="" required="true" disabled>
 
                     </div>
                     <!-- This is email input  -->
@@ -140,16 +143,18 @@
                     <!-- This is user mobile number -->
                     <div class="number" id="align-num">
                         <label class="more"> Number</label>
-                        <input class="name" id="user-number" type="text" pattern="[0-9]{10}" title="PLease enter 10 digit number" name="user mobile"
-                            placeholder="+91 8923456789" required="true" disabled>
+                        <input class="name" id="user-number" type="text" pattern="[0-9]{10}"
+                            title="PLease enter 10 digit number" name="user mobile" placeholder="+91 8923456789"
+                            required="true" disabled>
                     </div>
 
                     <!-- This is districk -->
                     <div class="address" id="align-num">
                         <label class="more"> Address</label>
 
-                        <input class="name" id="user-address" type="text" pattern="^[a-zA-Z0-9!@#\$%\^&\*\(\)\-_=\+\\|\{\}\[\]:;\"
-                            name="user address" placeholder="Add Address" required="true" disabled>
+                        <input class="name" id="user-address" type="text"
+                            pattern="^[a-zA-Z0-9!@#\$%\^&\*\(\)\-_=\+\\|\{\}\[\]:;\" name="user address"
+                            placeholder="Add Address" required="true" disabled>
 
                     </div>
                     <!-- This is Address input  -->
@@ -174,107 +179,7 @@
     </div>
 
     </div>
-    <script>
-
-        const user = JSON.parse(localStorage.getItem("user_data"))
-        const loginuser = localStorage.getItem("sign_in")
-
-        //This is for get a data in form
-        const firstName = document.getElementById("user-firstname");
-        const lastName = document.getElementById("user-lastname");
-        const email = document.getElementById("user-email");
-
-        const userMobile = document.getElementById("user-number");
-        const address = document.getElementById("user-address");
-        const pincodeAddress = document.getElementById("user-pincode");
-
-        //console.log();
-        //This is for store data in localstorage
-
-
-
-        for (let i = 0; i < user.length; i++) {
-            if (loginuser == user[i]["user_email"]) {
-                firstName.value = user[i]["user_Firstname"]
-                lastName.value = user[i]["user_lastname"]
-                email.value = user[i]["user_email"]
-                userMobile.value = user[i]["mobile"]
-                address.value = user[i]["address1"]
-                pincodeAddress.value = user[i]["pinaddress"]
-            }
-        }
-
-
-
-        // localStorage.setItem("profile",JSON.stringify(user))
-
-const formBtn= document.getElementById("form");
-
-        const btn = document.getElementById("btn")
-
-        formBtn.addEventListener("submit", (e)=> {
-            e.preventDefault();
-            
-
-            if (btn.innerHTML == "Edit") {
-                btn.innerHTML = "Save"
-                // firstName.setAttribute("disabled", "")
-                // lastName.setAttribute("disabled", "")
-
-                // userMobile.setAttribute("disabled", "")
-                // address.setAttribute("disabled", "")
-                // pincodeAddress.setAttribute("disabled", "")
-                firstName.removeAttribute("disabled")
-                lastName.removeAttribute("disabled")
-
-                userMobile.removeAttribute("disabled")
-                address.removeAttribute("disabled")
-                pincodeAddress.removeAttribute("disabled")
-
-            }
-            else if (btn.innerHTML = "Edit") {
-             firstName.setAttribute("disabled", "")
-                lastName.setAttribute("disabled", "")
-
-                userMobile.setAttribute("disabled", "")
-                address.setAttribute("disabled", "")
-                pincodeAddress.setAttribute("disabled", "")
-            
-
-            const userid = JSON.parse(localStorage.getItem("user_data"))
-            // const userlist = JSON.parse(localStorage.getItem("profile"))
-            userid.find(element => {
-                if (email.value == element["user_email"]) {
-
-                    element["user_Firstname"] = firstName.value
-                    element["user_lastname"] = lastName.value
-                    element["mobile"] = userMobile.value
-                    element["address1"] = address.value
-                    element["pinaddress"] = pincodeAddress.value
-                    localStorage.setItem("user_data", JSON.stringify(userid))
-                    // localStorage.setItem("profile", JSON.stringify(element))
-                }
-            })
-        }
-        })
-
-        const log = document.getElementById("log")
-
-        log.addEventListener("click", function () {
-
-
-
-
-            const erase = delete user
-
-            window.location.href = "../../Page/create_accound/signin.html"
-            localStorage.setItem("sign_in", JSON.stringify(erase))
-
-
-
-
-        })
-
+    <script src="../../Page/JS files/user-profile.js">
     </script>
 
 </body>

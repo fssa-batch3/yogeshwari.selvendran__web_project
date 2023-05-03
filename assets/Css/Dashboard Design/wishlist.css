@@ -191,7 +191,7 @@ header {
     justify-content: space-around;
     background-color: #4e3d9a;
     height: 100px;
-  
+
 }
 
 .main-nav p {
@@ -210,7 +210,7 @@ header {
 
 .search-bar {
     margin-top: 25px;
-  
+
 }
 
 input {
@@ -226,7 +226,7 @@ input {
 }
 
 .search-bar i {
-    
+
     color: var(--text-color);
     position: relative;
     right: 40px;
@@ -265,10 +265,6 @@ span {
 }
 
 /* Cart section */
-.card-section {
-    display: flex;
-    justify-content: space-between;
-}
 /* .pro-collection{
     margin-top: 3%;
     width: 900px;
@@ -277,17 +273,20 @@ span {
     flex-direction: column;
     justify-content: space-around;
 } */
-.top-head{
+.top-head {
     margin-top: 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
-.card-section h2{
+
+.card-section h2 {
     text-align: center;
     font-size: 2.5rem;
+    margin-top: 5%;
 }
-.cart{
+
+.cart {
     background-color: #ffffff;
     box-shadow: var(--box-shadow);
     border: #00000057 solid 0.05px;
@@ -300,34 +299,41 @@ span {
     margin-left: 150px;
     margin-top: 2%;
 }
-.first-cart img{
+
+.first-cart img {
     width: 150px;
     height: 150px;
     background-color: var(--white-color);
     border-radius: 6px;
 }
-.second-cart{
+
+.second-cart {
     display: flex;
     height: 120px;
+    width: 250px;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: baseline;
 
 }
-#name{
+
+#name {
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 1px;
-    
+
 }
-#price{
+
+.price {
     font-size: 20px;
     font-weight: 600;
 }
-.star{
+
+.star {
     width: 40px;
 }
-.removebtn button{
+
+.removebtn button {
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
@@ -335,23 +341,26 @@ span {
     border: none;
     background-color: #e65a14;
 }
-.removebtn button:hover{
+
+.removebtn button:hover {
     background-color: #4e3d9a;
 }
-.removebtn i{
+
+.removebtn i {
     padding-right: 10px;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(105deg) brightness(101%) contrast(103%);
 }
-.removebtn i:hover{
+
+.removebtn i:hover {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(105deg) brightness(101%) contrast(103%);
 }
-/* This is quantity incres */
-.count{
 
-	display: flex;
+/* This is quantity incres */
+.count {
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
-	font-size: 1.2rem;
+    font-size: 1.2rem;
     padding-bottom: 5px;
     width: 140px;
     height: 40px;
@@ -361,37 +370,138 @@ span {
     border-radius: 4px;
     box-shadow: var(--box-shadow);
 }
-.num{
-    padding: 2px 15px; 
+
+.num {
+    padding: 2px 15px;
     border-left: 1px rgb(0, 0, 0) solid;
     border-right: 1px solid rgb(0, 0, 0);
     border-radius: 4px;
     background-color: white;
-	box-shadow: 0 1em 2em -0.9em rgba(#000, 0.7);
-	transform: scale(1);
+    box-shadow: 0 1em 2em -0.9em rgba(#000, 0.7);
+    transform: scale(1);
 }
-.minus,.plus{
-    padding: 4px 15px; 
+
+.minus,
+.plus {
+    padding: 4px 15px;
     background-color: white;
     border-radius: 4px;
 }
-.collection{
+
+.collection {
     width: 400px;
+    position: absolute;
+    top: 330px;
+    left: 950px;
 }
-.total1, .order{
+
+.total1,
+.order {
     display: flex;
 
 }
-.bit-collection{
-    position:sticky;
-    margin-top: 26%;
-background-color: #f7a859;
-border-radius: 6px;
+
+.bit-collection {
+    margin-top: 25%;
+    background-color: #e1c1f8;
+    border-radius: 6px;
+    box-shadow: var(--box-shadow);
 }
-.price{
+.bit-collection .cont-btn{
+ margin-top: 25px;
+
+}
+.cont-btn button{
+    padding: 1em 1.1em;
+    width: 400px;
+    text-align: center;
+    font-weight: medium;
+    background-color: #3F0071;
+    color: white;
+    border-radius: 6px;
+    border: solid 1px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.cont-btn button:hover{
+    background-color: #9c58cd;
+}
+.total1, .order{
+    display: flex;
+    justify-content: space-around;
+}
+.price h3{
+    text-align: center;
+}
+.price {
     margin-left: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 200px;
+
+}
+
+/* payment section */
+.payment-section p {
+    /* text-align: center; */
+    margin-top: 0px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+form {
+    /* margin-left: 550px;
+    margin-top: 70px; */
+}
+
+form img {
+    height: 30px;
+    width: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.form,
+label,
+input {
+    background-color: var(--white-color);
+}
+
+form label {
+    font-size: 18px;
+    font-weight: medium;
+    line-height: 20px;
+    color: #303030;
+}
+
+fieldset {
+    width: 200px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 0px;
+    border-radius: 15px;
+    border: 0.01rem solid rgba(128, 128, 128, 0.381);
+    box-shadow: var(--box-shadow);
+}
+
+.payment-section button {
+    width: 300px;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    font-size: var(--button-font);
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: rgb(14, 136, 243);
+}
+
+.back-page {
+    width: 40px;
+    margin-top: 25px;
+    margin-left: 30px;
 }

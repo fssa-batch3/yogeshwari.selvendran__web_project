@@ -16,7 +16,7 @@
 
   let showndetails;
   products.find((item)=>{
-    if(searchresult== item["productid"]+""){
+    if(searchresult== item["productid"]){
       return showndetails=item
 
     }
