@@ -1,5 +1,6 @@
 let cart_sample = JSON.parse(localStorage.getItem("cart"));
             let user = JSON.parse(localStorage.getItem("active_user"));
+            let activeruseremail = user["user_email"];
             let total = 0;
             if (cart_sample == null) {
 
@@ -111,13 +112,13 @@ let cart_sample = JSON.parse(localStorage.getItem("cart"));
             let totalAmount = document.getElementById("total_count");
             let totalAmount1 = document.getElementById("total_count1");
             let a = 1;
-            plus.forEach((plusbtn) => {
-                console.log(plusbtn);
-                plusbtn.addEventListener("change", () => {
+            // plus.forEach((plusbtn) => {
+            //     console.log(plusbtn);
+            //     plusbtn.addEventListener("change", () => {
 
-                });
+            //     });
 
-            })
+            // })
             const plus_btn = document.querySelectorAll(".plus")
             const minus_btn = document.querySelectorAll(".minus")
             const num_digit = document.querySelectorAll(".digit")
@@ -165,3 +166,7 @@ let cart_sample = JSON.parse(localStorage.getItem("cart"));
 
                 })
             }
+            // This is Move to buy now page the cart products
+       moveto = document.getElementById("confirm-order");
+     moveto.setAttribute("href","../../Page/Accesssories/buynow.html?id=" + activeruseremail)
+            

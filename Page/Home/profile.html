@@ -18,21 +18,20 @@
     <div class="account-section">
         <div class="side-item">
             <div class="page">
-                <span></span>
-                <div>
-                    <h4>Yogesh_yogi</h4>
-                    <small>Customer_ID</small>
-                </div>
+                <img class="pro_image" src="../../assets/New_collection/Acc-cover.png" alt="profile">
+                <label for="upload-file"><i class="fa-solid fa-camera" style="color: #a322ee;"></i></label>
+                <input type="file" accept="image/jpeg,image/png,image/jpg" id="upload-file">
+                
             </div>
             <div class="side-menu">
                 <ul>
                     <li>
                         <a href="../../Page/Dashboard/user-profile.html" class="active"><span
-                                class="fa-solid fa-circle-user"></span>
+                                class="fa-solid fa-circle-user" ></span>
                             <span>My Profile</span></a>
                     </li>
                     <li>
-                        <a href="" class="active"><span class="fa-solid fa-bag-shopping"></span>
+                        <a href="#order-history" class="active" autofocus ><span class="fa-solid fa-bag-shopping"></span>
                             <span>Orders</span></a>
                     </li>
                     <li>
@@ -47,10 +46,10 @@
                         <a href="" class="active"><span class="fa-solid fa-circle-user"></span>
                             <span>Offers</span></a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="" class="active"><span class="fa-solid fa-calendar-check"></span>
                             <span>History</span></a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="../../Page/Home/home.html" class="active"><span class="fa-solid fa-left-long"></span>
                             <span>Exit</span></a>
@@ -64,91 +63,72 @@
             </div>
 
         </div>
-        <!-- <div class="little-footer">
-            <div class="contact-item">
-                <span>
-                    <i class="fa-solid fa-phone"></i>506272 8115
-    
-                    <span>
-                        <i class="fa-solid fa-envelope"></i> torkanservice@gmail.com
-                    </span>
-                    <span>
-                        <i class="fa-regular fa-clock"></i>24/7 Service
-                    </span>
-            </div>
-            <div class="logo-item">
-                <nav class=".nav">
-                    <ul>
-                        <li> <i class="fa-brands fa-facebook-f"></i></li>
-                        <li><i class="fa-brands fa-instagram"></i></li>
-                        <li><i class="fa-brands fa-twitter"></i></li>
-                        <li><i class="fa-brands fa-pinterest"></i></li>
-                        <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                        <li><i class="fa-solid fa-cart-shopping"></i></li>
-                    </ul>
-                </nav>
-            </div>
-        </div> -->
-        <header>
-            <div class="logo">
-                <img class="live-on" src="../../assets/Icons/live-on.png" alt="">
-                <img class="live" src="../../assets/Icons/text-liveon-removebg-preview.png" alt="">
-            </div>
-            <div class="center">
-                <ul class="cen-ul">
-                    <li class="list"><a href="../../Page/Home/home.html">HOME</a></li>
-                    <li class="list"><a href="../Home/about.html">ABOUT</a></li>
-                    <li>
-                        <button class="service list"><a href="">SERVICES<i class="fa-solid fa-caret-down"></i></a>
-                            <div class="sub-service">
-                                <ul>
-                                    <li><a class="sub-service1" href="../../Page/Appoinment/appoinment.html"
-                                            target="_blank">Appoinment</a>
-                                    </li>
-                                    <li><a class="sub-service1"
-                                            href="../../Page/Accesssories/accessories.html">Accesssories</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </button>
-                    </li>
-                    <li class="list"><a href="">PARTENERS</a></li>
-                </ul>
-            </div>
-            <div class="user">
-                <ul>
-                    <!-- <li><i class="fa-solid fa-location-dot"></i></li> -->
-                    <li><i class="fa-solid fa-bell"></i></li>
-                    <li><a href="../../Page/Dashboard/wishlist.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li><a href="../../Page/Home/profile.html"><img class="profile" src="../../assets/New_collection/profile-cover.jpg" alt="profile image"></a>
-                    </li>
-                </ul>
-            </div>
-        </header>
+       
         <div class="main-item">
-            <!-- This is header section -->
-            <!-- <div class="header">
-                <div class="logo">
-                    <img class="live-on" src="../../assets/Icons/live-on.png" alt="">
-                    <img class="live" src="../../assets/Icons/text-liveon-removebg-preview.png" alt="">
-                </div> -->
-                <!-- This is searchbar -->
-                <!-- <div class="search-bar">
-                    <span class="fa-solid fa-magnifying-glass"></span>
-                    <input type="search" placeholder="Search here">
-                </div> -->
-                <!-- This is user profile -->
-                <!-- <div class="user-war">
-                    <img src="../../assets/Images/image-emily.jpg" alt="">
-                    <div>
-                        <h4>Yogi</h4>
-                        <small>Customer_ID</small>
-                    </div>
-                </div> -->
-            <!-- </div> -->
-            <!-- This is cardsection -->
+           
             <main>
-                <div class="cards">
+                <!-- This is user condainer -->
+                <div class="user-container">
+
+                    <div class="information">
+                        <form id="form">
+                            <!-- This is First name  -->
+                            <div class="first-name" id="align-num">
+                                <label class="more">First Name</label>
+                                <input class="name" id="user-firstname" type="text" pattern=^[a-zA-Z]{3,20}$
+                                    title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                                    name="user name" placeholder="First Name" value="" required="true" disabled>
+        
+                            </div>
+                            <!-- This is Last name  -->
+                            <div class="last-name" id="align-num">
+                                <label class="more">Last Name</label>
+                                <input class="name" id="user-lastname" type="text" name="user name" pattern=^[a-zA-Z]{3,20}$
+                                    title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                                    placeholder="Last Name" value="" required="true" disabled>
+        
+                            </div>
+                            <!-- This is email input  -->
+                            <div class="email" id="align-num">
+                                <label class="more"> Email</label>
+                                <input class="name" id="user-email" type="email" name="user email" placeholder="name@gmail.com"
+                                    value="" required="true" title="First name connot contain spaces" disabled>
+        
+                            </div>
+        
+                            <!-- This is user mobile number -->
+                            <div class="number" id="align-num">
+                                <label class="more"> Number</label>
+                                <input class="name" id="user-number" type="text" pattern="[0-9]{10}"
+                                    title="PLease enter 10 digit number" name="user mobile" placeholder="+91 8923456789"
+                                    required="true" disabled>
+                            </div>
+        
+                            <!-- This is districk -->
+                            <!-- <div class="address" id="align-num">
+                                <label class="more"> Address</label>
+        
+                                <input class="name" id="user-address" type="text"
+                                    pattern="^[a-zA-Z0-9!@#\$%\^&\*\(\)\-_=\+\\|\{\}\[\]:;\" name="user address"
+                                    placeholder="Add Address" required="true" disabled>
+        
+                            </div> -->
+                            <!-- This is Address input  -->
+                            <div class="address" id="align-num">
+                                <label class="more"> Pincode</label>
+                                <input class="name" id="user-pincode" type="text" pattern="[0-9]{6}" maxlength="6"
+                                    name="user address" placeholder="Pincode" required="true" disabled>
+        
+                            </div>
+                            <!-- This is update button -->
+                            <div>
+                                <button type="submit" id="btn" class="name">Edit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- This is card section -->
+                <!-- <div class="cards">
                     <div class="single-card">
                         <div>
                             <h1>11</h1>
@@ -185,41 +165,161 @@
                             <span class="fa-solid fa-bag-shopping"></span>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Appoinment booking page -->
-                <div class="booking_appoinment">
-                    <h2>Up Coming Appoinments</h2>
-<div class="upcoming">
-    <table>
-        <thead>
-          <th>Booking id</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Phone_number</th>
-          <th>Service</th>
-          <th>Address</th>
-          <th>Time</th>
-          <th>Date</th>
-          <th>Edit</th>
-          <th>Delete</th>
-        </thead>
-        <tbody class="table_row">
-           <td>hii</td>
-        </tbody>
-      </table>
-</div>
+                <div id="appoinment-booking">
+                    <div class="booking_appoinment">
+                        <h2>Up Coming Appoinments</h2>
+                        <div class="upcoming">
+                            <table>
+                                <thead>
+                                    <th>Booking id</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone_number</th>
+                                    <th>Service</th>
+                                    <th>Address</th>
+                                    <th>Time</th>
+                                    <th>Date</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </thead>
+                                <tbody class="table_row">
+                                    <td>hii</td>
+                                </tbody>
+                            </table>
+                        </div>
 
 
 
+                    </div>
+                </div>
+                <!-- This is order history -->
+                <div id="order-history">
+                    <h1>My Orders</h1>
+                    <div class="order-his">
+                        <!-- <div class="or-contain">
+                            <div class="order-pic">
+                                <img id="order-image1">
+                            </div>
+                            <div class="order-ditail">
+                                <h4 id="order-name">qwerty</h4>
+                                <p id="order-quantity">asdfg</p>
+                            </div>
+                            <div class="order-price">
+                                <p id="order-price">asdf</p>
+                            </div>
+                            <div class="oeder-address">
+                                <span id="hno">sf</span>
+                                <span id="street">fbvtg</span>
+                                <span id="city">dcec</span>
+                                <span id="state">ded</span>
+                                <span id="pincode">eded</span>
+                            </div>
+                        </div> -->
+                    </div>
                 </div>
             </main>
-            
+
         </div>
     </div>
+    
     <script>
 
-        const book = JSON.parse(localStorage.getItem("book_data"))
-       
+
+
+
+        const orderhis = JSON.parse(localStorage.getItem("order_history"));
+        console.log(orderhis);
+        const loginuser = JSON.parse(localStorage.getItem("active_user"));
+        console.log(loginuser.user_email);
+        const use_address = JSON.parse(localStorage.getItem("user_address"))
+        let filterOrder = orderhis.filter((data) => {
+            return data.user_email == loginuser["user_email"]
+        })
+        // console.log(filterOrder);
+        for (const order of filterOrder) {
+            const { address_id } = order
+            const address = use_address.find(data =>
+                data.address_id == address_id
+
+            )
+            order["user_address"] = address
+        }
+console.log(filterOrder);
+
+        for (let i = 0; i < filterOrder.length; i++) {
+            // if (orderhis[i]["user_email"] == loginuser["user_email"]) {
+
+            // Create order history page in JSON
+            // Create a <div class="or-contain">
+            const orderContain = document.createElement("div")
+            orderContain.setAttribute("class", "or-contain")
+            document.querySelector(".order-his").prepend(orderContain)
+            // Create <div class="order-pic">
+            const orPic = document.createElement("div")
+            orPic.setAttribute("class", "order-pic")
+            orderContain.append(orPic)
+            // img id="order-image1">
+            const orderPicture = document.createElement("img")
+            orderPicture.setAttribute("id", "order-image1")
+            orderPicture.setAttribute("src", filterOrder[i]["or_pro_img"])
+            orPic.append(orderPicture)
+            // Create <div class="order-ditail">
+            const orDitail = document.createElement("div")
+            orDitail.setAttribute("class", "order-ditail")
+            orderContain.append(orDitail)
+            // Create <h4 id="order-name"
+            const orName = document.createElement("h3")
+            orName.setAttribute("id", "order-name")
+            orName.innerText =filterOrder[i]["or_pro_name"]
+            orDitail.append(orName)
+            // Create <p id="order-quantity">
+            const orQuan = document.createElement("p")
+            orQuan.setAttribute("id", "order-quantity")
+            orQuan.innerText ="Quantity:" + filterOrder[i]["or_pro_quantity"]
+            orDitail.append(orQuan)
+            // Create <div class="order-price">
+            const orPrice = document.createElement("div")
+            orPrice.setAttribute("class", "order-price")
+            orderContain.append(orPrice)
+            // Create <p id="order-price">
+            const orderPrice = document.createElement("p")
+            orderPrice.setAttribute("id", "order-price")
+            orderPrice.innerText = filterOrder[i]["order_price"]
+            orPrice.append(orderPrice)
+            // create <div class="oeder-address">
+            const orAdd = document.createElement("div")
+            orAdd.setAttribute("class", "oeder-address")
+            orderContain.append(orAdd)
+            // Create <span id="hno">sf</span>
+            const orHouse = document.createElement("span")
+            orHouse.setAttribute("id", "hno")
+            orHouse.innerText = filterOrder[i]["user_address"]["user_houseNo"]
+            orAdd.append(orHouse)
+            // Create <span id="orStreet">fbvtg</span>
+            const orStreet = document.createElement("span")
+            orStreet.setAttribute("id", "orStreet")
+            orStreet.innerText = filterOrder[i]["user_address"]["user_street"]
+            orAdd.append(orStreet)
+            // Create <span id="city">dcec</span>
+            const orCity = document.createElement("span")
+            orCity.setAttribute("id", "city")
+            orCity.innerText = filterOrder[i]["user_address"]["user_city"]
+            orAdd.append(orCity)
+            //    Create <span id="state">ded</span>
+            const orState = document.createElement("span")
+            orState.setAttribute("id", "state")
+            orState.innerText = filterOrder[i]["user_address"]["user_state"]
+            orAdd.append(orState)
+            // Create <span id="pincode">eded</span>
+            const orPin = document.createElement("span")
+            orPin.setAttribute("id", "pincode")
+            orPin.innerText ="-"+ filterOrder[i]["user_address"]["pincode"]+"."
+            orAdd.append(orPin)
+        }
+        // const book = JSON.parse(localStorage.getItem("book_data"))
+
 
         // // This is collect a data from form
         // const vehicleNumber = document.getElementById("vehicle-number");
@@ -231,8 +331,8 @@
         // const cusName = document.getElementById("vehicle-number");
 
     </script>
+<script src="../../Page/JS files/user-profile.js"></script>
 
-    
 
 </body>
 

@@ -132,6 +132,7 @@ padding-left: 2rem;
 }
 main{
     margin-left: 400px;
+    margin-top: 6%;
 }
 
 
@@ -140,7 +141,7 @@ main{
 
 /* This is product section */
 #product{
-    margin-top: 10%;
+    margin-top: 8%;
 }
 .product-countainer {
     margin-left: 30%;

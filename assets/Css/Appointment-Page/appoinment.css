@@ -210,11 +210,12 @@ span{
     margin-right:10px;
 }
 /* This is appointment */
-.appoinment img{
-    height: 300px;
+.appoinment {
+    background-image: url(../../assets/New_collection/BG-Collection/vecteezy_car-repair-service-min.jpg);
+    /* height: 300px;
     width: 1450px;
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: 10px; */
     /* background-color: #3F0071;
     height: 200px;
     margin-top: 2px;

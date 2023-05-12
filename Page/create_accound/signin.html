@@ -12,7 +12,6 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
     <main>
         <div class="context">
@@ -37,36 +36,28 @@
                             consectetur inventore omnis dolore
                         </p>
                     </div> -->
-
-
                 <div class="form-page">
                     <!-- <form id="form"> -->
                     <h1>Sign In</h1>
                     <p>Use either your email or a verified phone number</p>
-
                     <input class="name" id="user-email" type="email" name="user email" pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Enter email">
-
-
                     <input class="name" id="user-password" type="password" name="user password"
-                        placeholder="Enter password">
-
+                    placeholder="Enter password">
                     <button class="name btn1" type="submit" onclick="yogi()">Continue</button>
                     <!-- <input type="button" onclick="yogi" class="name"> -->
                     <a href="../create_accound/user-signup.html">Create a account</a>
                     <!-- </form> -->
                 </div>
-
             </div>
             <!-- </div> -->
         </div>
     </main>
-
+<a href="../../Page/Home/home.html"></a>
 
     <script>
 
 
         function yogi() {
-
             let useremail = document.getElementById("user-email").value;
             let userpassword = document.getElementById("user-password").value;
 
@@ -93,6 +84,10 @@
                 alert(" success")
                 localStorage.setItem("active_user",JSON.stringify(active_user))
                 // localStorage.setItem("sign_in", useremail)
+
+            }
+           else if("admin@gmail.com"==useremail && "Admin@123"==userpassword){
+                window.location.href = "../../Page/Admin/admin.html"
 
             }
             else {

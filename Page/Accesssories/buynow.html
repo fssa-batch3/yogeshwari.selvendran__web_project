@@ -23,8 +23,10 @@
 
     </div>
     <main>
+
         <div class="add-address">
             <div class="left-cart">
+
                 <!-- First step login page -->
                 <div class="top-add" id="add">
                     <div class="side-value">
@@ -32,92 +34,115 @@
                             <p><i class="fa-solid fa-1" style="color: #ffffff;"></i></p>
                         </div>
                         <div class="lod">
-                            <div class="lod-name">
-                                <h2>LOGIN <span class="fa-solid fa-check" style="color: #a145f1;"></span></h2>
-                            </div>
+                            <h2>LOGIN <span class="fa-solid fa-check" style="color: #a145f1;"></span></h2>
                         </div>
-                        
                     </div>
-                    <!-- <div class="chan-btn">
-                        <button type="submit" id="edit_btn"><i class="fa-solid fa-pen" style="color: #ffffff;"></i></button>
-                    </div> -->
                 </div>
                 <!-- This is second cart -->
-                <div class="top-add">
+                <div class="top-add" id="add">
                     <div class="side-value">
                         <div class="ex-no">
                             <p><i class="fa-solid fa-2" style="color: #ffffff;"></i></p>
                         </div>
                         <div class="lod">
-                            <div class="lod-name">
-                                <h2>SHIPPING ADDRESS<span class="fa-solid fa-check" style="color: #a145f1;"></span></h2>
-                                <div class="user-value">
-                                    <input type="text" id="use-address" placeholder="North street, kulamangalam,madurai-625017" >
-                                    <input type="text" id="use-phone" placeholder="9876543210">
-                                    <!-- <h4 id="use-num">1234567890</h4> -->
+                            <h3>SHIPPING ADDRESS<span class="fa-solid fa-check" style="color: #a145f1;"></span></h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- This is third cart Select the address -->
+                <div class="select-address">
+                    <div class="user-value">
+
+                        <div class="ues-add">
+                            <!-- <div class="address_info">
+                                    <input type="radio" name="" id="check">
+                                        <div id="location_info">
+                                            <p id="location">ST Couriers, IT Corridor, Lakshman Nagar, Perungudi,
+                                                Chennai, Tamil Nadu -</p>
+                                            <p>600096</p>
+                                        </div>
+                                </div> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- This is Add adress click button-->
+                <!-- <div class="top-add" id="add">
+                    <div class="side-value">
+                        <div class="lod">
+                         <h2>SHIPPING ADDRESS<span class="fa-solid fa-check" style="color: #a145f1;"></span></h2>                 
+                        </div>
+                    </div>
+                </div> -->
+                <!-- Add address -->
+                <div class="top-add1" id="add-detail">
+                    <h3>Add Address</h3>
+                    <div class="ex-no">
+                        <p><i class="fa-solid fa-add" style="color: #ffffff;"></i></p>
+                    </div>
+                </div>
+
+
+                <!-- payment method section -->
+                <form id="buyform">
+                    <div class="mid-add">
+                        <div class="ex-no">
+                            <p><i class="fa-solid fa-3" style="color: #ffffff;"></i></p>
+                        </div>
+                        <h2>PAYMENT METHOD</h2>
+                    </div>
+                    <div class="payment">
+                        <div class="cards">
+                            <div class="pay-card">
+                                <label for=""><input type="radio" id="expand" name="payment" value="Pay with card">Pay
+                                    with
+                                    Debit/Credit/ATM Cards</label>
+                            </div>
+                            <p>You can save your cards as per new RBI guidelines</p>
+                            <ul>
+                                <li><img src="../../assets/New_collection/visa.png" alt=""></li>
+                                <li><img src="../../assets/New_collection/mastercard.png" alt=""></li>
+                                <li><img src="../../assets/New_collection/Rupay-Logo.png" alt=""></li>
+                            </ul>
+                        </div>
+                        <div id="hidden">
+                            <!-- <div class="card-details">
+                                <h3>Enter card details</h3>
+                                
+                                <div class="cards-numbers">
+                                    <form id="payment-form">
+                                        <div class="field">
+                                          <label>Card Number<input type="tel" id="cc-number" placeholder="•••• •••• •••• ••••" data-payment='cc-number'></label>
+                                            
+                                        </div>
+                                        <div class="field">
+                                          <label>CVC<input type="password" id="cc-cvc" placeholder="•••" data-payment='cc-cvc'>
+                                          </label>
+                                        </div>
+                                        <div class="field">
+                                          <label>Card Expiry (MM/YYYY)<input type="tel" id="cc-exp" placeholder="•• / ••••" data-payment='cc-exp'></label>
+                                          
+                                        </div>
+                                        
+                                        <div class="paybutton">
+                                
+                                         <button class="card-button" type="submit">Pay now</button> 
+                                        </div>
+                                    </form>
                                 </div>
+                                
+                            </div> -->
+                        </div>
+                        <div class="cash">
+                            <div class="pay-card">
+                                <label><input type="radio" id="cash_pay" name="payment" value="Cash on Delivery">Cash on
+                                    Delivery/Pay on Delivery</label>
                             </div>
                         </div>
-                        
-                    </div>
-                    <div class="chan-btn">
-                        <button id="update1"><i class="fa-solid fa-pen" style="color: #ffffff;"></i></button>
-                    </div>
-                </div>
-                <!-- payment method section -->
-                <div class="mid-add">
-                    <div class="ex-no">
-                        <p><i class="fa-solid fa-3" style="color: #ffffff;"></i></p>
-                    </div>
-                    <h2>PAYMENT METHOD</h2>
-                </div>
-                <div class="payment">
-                    <div class="cards">
-                        <div class="pay-card">
-                            <label for=""><input type="radio" id="expand" name="payment" value="card">Pay with Debit/Credit/ATM Cards</label>
-                        </div>
-                        <p>You can save your cards as per new RBI guidelines</p>
-                        <ul>
-                            <li><img src="../../assets/New_collection/visa.png" alt=""></li>
-                            <li><img src="../../assets/New_collection/mastercard.png" alt=""></li>
-                            <li><img src="../../assets/New_collection/Rupay-Logo.png" alt=""></li>
-                        </ul>
-                    </div>
-                    <div id="hidden"></div>
-                    <div class="cash">
-                        <div class="pay-card">
-                            <label><input type="radio" id="cash_pay" name="payment" value="Cash on Delivery">Cash on Delivery/Pay on Delivery</label>
+                        <div class="chan-btn"><button class="pr-btn" type="submit">Use this payment method</button>
                         </div>
                     </div>
-                    <div class="chan-btn"><button class="pr-btn">Use this payment method</button></div>
-                </div>
             </div>
-            <!-- <div class="card-details">
-                <h3>Enter card details</h3>
-                
-                <div class="cards-numbers">
-                    <form id="payment-form">
-                        <div class="field">
-                          <label>Card Number<input type="tel" id="cc-number" placeholder="•••• •••• •••• ••••" data-payment='cc-number'></label>
-                            
-                        </div>
-                        <div class="field">
-                          <label>CVC<input type="password" id="cc-cvc" placeholder="•••" data-payment='cc-cvc'>
-                          </label>
-                        </div>
-                        <div class="field">
-                          <label>Card Expiry (MM/YYYY)<input type="tel" id="cc-exp" placeholder="•• / ••••" data-payment='cc-exp'></label>
-                          
-                        </div>
-                        
-                        <div class="paybutton">
-                
-                         <button class="card-button" type="submit">Pay now</button> 
-                        </div>
-                    </form>
-                </div>
-                
-            </div> -->
+
 
         </div>
         <div class="collection">
@@ -129,13 +154,13 @@
                         </div>
                         <div class="second-cart">
                             <p id="name">asdfghj</p> -->
-                            <!-- <div class="star">
+                    <!-- <div class="star">
                                 <span>
                                     <i class="fa-solid fa-star"></i>
                                     <p id="product_ratting">4</p>
                                 </span>
                             </div> -->
-                            <!-- <p id="price">5432</p>
+                    <!-- <p id="price">5432</p>
 
                             <div class="count">
                                 <span class="minus">-</span>
@@ -156,26 +181,49 @@
 
                 <div class="price">
                     <h3 id="product">Price Details</h3>
+                    <div class="price1">
                     <div class="total1">
-                        <p>Total Product Price :</p>
-                        <p id="total_count"></p>
+                        <p>Total Product Price:</p>
+                        <p>Delivery Charges</p>
+                        <p>Order Total :</p>
+                        
                     </div>
                     <div class="order">
-                        <p>Order Total :</p>
+                        <p id="total_count"></p>
+                        <p>FREE</p>
                         <p id="total_count1"></p>
                     </div>
                 </div>
-                <div class="cont-btn">
-                    <a href="../../Page/Accesssories/buynow.html"><button>Place Order</button></a>
                 </div>
+                <!-- <div class="cont-btn">
+                    <a href="../../Page/Accesssories/buynow.html"><button>Place Order</button></a>
+                </div> -->
             </div>
         </div>
+        </form>
     </main>
-<script src="../../Page/JS files/buynow.js"></script>
-<script>
+    <div class="ex-address">
+        <span id="remove"><i class="fa-solid fa-xmark" style="color: #000000;"></i></span>
+        <form id="ex-add">
+            <div class="form-group">
+                <input type="text" id="autocomplete" placeholder="B.No/House.No" required>
+                <input type="street" id="street" placeholder="Street" required>
+                <div class="cty">
+                    <input type="city" id="inputCity" placeholder="City" required>
 
-   
-</script>
+                    <input type="state" id="inputState" placeholder="State" required>
+                </div>
+                <input type="zip" id="inputZip" placeholder="Pincode" required>
+            </div>
+            <div class="add-btn">
+                <button type="submit" id="new-address">Save Address</button>
+            </div>
+        </form>
+    </div>
+    <script src="../../Page/JS files/buynow.js"></script>
+
+
+    </script>
 </body>
 
 </html>

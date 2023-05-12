@@ -37,7 +37,7 @@ function productCard(item) {
     document.querySelector(".container").prepend(product)
     console.log(product);
     const forwed = document.createElement("a")
-    forwed.setAttribute("href", "../../Page/Accesssories/product.html?prod_id=" + item["productid"])
+    forwed.setAttribute("href", "../../Page/Accesssories/product.html?id=" + item["productid"])
     product.append(forwed)
 
     //This is product div
@@ -105,3 +105,24 @@ function productCard(item) {
     // button.innerHTML = "More"
     // document.querySelector(".detail").append(button)
 }
+
+
+let search = document.getElementById("name");
+
+
+search.addEventListener("keyup", (e)=>{
+    let words = e.target.value.toLowerCase();
+
+
+    let latter = document.querySelectorAll(".container");
+
+   latter.forEach((element)=>{
+    let content = element.children[1].textContent.toLowerCase();
+    if(content.includes(words)){
+        element.style.display = "grid";
+    }
+    else{
+        element.style.display = "none";
+    }
+   });
+});

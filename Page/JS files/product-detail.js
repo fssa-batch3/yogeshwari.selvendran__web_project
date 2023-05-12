@@ -2,7 +2,7 @@ const url = window.location.search //"prd_id=54"
 console.log(url);
 const urlparams = new URLSearchParams(url);//"prod_id" =" "
 console.log(urlparams);
-const product_id = urlparams.get("prod_id")
+const product_id = urlparams.get("id")
 console.log(product_id);
 
 
@@ -63,7 +63,7 @@ pr_ratting.innerText = search["rating"]
 
 //  get buynow btn data
 const buynow = document.getElementById("order-nav")
-buynow.setAttribute("href","../../Page/Accesssories/buynow.html?prod_id=" +search["productid"])
+buynow.setAttribute("href","../../Page/Accesssories/buynow.html?id=" +search["productid"])
 // This is add to cart
 let btn_cart = document.getElementById("add_card");
 

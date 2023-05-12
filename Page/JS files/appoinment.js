@@ -74,5 +74,6 @@ review.push({
 "cust_message" : message
 })
 }
+alert("Thank you")
 localStorage.setItem("user_review",JSON.stringify(review));
 }

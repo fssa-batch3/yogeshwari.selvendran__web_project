@@ -1,13 +1,13 @@
-const user = JSON.parse(localStorage.getItem("user_data"))
-        const loginuser = JSON.parse(localStorage.getItem("active_user"))
-        console.log(loginuser);
+    const user = JSON.parse(localStorage.getItem("user_data"))
+     const loginUser = JSON.parse(localStorage.getItem("active_user"))
+        
 
         //This is for get a data in form
         const firstName = document.getElementById("user-firstname");
         const lastName = document.getElementById("user-lastname");
         const email = document.getElementById("user-email");
         const userMobile = document.getElementById("user-number");
-        const address = document.getElementById("user-address");
+        // const address = document.getElementById("user-address");
         const pincodeAddress = document.getElementById("user-pincode");
 
         //console.log();
@@ -16,12 +16,12 @@ const user = JSON.parse(localStorage.getItem("user_data"))
         // view
 
         for (let i = 0; i < user.length; i++) {
-            if (loginuser["user_email"] == user[i]["user_email"]) {
+            if (loginUser["user_email"] == user[i]["user_email"]) {
                 firstName.value = user[i]["user_Firstname"]
                 lastName.value = user[i]["user_lastname"]
                 email.value = user[i]["user_email"]
                 userMobile.value = user[i]["mobile"]
-                address.value = user[i]["address1"]
+                // address.value = user[i]["address1"]
                 pincodeAddress.value = user[i]["pinaddress"]
             }
         }
@@ -40,17 +40,11 @@ const user = JSON.parse(localStorage.getItem("user_data"))
 
             if (btn.innerHTML == "Edit") {
                 btn.innerHTML = "Save"
-                // firstName.setAttribute("disabled", "")
-                // lastName.setAttribute("disabled", "")
-
-                // userMobile.setAttribute("disabled", "")
-                // address.setAttribute("disabled", "")
-                // pincodeAddress.setAttribute("disabled", "")
                 firstName.removeAttribute("disabled")
                 lastName.removeAttribute("disabled")
 
                 userMobile.removeAttribute("disabled")
-                address.removeAttribute("disabled")
+                // address.removeAttribute("disabled")
                 pincodeAddress.removeAttribute("disabled")
 
             }
@@ -59,19 +53,19 @@ const user = JSON.parse(localStorage.getItem("user_data"))
                 lastName.setAttribute("disabled", "")
 
                 userMobile.setAttribute("disabled", "")
-                address.setAttribute("disabled", "")
+                // address.setAttribute("disabled", "")
                 pincodeAddress.setAttribute("disabled", "")
 
 
                 const userid = JSON.parse(localStorage.getItem("user_data"))
                 // const userlist = JSON.parse(localStorage.getItem("profile"))
                 userid.find(element => {
-                    if (loginuser["user_email"] == element["user_email"]) {
+                    if (loginUser["user_email"] == element["user_email"]) {
 
                         element["user_Firstname"] = firstName.value
                         element["user_lastname"] = lastName.value
                         element["mobile"] = userMobile.value
-                        element["address1"] = address.value
+                        // element["address1"] = address.value
                         element["pinaddress"] = pincodeAddress.value
                         localStorage.setItem("user_data", JSON.stringify(userid))
                         // localStorage.setItem("profile", JSON.stringify(element))
@@ -83,7 +77,7 @@ const user = JSON.parse(localStorage.getItem("user_data"))
         const log = document.getElementById("log")
 
         log.addEventListener("click", function () {
-            const erase = delete loginuser
+            const erase = delete loginUser
 
             window.location.href = "../../Page/create_accound/signin.html"
             localStorage.setItem("active_user", JSON.stringify(erase))
