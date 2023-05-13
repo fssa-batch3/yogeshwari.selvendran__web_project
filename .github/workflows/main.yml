@@ -15,6 +15,7 @@ jobs:
           # enter the starting point
           start-point: "./"
           version: "v2"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
 
 
