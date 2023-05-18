@@ -211,7 +211,7 @@ span{
 }
 /* This is appointment */
 .appoinment {
-    background-image: url(../../assets/New_collection/BG-Collection/vecteezy_car-repair-service-min.jpg);
+    /* background-image: url(../../assets/New_collection/BG-Collection/vecteezy_car-repair-service-min.jpg); */
     /* height: 300px;
     width: 1450px;
     margin-left: 20px;
@@ -309,13 +309,23 @@ span{
 .date-choosing{
     width: 600px;
 }
+#check-Box1{
+    display: none;
+}
 .list-checkbox input{
    width: 15px;
    padding: 0;
 }
+/* #check-Box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 200px;
+} */
 .list-checkbox{
     display: flex;
     flex-wrap: wrap;
+    width: 600px;
 }
 .addres{
     display: flex;

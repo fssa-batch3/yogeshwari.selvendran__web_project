@@ -64,6 +64,10 @@ pr_ratting.innerText = search["rating"]
 //  get buynow btn data
 const buynow = document.getElementById("order-nav")
 buynow.setAttribute("href","../../Page/Accesssories/buynow.html?id=" +search["productid"])
+
+
+
+
 // This is add to cart
 let btn_cart = document.getElementById("add_card");
 

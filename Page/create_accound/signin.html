@@ -7,54 +7,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live On - Too Fast Too Quick</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../../assets/Icons/live-on.png">
-    <link rel="stylesheet" href="../../assets/Css/Login-Pages/signin.css">
+    <link rel="stylesheet" href="../../assets/Css/Login-Pages/usesign.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <main>
-        <div class="context">
-            <!-- <div class="container2"> -->
-            <div class="container">
-                <!-- <div class="more">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus esse et earum quos!
-                            Necessitatibus ducimus ipsam quis, numquam, nostrum harum sunt officiis ex dolores iste
-                            delectus
-                            consectetur inventore omnis dolore Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Voluptatibus esse et earum quos! Necessitatibus ducimus ipsam quis, numquam, nostrum harum
-                            sunt
-                            officiis ex dolores iste delectus consectetur inventore omnis dolore Lorem ipsum dolor, sit
-                            amet
-                            consectetur adipisicing elit. Voluptatibus esse et earum quos! Necessitatibus ducimus ipsam
-                            quis,
-                            numquam, nostrum harum sunt officiis ex dolores iste delectus consectetur inventore omnis
-                            dolore
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus esse et earum quos!
-                            Necessitatibus ducimus ipsam quis, numquam, nostrum harum sunt officiis ex dolores iste
-                            delectus
-                            consectetur inventore omnis dolore
-                        </p>
-                    </div> -->
-                <div class="form-page">
-                    <!-- <form id="form"> -->
-                    <h1>Sign In</h1>
-                    <p>Use either your email or a verified phone number</p>
-                    <input class="name" id="user-email" type="email" name="user email" pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Enter email">
-                    <input class="name" id="user-password" type="password" name="user password"
-                    placeholder="Enter password">
-                    <button class="name btn1" type="submit" onclick="yogi()">Continue</button>
-                    <!-- <input type="button" onclick="yogi" class="name"> -->
-                    <a href="../create_accound/user-signup.html">Create a account</a>
-                    <!-- </form> -->
+    <!-- <h2>Weekly Coding Challenge #1: Sign in/up Form</h2> -->
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#" id="form-page1">
+                <h1>Create Account</h1>
+                <div class="input">
+                    <input class="name" id="user-firstname" type="text" pattern=^[a-zA-Z]{3,20}$
+                        title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                        name="user name" value="" required autocomplete="off">
+                    <!-- <input type="text" required="" autocomplete="off"> -->
+                    <label for="name">Firstname</label>
+                </div>
+                <!-- <div class="first-name">
+                    <input class="name" id="user-firstname" type="text" pattern=^[a-zA-Z]{3,20}$
+                        title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                        name="user name" placeholder="First Name" value="" required>
+                </div> -->
+                <div class="input">
+                    <input type="text" class="name" id="user-lastname" type="text" name="user name"
+                        pattern=^[a-zA-Z]{1,20}$
+                        title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                        value="" required autocomplete="off">
+                    <label for="name">Lastname</label>
+                </div>
+                <!-- <div class="last-name">
+                    <input class="name" id="user-lastname" type="text" name="user name" pattern=^[a-zA-Z]{3,20}$
+                        title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                        placeholder="Last Name" value="" required>
+                </div> -->
+                <div class="input">
+                    <input class="name" id="user-email" type="email" name="user email"
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$"  value="" required
+                        autocomplete="off">
+                    <label for="name">Email</label>
+                </div>
+                <!-- <div class="email">
+                    <input class="name" id="user-email" type="email" name="user email"
+                        pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                        placeholder="name@gmail.com" value="" required>
+                </div> -->
+                <div class="input">
+                    <input class="name" id="user-password" type="password" name="psw"
+                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n\s])(?=.*[A-Z])(?=.*[a-z]).*$"
+                        title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters and white space character"
+                        required autocomplete="off">
+                    <label for="name">Password</label>
+                </div>
+                <!-- <div class="password">
+                    <input class="name" id="user-password" type="password" name="psw"
+                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n\s])(?=.*[A-Z])(?=.*[a-z]).*$"
+                        title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters and white space character"
+                        placeholder="password" required>
+                </div> -->
+                <div class="input">
+                    <input class="name" id="confirm-password" type="password" name="psw"
+                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n\s])(?=.*[A-Z])(?=.*[a-z]).*$"
+                        title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters and white space character"
+                        required autocomplete="off">
+                    <label for="name">Confirm Password</label>
+                </div>
+                <!-- <div class="confirm-password">
+                    <input class="name" id="confirm-password" type="password" name="psw"
+                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n\s])(?=.*[A-Z])(?=.*[a-z]).*$"
+                        title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters and white space character"
+                        placeholder="confirm-password" required>
+                </div> -->
+                <div class="input">
+                    <input class="name" id="user-number" type="tel" pattern="^[6-9][0-9]{9}$"
+                        title="PLease enter 10 digit number" name="user mobile" required="true" autocomplete="off">
+                    <label for="name">Number</label>
+                </div>
+                <!-- <div class="number">
+                    <input class="name" id="user-number" type="tel" pattern="[0-9]{10}"
+                        title="PLease enter 10 digit number" name="user mobile" placeholder="Enter your Number"
+                        required="true">
+                </div> -->
+                <div class="input">
+                    <input class="name" id="user-pincode" type="text" pattern=^6\d{5}$ maxlength="6"
+                        name="user address" required autocomplete="off">
+                    <label for="name">Pincode</label>
+                </div>
+                <!-- <div class="address">
+                    <input class="name" id="user-pincode" type="text" pattern="[0-9]{6}" maxlength="6"
+                        name="user address" placeholder="Pincode" required>
+                </div> -->
+
+                <!-- <div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div> -->
+                <!-- <span>or use your email for registration</span>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" /> -->
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#" id="form-page2">
+                <h1>Sign in</h1>
+                <div class="input">
+                    <input class="name" id="user-email" type="email" name="user email"
+                        pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" value="" required
+                        autocomplete="off">
+                    <!-- <label for="name">Email</label> -->
+                </div>
+                <div class="input">
+                    <input class="name" id="user-password" type="password" name="psw"
+                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n\s])(?=.*[A-Z])(?=.*[a-z]).*$"
+                        title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters and white space character"
+                        required autocomplete="off">
+                    <!-- <label for="name">Password</label> -->
+                </div>
+                <button class="btn1" type="submit" onclick="yogi()">Continue</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel1 overlay-left">
+                    <h1>LIVE-ON</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel2 overlay-right">
+                    <h1>LIVE_ON</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
                 </div>
             </div>
-            <!-- </div> -->
         </div>
-    </main>
-<a href="../../Page/Home/home.html"></a>
+    </div>
 
     <script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
 
 
         function yogi() {
@@ -68,9 +172,9 @@
             let active_user;
             arraydetails.find(element => {
                 if (element["user_email"] == useremail && element["password"] == userpassword) {
-                active_user = element;
-                console.log(active_user);
-                // localStorage.setItem("active_user",JSON.stringify(active_user))
+                    active_user = element;
+                    console.log(active_user);
+                    // localStorage.setItem("active_user",JSON.stringify(active_user))
                     return result = 1;
                 }
                 else {
@@ -80,13 +184,13 @@
             if (result == 1) {
 
                 // swal("Yep!", "you logged in bruh!", "success");
-                window.location.href = "../../Page/Dashboard/user-profile.html"
+                window.location.href = "../../Page/Home/home.html"
                 alert(" success")
-                localStorage.setItem("active_user",JSON.stringify(active_user))
+                localStorage.setItem("active_user", JSON.stringify(active_user))
                 // localStorage.setItem("sign_in", useremail)
 
             }
-           else if("admin@gmail.com"==useremail && "Admin@123"==userpassword){
+            else if ("admin@gmail.com" == useremail && "Admin@123" == userpassword) {
                 window.location.href = "../../Page/Admin/admin.html"
 
             }
@@ -95,9 +199,10 @@
                 // swal("Oops!", "email or password is not correct!", "error");
             }
         }
-
-
+    </script>
+    <script src="../../Page/JS files/user-signup.js">
     </script>
 </body>
+
 
 </html>

@@ -1,3 +1,7 @@
+// const scroll = document.querySelector("body");
+// scroll.addEventListener("onScroll",()=>{
+
+// })
 var project = setInterval(projectDone, 10)
 var cities = setInterval(happyCities, 10)
 var service = setInterval(vehicle, 10)

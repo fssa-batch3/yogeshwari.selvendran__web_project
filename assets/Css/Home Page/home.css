@@ -339,7 +339,88 @@ margin-top: 8%;
 .over_flow {
     margin: 0px;
 }
-.servicess {
+/* This is service card  */
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 290px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: #000000 solid 2px;
+    padding: 32px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    color: #000000;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .content .heading {
+    font-weight: 700;
+    font-size: 32px;
+  }
+  
+  .content .para {
+    line-height: 1.5;
+  }
+  
+  .content .btn {
+    color: #e8e8e8;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(-45deg, #b729f8 0%, #ef0fff 100% );
+    z-index: -1;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card:hover::before {
+    height: 100%;
+  }
+  
+  .card:hover {
+    box-shadow: none;
+  }
+  
+  .card:hover .btn {
+    color: #212121;
+    background: #e8e8e8;
+  }
+  
+  .content .btn:hover {
+    outline: 2px solid #e8e8e8;
+    background: transparent;
+    color: #e8e8e8;
+  }
+  
+  .content .btn:active {
+    box-shadow: none;
+  }
+  
+/* .servicess {
     height: 33vh;
     width: 290px;
     margin: 20px;
@@ -353,15 +434,15 @@ margin-top: 8%;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.55);
    
     border-radius: 0.4rem;
-}
+} */
 
-.servicess:hover {
+/* .servicess:hover {
     color: var(--white-color);
     background-image: linear-gradient(135deg, #FF6FD8 10%, #3813C2 100%);
   
-}
+} */
 .card-item img {
-
+height: 90px;
     background-color: white;
     padding: 15px;
     border-radius: 15px;
@@ -371,7 +452,7 @@ margin-top: 8%;
     justify-content: space-between;
     align-items: center;
 }
-.content p {
+/* .content p {
     text-align: center;
     font-size: 1rem;
     font-weight: 600;
@@ -381,11 +462,11 @@ margin-top: 8%;
     font-size: 1em;
     padding-left: 20px;
     text-align: justify;
-}
+} */
 .service-page {
 
     background-size: cover;
-    width: 40%;
+    width: 25%;
     color: white;
     background-color: var(--btn-color);
     display: flex;
@@ -472,7 +553,7 @@ margin-top: 8%;
 
 
 /* This is product section */
-.product-page {
+/* .product-page {
     margin-top: 50px;
 }
 
@@ -603,7 +684,7 @@ margin-top: 8%;
 
 .ratting :nth-child(4) {
     color: rgb(204, 199, 199);
-}
+} */
 /* This is customer review */
 
 .cus-review {
@@ -612,26 +693,56 @@ margin-top: 8%;
 }
 .container {
     height: 500px;
-    width: 1000px;
+    width: 1100px;
     margin: 100px auto;   
     text-align: center;  
 }
-
-.title {
+.container h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 5%;
+    /* border-bottom: 5px solid rgb(134, 45, 217) ; */
+    /* padding-top: 70px; */
+}
+/* .title {
     width: 180px;
     text-transform: capitalize;
     margin-top: 25px;
-    margin-left: 410px;
+    margin-left: 500px;
     margin-bottom: 45px;
     border-bottom: 5px solid rgb(134, 45, 217) ;
     padding-bottom: 10px;
     letter-spacing: 3px;
+} */
+.review-container{
+    position: static;
+    display: flex;
+    gap: 50px;
+    overflow: hidden;
+    overflow-x: scroll;
+    left: 400px;
+    height: 300px;
+    border: #000000 solid;
+ 
+}
+.review-container::-webkit-scrollbar {
+    display: none;
 }
 
-.review-container{
-    display: flex;
-}
 .review{
+    margin-top: 2%;
+    width: 250px;
+    height: 250px;
+    padding: 20px 10px;
+    background: rgb(181, 119, 236);
+    transition: all 300ms;
+   }
+   
+   .review:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+   }
+/* .review{
     width: 300px;
     height: 285px;
     display: flex;
@@ -647,20 +758,20 @@ margin-top: 8%;
 .review:hover{
     background-color: white;
     color: rgb(0, 0, 0);
-}
+} */
 
 #author {
     text-transform: capitalize;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
 }
 
 .information{
-  width: 200px;
+  width: 300px;
 }
 #info {
     text-align: center;
     font-size: 15px;
-    padding: 20px;
+    padding: 10px 10px;
 }
 /* This is footer */
 footer {
@@ -765,3 +876,6 @@ footer {
     text-align: center;
     font-size: 110%;
 }
+@media only screen and (max-width: 1200px){
+
+    }

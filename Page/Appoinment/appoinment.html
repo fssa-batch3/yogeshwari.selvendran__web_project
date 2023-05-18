@@ -14,6 +14,24 @@
 </head>
 
 <body>
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+            s.addEventListener('load', function() {
+              myLandbot = new Landbot.Popup({
+                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1585520-59VB2JK37BW8G12A/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+        </script>
     <div class="little-footer">
         <div class="contact-item">
             <span>
@@ -62,7 +80,7 @@
                         </div>
                     </button>
                 </li>
-                <li class="list"><a href="">PARTENERS</a></li>
+                <!-- <li class="list"><a href="">PARTENERS</a></li> -->
             </ul>
         </div>
         <div class="user">
@@ -117,37 +135,79 @@
                 <!-- This is appoinment section -->
                 <div class="appoinment-section">
                     <div class="date">
+                        <!-- This is choose the appointment date -->
                         <div class="date-choose">
                             <label for="appointment-date" class="top-head">APPOINTMENT DATE</label><br>
                             <input id="date" type="date" required aria-label="date">
                         </div><br>
+                        <!-- This is choose the appointment time -->
                         <div class="date-choose">
                             <label for="appointment-date" class="top-head">PREFFERED TIME FRAME</label><br>
                             <input id="time" type="time" required aria-label="time" required>
                         </div><br>
+                        <!-- This is choose the appointment vehicle type -->
+                        <div class="type-choose">
+                            <label for="appointment-date" class="top-head">VEHICLE</label><br>
+                            <label for="vehicle-type" id="bike" >
+                                <input type="radio" id="vehicle-type" name="vehicle-type" value="Bike">Bike
+                            </label>
+                            <label for="vehicle-type1" id="car">
+                                <input type="radio" id="vehicle-type1" name="vehicle-type" value="Car">Car
+                            </label>
+                        </div>
+                        <!-- This is choose the appointment servicde -->
                         <div class="date-choosing">
                             <label for="appointment-date" class="top-head">SELECT SERVICES NEEDED</label><br>
-                            <div class="list-checkbox">
-                                <label for="text" class="checkbox"> <input type="checkbox" id="check"  value="Air Conditioning" class="item"
-                                        name="check" aria-label="checkbox"> Air Conditioning</label>
-                                <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Breakes repair"
-                                        name="check" aria-label="checkbox"> Breakes repair</label>
-                                <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Engine Diagnostics"
-                                        name="check" aria-label="checkbox"> Engine Diagnostics</label>
-                                <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Heating & Cooling"
-                                        name="check" aria-label="checkbox"> Heating & Cooling </label>
-                                <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Oil, Lube & Filters "
-                                        name="check" aria-label="checkbox"> Oil, Lube & Filters </label>
-                                <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Service"
-                                        name="check" aria-label="checkbox">Service</label>
-                                <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Steering & Supension"
-                                        name="check" aria-label="checkbox"> Steering & Supension</label> -->
-                                <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Transmission"
-                                        name="check" aria-label="checkbox"> Transmission</label> -->
+                            <div id="service-select">
+                                <div class="list-checkbox" id="check-Box">
+                                    <label for="text" class="checkbox"> <input type="checkbox" id="check"  value="Air Conditioning" class="item"
+                                            name="check" aria-label="checkbox"> waret Service</label>
+                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Breakes repair"
+                                            name="check" aria-label="checkbox"> Breakes repair</label>
+                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Engine Diagnostics"
+                                            name="check" aria-label="checkbox"> sdfghhhhh</label>
+                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Heating & Cooling"
+                                            name="check" aria-label="checkbox"> dfghjk </label>
+                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Oil, Lube & Filters "
+                                            name="check" aria-label="checkbox"> swedcfvgbhnj</label>
+                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Service"
+                                            name="check" aria-label="checkbox">Water Service</label>
+                                    <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Steering & Supension"
+                                            name="check" aria-label="checkbox"> Steering & Supension</label> -->
+                                    <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Transmission"
+                                            name="check" aria-label="checkbox"> Transmission</label> -->
+    
+                                    <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" 
+                                            name="check" aria-label="checkbox"> Others</label> -->
+                                </div>
 
-                                <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" 
-                                        name="check" aria-label="checkbox"> Others</label> -->
+
+
+                                <div class="list-checkbox"  id="check-Box1">
+                                    <label for="text" class="checkbox"> <input type="checkbox" id="check"  value="Air Conditioning" class="item"
+                                            name="check" aria-label="checkbox"> Air Conditioning</label>
+                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Breakes repair"
+                                            name="check" aria-label="checkbox"> Breakes repair</label>
+                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Engine Diagnostics"
+                                            name="check" aria-label="checkbox"> Engine Diagnostics</label>
+                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Heating & Cooling"
+                                            name="check" aria-label="checkbox"> Heating & Cooling </label>
+                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Oil, Lube & Filters "
+                                            name="check" aria-label="checkbox"> Oil, Lube & Filters </label>
+                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Service"
+                                            name="check" aria-label="checkbox">Water Service</label>
+                                    <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Steering & Supension"
+                                            name="check" aria-label="checkbox"> Steering & Supension</label> -->
+                                    <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Transmission"
+                                            name="check" aria-label="checkbox"> Transmission</label> -->
+    
+                                    <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" 
+                                            name="check" aria-label="checkbox"> Others</label> -->
+                                </div>
                             </div>
+                            
+
+                            
                         </div>
                     </div>
                     <div class="addres">

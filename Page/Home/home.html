@@ -14,6 +14,24 @@
 </head>
 
 <body>
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+            s.addEventListener('load', function() {
+              myLandbot = new Landbot.Popup({
+                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1585520-59VB2JK37BW8G12A/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+        </script>
     <!-- <img src="../../assets/New_collection/BG-Collection/homebackgroundImage.jpg"> -->
     <header>
         <div class="logo">
@@ -31,14 +49,14 @@
                                 <li><a class="sub-service1" href="../../Page/Appoinment/appoinment.html"
                                         target="_blank">Appoinment</a>
                                 </li>
-                                <li><a class="sub-service1"
-                                        href="../../Page/Accesssories/accessories.html">Accesssories</a>
+                                <li><a href="../../Page/Accesssories/accessories.html" class="sub-service1"
+                             id="singam">Accesssories</a>
                                 </li>
                             </ul>
                         </div>
                     </button>
                 </li>
-                <li class="list"><a href="../../Page/Home/partner.html">PARTENERS</a></li>
+                <!-- <li class="list"><a href="../../Page/Home/partner.html">PARTENERS</a></li> -->
             </ul>
         </div>
         <div class="user">
@@ -109,78 +127,47 @@
                     </div>
                     <div class="genral-item">
                         <div class="first-item">
-                            <div class="servicess">
-                                <div class="card-item">
-                                    <img src="../../assets/New_collection/settings (1).png" alt="">
-                                    <!-- <img src="../../assets/New_collection/battery.png" alt=""> -->
-                                </div>
+
+                            <!-- This card style -->
+                            <div class="card">
                                 <div class="content">
-                                    <p>Genaral Service</p>
-                                    <span>Get professional periodic bike service, bikeNeed to buy car care
-                                        tools,
-                                        accessories, this will be a useful choice</span>
+                                  <p class="heading">Genaral Service
+                                  </p>
+                                  
+                                <p class="para">
+                                    Get professional periodic bike service, bikeNeed to buy car care
+                                    tools,
+                                    accessories, this will be a useful choice
+                                  </p>
+                                  <!-- <button class="btn">Read more</button> -->
                                 </div>
-                            </div>
-                            <div class="servicess">
-                                <div class="card-item">
-                                    <img src="../../assets/New_collection/calendar.png" alt="">
-                                    <!-- <img src="../../assets/New_collection/battery.png" alt=""> -->
-                                </div>
+                              </div>
+                              <div class="card">
                                 <div class="content">
-                                    <p>Spare parts</p>
-                                    <span>Get professional periodic bike service, bikeNeed to buy car care
-                                        tools,
-                                        accessories, this will be a useful choice</span>
+                                  <p class="heading">Card Hover Effect
+                                  </p><p class="para">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+                                    laboriosam at voluptas minus culpa deserunt delectus sapiente
+                                    inventore pariatur
+                                  </p>
+                                  <!-- <button class="btn">Read more</button> -->
                                 </div>
-                            </div>
-                            <div class="servicess">
-                                <div class="card-item">
-                                    <img src="../../assets/New_collection/disc-brake.png" alt="">
-                                    <!-- <img src="../../assets/New_collection/battery.png" alt=""> -->
-                                </div>
+                              </div>
+                              <div class="card">
                                 <div class="content">
-                                    <p>Genaral Service</p>
-                                    <span>Get professional periodic bike service, bikeNeed to buy car care
-                                        tools,
-                                        accessories, this will be a useful choice</span>
+                                  <p class="heading">Card Hover Effect
+                                  </p><p class="para">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+                                    laboriosam at voluptas minus culpa deserunt delectus sapiente
+                                    inventore pariatur
+                                  </p>
+                                  <!-- <button class="btn">Read more</button> -->
                                 </div>
-                            </div>
-                            <div class="servicess">
-                                <div class="card-item">
-                                    <img src="../../assets/New_collection/settings.png" alt="">
-                                    <!-- <img src="../../assets/New_collection/battery.png" alt=""> -->
-                                </div>
-                                <div class="content">
-                                    <p>Genaral Service</p>
-                                    <span>Get professional periodic bike service, bikeNeed to buy car care
-                                        tools,
-                                        accessories, this will be a useful choice</span>
-                                </div>
-                            </div>
-                            <div class="servicess">
-                                <div class="card-item">
-                                    <img src="../../assets/New_collection/settings.png" alt="">
-                                    <!-- <img src="../../assets/New_collection/battery.png" alt=""> -->
-                                </div>
-                                <div class="content">
-                                    <p>Genaral Service</p>
-                                    <span>Get professional periodic bike service, bikeNeed to buy car care
-                                        tools,
-                                        accessories, this will be a useful choice</span>
-                                </div>
-                            </div>
-                            <div class="servicess">
-                                <div class="card-item">
-                                    <img src="../../assets/New_collection/settings.png" alt="">
-                                    <!-- <img src="../../assets/New_collection/battery.png" alt=""> -->
-                                </div>
-                                <div class="content">
-                                    <p>Genaral Service</p>
-                                    <span>Get professional periodic bike service, bikeNeed to buy car care
-                                        tools,
-                                        accessories, this will be a useful choice</span>
-                                </div>
-                            </div>
+                              </div>
+
+
+
+                            
                         </div>
                     </div>
 
@@ -226,22 +213,21 @@
                 </div>
             </div>
             <!-- product-detail section -->
-            <div class="product-page">
+            <!-- <div class="product-page">
                 <h3>Popular Products</h3>
                 <div class="products-condainer">
 
                 </div>
-                <!-- <a class="page" href="../../Page/Accesssories/accessories.html"><button>MORE</button></a> -->
-            </div>
+                <a class="page" href="../../Page/Accesssories/accessories.html"><button>MORE</button></a>
+            </div> -->
         </div>
 
         <!-- This is a customer review -->
         <div class="cus-review">
             <section class="container">
-                <div class="title">
-                    <h2>our reviews</h2>
-                </div>
+                 <h2>our reviews</h2>
                 <div class="review-container">
+                    <!-- <div class="card">HOVER</div> -->
                     <!-- <div class="review"> -->
                         <!-- <div class="img-container">
                             <img src="http://siga-aluminio.com.mx/wp-content/uploads/2019/01/person2.jpg"
@@ -322,142 +308,142 @@
         <p> &copy;Copyright 2023 Carservice Theme by my own design</p>
     </div>
     <script>
-        const productlist = [
-            {
-                image: "../../assets/New_collection/Bik-part/Automotive Brake Part-1.png",
-                name: "Brake Part",
-                price: "12,000"
-            },
-            {
-                image: "../../assets/New_collection/Bik-part/Air filter.png",
-                name: "Air filter",
-                price: "13,000"
-            },
-            {
-                image: "../../assets/New_collection/Bik-part/assorted-.png",
-                name: "Automotive break part",
-                price: "14,000"
-            },
-            {
-                image: "../../assets/New_collection/Bik-part/Car Ball joint Suspension Control arm.png",
-                name: "Automotive break part",
-                price: "15,000"
-            },
-            {
-                image: "../../assets/New_collection/Bik-part/Car Rim Alloy wheel.png",
-                name: "Automotive break part",
-                price: "16,000"
-            },
-            {
-                image: "../../assets/New_collection/Bik-part/Car Intercooler Radiator.png",
-                name: "Automotive break part",
-                price: "16,000"
-            },
-            {
-                image: "../../assets/New_collection/Bik-part/Car dealership Renault Parts.png",
-                name: "Automotive break part",
-                price: "16,000"
-            }
-            , {
-                image: "../../assets/New_collection/Bik-part/Car Suspension Shock absorb.png",
-                name: "Automotive break part",
-                price: "16,000"
-            },
-            {
-                image: "../../assets/New_collection/Bik-part/Windscreen Wipers.png",
-                name: "Automotive break part",
-                price: "16,000"
-            },
-            {
-                image: "../../assets/New_collection/Bik-part/Used car Mesman Motors Alternator Ford Motor.png",
-                name: "Automotive break part",
-                price: "16,000"
-            },
-            {
-                image: "../../assets/New_collection/Bik-part/Hyundai Tiburon Starter.png",
-                name: "Automotive break part",
-                price: "16,000"
-            },
-            {
-                image: "../../assets/New_collection/Bik-part/Car Turbine Turbocharger.png",
-                name: "Automotive break part",
-                price: "16,000"
-            }
+        // const productlist = [
+        //     {
+        //         image: "../../assets/New_collection/Bik-part/Automotive Brake Part-1.png",
+        //         name: "Brake Part",
+        //         price: "12,000"
+        //     },
+        //     {
+        //         image: "../../assets/New_collection/Bik-part/Air filter.png",
+        //         name: "Air filter",
+        //         price: "13,000"
+        //     },
+        //     {
+        //         image: "../../assets/New_collection/Bik-part/assorted-.png",
+        //         name: "Automotive break part",
+        //         price: "14,000"
+        //     },
+        //     {
+        //         image: "../../assets/New_collection/Bik-part/Car Ball joint Suspension Control arm.png",
+        //         name: "Automotive break part",
+        //         price: "15,000"
+        //     },
+        //     {
+        //         image: "../../assets/New_collection/Bik-part/Car Rim Alloy wheel.png",
+        //         name: "Automotive break part",
+        //         price: "16,000"
+        //     },
+        //     {
+        //         image: "../../assets/New_collection/Bik-part/Car Intercooler Radiator.png",
+        //         name: "Automotive break part",
+        //         price: "16,000"
+        //     },
+        //     {
+        //         image: "../../assets/New_collection/Bik-part/Car dealership Renault Parts.png",
+        //         name: "Automotive break part",
+        //         price: "16,000"
+        //     }
+        //     , {
+        //         image: "../../assets/New_collection/Bik-part/Car Suspension Shock absorb.png",
+        //         name: "Automotive break part",
+        //         price: "16,000"
+        //     },
+        //     {
+        //         image: "../../assets/New_collection/Bik-part/Windscreen Wipers.png",
+        //         name: "Automotive break part",
+        //         price: "16,000"
+        //     },
+        //     {
+        //         image: "../../assets/New_collection/Bik-part/Used car Mesman Motors Alternator Ford Motor.png",
+        //         name: "Automotive break part",
+        //         price: "16,000"
+        //     },
+        //     {
+        //         image: "../../assets/New_collection/Bik-part/Hyundai Tiburon Starter.png",
+        //         name: "Automotive break part",
+        //         price: "16,000"
+        //     },
+        //     {
+        //         image: "../../assets/New_collection/Bik-part/Car Turbine Turbocharger.png",
+        //         name: "Automotive break part",
+        //         price: "16,000"
+        //     }
 
 
-        ]
-        for (i = 0; i <= 10; i++) {
-            //This is product div
-            const product = document.createElement("div")
-            product.setAttribute("class", "product")
-            document.querySelector(".products-condainer").prepend(product)
+        // ]
+        // for (i = 0; i <= 10; i++) {
+        //     //This is product div
+        //     const product = document.createElement("div")
+        //     product.setAttribute("class", "product")
+        //     document.querySelector(".products-condainer").prepend(product)
 
-            // Create a div pic-part
-            const picPart = document.createElement("div")
-            picPart.setAttribute("class", "pic-part")
-            document.querySelector(".product").append(picPart)
+        //     // Create a div pic-part
+        //     const picPart = document.createElement("div")
+        //     picPart.setAttribute("class", "pic-part")
+        //     document.querySelector(".product").append(picPart)
 
-            // Create a img tag
-            const picture = document.createElement("img")
-            picture.setAttribute("src", productlist[i].image)
-            picture.setAttribute("alt", "Automotive Brake Part")
-            document.querySelector(".pic-part").append(picture)
+        //     // Create a img tag
+        //     const picture = document.createElement("img")
+        //     picture.setAttribute("src", productlist[i].image)
+        //     picture.setAttribute("alt", "Automotive Brake Part")
+        //     document.querySelector(".pic-part").append(picture)
 
-            // Create a detail div
-            const detailSection = document.createElement("div")
-            detailSection.setAttribute("class", "detail")
-            document.querySelector(".product").append(detailSection)
+        //     // Create a detail div
+        //     const detailSection = document.createElement("div")
+        //     detailSection.setAttribute("class", "detail")
+        //     document.querySelector(".product").append(detailSection)
 
-            // Creat a p tag
-            const partname = document.createElement("p")
-            partname.setAttribute("class", "part-name")
-            partname.innerText = productlist[i].name
-            document.querySelector(".detail").append(partname)
+        //     // Creat a p tag
+        //     const partname = document.createElement("p")
+        //     partname.setAttribute("class", "part-name")
+        //     partname.innerText = productlist[i].name
+        //     document.querySelector(".detail").append(partname)
 
-            // Create a dic cost-rate
-            const costRate = document.createElement("div")
-            costRate.setAttribute("class", "cost-rate")
-            document.querySelector(".detail").append(costRate)
-            // This is rupee div
-            const rupee1 = document.createElement("div")
-            rupee1.setAttribute("class", "rupee")
-            document.querySelector(".cost-rate").append(rupee1)
+        //     // Create a dic cost-rate
+        //     const costRate = document.createElement("div")
+        //     costRate.setAttribute("class", "cost-rate")
+        //     document.querySelector(".detail").append(costRate)
+        //     // This is rupee div
+        //     const rupee1 = document.createElement("div")
+        //     rupee1.setAttribute("class", "rupee")
+        //     document.querySelector(".cost-rate").append(rupee1)
 
-            // Create a icon rupee
-            const icon1 = document.createElement("i")
-            icon1.setAttribute("class", "fa-solid fa-indian-rupee-sign")
-            document.querySelector(".rupee").append(icon1)
+        //     // Create a icon rupee
+        //     const icon1 = document.createElement("i")
+        //     icon1.setAttribute("class", "fa-solid fa-indian-rupee-sign")
+        //     document.querySelector(".rupee").append(icon1)
 
-            // Create a p tag foe cost price
-            const costPrice = document.createElement("p")
-            costPrice.innerHTML = productlist[i].price
-            document.querySelector(".rupee").append(costPrice)
+        //     // Create a p tag foe cost price
+        //     const costPrice = document.createElement("p")
+        //     costPrice.innerHTML = productlist[i].price
+        //     document.querySelector(".rupee").append(costPrice)
 
-            // Create a ratting div
-            const ratting = document.createElement("div")
-            ratting.setAttribute("class", "ratting")
-            document.querySelector(".cost-rate").append(ratting)
-            // Create ratting icon (star)
-            const iconStar1 = document.createElement("i")
-            iconStar1.setAttribute("class", "fa-solid fa-star")
-            document.querySelector(".ratting").append(iconStar1)
+        //     // Create a ratting div
+        //     const ratting = document.createElement("div")
+        //     ratting.setAttribute("class", "ratting")
+        //     document.querySelector(".cost-rate").append(ratting)
+        //     // Create ratting icon (star)
+        //     const iconStar1 = document.createElement("i")
+        //     iconStar1.setAttribute("class", "fa-solid fa-star")
+        //     document.querySelector(".ratting").append(iconStar1)
 
-            const iconStar2 = document.createElement("i")
-            iconStar2.setAttribute("class", "fa-solid fa-star")
-            document.querySelector(".ratting").append(iconStar2)
+        //     const iconStar2 = document.createElement("i")
+        //     iconStar2.setAttribute("class", "fa-solid fa-star")
+        //     document.querySelector(".ratting").append(iconStar2)
 
-            const iconStar3 = document.createElement("i")
-            iconStar3.setAttribute("class", "fa-solid fa-star")
-            document.querySelector(".ratting").append(iconStar3)
+        //     const iconStar3 = document.createElement("i")
+        //     iconStar3.setAttribute("class", "fa-solid fa-star")
+        //     document.querySelector(".ratting").append(iconStar3)
 
-            const iconStar4 = document.createElement("i")
-            iconStar4.setAttribute("class", "fa-solid fa-star")
-            document.querySelector(".ratting").append(iconStar4)
-            // Create a  button tag
-            const button = document.createElement("button")
-            button.innerHTML = "ADD TO CART"
-            document.querySelector(".detail").append(button)
-        }
+        //     const iconStar4 = document.createElement("i")
+        //     iconStar4.setAttribute("class", "fa-solid fa-star")
+        //     document.querySelector(".ratting").append(iconStar4)
+        //     // Create a  button tag
+        //     const button = document.createElement("button")
+        //     button.innerHTML = "ADD TO CART"
+        //     document.querySelector(".detail").append(button)
+        // }
         
 
         // This customar review
@@ -486,6 +472,18 @@
                 review.append(information)
 
         }
+        // let user=JSON.parse(localStorage.getItem("active_user"));
+        // console.log(user);
+        // const accessories=document.getElementById("singam")
+        // accessories.addEventListener("click",(el)=>{
+        //     if(user=="false"){
+        //         console.log("yohi");
+        //         alert("plese login");
+        //     }
+        //     else{
+        //         window.location.href="../../Page/Accesssories/accessories.html"
+        //     }
+        // })
     </script>
 
 </body>

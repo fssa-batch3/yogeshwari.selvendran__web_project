@@ -21,55 +21,49 @@
                 <img class="pro_image" src="../../assets/New_collection/Acc-cover.png" alt="profile">
                 <label for="upload-file"><i class="fa-solid fa-camera" style="color: #a322ee;"></i></label>
                 <input type="file" accept="image/jpeg,image/png,image/jpg" id="upload-file">
-                
             </div>
             <div class="side-menu">
                 <ul>
                     <li>
-                        <a href="../../Page/Dashboard/user-profile.html" class="active"><span
-                                class="fa-solid fa-circle-user" ></span>
+                        <a href="#profile-page" class="active" autofocus id="profile1"><span class="fa-solid fa-circle-user" ></span>
                             <span>My Profile</span></a>
                     </li>
                     <li>
-                        <a href="#order-history" class="active" autofocus ><span class="fa-solid fa-bag-shopping"></span>
+                        <a href="#order-history" class="active" autofocus id="order_history1"><span class="fa-solid fa-bag-shopping"></span>
                             <span>Orders</span></a>
                     </li>
                     <li>
-                        <a href="" class="active"><span class="fa-solid fa-calendar-check"></span>
+                        <a href="#appoinment-booking" class="active" autofocus id="appointment1"><span class="fa-solid fa-calendar-check"></span>
                             <span>Appointments</span></a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="" class="active"><span class="fa-solid fa-circle-user"></span>
                             <span>Wishlist</span></a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="" class="active"><span class="fa-solid fa-circle-user"></span>
-                            <span>Offers</span></a>
+                        <span>Offers</span></a>
                     </li>
                     <!-- <li>
                         <a href="" class="active"><span class="fa-solid fa-calendar-check"></span>
                             <span>History</span></a>
                     </li> -->
                     <li>
+                        <a id="log" class="active"><span class="fa-solid fa-right-from-bracket"></span>
+                            <span id="log">Logout</span></a>
+                    </li>
+                    <li>
                         <a href="../../Page/Home/home.html" class="active"><span class="fa-solid fa-left-long"></span>
                             <span>Exit</span></a>
                     </li>
-                    <!-- <li>
-                        <a href="../../Page/Home/home.html" class="active"><span class="fa-solid fa-left-long"></span>
-                            <span>Exit</span></a>
-                    </li> -->
 
                 </ul>
             </div>
-
         </div>
-       
         <div class="main-item">
-           
             <main>
                 <!-- This is user condainer -->
-                <div class="user-container">
-
+                <div class="user-container" id="profile-page">
                     <div class="information">
                         <form id="form">
                             <!-- This is First name  -->
@@ -95,7 +89,6 @@
                                     value="" required="true" title="First name connot contain spaces" disabled>
         
                             </div>
-        
                             <!-- This is user mobile number -->
                             <div class="number" id="align-num">
                                 <label class="more"> Number</label>
@@ -121,7 +114,9 @@
         
                             </div>
                             <!-- This is update button -->
-                            <div>
+                            <div class="exit">
+                                <!-- <button id="log"><span class="fa-solid fa-right-from-bracket"></span>
+                                    <span>Logout</span></button> -->
                                 <button type="submit" id="btn" class="name">Edit</button>
                             </div>
                         </form>
@@ -174,18 +169,18 @@
                             <table>
                                 <thead>
                                     <th>Booking id</th>
+                                    <th>Vehicle</th>
                                     <th>Name</th>
-                                    <th>Email</th>
+                                    <!-- <th>Email</th> -->
                                     <th>Phone_number</th>
                                     <th>Service</th>
                                     <th>Address</th>
                                     <th>Time</th>
                                     <th>Date</th>
-                                    <th>Edit</th>
-                                    <th>Delete</th>
+                                    <!-- <th>Edit</th>
+                                    <th>Delete</th> -->
                                 </thead>
                                 <tbody class="table_row">
-                                    <td>hii</td>
                                 </tbody>
                             </table>
                         </div>
@@ -260,6 +255,7 @@ console.log(filterOrder);
             const orPic = document.createElement("div")
             orPic.setAttribute("class", "order-pic")
             orderContain.append(orPic)
+
             // img id="order-image1">
             const orderPicture = document.createElement("img")
             orderPicture.setAttribute("id", "order-image1")
@@ -318,15 +314,45 @@ console.log(filterOrder);
             orPin.innerText ="-"+ filterOrder[i]["user_address"]["pincode"]+"."
             orAdd.append(orPin)
         }
-        // const book = JSON.parse(localStorage.getItem("book_data"))
+        
+        const book = JSON.parse(localStorage.getItem("book_data"));
+
+        
 
 
-        // // This is collect a data from form
+
+
+
+
+ 
+        const active_user = JSON.parse(localStorage.getItem("active_user"));
+
+        let filterappointment = book.filter((data) => {
+            return data.User_id == loginuser["user_id"]
+
+        })
+        filterappointment.forEach(item => {
+            
+            document.querySelector(".table_row").innerHTML += ` <tr>
+                                        <td>${item.Booking_id}</td>
+                                        <td>${item.Vehicle_type}</td>
+                                        <td>${item.customer_name}</td>
+                                        <td>${item.customer_phone}</td>
+                                        <td>${item.Booking_service}</td>
+                                        <td>${item.customer_address}</td>
+                                        <td>${item.Booking_time}</td>
+                                        <td>${item.Booking_date}</td>
+                                    </tr>`
+        });
+
+
+        // This is collect a data from form
         // const vehicleNumber = document.getElementById("vehicle-number");
         // const fromAddress = document.getElementById("from-address");
         // const toAddress = document.getElementById("to-address");
         // const date = document.getElementById("data");
         // const time = document.getElementById("vvehicle-time");
+        // const vehicleType = document.getElementById("vehicle-type");
         // const contactNumber = document.getElementById("vehicle-number");
         // const cusName = document.getElementById("vehicle-number");
 

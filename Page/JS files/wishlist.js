@@ -25,7 +25,7 @@ let cart_sample = JSON.parse(localStorage.getItem("cart"));
 
                         // Create a img tag
                         const picture = document.createElement("img")
-                        picture.setAttribute("src", cart_sample[i]["pr_img_1"])
+                        picture.setAttribute("src", cart_sample[i].pr_img_1)
                         first.append(picture)
                         console.log(picture)
                         // Create a second cart
@@ -35,13 +35,13 @@ let cart_sample = JSON.parse(localStorage.getItem("cart"));
                         // Product name
                         const name1 = document.createElement("p")
                         name1.setAttribute("id", "name")
-                        name1.innerHTML = cart_sample[i]["product_name"]
+                        name1.innerHTML = cart_sample[i].product_name
                         second.append(name1)
                         // Product price
                         const price = document.createElement("p")
                         price.setAttribute("class", "price")
-                        price.setAttribute("data-keyword", cart_sample[i]["product_price"])
-                        price.innerText = "price:" + cart_sample[i]["product_price"];
+                        price.setAttribute("data-keyword", cart_sample[i].product_price)
+                        price.innerText = "price:" + cart_sample[i].product_price;
                         second.append(price)
                         console.log(price)
                         // create a count
@@ -86,7 +86,7 @@ let cart_sample = JSON.parse(localStorage.getItem("cart"));
 
                         remove1.addEventListener("click", (e) => {
                             for (let j = 0; j < cart_sample.length; j++) {
-                                if (user["user_email"] == cart_sample[i]["user_email"]) {
+                                if (user.user_email == cart_sample[i].user_email) {
                                     cart_sample.splice(i, 1);
                                     localStorage.setItem("cart", JSON.stringify(cart_sample));
                                     alert("Are you sure remove cart");
@@ -167,6 +167,6 @@ let cart_sample = JSON.parse(localStorage.getItem("cart"));
                 })
             }
             // This is Move to buy now page the cart products
-       moveto = document.getElementById("confirm-order");
-     moveto.setAttribute("href","../../Page/Accesssories/buynow.html?id=" + activeruseremail)
+moveto = document.getElementById("confirm-order");
+moveto.setAttribute("href","../../Page/Accesssories/buynow.html?id=" + activeruseremail)
             

@@ -37,7 +37,7 @@ header {
     justify-content: space-evenly;
     /* height: 100px; */
     /* box-sizing: border-box; */
-    margin-top: 1%;
+    margin-top: 1% 5%;
     cursor: pointer;
 }
 .checkbtn{
@@ -58,16 +58,16 @@ header {
 }
 
 .live-on {
-    width: 7%;
+    width: 30px;
     margin-left: 3%;
 }
 
 .live {
-    width: 18%;
+    width: 19%;
 }
 
 .center {
-    margin-top: 2.5%;
+    margin-top: 2.6%;
     margin-right: 130px;
 }
 
@@ -122,34 +122,66 @@ ul li::after {
 }
 
 .contact a {
-    margin-left: 50px;
+    /* margin-left: 50px; */
     font-size: var(--nav-font-size);
     font-weight: 500;
     cursor: pointer;
 }
-
 .contact button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #ffffff;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    /* -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27); */
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   .contact button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #ff860f;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   .contact button:hover {
+    color: #ffffff;
+   }
+   
+   .contact button:hover::before {
+    width: 100%;
+   }
+/* .contact button {
     border-radius: 6px;
-    /* border: solid 0.5px; */
+
     width: 6em;
     letter-spacing: 1px;
-    /* font-size: var(--button-font);
-    background-color: white;
-    font-weight: var(--nav-font-size);
-    background-color: white;
-    color: black; */
     text-align: center;
     padding: 10px 20px;
-    /* box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.594); */
-    margin-top: 2.2%;
-} 
 
-.contact button:hover {
+    margin-top: 2.2%;
+}  */
+
+/* .contact button:hover {
     color: var(--white-color);
     font-weight: 600;
     background: #793cf2;
     border: none;
-}
+} */
 button {
     /* padding: 0.8em 1.8em; */
     border: none;

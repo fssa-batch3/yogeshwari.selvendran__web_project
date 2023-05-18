@@ -10,7 +10,7 @@ function getData() {
     //This is for get a data in form
     const firstName = document.getElementById("user-firstname").value;
     const lastName = document.getElementById("user-lastname").value;
-    const gender = document.querySelector('input[name="gender"]:checked').value;
+    // const gender = document.querySelector('input[name="gender"]:checked').value;
     const email = document.getElementById("user-email").value;
     const password = document.getElementById("user-password").value;
     const number = document.getElementById("user-number").value;
@@ -32,7 +32,7 @@ function getData() {
             "user_id":userid,
             "user_Firstname": firstName,
             "user_lastname": lastName,
-            "gender": gender,
+            // "gender": gender,
             "user_email": email,
             "password": password,
             "mobile": number,
@@ -45,5 +45,5 @@ function getData() {
         
     }
     localStorage.setItem("user_data",JSON.stringify(userRecords));
-    window.location.href = "./Page/create_accound/signin.html"
+    window.location.href = "../Home/profile.html"
 }

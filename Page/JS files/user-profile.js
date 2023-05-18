@@ -74,12 +74,13 @@
             }
         })
 
-        const log = document.getElementById("log")
+        const use_pro = document.getElementById("log")
 
-        log.addEventListener("click", function () {
+        use_pro.addEventListener("click", function () {
+            console.log("sethu");
             const erase = delete loginUser
 
-            window.location.href = "../../Page/create_accound/signin.html"
+            window.location.href = "../../index.html"
             localStorage.setItem("active_user", JSON.stringify(erase))
 
         })
