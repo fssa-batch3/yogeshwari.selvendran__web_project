@@ -27,7 +27,7 @@
 console.log(showndetails);
 
 
-const pro_name = document.getElementById("pr_name");
+// const pro_name = document.getElementById("pr_name");
       const about_product = document.getElementById("about_product")
       const product_price = document.getElementById("product_price")
       const pr_img_1 = document.getElementById("pr_img_1")
@@ -37,13 +37,15 @@ const pro_name = document.getElementById("pr_name");
       const highlights = document.getElementById("high")
       const description=document.getElementById("description")
       const rating = document.getElementById("rating")
+      const vehicleType=document.getElementById("vehicle-type")
       const editProduct = document.getElementById("edit")
       const deleteproduct = document.getElementById("delete")
 
       //view
     //   let productnameincludes=  
-    pro_name.value = showndetails["product_name"]
+    // pro_name.value = showndetails["product_name"]
       rating.value = showndetails["rating"]
+      vehicleType.value = showndetails["product_part_type"]
       product_price.value = showndetails["product_price"]
       about_product.value = showndetails["about_product"]
       highlights.value = showndetails["highlights"]
@@ -63,8 +65,9 @@ let saveId=editProduct.value
 
 for(let i=0;i<products.length;i++){
     if(saveId==products[i]["productid"]){
-        showndetails["product_name"] = pro_name.value
+        // showndetails["product_name"] = pro_name.value
         showndetails["rating"]=rating.value
+        showndetails["product_part_type"]=vehicleType.value
         showndetails["product_price"]=product_price.value
         showndetails["about_product"]= about_product.value 
         showndetails["highlights"]=highlights.value 

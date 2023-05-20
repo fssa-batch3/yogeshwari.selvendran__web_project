@@ -45,5 +45,53 @@ function getData() {
         
     }
     localStorage.setItem("user_data",JSON.stringify(userRecords));
-    window.location.href = "../Home/profile.html"
+    alert("Account created successfully")
+    window.location.href = "../../Page/create_accound/signin.html"
+}
+
+
+
+const loginData = document.getElementById("form-page2")
+loginData.addEventListener('submit', (e) => {
+    e.preventDefault();
+    yogi();
+})
+
+function yogi() {
+    let useremail = document.getElementById("log-email").value;
+    let userpassword = document.getElementById("log-password").value;
+
+    let arraydetails = JSON.parse(localStorage.getItem("user_data"))
+
+    let result;
+
+    let active_user;
+    arraydetails.find(element => {
+        if (element["user_email"] == useremail && element["password"] == userpassword) {
+            active_user = element;
+            console.log(active_user);
+            // localStorage.setItem("active_user",JSON.stringify(active_user))
+            return result = 1;
+        }
+        else {
+            return result = 0;
+        }
+    });
+    if (result == 1) {
+
+        // swal("Yep!", "you logged in bruh!", "success");
+        window.location.href = "../../Page/Home/home.html"
+        alert(" success")
+        localStorage.setItem("active_user", JSON.stringify(active_user))
+        // localStorage.setItem("sign_in", useremail)
+
+    }
+    else if ("admin@gmail.com" == useremail && "Admin@123" == userpassword) {
+        window.location.href = "../../Page/Admin/admin.html"
+
+    }
+    else {
+        alert(" failure")
+        // swal("Oops!", "email or password is not correct!", "error");
+    }
 }

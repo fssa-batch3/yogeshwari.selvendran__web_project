@@ -15,6 +15,7 @@ else {
             "highlights": "Brand: MUKUT position: Rear Weight: 850g approx. Meterial: Aluminium Alloy ",
             "rating": "3",
             "description": "Mukut is a leading aftermarket spare parts manufacturer for over a decade. it specializes in manufacturing of Disc breake Calipers. Its products are trusted by customers all over India.",
+            "product_part_type":"Bike",
             "status": true
         },
         {
@@ -28,6 +29,7 @@ else {
             "pr_img_4": "https://iili.io/HU5YTVS.png",
             "highlights": "Brand: MUKUT position: Rear Weight: 850g approx. Meterial: Aluminium Alloy ",
             "rating": "3",
+            "product_part_type":"Bike",
             "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English",
             "status": true
         },
@@ -42,6 +44,7 @@ else {
             "pr_img_4": "https://iili.io/HU707Pp.png",
             "highlights": "Brand: MUKUT position: Rear Weight: 850g approx. Meterial: Aluminium Alloy ",
             "rating": "4",
+            "product_part_type":"Bike",
             "description": "Mukut is a leading aftermarket spare parts manufacturer for over a decade. it specializes in manufacturing of Disc breake Calipers. Its products are trusted by customers all over India.",
             "status": true
         },
@@ -56,6 +59,7 @@ else {
             "pr_img_4": "https://iili.io/HUSBxTv.png",
             "highlights": "Brand: MUKUT position: Front Weight: 850g approx. Meterial: Aluminium Alloy ",
             "rating": "4",
+            "product_part_type":"Bike",
             "description": "Mukut is a leading aftermarket spare parts manufacturer for over a decade. it specializes in manufacturing of Disc breake Calipers. Its products are trusted by customers all over India.",
             "status": true
         },
@@ -70,6 +74,7 @@ else {
             "pr_img_4": "https://iili.io/HUSBNyb.png",
             "highlights": "Brand: original honda position: Front Weight: 850g approx. Meterial: Aluminium Alloy",
             "rating": "3",
+            "product_part_type":"Bike",
             "description": "Mukut is a leading aftermarket spare parts manufacturer for over a decade. it specializes in manufacturing of Disc breake Calipers. Its products are trusted by customers all over India.",
             "status": true
         },
@@ -84,6 +89,7 @@ else {
             "pr_img_4": "https://iili.io/HUSC5oQ.png",
             "highlights": "Brand: mukut speedometer type: digital Weight: 1 Kg approx. Meterial: PVC + Glass",
             "rating": "3",
+            "product_part_type":"Bike",
             "description": "Mukut is a leading aftermarket spare parts manufacturer for over a decade. it specializes in manufacturing of Disc breake Calipers. Its products are trusted by customers all over India.",
             "status": true
         },
@@ -98,6 +104,7 @@ else {
             "pr_img_4": "https://iili.io/HUSCXxR.png",
             "highlights": "Brand: rolon contains: rear sprocket(1N),Front sprocket(1N), Chain(1N) Meterial: alloy steel",
             "rating": "4",
+            "product_part_type":"Bike",
             "description": "Mukut is a leading aftermarket spare parts manufacturer for over a decade. it specializes in manufacturing of Disc breake Calipers. Its products are trusted by customers all over India.",
             "status": true
         }

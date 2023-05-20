@@ -12,7 +12,26 @@ car_service.addEventListener("click", () => {
 })
 
 
-
+let startTimeValue= null;
+// let endTimeValue=null;
+const timePicker={
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "h:i K",
+    time_24hr: false,
+  minuteIncrement: 10,
+//   defaultDate: "12:00 AM",
+  onChange: function(selectedDates, dateStr) {
+    // Store selected start and end times in global variables
+    if (this.input.id === "time") {
+      startTime = dateStr;
+    } 
+    // localStorage.setItem("startTime", startTime);
+    // localStorage.setItem("endTime", endTime);
+  }
+}
+const startTimepicker = flatpickr("#time", timePicker);
+const endTimepicker = flatpickr("#endTime", timePicker);
 
 const appData = document.getElementById("app-book")
 appData.addEventListener('submit', (s) => {
@@ -34,7 +53,7 @@ function collectData() {
     // console.log(typeVehicle);
     // const company1 = document.getElementById("company").value;
     const contactName = document.getElementById("contactname").value;
-    const contactEmail = document.getElementById("contactemail").value;
+    // const contactEmail = document.getElementById("contactemail").value;
     const contactPhone = document.getElementById("contactphone").value;
     const contactAddress = document.getElementById("address").value;
     let bookingid = Math.floor(Math.random() * 100)
@@ -54,10 +73,10 @@ function collectData() {
     let cusBook = new Array();
     cusBook = JSON.parse(localStorage.getItem("book_data")) ?
         JSON.parse(localStorage.getItem("book_data")) : []
-    if (cusBook.some((s) => { return s.customer_email == contactEmail })) {
-        alert("already booked")
-    }
-    else {
+    // if (cusBook.some((s) => { return s.customer_email == contactEmail })) {
+    //     alert("already booked")
+    // }
+    // else {
         cusBook.push({
 
             "Booking_id": bookingid,
@@ -66,14 +85,15 @@ function collectData() {
             "Vehicle_type": typeVehicle,
             "Booking_service": checkValue,
             "customer_name": contactName,
-            "customer_email": contactEmail,
+            // "customer_email": contactEmail,
             "customer_phone": contactPhone,
             "customer_address": contactAddress,
             "User_id": cus_id
         })
         window.location.href = "../../Page/Home/profile.html"
-    }
+    // }
     localStorage.setItem("book_data", JSON.stringify(cusBook));
+    alert("")
 }
 
 // Customar reviews

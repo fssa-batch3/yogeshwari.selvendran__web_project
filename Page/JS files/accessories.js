@@ -24,17 +24,29 @@ if (filterProducts == null) {
 
 }
 else {
-    filterProducts.forEach(e => {
-        productCard(e);
-    });
+    productCard(filterProducts)
+    // filterProducts.forEach(e => {
+    //     productCard(e);
+    // });
 }
 
 // for (i = 0; i <productlist.length; i++) 
-function productCard(item) {
+// const parentHtmlDiv = document.querySelector(".parent");
+//   parentHtmlDiv.innerHTML = "";
+
+// const container = document.querySelector(".container");
+
+
+
+function productCard(array=[]) {
+    const parentHtmlDiv = document.querySelector(".container");
+  parentHtmlDiv.innerHTML = "";
+  array.forEach((item) => {
     const product = document.createElement("div")
     product.setAttribute("class", "product")
+    product.setAttribute("value",item["product_part_type"]);
     // document.querySelector(".container").prepend(product)
-    document.querySelector(".container").prepend(product)
+    parentHtmlDiv.prepend(product)
     console.log(product);
     const forwed = document.createElement("a")
     forwed.setAttribute("href", "../../Page/Accesssories/product.html?id=" + item["productid"])
@@ -147,7 +159,6 @@ let products_star = item
     let stars = "";
     for (let j = 0; j < rating_round; j++) {
         stars += "⭐";
-
     }
     cardButton.append(stars);
 card.append(cardFooter);
@@ -155,27 +166,87 @@ card.append(cardFooter);
 // Append the card to the desired parent element
 // const parentElement = document.querySelector('#parentElement');
 // parentElement.append(card);
-
+  })
 }
 
-
-let search = document.getElementById("name");
-
-
-search.addEventListener("keyup", (e)=>{
-    let words = e.target.value.toLowerCase();
-
-
-    let latter = document.querySelectorAll(".card");
-
-   latter.forEach((element)=>{
-    let content = element.children[1].textContent.toLowerCase();
-    if(content.includes(words)){
-        element.style.display = "grid";
-    }
-    else{
-        element.style.display = "none";
-    }
-   });
+const selectOption = document.getElementById("store");
+let filteredData = [];
+selectOption.addEventListener("change", (e) => {
+  const seletedQuery = selectOption.value.trim();
+  console.log(seletedQuery);
+  // const searchbox = document.getElementById("search2");
+  if (e.key === "Enter") {
+    e.preventDefault();
+    // e.stopPropagation();
+    // return false
+  }
+  if (seletedQuery !== "all") {
+    filteredData = filterProducts.filter((item) =>
+    item.product_part_type.includes(seletedQuery)
+    );
+  }
+  // else if (e.target===searchbox){
+  //   filteredData=ground_list.filter((item) => {
+  //     return item.groundname.toLowerCase().includes(searchQuery) || item.locationname.toLowerCase().includes(searchQuery)
+  //   })
+  // }
+  else {
+    filteredData = filterProducts;
+  }
+  console.log(filteredData);
+  if (filteredData.length === 0) {
+    const parentHtmlDiv2 = document.querySelector(".parent");
+    const p = document.createElement("p");
+    p.setAttribute("class", "noresult");
+    p.innerText = "No result found";
+    parentHtmlDiv2.innerHTML = "";
+    parentHtmlDiv2.append(p);
+    console.log("pkdd");
+  } else {
+    productCard(filteredData);
+  }
 });
+
+const searchbox = document.getElementById("name");
+searchbox.addEventListener("keydown", (e) => {
+  const searchQuery = searchbox.value.trim().toLowerCase();
+//   console.log(searchQuery,"yogi");
+  if (e.key === "Enter"){
+    e.preventDefault();
+    // e.stopPropagation();
+    // // return false
+  }
+  const filteredList = filteredData.filter((item) => {
+    return item.about_product.toLowerCase().includes(searchQuery) 
+    // || item.about_product.toLowerCase().includes(searchQuery)
+  })
+  productCard(filteredList);
+if(selectOption.value==""){
+  const filteredList2 = filterProducts.filter((item) => {
+    return item.about_product.toLowerCase().includes(searchQuery)
+    //  || item.about_product.toLowerCase().includes(searchQuery)
+  })
+  
+  productCard(filteredList2)
+}
+})
+// let search = document.getElementById("name");
+
+
+// search.addEventListener("keyup", (e)=>{
+//     let words = e.target.value.toLowerCase();
+
+
+//     let latter = document.querySelectorAll(".card");
+
+//    latter.forEach((element)=>{
+//     let content = element.children[1].textContent.toLowerCase();
+//     if(content.includes(words)){
+//         element.style.display = "grid";
+//     }
+//     else{
+//         element.style.display = "none";
+//     }
+//    });
+// });
 

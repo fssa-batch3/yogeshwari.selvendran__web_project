@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
 <body>
@@ -143,7 +144,9 @@
                         <!-- This is choose the appointment time -->
                         <div class="date-choose">
                             <label for="appointment-date" class="top-head">PREFFERED TIME FRAME</label><br>
-                            <input id="time" type="time" required aria-label="time" required>
+                            <!-- <input id="time" type="time" required aria-label="time" required> -->
+
+                            <input type="text" id="time" required placeholder="12:00">
                         </div><br>
                         <!-- This is choose the appointment vehicle type -->
                         <div class="type-choose">
@@ -373,6 +376,7 @@
     <div class="copy-right">
         <p> &copy;Copyright 2023 Carservice Theme by my won design</p>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="../../Page/JS files/appoinment.js">
        
     </script>

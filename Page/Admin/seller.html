@@ -79,7 +79,10 @@
     <main>
         <div class="sell-contain">
             <div class="back">
-                <a href="../../Page/Admin/admin.html"><i class="fa-solid fa-arrow-left-long" style="color: #000000;"></i></a>
+                <a href="../../Page/Admin/admin.html">Admin</a>
+                <span><i class="fa-solid fa-chevron-right" style="color: #000000;"></i></span>
+                <a href="../../Page/Admin/seller.html">Product Upload</a>
+                <span><i class="fa-solid fa-chevron-right" style="color: hsl(0, 0%, 0%);"></i></span>
             </div>
             <form>
                 <div class="container">
@@ -87,9 +90,13 @@
                         <p class="head">Product-Tittle</p><br><br><br>
                         <div class="pro-price1">
                             <div>
+                                <label id="type">Vehicle type</label><br><br>
+                                <input type="text" class="inputs" id="vehicle-type" required>
+                            </div>
+                            <!-- <div>
                                 <label>Product Name</label><br><br>
                                 <input type="text" class="inputs" id="pr_name" required>
-                            </div>
+                            </div> -->
 
                             <div>
                                 <label>  product price</label><br><br>
@@ -140,6 +147,7 @@
                                 <label id="add2">Description</label><br><br>
                                 <input type="text" id="description" required>
                             </div>
+                            
                         </div>
 
                     </div><br><br><br>

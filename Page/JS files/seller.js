@@ -1,7 +1,7 @@
 const submitbut = document.getElementById("sub")
     submitbut.addEventListener("click", function (e) {
       e.preventDefault();
-      const pro_name = document.getElementById("pr_name").value;
+      // const pro_name = document.getElementById("pr_name").value;
       const about_product = document.getElementById("about_product").value
       const product_price = document.getElementById("product_price").value
       const pr_img_1 = document.getElementById("pr_img_1").value
@@ -10,6 +10,7 @@ const submitbut = document.getElementById("sub")
       const pr_img_4 = document.getElementById("pr_img_4").value
       const highlights = document.getElementById("high").value
       const description=document.getElementById("description").value
+      const vehicleType = document.getElementById("vehicle-type").value
       const rating = document.getElementById("rating").value
       let productid = Math.floor(Math.random() * 100)
       // let product_arr = []
@@ -25,7 +26,7 @@ else{
 
   product_arr.push({
     "productid": productid,
-    "product_name": pro_name,
+    "product_name": "",
     "about_product": about_product,
     "product_price": product_price,
     "pr_img_1": pr_img_1,
@@ -35,6 +36,7 @@ else{
     "highlights": highlights,
     "rating": rating,
     "description":description,
+    "product_part_type":vehicleType,
     "status":true
   })
 

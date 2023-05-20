@@ -164,7 +164,7 @@
                 <!-- Appoinment booking page -->
                 <div id="appoinment-booking">
                     <div class="booking_appoinment">
-                        <h2>Up Coming Appoinments</h2>
+                        <h1>Up Coming Appoinments</h1>
                         <div class="upcoming">
                             <table>
                                 <thead>
@@ -228,11 +228,22 @@
         console.log(orderhis);
         const loginuser = JSON.parse(localStorage.getItem("active_user"));
         console.log(loginuser.user_email);
-        const use_address = JSON.parse(localStorage.getItem("user_address"))
-        let filterOrder = orderhis.filter((data) => {
-            return data.user_email == loginuser["user_email"]
+        const use_address = JSON.parse(localStorage.getItem("user_address"));
+
+        let filterOrder;
+
+        if(orderhis==null){
+
+        }
+        else{
+
+       
+         filterOrder = orderhis.filter((data) => {
+            return data.user_email == loginuser["user_email"];
+              // console.log(filterOrder);
+      
         })
-        // console.log(filterOrder);
+    
         for (const order of filterOrder) {
             const { address_id } = order
             const address = use_address.find(data =>
@@ -314,21 +325,16 @@ console.log(filterOrder);
             orPin.innerText ="-"+ filterOrder[i]["user_address"]["pincode"]+"."
             orAdd.append(orPin)
         }
-        
+    }
+
+
+
         const book = JSON.parse(localStorage.getItem("book_data"));
 
-        
-
-
-
-
-
-
- 
         const active_user = JSON.parse(localStorage.getItem("active_user"));
 
         let filterappointment = book.filter((data) => {
-            return data.User_id == loginuser["user_id"]
+            return data.User_id == active_user["user_id"]
 
         })
         filterappointment.forEach(item => {
