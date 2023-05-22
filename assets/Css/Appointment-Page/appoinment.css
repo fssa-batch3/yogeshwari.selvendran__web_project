@@ -37,27 +37,30 @@ header {
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    height: 80px;
+    width: auto;
     box-sizing: border-box;
     box-shadow: 5px 0px 5px 0px #0000002c;
     position: sticky;
     top: 0;
     z-index: 2;
 }
-.logo {
+/* .logo {
     margin-top: 2.5%;
-}
+} */
 .live-on {
-    width: 7%;
-    margin-left: 5%;
+    width: 25px;
+    /* margin-left: 5%; */
 }
 .live {
-    width: 17%;
+    width: 70px;
 }
 
 .center {
-    margin-top: 2.7%;
-    margin-right: 35%;
+    display: flex;
+    margin-top: 1.5%;
+    margin-left: 4%;
+    /* margin-right: 35%; */
 }
 
 .center ul {
@@ -68,7 +71,7 @@ header {
 
 .center li {
     padding-left: 25%;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: medium;
     cursor: pointer;
 }
@@ -99,40 +102,40 @@ header {
 }
 
 .user {
-    margin-top: 2.2%;
-    margin-right: 13%;
+    margin-top: 1.6%;
+    margin-right: 5%;
 }
 
 .user ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    width: 130px;
 }
 
-.user li {
-    padding: 15px;
-}
+/* .user li {
+    padding: 5px;
+} */
 
-.user,
+/* .user,
 .profile {
     height: 40px;
     width: 40px;
     border-radius: 50%;
     position: relative;
     bottom: 9px;
-}
+} */
 /* This is drop down menu nave bar */
-.service {
+/* .service {
     border: none;
     background: none;
     font-size: 1em;
     font-weight: medium;
     cursor: pointer;
-}
+} */
 
-.sub-service ul {
+/* .sub-service ul {
     list-style: none;
-    /* display: flex; */
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
@@ -148,15 +151,15 @@ header {
     font-weight: 500;
     border-radius: 5px;
     display: none;
-}
+} */
 
-.cen-ul :nth-child(3) i {
+/* .cen-ul :nth-child(3) i {
     position: relative;
     left: 50px;
     bottom: 22px;
-}
+} */
 
-.service:hover .sub-service ul {
+/* .service:hover .sub-service ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -174,16 +177,13 @@ header {
     font-size: 18px;
     font-weight: 500;
     border-radius: 5px;
-}
+} */
 /* This is little footer */
 .little-footer{
     display: flex;
     justify-content: space-between;
-    height: 3.5rem;
+    height: 3rem;
    background-color: #EEEEEE;
-    
-    
-
 }
 .logo-item{
    margin-right: 50px;
@@ -229,9 +229,9 @@ span{
     letter-spacing: 2px;
 }
 /* This is live location page */
-.live-location img{
+/* .live-location img{
     height: 793px;
-}
+} */
 /* This is my user booking a vehicle service    */
 .app-align{
     margin-top: 5%;
@@ -250,7 +250,7 @@ span{
     line-height: 26px;
     text-align: center;
 }
-.vehicle-type input, select{
+/* .vehicle-type input, select{
     max-width: none;
     height: 60px;
     border: 1px solid #EBEBEB;
@@ -262,11 +262,11 @@ span{
     color: #303030;
     margin: 0;
     width: 350px;
-}
-#company{
+} */
+/* #company{
     width: 400px;
     height: 60px;
-}
+} */
 /* This is date and time choosing section */
 .appinment-section{
     display: flex;
@@ -290,9 +290,9 @@ span{
     background: #fffefec5;
     border-style: solid;
     border-color: #74787c18;
-    margin: 5px;
-    padding: 11px 16px;
-    line-height: 26px;
+    margin: 60px 10px;
+    padding:10px;
+    line-height: 55px;
 }
 .date{
     float: left;
@@ -303,30 +303,54 @@ span{
     width: 600px;
 }
 .item{
-    width: 20px;
+    width: 25px;
     margin-right: 5px;
 }
 .date-choosing{
     width: 600px;
 }
+.vehi-cho{
+    width: 600px;
+    height: 60px;
+    padding: 2px 100px;
+    font-size: 17px;
+    border: 1px solid #EBEBEB;
+    background: #FFF;
+    display: flex;
+}
+.vehi-cho input{
+    height: 16px;
+    width: 16px;
+    padding: 20px;
+}
+.vehi-cho #bike, #car{
+    padding:15px 30px;
+}
+.vehi-cho #vehicle-type, #vehicle-type1{
+    position: relative;
+    left: -10px;
+    /* padding: 10px 20px; */
+}
 #check-Box1{
     display: none;
 }
-.list-checkbox input{
+/* .list-checkbox input{
    width: 15px;
-   padding: 0;
-}
+   padding: 5px;
+} */
 /* #check-Box{
     display: flex;
     flex-wrap: wrap;
     width: 600px;
     height: 200px;
 } */
-.list-checkbox{
+/* .list-checkbox{
     display: flex;
     flex-wrap: wrap;
+    margin: 2px 5px;
     width: 600px;
-}
+    height: 300px;
+} */
 .addres{
     display: flex;
     flex-direction: column;
@@ -346,7 +370,7 @@ span{
     padding: 12px 15px;
     color: #303030;
 }
-#message{
+/* #message{
     height: 100px;
     width: 600px;
     margin-top: 10px;
@@ -357,7 +381,7 @@ span{
     line-height: 24px;
     padding: 12px 15px;
     color: #303030;
-}
+} */
 /* .addres a{
     text-decoration: none;
     color: var(--white-color);
@@ -385,7 +409,7 @@ span{
    margin-left: 5%;
    margin-right: 5%;
    border-radius: 1em;
-    margin-top: 40%;
+    margin-top: 50%;
 }
 .book-page{
     display: flex;
@@ -410,8 +434,7 @@ span{
 .booking-app hr{
     margin-top: 20px;
     width: 350px;
-    line-height: 5px;
-    
+    line-height: 5px;   
 }
 /* This is review section */
 #reviews{
@@ -486,7 +509,6 @@ footer {
 }
 
 .main-item .logo {
-
     margin-left: 15%;
 }
 
@@ -500,7 +522,6 @@ footer {
 .disicription p {
     width: 300px;
     margin-top: 6%;
-    
 }
 
 .main-item .live-on {
@@ -558,7 +579,7 @@ footer {
      text-align: center;
      font-size: 110%;
 }
-.nj-timepick {
+/* .nj-timepick {
     position: fixed;
     right: -100%;
     top: 0;
@@ -571,7 +592,7 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
-  }
+  } */
 
 
 

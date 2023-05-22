@@ -39,29 +39,31 @@ header {
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    align-items: center;
+    height: 80px;
+    width: auto;
     box-sizing: border-box;
-    /* box-shadow: 5px 0px 5px 0px #0000002c; */
-    /* position: sticky;
-    top: 0; */
+    box-shadow: 5px 0px 5px 0px #0000002c;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
-
-.logo {
+/* .logo {
     margin-top: 2.5%;
-}
-
+} */
 .live-on {
-    width: 7%;
-    margin-left: 5%;
+    width: 25px;
+    /* margin-left: 5%; */
 }
-
 .live {
-    width: 17%;
+    width: 70px;
 }
 
 .center {
-    margin-top: 2.7%;
-    margin-right: 35%;
+    display: flex;
+    /* margin-top: 1.5%; */
+    margin-left: 4%;
+    /* margin-right: 35%; */
 }
 
 .center ul {
@@ -72,7 +74,7 @@ header {
 
 .center li {
     padding-left: 25%;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: medium;
     cursor: pointer;
 }
@@ -87,7 +89,7 @@ header {
     font-weight: 600;
 }
 
-.center .cen-ul .list::after {
+.center ul li::after {
     content: '';
     background-color: var(--btn-color);
     display: block;
@@ -98,43 +100,28 @@ header {
 
 }
 
-.center .cen-ul .list:hover::after {
+.center ul li:hover::after {
     width: 100%;
 }
 
-.user {
-    margin-top: 2.2%;
-    margin-right: 13%;
+.user{
+    margin-right: 5%;
 }
 
 .user ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    width: 130px;
 }
-
-/* .user li {
-    padding: 0px;
-} */
-.user:nth-child(3) img{
-  
-    position: relative;
-bottom:20px;
-   border-radius: 50%;
-   height: 60px;
-   width: 60px;
+.user ul li{
+    padding-bottom: 60px;
 }
-/* .user, a, .profile{
-    height: 40px;
-    width: 40px;
+li a i{
+    font-size: 18px;
 }
-.user,.profile {
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-} */
 /* This is drop down menu nave bar */
-.service {
+/* .service {
     border: none;
     background: none;
     font-size: 1em;
@@ -144,7 +131,7 @@ bottom:20px;
 
 .sub-service ul {
     list-style: none;
-    /* display: flex; */
+
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
@@ -186,10 +173,10 @@ bottom:20px;
     font-size: 18px;
     font-weight: 500;
     border-radius: 5px;
-}
+} */
 
 /* This is second navbar */
-.nav-container {
+/* .nav-container {
     position: sticky;
     top: 0;
     z-index: 2;
@@ -200,7 +187,7 @@ bottom:20px;
     justify-content: space-around;
     background-color: #4e3d9a;
     height: 100px;
-    /* box-shadow: var(--box-shadow2); */
+   
 }
 
 .main-nav p {
@@ -216,7 +203,7 @@ bottom:20px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* margin-top: 25px; */
+
 }
 
 .search-bar {
@@ -250,11 +237,11 @@ input:hover {
 }
 
 .search-bar i {
-    /* margin-right: 20%; */
+
     color: var(--text-color);
     position: relative;
     right: 40px;
-    /* left: 1rem; */
+
     fill: #9e9ea7;
     width: 1rem;
     height: 1rem;
@@ -283,22 +270,19 @@ input:hover {
     color: var(--primary);
 }
 
-/* .min-nav span {
-    margin-top: 6px;
-    margin-left: 10px;
-} */
+
 
 .bp-item {
     font-size: 1.2rem;
     font-weight: 600;
-}
+} */
 
 /* This is little footer */
 .little-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 45px;
+    height: 35px;
     background-color: #EEEEEE;
     color: black;
 }
@@ -399,8 +383,8 @@ span {
     display: flex;
     justify-content: space-between;
     margin-top: 55px;
-    margin-left: 150px;
-    margin-right: 135px;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 .bike-car ul {
@@ -426,7 +410,7 @@ span {
 }
 
 select {
-    width: 200px;
+    width: 250px;
     padding: 10px 20px;
     font-size: 16px;
 }
@@ -901,7 +885,7 @@ padding: 10px;
    }
    
    .card-img {
-    background-color: #ffcaa6;
+    background-color: #ffffff;
     height: 60%;
     width: 100%;
     border-radius: .5rem;
@@ -963,3 +947,28 @@ padding: 10px;
     background-color: #ffcaa6;
    } */
    
+   .container-input {
+    position: relative;
+  }
+  
+  .input {
+    width: 250px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 6px;
+    border: solid 1px #333;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+  }
+  
+  .container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translate(0, -50%);
+  }
+  
+  .input:focus {
+    opacity: 1;
+    width: 350px;
+  }

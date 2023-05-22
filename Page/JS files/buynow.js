@@ -4,6 +4,13 @@ formbuynowdata.addEventListener("submit", (m) => {
     m.preventDefault();
     collectData();
 })
+
+
+
+const profile_id = JSON.parse(localStorage.getItem("active_user"));
+const last_id = profile_id["user_id"];
+const call_address = JSON.parse(localStorage.getItem("user_address"));
+
 const formAddress = document.getElementById("ex-add")
 console.log(formAddress, "logu")
 formAddress.addEventListener("submit", (s) => {
@@ -314,14 +321,42 @@ function collectAddress() {
     }
     alert("address added")
     localStorage.setItem("user_address", JSON.stringify(addressRecords));
+
+    const info = document.createElement("div")
+    info.setAttribute("class", "address_info")
+    document.querySelector(".ues-add").prepend(info)
+
+    // <input type="radio" name="" id="check">
+    const inputType = document.createElement("input")
+    inputType.setAttribute("type", "radio")
+    inputType.setAttribute("data-keyword", address_id)
+    inputType.setAttribute("name", "Address")
+    inputType.setAttribute("id", "check")
+    inputType.setAttribute("class", "radio_btn")
+    info.append(inputType)
+    // <div id="location_info">
+    const locInfo = document.createElement("div")
+    locInfo.setAttribute("id", "location_info")
+    info.append(locInfo)
+    // <p id="location">
+    const addInfo = document.createElement("p")
+    addInfo.setAttribute("id", "location")
+    addInfo.innerText = userHno + "" + user_street + "" + user_city + "" + user_state;
+    locInfo.append(addInfo)
+
+    // <p>600096</p>
+    const addPin = document.createElement("p")
+    addPin.setAttribute("id", "sec1")
+    addPin.innerText = user_zip
+    addInfo.append(addPin)
 }
 
 
 
 // This is collect the  address data in local storage 
-const profile_id = JSON.parse(localStorage.getItem("active_user"));
-const last_id = profile_id["user_id"];
-const call_address = JSON.parse(localStorage.getItem("user_address"));
+// const profile_id = JSON.parse(localStorage.getItem("active_user"));
+// const last_id = profile_id["user_id"];
+// const call_address = JSON.parse(localStorage.getItem("user_address"));
 for (let i = 0; i < call_address.length; i++) {
     if (last_id == call_address[i]["user_id"]) {
         //  Create <div class="address_info">
@@ -354,149 +389,160 @@ for (let i = 0; i < call_address.length; i++) {
         addInfo.append(addPin)
     }
 
+}
+// This is user address
 
-    // This is user address
+let input = document.querySelectorAll(".radio_btn")
+let address_id;
+for (let i = 0; i < input.length; i++) {
 
-    let input = document.querySelectorAll(".radio_btn")
-    let address_id;
-    for (let i = 0; i < input.length; i++) {
+    input[i].addEventListener("click", function () {
+        address_id = input[i].dataset.keyword
 
-        input[i].addEventListener("click", function () {
-            address_id = input[i].dataset.keyword
+    })
+}
+// const user = JSON.parse(localStorage.getItem("user_data"));
+// console.log(user);
+// const profile_email = JSON.parse(localStorage.getItem("active_user"));
+// const last_email = profile_email["user_email"]
 
-        })
-    }
-    // const user = JSON.parse(localStorage.getItem("user_data"));
-    // console.log(user);
-    // const profile_email = JSON.parse(localStorage.getItem("active_user"));
-    // const last_email = profile_email["user_email"]
+// const number1 = document.getElementById("use-phone")
+// const address2 = document.getElementById("use-address")
 
-    // const number1 = document.getElementById("use-phone")
-    // const address2 = document.getElementById("use-address")
+// for (let i = 0; i < user.length; i++) {
+//     if (user[i]["user_email"] == profile_email["user_email"]) {
+//         number1.value = user[i]["mobile"];
+//         address2.value = user[i]["address1"];
+//         break;
+//     }
+// }
 
-    // for (let i = 0; i < user.length; i++) {
-    //     if (user[i]["user_email"] == profile_email["user_email"]) {
-    //         number1.value = user[i]["mobile"];
-    //         address2.value = user[i]["address1"];
-    //         break;
-    //     }
+// const updateAdd = document.querySelector("#updatebtn");
+// updateAdd.addEventListener("click", () => {
+//     for (let i = 0; i < user.length; i++) {
+//         if (last_email == user[i]["user_email"]) {
+//             user[i]["address1"] = address2.value;
+//             user[i]["mobile"] = number1.value;
+//             localStorage.setItem("user_data", JSON.stringify(user));
+//         }
+//     }
+// })
+
+// This is store a data in local storage
+// let newdate;
+//       let dateObj = new Date();
+//       let month = dateObj.getUTCMonth() + 1; //months from 1-12
+//       let day = dateObj.getUTCDate();
+//       let year = dateObj.getUTCFullYear();
+//       newdate = day + "/" + month + "/" + year;
+//       console.log(newdate);
+//       // orders id code
+//       let order_id = Date.now();
+//       console.log(order_id);
+
+
+const activemail = JSON.parse(localStorage.getItem("active_user"));
+let currentEmail = activemail["user_email"];
+
+function collectData() {
+
+    // const orderAddress = address2.value;
+
+    // const orderPhone = number1.value;
+
+    const payMethod = document.querySelector('input[name="payment"]:checked').value;
+
+    const orderPrice = price.innerText.substring(6);
+
+    const order_pro_image1 = picture.src;
+
+    const or_pro_name = name1.innerText;
+
+    const or_pro_quan = numcount.innerText;
+
+    let orderhis_id = Math.floor(Math.random() * 1000)
+
+    let orderRecords = new Array();
+    orderRecords = JSON.parse(localStorage.getItem("order_history")) ?
+        JSON.parse(localStorage.getItem("order_history")) : [];
+    // if (orderRecords.some((y) => {
+    //     return y.his_id == orderhis_id
+    // })) {
+    //     alert("Product is already added")
     // }
+    // else {
+    //         orderRecords.push({
 
-    // const updateAdd = document.querySelector("#updatebtn");
-    // updateAdd.addEventListener("click", () => {
-    //     for (let i = 0; i < user.length; i++) {
-    //         if (last_email == user[i]["user_email"]) {
-    //             user[i]["address1"] = address2.value;
-    //             user[i]["mobile"] = number1.value;
-    //             localStorage.setItem("user_data", JSON.stringify(user));
-    //         }
-    //     }
-    // })
+    //             "his_id": orderhis_id,
+    //             // "order_address": orderAddress,
+    //             // "order_phone": orderPhone,
+    //             "payment": payMethod,
+    //             "order_price": orderPrice,
+    //             "or_pro_img": order_pro_image1,
+    //             "or_pro_name": or_pro_name,
+    //             "or_pro_quantity": or_pro_quan,
+    //             "user_email": currentEmail,
+    //             "address_id" : address_id
+    //         })
 
-    // This is store a data in local storage
-    // let newdate;
-    //       let dateObj = new Date();
-    //       let month = dateObj.getUTCMonth() + 1; //months from 1-12
-    //       let day = dateObj.getUTCDate();
-    //       let year = dateObj.getUTCFullYear();
-    //       newdate = day + "/" + month + "/" + year;
-    //       console.log(newdate);
-    //       // orders id code
-    //       let order_id = Date.now();
-    //       console.log(order_id);
+    //     // }
+    //     alert("order confirmed")
+    //     localStorage.setItem("order_history", JSON.stringify(orderRecords));
+    //     // window.location.href =""
 
+    if (order_id == Number(order_id)) {
+        const arr = {}
 
-    const activemail = JSON.parse(localStorage.getItem("active_user"));
-    let currentEmail = activemail["user_email"];
+        arr.his_id = orderhis_id,
+            arr.payment = payMethod,
+            arr.order_price = orderPrice,
+            arr.or_pro_img = order_pro_image1,
+            arr.or_pro_name = or_pro_name,
+            arr.or_pro_quantity = or_pro_quan,
+            arr.user_email = currentEmail,
+            arr.address_id = address_id
 
-    function collectData() {
+        orderRecords.push(arr);
+        localStorage.setItem("order_history", JSON.stringify(orderRecords));
+        window.location.href = "../../Page/Home/profile.html"
 
-        // const orderAddress = address2.value;
-
-        // const orderPhone = number1.value;
-
-        const payMethod = document.querySelector('input[name="payment"]:checked').value;
-
-        const orderPrice = price.innerText.substring(6);
-
-        const order_pro_image1 = picture.src;
-
-        const or_pro_name = name1.innerText;
-
-        const or_pro_quan = numcount.innerText;
-
-        let orderhis_id = Math.floor(Math.random() * 1000)
-
-        let orderRecords = new Array();
-        orderRecords = JSON.parse(localStorage.getItem("order_history")) ?
-            JSON.parse(localStorage.getItem("order_history")) : [];
-        // if (orderRecords.some((y) => {
-        //     return y.his_id == orderhis_id
-        // })) {
-        //     alert("Product is already added")
-        // }
-        // else {
-        //         orderRecords.push({
-
-        //             "his_id": orderhis_id,
-        //             // "order_address": orderAddress,
-        //             // "order_phone": orderPhone,
-        //             "payment": payMethod,
-        //             "order_price": orderPrice,
-        //             "or_pro_img": order_pro_image1,
-        //             "or_pro_name": or_pro_name,
-        //             "or_pro_quantity": or_pro_quan,
-        //             "user_email": currentEmail,
-        //             "address_id" : address_id
-        //         })
-
-        //     // }
-        //     alert("order confirmed")
-        //     localStorage.setItem("order_history", JSON.stringify(orderRecords));
-        //     // window.location.href =""
-
-        if (order_id == Number(order_id)) {
-            const arr = {}
-
-            arr.his_id = orderhis_id,
-                arr.payment = payMethod,
-                arr.order_price = orderPrice,
-                arr.or_pro_img = order_pro_image1,
-                arr.or_pro_name = or_pro_name,
-                arr.or_pro_quantity = or_pro_quan,
-                arr.user_email = currentEmail,
-                arr.address_id = address_id
-
-            orderRecords.push(arr);
-            localStorage.setItem("order_history", JSON.stringify(orderRecords));
-            window.location.href = "../../Page/Home/profile.html"
-
-        }
-        else {
-            let cart_sample = JSON.parse(localStorage.getItem("cart"));
-            const profile_email = JSON.parse(localStorage.getItem("active_user"));
-
-            cart_sample.find((e) => {
-                if (e.user_email == profile_email.user_email) {
-                    const arr = {}
-
-
-                    arr.his_id = orderhis_id,
-                        arr.payment = payMethod,
-                        arr.order_price = e.product_price,
-                        arr.or_pro_img = e.pr_img_1,
-                        arr.or_pro_name = e.product_name,
-                        arr.or_pro_quantity = or_pro_quan,
-                        arr.user_email = currentEmail,
-                        arr.address_id = address_id
-
-                    orderRecords.push(arr);
-                    localStorage.setItem("order_history", JSON.stringify(orderRecords));
-                    window.location.href = "../../Page/Home/profile.html"
-
-                }
-            })
-        }
     }
+    else {
+        let cart_sample = JSON.parse(localStorage.getItem("cart"));
+        const profile_email = JSON.parse(localStorage.getItem("active_user"));
 
-};
+        cart_sample.find((e) => {
+            if (e.user_email == profile_email.user_email) {
+                const arr = {}
+
+
+                arr.his_id = orderhis_id,
+                    arr.payment = payMethod,
+                    arr.order_price = e.product_price,
+                    arr.or_pro_img = e.pr_img_1,
+                    arr.or_pro_name = e.product_name,
+                    arr.or_pro_quantity = or_pro_quan,
+                    arr.user_email = currentEmail,
+                    arr.address_id = address_id
+
+                orderRecords.push(arr);
+                localStorage.setItem("order_history", JSON.stringify(orderRecords));
+                window.location.href = "../../Page/Home/profile.html"
+
+            }
+        })
+        const Cartitem = JSON.parse(localStorage.getItem("cart"));
+        const useract = JSON.parse(localStorage.getItem("active_user"));
+        //this filter for delete the cart which buy by user
+        let cart_obj = Cartitem.filter(function (obj) {
+            if (obj["user_email"] === useract["user_email"]) {
+                return false;
+            } else {
+                return true;
+            }
+        });
+        localStorage.setItem("cart", JSON.stringify(cart_obj));
+    }
+}
+
+// };

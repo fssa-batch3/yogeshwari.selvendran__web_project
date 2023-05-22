@@ -239,6 +239,7 @@ table{
             flex-direction: column;
             justify-content: space-between;
             height: 900px;
+            /* margin-top: 3%; */
         }
         #align-num{
             display: flex;

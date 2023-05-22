@@ -17,7 +17,7 @@ const submitbut = document.getElementById("sub")
       let product_arr = JSON.parse(localStorage.getItem("product_detail")) ?? []
 
 
-if(product_arr.some((s) => {return s.product_name == pro_name && s.pr_img_1 ==pr_img_1 })){
+if(product_arr.some((s) => {return s.pr_img_1 ==pr_img_1 })){
   alert("Already Saved")
 }
 

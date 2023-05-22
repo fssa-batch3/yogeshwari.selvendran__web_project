@@ -12,26 +12,134 @@ car_service.addEventListener("click", () => {
 })
 
 
-let startTimeValue= null;
-// let endTimeValue=null;
-const timePicker={
-    enableTime: true,
-    noCalendar: true,
-    dateFormat: "h:i K",
-    time_24hr: false,
-  minuteIncrement: 10,
-//   defaultDate: "12:00 AM",
-  onChange: function(selectedDates, dateStr) {
-    // Store selected start and end times in global variables
-    if (this.input.id === "time") {
-      startTime = dateStr;
-    } 
-    // localStorage.setItem("startTime", startTime);
-    // localStorage.setItem("endTime", endTime);
+const date = document.getElementById("date");
+console.log(date);
+// let today = new Date().toISOString().split("T")[0];
+const today = new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
+  .toISOString()
+  .split("T")[0];
+date.setAttribute("min", today);
+
+const dateInput = document.getElementById('date');
+const timeInput = document.getElementById('time');
+
+timeInput.addEventListener('change', validateTime);
+
+function validateTime() {
+  const selectedDate = dateInput.value;
+  const selectedTime = timeInput.value;
+
+  if (!selectedDate) {
+    return; // If date is not selected, do not perform validation
   }
-}
-const startTimepicker = flatpickr("#time", timePicker);
-const endTimepicker = flatpickr("#endTime", timePicker);
+
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth() + 1;
+  const currentDay = currentDate.getDate();
+  const currentHour = currentDate.getHours();
+  const currentMinute = currentDate.getMinutes();
+
+  const formattedCurrentDate = `${currentYear}-${currentMonth.toString().padStart(2, '0')}-${currentDay.toString().padStart(2, '0')}`;
+  const formattedCurrentTime = `${currentHour.toString().padStart(2, '0')}:${currentMinute.toString().padStart(2, '0')}`;
+
+  const selectedDateTime = new Date(`${selectedDate}T${selectedTime}`);
+  const currentDateTime = new Date(`${formattedCurrentDate}T${formattedCurrentTime}`);
+
+  if (selectedDateTime <= currentDateTime) {
+    alert('Please select a time in the future.');
+    timeInput.value = ''; // Clear the time input value
+  }
+  }
+
+
+
+
+
+// let startTimeValue= null;
+// // let endTimeValue=null;
+// const timePicker={
+//     enableTime: true,
+//     noCalendar: true,
+//     dateFormat: "h:i K",
+//     time_24hr: false,
+//   minuteIncrement: 10,
+// //   defaultDate: "12:00 AM",
+//   onChange: function(selectedDates, dateStr) {
+//     // Store selected start and end times in global variables
+//     if (this.input.id === "time") {
+//       startTime = dateStr;
+//     } 
+//     // localStorage.setItem("startTime", startTime);
+//     // localStorage.setItem("endTime", endTime);
+//   }
+// }
+// const timePicker = {
+//     enableTime: true,
+//     noCalendar: true,
+//     dateFormat: "h:i K",
+//     time_24hr: false,
+//     minuteIncrement: 60,
+//     onChange: function(selectedDates, dateStr) {
+//       const currentTime = new Date(); // Get the current time
+//       const selectedTime = new Date(dateStr); // Convert selected time string to Date object
+//       if (selectedTime <= currentTime) {
+//         // The selected time has already passed, hide it
+//         this.clear(); // Clear the selected time
+//         console.log("Selected time has already passed. It will be hidden.");
+//       }
+//     }
+//   };
+//   const startTimepicker = flatpickr("#startTime", timePicker);
+
+// const timePicker = {
+//     enableTime: true,
+//     noCalendar: true,
+//     dateFormat: "h:i K",
+//     time_24hr: false,
+//     minuteIncrement: 60,
+//     onChange: function(selectedDates, dateStr) {
+//       const currentTime = new Date(); // Get the current time
+//       const selectedTime = new Date(dateStr); // Convert selected time string to Date object
+      
+//       if (selectedTime <= currentTime) {
+//         // The selected time has already passed, disable it
+//         this.config.disable.push({ from: "00:00", to: dateStr });
+//         this.redraw();
+//         console.log("Selected time has already passed. It will be hidden.");
+//       }
+//     }
+//   };
+//   const startTimepicker = flatpickr("#startTime", timePicker);
+
+// const timePicker = {
+//     enableTime: true,
+//     noCalendar: true,
+//     dateFormat: "h:i K",
+//     time_24hr: false,
+//     minuteIncrement: 60,
+//     minTime: "12:00 AM", // Initial minimum selectable time
+//     onChange: function(selectedDates, dateStr) {
+//       const currentTime = new Date(); // Get the current time
+//       const selectedTime = new Date(dateStr); // Convert selected time string to Date object
+      
+//       if (selectedTime <= currentTime) {
+//         // The selected time has already passed, update the minimum selectable time
+//         const currentHour = currentTime.getHours();
+//         const currentMinute = currentTime.getMinutes();
+//         const currentAMPM = currentHour < 12 ? "AM" : "PM";
+//         const minTime = `${currentHour}:${currentMinute} ${currentAMPM}`;
+//         this.set("minTime", minTime); // Update the minimum selectable time
+//         this.setDate(null); // Clear the selected time
+//         console.log("Selected time has already passed. It will be hidden.");
+//       }
+//     }
+//   };
+//   const startTimepicker = flatpickr("#startTime", timePicker);
+// // const startTimepicker = flatpickr("#time", timePicker);
+// const endTimepicker = flatpickr("#endTime", timePicker);
+const check1 = document.querySelectorAll("input[type=radio]")
+console.log(check1);
 
 const appData = document.getElementById("app-book")
 appData.addEventListener('submit', (s) => {
@@ -51,17 +159,21 @@ function collectData() {
     const time1 = document.getElementById("time").value;
     const typeVehicle = document.querySelector('input[name="vehicle-type"]:checked').value;
     // console.log(typeVehicle);
-    // const company1 = document.getElementById("company").value;
-    const contactName = document.getElementById("contactname").value;
-    // const contactEmail = document.getElementById("contactemail").value;
     const contactPhone = document.getElementById("contactphone").value;
-    const contactAddress = document.getElementById("address").value;
-    let bookingid = Math.floor(Math.random() * 100)
+    // const company1 = document.getElementById("company").value;
+    const homeHouse = document.getElementById("home-num").value;
+    const homeStreet = document.getElementById("home-street").value;
+    const homeCity = document.getElementById("home-city").value;
+    const homeState = document.getElementById("home-state").value;
+    // const contactEmail = document.getElementById("contactemail").value;
+
+    const homePincoded = document.getElementById("address").value;
+    let bookingid = Math.floor(Math.random() * 1000000)
 
     let checkValue;
     // check box
 
-    const check1 = document.querySelectorAll("input[type=checkbox]")
+    const check1 = document.querySelectorAll("input[type=radio]")
     check1.forEach((e) => {
         if (e.checked) {
             checkValue = e.value
@@ -84,10 +196,12 @@ function collectData() {
             "Booking_time": time1,
             "Vehicle_type": typeVehicle,
             "Booking_service": checkValue,
-            "customer_name": contactName,
-            // "customer_email": contactEmail,
-            "customer_phone": contactPhone,
-            "customer_address": contactAddress,
+            "cus_hNo": homeHouse,
+            "cus_street": homeStreet,
+            "cus_city":homeCity,
+            "cus_state":homeState,
+            "cus_phone": contactPhone,
+            "cus_pincode": homePincoded,
             "User_id": cus_id
         })
         window.location.href = "../../Page/Home/profile.html"

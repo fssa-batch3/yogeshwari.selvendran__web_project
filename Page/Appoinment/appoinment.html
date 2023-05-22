@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
 <body>
@@ -20,19 +20,19 @@
         window.addEventListener('touchstart', initLandbot, { once: true });
         var myLandbot;
         function initLandbot() {
-          if (!myLandbot) {
-            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
-            s.addEventListener('load', function() {
-              myLandbot = new Landbot.Popup({
-                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1585520-59VB2JK37BW8G12A/index.json',
-              });
-            });
-            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
-            var x = document.getElementsByTagName('script')[0];
-            x.parentNode.insertBefore(s, x);
-          }
+            if (!myLandbot) {
+                var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+                s.addEventListener('load', function () {
+                    myLandbot = new Landbot.Popup({
+                        configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1585520-59VB2JK37BW8G12A/index.json',
+                    });
+                });
+                s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            }
         }
-        </script>
+    </script>
     <div class="little-footer">
         <div class="contact-item">
             <span>
@@ -59,38 +59,27 @@
         </div>
     </div>
     <header>
-        <div class="logo">
-            <img class="live-on" src="../../assets/Icons/live-on.png" alt="">
-            <img class="live" src="../../assets/Icons/text-liveon-removebg-preview.png" alt="">
-        </div>
         <div class="center">
+            <div class="logo">
+                <a href="../../Page/Home/home.html">
+                    <img class="live-on" src="../../assets/Icons/live-on.png" alt="">
+                    <img class="live" src="../../assets/Icons/text-liveon-removebg-preview.png" alt="">
+                </a>
+            </div>
             <ul class="cen-ul">
-                <li class="list"><a href="../../Page/Home/home.html">HOME</a></li>
-                <li class="list"><a href="../Home/about.html">ABOUT</a></li>
-                <li>
-                    <button class="service list"><a href="">SERVICES<i class="fa-solid fa-caret-down"></i></a>
-                        <div class="sub-service">
-                            <ul>
-                                <li><a class="sub-service1" href="../../Page/Appoinment/appoinment.html"
-                                        target="_blank">Appoinment</a>
-                                </li>
-                                <li><a class="sub-service1"
-                                        href="../../Page/Accesssories/accessories.html">Accesssories</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </button>
+                <li class="list"><a href="../../Page/Home/home.html">Home</a></li>
+                <li class="list"><a href="../Home/about.html">About</a></li>
+                <li class="list"><a href="../../Page/Appoinment/appoinment.html">Appoinment</a>
                 </li>
-                <!-- <li class="list"><a href="">PARTENERS</a></li> -->
+                <li class="list"><a href="../../Page/Accesssories/accessories.html">Accesssories</a>
+                </li>
             </ul>
         </div>
         <div class="user">
             <ul>
-                <!-- <li><i class="fa-solid fa-location-dot"></i></li> -->
-                <li><i class="fa-solid fa-bell"></i></li>
+                <li><i class="fa-solid fa-headset" style="color: #000000;"></i></li>
                 <li><a href="../../Page/Dashboard/wishlist.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <li><a href="../../Page/Home/profile.html"><img class="profile"
-                            src="../../assets/New_collection/profile-cover.jpg" alt="profile image"></a>
+                <li><a href="../../Page/Home/profile.html"><i class="fa-solid fa-user" style="color: #000000;"></i></a>
                 </li>
             </ul>
         </div>
@@ -104,35 +93,7 @@
 
         <div class="app-align" id="app-book">
             <form>
-                <!-- Vehicle type -->
-                <div class="vehicle-type">
-                    <!-- <div class="year">
-                        <label class="top-head">VEHICLE YEAR</label><br>
-                        <input id="vehicleyear" class="chose-year" name="vehicle-year" type="text" step="1"
-                            pattern="[0-9]{4,10}" title="First name connot contain spaces" placeholder="vehicle-year"
-                            value="" aria-label="Phone">
-                    </div> -->
-                    <!-- <div class="year">
-                        <label class="top-head">VEHICLE MAKE</label><br>
-                        <select name="vehicle-make" id="company">
-                            <option value="">Choose</option>
-                            <option value="Honda">Honda</option>
-                            <option value="Tvs">TVS</option>
-                            <option value="TATA">TATA</option>
-                            <option value="AUDY">AUDY</option>
-                            <option value=">Honda">Honda</option>
-                            <option value="">Honda</option>
-                            <option value="">Honda</option>
-                            <option value="">Honda</option>
-                            <option value="">Honda</option>
-                        </select>
-                    </div> -->
-                    <!-- <div class="year">
-                        <label class="top-head">VEHICLE MILEAGE</label><br>
-                        <input id="vehiclemileage" class="mileage" name="vehicle-mileage" type="text"
-                            pattern="[a-zA-Z0-9]{3,10}" placeholder="Vehicle Mileage" required aria-label="mileage">
-                    </div> -->
-                </div><br><br>
+                   
                 <!-- This is appoinment section -->
                 <div class="appoinment-section">
                     <div class="date">
@@ -146,86 +107,80 @@
                             <label for="appointment-date" class="top-head">PREFFERED TIME FRAME</label><br>
                             <!-- <input id="time" type="time" required aria-label="time" required> -->
 
-                            <input type="text" id="time" required placeholder="12:00">
+                            <input type="time" id="time" required placeholder="12:00">
                         </div><br>
                         <!-- This is choose the appointment vehicle type -->
                         <div class="type-choose">
                             <label for="appointment-date" class="top-head">VEHICLE</label><br>
-                            <label for="vehicle-type" id="bike" >
-                                <input type="radio" id="vehicle-type" name="vehicle-type" value="Bike">Bike
-                            </label>
-                            <label for="vehicle-type1" id="car">
-                                <input type="radio" id="vehicle-type1" name="vehicle-type" value="Car">Car
-                            </label>
-                        </div>
+                            <div class="vehi-cho">
+                                <label for="vehicle-type" id="bike">
+                                    <input type="radio" id="vehicle-type" name="vehicle-type" value="Bike">BIKE
+                                </label>
+                                <label for="vehicle-type1" id="car">
+                                    <input type="radio" id="vehicle-type1" name="vehicle-type" value="Car">CAR
+                                </label>
+                            </div>
+                        </div><br>
                         <!-- This is choose the appointment servicde -->
                         <div class="date-choosing">
                             <label for="appointment-date" class="top-head">SELECT SERVICES NEEDED</label><br>
                             <div id="service-select">
                                 <div class="list-checkbox" id="check-Box">
-                                    <label for="text" class="checkbox"> <input type="checkbox" id="check"  value="Air Conditioning" class="item"
-                                            name="check" aria-label="checkbox"> waret Service</label>
-                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Breakes repair"
-                                            name="check" aria-label="checkbox"> Breakes repair</label>
-                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Engine Diagnostics"
-                                            name="check" aria-label="checkbox"> sdfghhhhh</label>
-                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Heating & Cooling"
-                                            name="check" aria-label="checkbox"> dfghjk </label>
-                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Oil, Lube & Filters "
-                                            name="check" aria-label="checkbox"> swedcfvgbhnj</label>
-                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Service"
-                                            name="check" aria-label="checkbox">Water Service</label>
-                                    <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Steering & Supension"
-                                            name="check" aria-label="checkbox"> Steering & Supension</label> -->
-                                    <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Transmission"
-                                            name="check" aria-label="checkbox"> Transmission</label> -->
-    
-                                    <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" 
-                                            name="check" aria-label="checkbox"> Others</label> -->
+                                    <label for="text" class="checkbox"> <input type="radio" id="check"
+                                            value="Air Conditioning" class="item" name="check" aria-label="radio">
+                                        waret Service</label>
+                                    <label for="text" class="checkbox"> <input type="radio" id="check" class="item"
+                                            value="Breakes repair" name="check" aria-label="radio"> Breakes
+                                        repair</label>
+                                    <label for="text" class="checkbox"> <input type="radio" id="check" class="item"
+                                            value="Oil, Lube & Filters " name="check" aria-label="radio"> Oil, Lube &
+                                        Filters </label>
+                                    <label for="text" class="checkbox"> <input type="radio" id="check" class="item"
+                                            value="Service" name="check" aria-label="radio">Water Service</label>
+                                    <label for="text" class="checkbox"> <input type="radio" id="check" class="item"
+                                            value="Service" name="check" aria-label="radio">Water Service</label>
                                 </div>
 
 
 
-                                <div class="list-checkbox"  id="check-Box1">
-                                    <label for="text" class="checkbox"> <input type="checkbox" id="check"  value="Air Conditioning" class="item"
-                                            name="check" aria-label="checkbox"> Air Conditioning</label>
-                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Breakes repair"
-                                            name="check" aria-label="checkbox"> Breakes repair</label>
-                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Engine Diagnostics"
-                                            name="check" aria-label="checkbox"> Engine Diagnostics</label>
-                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Heating & Cooling"
-                                            name="check" aria-label="checkbox"> Heating & Cooling </label>
-                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Oil, Lube & Filters "
-                                            name="check" aria-label="checkbox"> Oil, Lube & Filters </label>
-                                    <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Service"
-                                            name="check" aria-label="checkbox">Water Service</label>
-                                    <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Steering & Supension"
-                                            name="check" aria-label="checkbox"> Steering & Supension</label> -->
-                                    <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" value="Transmission"
-                                            name="check" aria-label="checkbox"> Transmission</label> -->
-    
-                                    <!-- <label for="text" class="checkbox"> <input type="checkbox" id="check" class="item" 
-                                            name="check" aria-label="checkbox"> Others</label> -->
+                                <div class="list-checkbox" id="check-Box1">
+                                    <label for="text" class="checkbox"> <input type="radio" id="check"
+                                            value="Air Conditioning" class="item" name="check" aria-label="radio">
+                                        Air Conditioning</label>
+                                    <label for="text" class="checkbox"> <input type="radio" id="check" class="item"
+                                            value="Breakes repair" name="check" aria-label="radio"> Breakes
+                                        repair</label>
+                                    <label for="text" class="checkbox"> <input type="radio" id="check" class="item"
+                                            value="Engine Diagnostics" name="check" aria-label="radio"> Engine
+                                        Diagnostics</label>
+                                    <label for="text" class="checkbox"> <input type="radio" id="check" class="item"
+                                            value="Heating & Cooling" name="check" aria-label="radio"> Heating &
+                                        Cooling </label>
+                                    <label for="text" class="checkbox"> <input type="radio" id="check" class="item"
+                                            value="Oil, Lube & Filters " name="check" aria-label="radio"> Oil, Lube &
+                                        Filters </label>
+                                    <label for="text" class="checkbox"> <input type="radio" id="check" class="item"
+                                            value="Service" name="check" aria-label="radio">Water Service</label>
+                                  
                                 </div>
                             </div>
-                            
 
-                            
+
+
                         </div>
                     </div>
                     <div class="addres">
                         <label for="" class="top-head">CONTACT DETAILS</label><br>
-                        <input type="text" id="contactname" placeholder="Your Name*" required aria-label="name"><br>
-                        <input type="email" id="contactemail" placeholder="Your Email*" required aria-label="email"><br>
                         <input type="text" id="contactphone" placeholder="Your Phone" maxlength="10" required
-                            pattern="[0-9]{3,12}" aria-label="Phone"><br>
-                            <input class="name" id="address" type="text" pattern="[A-za-z0-9]{6,90}"
-                            name="user address" placeholder="Add Address" required="true">
-                        <!-- <input type="text" id="address" placeholder="vehicle Pickup address" maxlength="10" required pattern="[a-zA-Z0-9]{3,80}"
-                        aria-label="Phone"> -->
-                        <br><br>
-                        <!-- <input id="message" id="contactmessage" type="message" placeholder="Additional Questions or Comments"
-                    aria-label="message"><br> -->
+                        pattern="^[6-9][0-9]{9}$" aria-label="Phone"><br>
+                        <input type="text" id="home-num" placeholder="H.no/P.no"  required aria-label="hno"><br>
+                        <input type="text" id="home-street" placeholder="Street"  required aria-label="street"><br>
+                        <input type="text" id="home-city" placeholder="City" required aria-label="city"><br>
+                        <input class="name" id="home-state" type="text"  name="user address"
+                            placeholder="State" required="true">
+                        <input class="name" id="address" type="text" pattern="^6\d{5}$" name="user address"
+                            placeholder="Pincode" required="true">
+                        <br>
                         <button type="submit">SUBMIT NOW</button>
                         <!-- <button>SUBMIT NOW</button> -->
                     </div>
@@ -261,7 +216,7 @@
                     <input type="file" name="listing_faq-question" id="review-userimage" >
                 </div> -->
                 <div>
-                    <button type="submit" >submit your reviw</button>
+                    <button type="submit">submit your reviw</button>
                 </div>
         </form>
     </div>
@@ -378,7 +333,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="../../Page/JS files/appoinment.js">
-       
+
     </script>
 </body>
 

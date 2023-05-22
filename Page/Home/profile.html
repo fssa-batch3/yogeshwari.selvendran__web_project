@@ -25,7 +25,7 @@
             <div class="side-menu">
                 <ul>
                     <li>
-                        <a href="#profile-page" class="active" autofocus id="profile1"><span class="fa-solid fa-circle-user" ></span>
+                        <a href="#profile_page" class="active" autofocus id="profile1"><span class="fa-solid fa-circle-user" ></span>
                             <span>My Profile</span></a>
                     </li>
                     <li>
@@ -33,7 +33,7 @@
                             <span>Orders</span></a>
                     </li>
                     <li>
-                        <a href="#appoinment-booking" class="active" autofocus id="appointment1"><span class="fa-solid fa-calendar-check"></span>
+                        <a href="#appoinment_booking" class="active" autofocus id="appointment1"><span class="fa-solid fa-calendar-check"></span>
                             <span>Appointments</span></a>
                     </li>
                     <!-- <li>
@@ -63,7 +63,7 @@
         <div class="main-item">
             <main>
                 <!-- This is user condainer -->
-                <div class="user-container" id="profile-page">
+                <div class="display_cls" id="profile_page">
                     <div class="information">
                         <form id="form">
                             <!-- This is First name  -->
@@ -162,21 +162,22 @@
                     </div>
                 </div> -->
                 <!-- Appoinment booking page -->
-                <div id="appoinment-booking">
+                <div id="appoinment_booking" class="display_cls">
                     <div class="booking_appoinment">
-                        <h1>Up Coming Appoinments</h1>
+                        <h1 class="heading">Up Coming Appoinments</h1>
                         <div class="upcoming">
                             <table>
                                 <thead>
                                     <th>Booking id</th>
                                     <th>Vehicle</th>
-                                    <th>Name</th>
+                                    <th>Time</th>
+                                    <th>Date</th>
+                                    <!-- <th>Name</th> -->
                                     <!-- <th>Email</th> -->
                                     <th>Phone_number</th>
                                     <th>Service</th>
+                                    
                                     <th>Address</th>
-                                    <th>Time</th>
-                                    <th>Date</th>
                                     <!-- <th>Edit</th>
                                     <th>Delete</th> -->
                                 </thead>
@@ -190,7 +191,7 @@
                     </div>
                 </div>
                 <!-- This is order history -->
-                <div id="order-history">
+                <div id="order_history" class="display_cls">
                     <h1>My Orders</h1>
                     <div class="order-his">
                         <!-- <div class="or-contain">
@@ -233,7 +234,6 @@
         let filterOrder;
 
         if(orderhis==null){
-
         }
         else{
 
@@ -328,10 +328,20 @@ console.log(filterOrder);
     }
 
 
-
+    // This is booking data get in localStorage 
         const book = JSON.parse(localStorage.getItem("book_data"));
 
         const active_user = JSON.parse(localStorage.getItem("active_user"));
+
+
+        if(book==null){
+            const appointmentpage =document.createElement("h3")
+            appointmentpage.innerHTML="You have no appointment"
+document.querySelector(".heading").prepend(appointmentpage)
+        }
+        else{
+
+  
 
         let filterappointment = book.filter((data) => {
             return data.User_id == active_user["user_id"]
@@ -342,14 +352,45 @@ console.log(filterOrder);
             document.querySelector(".table_row").innerHTML += ` <tr>
                                         <td>${item.Booking_id}</td>
                                         <td>${item.Vehicle_type}</td>
-                                        <td>${item.customer_name}</td>
-                                        <td>${item.customer_phone}</td>
-                                        <td>${item.Booking_service}</td>
-                                        <td>${item.customer_address}</td>
                                         <td>${item.Booking_time}</td>
                                         <td>${item.Booking_date}</td>
+                                        <td>${item.cus_phone}</td>
+                                        <td>${item.Booking_service}</td>
+                                        <td>${item.cus_hNo+" "+item.cus_street+" "+item.cus_city+" "+item.cus_state}</td>
                                     </tr>`
         });
+
+    }
+
+    const display_div = document.querySelectorAll(".display_cls");
+   
+for (let i = 0; i < display_div.length; i++) {
+    display_div[i].style.display = "none"
+    
+}
+
+const appoitment_div = document.getElementById("appoinment_booking");
+const appoitement_profile = document.querySelector("#appointment1");
+appoitement_profile.addEventListener("click", function () {
+    appoitment_div.style.display = "block";
+})
+
+const order_div = document.getElementById("order_history");
+const order_profile = document.querySelector("#order_history1");
+order_profile.addEventListener("click", function () {
+    order_div.style.display = "block";
+    console.log("1");
+})
+
+const profile_div = document.getElementById("profile_page");
+const view_profile = document.querySelector("#profile1");
+view_profile.addEventListener("click", function () {
+    profile_div.style.display = "block";
+})
+
+
+view_profile.click();
+
 
 
         // This is collect a data from form
