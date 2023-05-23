@@ -594,7 +594,7 @@ padding: 10px;
 footer {
     margin-top:5%;
     height: 30vh;
-    
+
 }
 
 .footer-item {
@@ -678,17 +678,14 @@ footer {
     display: flex;
     justify-content: space-between;
 }
-
 .application i {
     font-size: 1.5rem;
     margin-left: 1.5rem;
 }
-
 .copy-right {
     background: #87b9ea;
     margin-top: 1%;
 }
-
 .copy-right p {
     padding: 20px;
     text-align: center;
