@@ -35,7 +35,8 @@ let cart_sample = JSON.parse(localStorage.getItem("cart"));
                         // Product name
                         const name1 = document.createElement("p")
                         name1.setAttribute("id", "name")
-                        name1.innerHTML = cart_sample[i].product_name
+                        name1.innerHTML = cart_sample[i].product_about
+
                         second.append(name1)
                         // Product price
                         const price = document.createElement("p")

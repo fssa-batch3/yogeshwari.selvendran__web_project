@@ -204,7 +204,7 @@ function collectData() {
             "cus_pincode": homePincoded,
             "User_id": cus_id
         })
-        window.location.href = "../../Page/Home/profile.html"
+        window.location.href = "../../Page/User-Profile/user-appointment.html"
     // }
     localStorage.setItem("book_data", JSON.stringify(cusBook));
     alert("")

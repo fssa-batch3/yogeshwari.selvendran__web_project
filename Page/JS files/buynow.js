@@ -504,7 +504,7 @@ function collectData() {
 
         orderRecords.push(arr);
         localStorage.setItem("order_history", JSON.stringify(orderRecords));
-        window.location.href = "../../Page/Home/profile.html"
+        window.location.href = "../../Page/User-Profile/user-order.html"
 
     }
     else {
@@ -527,7 +527,7 @@ function collectData() {
 
                 orderRecords.push(arr);
                 localStorage.setItem("order_history", JSON.stringify(orderRecords));
-                window.location.href = "../../Page/Home/profile.html"
+                window.location.href = "../../Page/User-Profile/user-order.html"
 
             }
         })
@@ -535,9 +535,9 @@ function collectData() {
         const useract = JSON.parse(localStorage.getItem("active_user"));
         //this filter for delete the cart which buy by user
         let cart_obj = Cartitem.filter(function (obj) {
-            if (obj["user_email"] === useract["user_email"]) {
+            if (obj["user_email"] === useract["user_email"]){
                 return false;
-            } else {
+            } else{
                 return true;
             }
         });

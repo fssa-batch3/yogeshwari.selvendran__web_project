@@ -99,7 +99,7 @@ addcart.find((e)=>{
      product["pr_img_1"] = search["pr_img_1"];
      product["product_price"] = search["product_price"];
      product["rating"] = search["rating"];
-     product["product_name"] = search["product_name"];
+     product["product_about"] = search["about_product"];
      product["user_email"] = user["user_email"];
      product["productid"]=search["productid"]
 
