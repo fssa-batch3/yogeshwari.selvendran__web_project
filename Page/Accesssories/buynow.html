@@ -50,9 +50,9 @@
                     </div>
                 </div>
                 <!-- This is third cart Select the address -->
+                <form id="buyform">
                 <div class="select-address">
                     <div class="user-value">
-
                         <div class="ues-add">
                             <!-- <div class="address_info">
                                     <input type="radio" name="" id="check">
@@ -61,7 +61,7 @@
                                                 Chennai, Tamil Nadu -</p>
                                             <p>600096</p>
                                         </div>
-                                </div> -->
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
 
 
                 <!-- payment method section -->
-                <form id="buyform">
+                
                     <div class="mid-add">
                         <div class="ex-no">
                             <p><i class="fa-solid fa-3" style="color: #ffffff;"></i></p>
@@ -93,7 +93,7 @@
                     <div class="payment">
                         <div class="cards">
                             <div class="pay-card">
-                                <label for=""><input type="radio" id="expand" name="payment" value="Pay with card">Pay
+                                <label for=""><input type="radio" id="expand" name="payment" value="Pay with card" required>Pay
                                     with
                                     Debit/Credit/ATM Cards</label>
                             </div>
@@ -134,7 +134,7 @@
                         </div>
                         <div class="cash">
                             <div class="pay-card">
-                                <label><input type="radio" id="cash_pay" name="payment" value="Cash on Delivery">Cash on
+                                <label><input type="radio" id="cash_pay" name="payment" value="Cash on Delivery" required>Cash on
                                     Delivery/Pay on Delivery</label>
                             </div>
                         </div>
@@ -182,18 +182,18 @@
                 <div class="price">
                     <h3 id="product">Price Details</h3>
                     <div class="price1">
-                    <div class="total1">
-                        <p>Total Product Price:</p>
-                        <p>Delivery Charges</p>
-                        <p>Order Total :</p>
-                        
+                        <div class="total1">
+                            <p>Total Product Price:</p>
+                            <p>Delivery Charges</p>
+                            <p>Order Total :</p>
+
+                        </div>
+                        <div class="order">
+                            <p id="total_count"></p>
+                            <p>FREE</p>
+                            <p id="total_count1"></p>
+                        </div>
                     </div>
-                    <div class="order">
-                        <p id="total_count"></p>
-                        <p>FREE</p>
-                        <p id="total_count1"></p>
-                    </div>
-                </div>
                 </div>
                 <!-- <div class="cont-btn">
                     <a href="../../Page/Accesssories/buynow.html"><button>Place Order</button></a>
@@ -207,7 +207,7 @@
         <form id="ex-add">
             <div class="form-group">
                 <input type="text" id="autocomplete" placeholder="B.No/House.No" required>
-                <input type="street" id="street" placeholder="Street"  required>
+                <input type="street" id="street" placeholder="Street" required>
                 <div class="cty">
                     <input type="city" id="inputCity" placeholder="City" required>
 
@@ -227,4 +227,3 @@
 </body>
 
 </html>
-

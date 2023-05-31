@@ -38,8 +38,9 @@ pr_main.setAttribute("src", search["pr_img_4"]);
 
 
 // get product name
-const pr_name = document.getElementById("product_name");
-pr_name.innerText = search["product_name"]
+
+// const pr_name = document.getElementById("product_name");
+// pr_name.innerText = search["product_name"]
 
 // get About product 
 const pr_about = document.getElementById("about_product");
@@ -139,7 +140,7 @@ buy_now.addEventListener("click",(element)=>{
 
         product["pr_img_1"] = search["pr_img_1"];
         product["product_price"] = search["product_price"];
-        product["product_name"] = search["product_name"];
+        product["product_about"] = search["about_product"];
         product["user_email"] = user["user_email"];
         product["productid"]=search["productid"];
         product["order_status"]="pending";
@@ -147,7 +148,7 @@ buy_now.addEventListener("click",(element)=>{
         buynow.push(product);
         localStorage.setItem("orders",JSON.stringify(buynow));
         // btn.href ="../../Page/Accesssories/buynow.html?prod_id=" +search["productid"]
-        alert("Continue");
+        // alert("Continue");
         
     }
 })

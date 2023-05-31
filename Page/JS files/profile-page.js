@@ -7,11 +7,9 @@ const use_address = JSON.parse(localStorage.getItem("user_address"));
 
 let filterOrder;
 
-if(orderhis==null){
-}
-else{
-
-
+// if(orderhis==null){
+// }
+// else{
  filterOrder = orderhis.filter((data) => {
     return data.user_email == loginuser["user_email"];
       // console.log(filterOrder);
@@ -99,39 +97,35 @@ for (let i = 0; i < filterOrder.length; i++) {
     orPin.innerText ="-"+ filterOrder[i]["user_address"]["pincode"]+"."
     orAdd.append(orPin)
 }
-}
+// }
 
 
 // This is booking data get in localStorage 
-const book = JSON.parse(localStorage.getItem("book_data"));
+// const book = JSON.parse(localStorage.getItem("book_data"));
 
-const active_user = JSON.parse(localStorage.getItem("active_user"));
-
-
-if(book==null){
-    const appointmentpage =document.createElement("h3")
-    appointmentpage.innerHTML="You have no appointment"
-document.querySelector(".heading").prepend(appointmentpage)
-}
-else{
+// const active_user = JSON.parse(localStorage.getItem("active_user"));
 
 
-
-let filterappointment = book.filter((data) => {
-    return data.User_id == active_user["user_id"]
-
-})
-filterappointment.forEach(item => {
+// if(book==null){
+//     const appointmentpage =document.createElement("h3")
+//     appointmentpage.innerHTML="You have no appointment"
+// document.querySelector(".heading").prepend(appointmentpage)
+// }
+// else{
+// let filterappointment = book.filter((data) => {
+//     return data.User_id == active_user["user_id"]
+// })
+// filterappointment.forEach(item => {
     
-    document.querySelector(".table_row").innerHTML += ` <tr>
-                                <td>${item.Booking_id}</td>
-                                <td>${item.Vehicle_type}</td>
-                                <td>${item.Booking_time}</td>
-                                <td>${item.Booking_date}</td>
-                                <td>${item.cus_phone}</td>
-                                <td>${item.Booking_service}</td>
-                                <td>${item.cus_hNo+" "+item.cus_street+" "+item.cus_city+" "+item.cus_state}</td>
-                            </tr>`
-});
+//     document.querySelector(".table_row").innerHTML += ` <tr>
+//                                 <td>${item.Booking_id}</td>
+//                                 <td>${item.Vehicle_type}</td>
+//                                 <td>${item.Booking_time}</td>
+//                                 <td>${item.Booking_date}</td>
+//                                 <td>${item.cus_phone}</td>
+//                                 <td>${item.Booking_service}</td>
+//                                 <td>${item.cus_hNo+" "+item.cus_street+" "+item.cus_city+" "+item.cus_state}</td>
+//                             </tr>`
+// });
 
-}
+// }

@@ -5,8 +5,6 @@ formbuynowdata.addEventListener("submit", (m) => {
     collectData();
 })
 
-
-
 const profile_id = JSON.parse(localStorage.getItem("active_user"));
 const last_id = profile_id["user_id"];
 const call_address = JSON.parse(localStorage.getItem("user_address"));
@@ -28,7 +26,7 @@ let picture;
 let price;
 let name1;
 let numcount;
-if (order_id == Number(order_id)) {
+if (order_id == Number(order_id)){
 
     const orders1 = pro_detail.find(function (pro) {
         selected = pro
@@ -60,7 +58,7 @@ if (order_id == Number(order_id)) {
     // Product name
     name1 = document.createElement("p")
     name1.setAttribute("id", "name")
-    name1.innerHTML = orders1["product_name"]
+    name1.innerHTML = orders1["about_product"]
     second.append(name1)
     // Product price
     price = document.createElement("p")
@@ -106,10 +104,6 @@ else {
 
             if (v.user_email == activeruseremail) {
                 // return true
-
-
-
-
                 const cart = document.createElement("div")
                 cart.setAttribute("class", "cart")
                 document.querySelector(".top-head").prepend(cart)
@@ -131,7 +125,7 @@ else {
                 // Product name
                 name1 = document.createElement("p")
                 name1.setAttribute("id", "name")
-                name1.innerHTML = v["product_name"]
+                name1.innerHTML = v["about_product"]
                 second.append(name1)
                 // Product price
                 price = document.createElement("p")
@@ -170,8 +164,6 @@ else {
     }
 
 }
-
-
 const plus = document.querySelectorAll(".plus"),
     minus = document.querySelectorAll(".minus"),
     num = document.querySelectorAll(".num");
@@ -268,8 +260,6 @@ expand.addEventListener("click", function () {
 cash.addEventListener("click", function () {
     hidden.innerHTML = ""
 })
-
-
 // Add address section form page
 const mainDiv = document.querySelector("main")
 const add_form = document.getElementById("add-detail");
@@ -284,7 +274,6 @@ backBtn.addEventListener("click", () => {
     hidd_add.style.display = "none"
     mainDiv.style.filter = `blur(${0}px)`;
 })
-
 
 // Collect the data in form page
 const user_data1 = JSON.parse(localStorage.getItem("user_data"));
@@ -371,6 +360,7 @@ for (let i = 0; i < call_address.length; i++) {
         inputType.setAttribute("name", "Address")
         inputType.setAttribute("id", "check")
         inputType.setAttribute("class", "radio_btn")
+        inputType.setAttribute("required","")
         info.append(inputType)
         // <div id="location_info">
         const locInfo = document.createElement("div")
@@ -514,8 +504,6 @@ function collectData() {
         cart_sample.find((e) => {
             if (e.user_email == profile_email.user_email) {
                 const arr = {}
-
-
                 arr.his_id = orderhis_id,
                     arr.payment = payMethod,
                     arr.order_price = e.product_price,
@@ -528,7 +516,6 @@ function collectData() {
                 orderRecords.push(arr);
                 localStorage.setItem("order_history", JSON.stringify(orderRecords));
                 window.location.href = "../../Page/User-Profile/user-order.html"
-
             }
         })
         const Cartitem = JSON.parse(localStorage.getItem("cart"));

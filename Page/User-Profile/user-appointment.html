@@ -133,8 +133,47 @@
 
         </div>
     </div>
-    <script src="../../Page/JS files/profile-page.js"></script>
-    <script src="../../Page/JS files/user-profile.js"></script>
+    <!-- <script src="../../Page/JS files/profile-page.js"></script> -->
+    <script>
+
+        
+const orderhis = JSON.parse(localStorage.getItem("order_history"));
+console.log(orderhis);
+const loginuser = JSON.parse(localStorage.getItem("active_user"));
+console.log(loginuser.user_email);
+const use_address = JSON.parse(localStorage.getItem("user_address"));
+
+        // This is booking data get in localStorage 
+const book = JSON.parse(localStorage.getItem("book_data"));
+
+const active_user = JSON.parse(localStorage.getItem("active_user"));
+
+
+if(book==null){
+    const appointmentpage =document.createElement("h3")
+    appointmentpage.innerHTML="You have no appointment"
+document.querySelector(".heading").prepend(appointmentpage)
+}
+else{
+let filterappointment = book.filter((data) => {
+    return data.User_id == active_user["user_id"]
+})
+filterappointment.forEach(item => {
+    
+    document.querySelector(".table_row").innerHTML += ` <tr>
+                                <td>${item.Booking_id}</td>
+                                <td>${item.Vehicle_type}</td>
+                                <td>${item.Booking_time}</td>
+                                <td>${item.Booking_date}</td>
+                                <td>${item.cus_phone}</td>
+                                <td>${item.Booking_service}</td>
+                                <td>${item.cus_hNo+" "+item.cus_street+" "+item.cus_city+" "+item.cus_state}</td>
+                            </tr>`
+});
+
+}
+    </script>
+    <!-- <script src="../../Page/JS files/user-profile.js"></script> -->
 
 
 </body>
