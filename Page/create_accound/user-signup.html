@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live On - Too Fast Too Quick</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/Icons/live-on.png">
+    <link rel="stylesheet" href="../../assets/Css/Login-Pages/signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <div class="align-page">
+            <img src="../../assets/New_collection/BG-Collection/6159289.jpg" alt="">
+        </div>
+        <div class="choose-one">
+
+            <ul>
+                <li><button id="loginform" autofocus>LOG IN</button>
+                </li>
+                <li><button id="signupform" autofocus>SIGN UP</button></li>
+            </ul>
+            <div id="log-in-page">
+                <div class="condainer">
+                    <div class="form-page">
+                        <!-- <form id="form"> -->
+                        <!-- <p>Use either your email or a verified phone number</p> -->
+                        <div class="inputGroup">
+                            <input class="name1" id="user-email" type="email" name="user email" pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"  required="" autocomplete="off">
+                            <label for="name">User Email</label>
+                        </div>
+                        <div class="inputGroup">
+                            <input class="name1" id="user-password" type="password" name="user password"
+                             required="" autocomplete="off">
+                            <label for="name">Password</label>
+                        </div>
+                        <!-- <input class="name1" id="user-email" type="email" name="user email" pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Enter email">
+                        <input class="name1" id="user-password" type="password" name="user password"
+                        placeholder="Enter password"> -->
+                        <button class="btn1" type="submit" onclick="yogi()">Continue</button>
+                        <!-- <input type="button" onclick="yogi" class="name"> -->
+                        <!-- <a href="../create_accound/user-signup.html">Create a account</a> -->
+                        <!-- </form> -->
+                    </div>
+                </div>
+            </div>
+            <div id="sign-up-page">
+                <div class="container2">
+                    <!-- <p>Create a account and touch with Live-On</p><br> -->
+                    <form id="form-page1">
+                        <div class="name-part">
+                            <div class="inputGroup">
+                                <input class="name" id="user-firstname" type="text" pattern=^[a-zA-Z]{3,20}$
+                                title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                                name="user name" required="" autocomplete="off">
+                                <label for="name">First Name</label>
+                            </div>
+                            <div class="inputGroup">
+                                <input class="name" id="user-lastname" type="text" name="user name"
+                                pattern=^[a-zA-Z]{3,20}$
+                                title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." required="" autocomplete="off">
+                                <label for="name">Last Name</label>
+                            </div>
+                            <!-- <div class="first-name">
+                                <input class="name" id="user-firstname" type="text" pattern=^[a-zA-Z]{3,20}$
+                                    title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                                    name="user name" placeholder="First Name" value="" required>
+                            </div> -->
+                            <!-- <div class="last-name">
+                                <input class="name" id="user-lastname" type="text" name="user name"
+                                    pattern=^[a-zA-Z]{3,20}$
+                                    title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                                    placeholder="Last Name" value="" required>
+                            </div> -->
+                        </div>
+
+                        <!-- <div class="ra-btn">
+
+                    <div class="male">
+                        <input class="radio" type="radio" id="male" name="gender" required value="male">
+                        <label for="male">Male</label>
+                    </div>
+
+                    <div class="male">
+                        <input class="radio" type="radio" id="male" name="gender" required="true" value="female">
+                        <label for="female">Female</label>
+                    </div>
+
+                    <div class="male">
+                        <input class="radio" type="radio" id="male" name="gender" required="true" value="others">
+                        <label for="others">Others</label>
+                    </div>
+                </div> -->
+                <div class="inputGroup">
+                    <input class="name" id="user-email" type="email" name="user email"
+                    pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required="" autocomplete="off">
+                    <label >Email</label>
+                </div>
+                <!-- <div class="inputGroup">
+                    <input class="name" id="user-email" type="email" name="user email" pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"  required="" autocomplete="off">
+                    <label for="name">User Email</label>
+                </div> -->
+                        <!-- <div class="email">
+                            <input class="name" id="user-email" type="email" name="user email"
+                                pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                placeholder="name@gmail.com" value="" required>
+                        </div> -->
+                        <div class="email-part">
+                            <div class="inputGroup">
+                                <input class="name" id="user-password" type="password" name="psw"
+                                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n\s])(?=.*[A-Z])(?=.*[a-z]).*$"
+                                title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters and white space character" required="" autocomplete="off">
+                                <label for="name">password</label>
+                            </div>
+                            <!-- <div class="password">
+                                <input class="name" id="user-password" type="password" name="psw"
+                                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n\s])(?=.*[A-Z])(?=.*[a-z]).*$"
+                                    title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters and white space character"
+                                    placeholder="password" required>
+                            </div> -->
+                            <div class="inputGroup">
+                                <input class="name" id="confirm-password" type="password" name="psw"
+                                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n\s])(?=.*[A-Z])(?=.*[a-z]).*$"
+                                title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters and white space character" required="" autocomplete="off">
+                                <label for="name">confirm-password</label>
+                            </div>
+                            <!-- <div class="confirm-password">
+                                <input class="name" id="confirm-password" type="password" name="psw"
+                                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n\s])(?=.*[A-Z])(?=.*[a-z]).*$"
+                                    title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters and white space character"
+                                    placeholder="confirm-password" required>
+                            </div> -->
+                        </div>
+
+                        <div class="num-part">
+                            <div class="inputGroup">
+                                <input class="name" id="user-number" type="tel" pattern="[0-9]{10}"
+                                title="PLease enter 10 digit number" name="user mobile" required="" autocomplete="off">
+                                <label for="name">Enter your Number</label>
+                            </div>
+                            <!-- <div class="number">
+                                <input class="name" id="user-number" type="tel" pattern="[0-9]{10}"
+                                    title="PLease enter 10 digit number" name="user mobile"
+                                    placeholder="Enter your Number" required="true">
+                            </div> -->
+                            <div class="inputGroup">
+                                <input class="name" id="user-pincode" type="text" pattern="[0-9]{6}" maxlength="6"
+                                name="user address" required="" autocomplete="off">
+                                <label for="name">Pincode</label>
+                            </div>
+                            <!-- <div class="address">
+                                <input class="name" id="user-pincode" type="text" pattern="[0-9]{6}" maxlength="6"
+                                    name="user address" placeholder="Pincode" required>
+                            </div> -->
+                        </div>
+                        <div>
+                            <button type="submit">Submit</button>
+                        </div>
+                        <!-- <a href="../create_accound/signin.html">Already have an account</a> -->
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+<script>
+    console.log("singam");
+    const use_log = document.getElementById("loginform");
+    console.log(use_log,"yogi");
+    const log_form = document.getElementById("log-in-page");
+    const use_sign = document.getElementById("signupform");
+    const sign_form = document.getElementById("sign-up-page");
+    console.log(sign_form);
+    use_log.addEventListener("click",()=>{
+        log_form.style.display="block"
+        sign_form.style.display="none"
+    })
+    use_sign.addEventListener("click",()=>{
+        log_form.style.display="none"
+        sign_form.style.display="block"
+    })
+
+
+
+    function yogi() {
+            let useremail = document.getElementById("user-email").value;
+            let userpassword = document.getElementById("user-password").value;
+
+            let arraydetails = JSON.parse(localStorage.getItem("user_data"))
+
+            let result;
+
+            let active_user;
+            arraydetails.find(element => {
+                if (element["user_email"] == useremail && element["password"] == userpassword) {
+                active_user = element;
+                console.log(active_user);
+                // localStorage.setItem("active_user",JSON.stringify(active_user))
+                    return result = 1;
+                }
+                else {
+                    return result = 0;
+                }
+            });
+            if (result == 1) {
+
+                // swal("Yep!", "you logged in bruh!", "success");
+                window.location.href = "../../Page/Home/home.html"
+                alert(" success")
+                localStorage.setItem("active_user",JSON.stringify(active_user))
+                // localStorage.setItem("sign_in", useremail)
+
+            }
+           else if("admin@gmail.com"==useremail && "Admin@123"==userpassword){
+                window.location.href = "../../Page/Admin/admin.html"
+
+            }
+            else {
+                alert(" failure")
+                // swal("Oops!", "email or password is not correct!", "error");
+            }
+        }
+
+</script>
+    <script src="../../Page/JS files/user-signup.js">
+
+    </script>
+
+</body>
+
+</html>

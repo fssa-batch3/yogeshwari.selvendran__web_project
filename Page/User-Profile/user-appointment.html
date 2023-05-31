@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live On - Too Fast Too Quick</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/Icons/live-on.png">
+    <link rel="stylesheet" href="../../assets/Css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- This is profile-section -->
+    <div class="account-section">
+        <div class="side-item">
+            <div class="page">
+                <img class="pro_image" src="../../assets/New_collection/Acc-cover.png" alt="profile">
+                <label for="upload-file"><i class="fa-solid fa-camera" style="color: #a322ee;"></i></label>
+                <input type="file" accept="image/jpeg,image/png,image/jpg" id="upload-file">
+            </div>
+            <div class="side-menu">
+                <ul>
+                    <li>
+                        <a href="../../Page/User-Profile/profile.html" class="active" autofocus id="profile1"><span
+                                class="fa-solid fa-circle-user"></span>
+                            <span>My Profile</span></a>
+                    </li>
+                    <li>
+                        <a href="../../Page/User-Profile/user-order.html" class="active" autofocus id="order_history1"><span
+                                class="fa-solid fa-bag-shopping"></span>
+                            <span>Orders</span></a>
+                    </li>
+                    <li>
+                        <a href="#appoinment_booking" class="active" autofocus id="appointment1"><span
+                                class="fa-solid fa-calendar-check"></span>
+                            <span>Appointments</span></a>
+                    </li>
+                    <!-- <li>
+                        <a href="" class="active"><span class="fa-solid fa-circle-user"></span>
+                            <span>Wishlist</span></a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="" class="active"><span class="fa-solid fa-circle-user"></span>
+                            <span>Offers</span></a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="" class="active"><span class="fa-solid fa-calendar-check"></span>
+                            <span>History</span></a>
+                    </li> -->
+                    <li>
+                        <a id="log" class="active"><span class="fa-solid fa-right-from-bracket"></span>
+                            <span id="log">Logout</span></a>
+                    </li>
+                    <li>
+                        <a href="../../Page/Home/home.html" class="active"><span class="fa-solid fa-left-long"></span>
+                            <span>Exit</span></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="main-item">
+            <main>
+                <!-- This is card section -->
+                <!-- <div class="cards">
+                    <div class="single-card">
+                        <div>
+                            <h1>11</h1>
+                            <span>Products</span>
+                        </div>
+                        <div>
+                            <span class="fa-solid fa-bag-shopping"></span>
+                        </div>
+                    </div>
+                    <div class="single-card">
+                        <div>
+                            <h1>50</h1>
+                            <span>Customer</span>
+                        </div>
+                        <div>
+                            <span class="fa-solid fa-bag-shopping"></span>
+                        </div>
+                    </div>
+                    <div class="single-card">
+                        <div>
+                            <h1>79</h1>
+                            <span>Customer</span>
+                        </div>
+                        <div>
+                            <span class="fa-solid fa-bag-shopping"></span>
+                        </div>
+                    </div>
+                    <div class="single-card">
+                        <div>
+                            <h1>79</h1>
+                            <span>Customer</span>
+                        </div>
+                        <div>
+                            <span class="fa-solid fa-bag-shopping"></span>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- Appoinment booking page -->
+                <div id="appoinment_booking" class="display_cls">
+                    <div class="booking_appoinment">
+                        <h1 class="heading">Up Coming Appoinments</h1>
+                        <div class="upcoming">
+                            <table>
+                                <thead>
+                                    <th>Booking id</th>
+                                    <th>Vehicle</th>
+                                    <th>Time</th>
+                                    <th>Date</th>
+                                    <!-- <th>Name</th> -->
+                                    <!-- <th>Email</th> -->
+                                    <th>Phone_number</th>
+                                    <th>Service</th>
+                                    <th>Address</th>
+                                    <!-- <th>Edit</th>
+                                    <th>Delete</th> -->
+                                </thead>
+                                <tbody class="table_row">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    </div>
+    <!-- <script src="../../Page/JS files/profile-page.js"></script> -->
+    <script>
+
+        
+const orderhis = JSON.parse(localStorage.getItem("order_history"));
+console.log(orderhis);
+const loginuser = JSON.parse(localStorage.getItem("active_user"));
+console.log(loginuser.user_email);
+const use_address = JSON.parse(localStorage.getItem("user_address"));
+
+        // This is booking data get in localStorage 
+const book = JSON.parse(localStorage.getItem("book_data"));
+
+const active_user = JSON.parse(localStorage.getItem("active_user"));
+
+
+if(book==null){
+    const appointmentpage =document.createElement("h3")
+    appointmentpage.innerHTML="You have no appointment"
+document.querySelector(".heading").prepend(appointmentpage)
+}
+else{
+let filterappointment = book.filter((data) => {
+    return data.User_id == active_user["user_id"]
+})
+filterappointment.forEach(item => {
+    
+    document.querySelector(".table_row").innerHTML += ` <tr>
+                                <td>${item.Booking_id}</td>
+                                <td>${item.Vehicle_type}</td>
+                                <td>${item.Booking_time}</td>
+                                <td>${item.Booking_date}</td>
+                                <td>${item.cus_phone}</td>
+                                <td>${item.Booking_service}</td>
+                                <td>${item.cus_hNo+" "+item.cus_street+" "+item.cus_city+" "+item.cus_state}</td>
+                            </tr>`
+});
+
+}
+    </script>
+    <!-- <script src="../../Page/JS files/user-profile.js"></script> -->
+
+
+</body>
+
+</html>

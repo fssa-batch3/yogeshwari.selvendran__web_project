@@ -18,12 +18,10 @@
     <div class="account-section">
         <div class="side-item">
             <div class="page">
-                <span></span>
-                <!-- <img src="../../assets/New_collection/image-emily.jpg" alt=""> -->
-                <div>
-                    <h4>Yogesh_yogi</h4>
-                    <small>Customer_ID</small>
-                </div>
+                <img class="pro_image" src="../../assets/New_collection/Acc-cover.png" alt="profile">
+                <label for="upload-file"><i class="fa-solid fa-camera" style="color: #a322ee;"></i></label>
+                <input type="file" accept="image/jpeg,image/png,image/jpg" id="upload-file">
+                
             </div>
             <div class="side-menu">
                 <ul>
@@ -52,203 +50,132 @@
                             <span>History</span></a>
                     </li> -->
                     <li>
-                        <a href="" class="active"><span class="fa-solid fa-right-from-bracket"></span>
-                            <span id="log" onclick="deleted()">Logout</span></a>
+                        <button id="log" class="active"><span class="fa-solid fa-right-from-bracket"></span>
+                            <span>Logout</span></button>
                     </li>
-
+                    <li>
+                        <a href="../../Page/Home/home.html" class="active"><span class="fa-solid fa-left-long"></span>
+                            <span>Exit</span></a>
+                    </li>
                 </ul>
             </div>
 
         </div>
 
         <div class="main-item">
-            <!-- This is header section -->
-            <div class="header">
+            <header>
                 <div class="logo">
-                    <a href="">
-                        <img class="live-on" src="../../assets/Icons/live-on.png" alt="">
-                        <img class="live" src="../../assets/Icons/text-liveon-removebg-preview.png" alt="">
-                    </a>
+                    <img class="live-on" src="../../assets/Icons/live-on.png" alt="">
+                    <img class="live" src="../../assets/Icons/text-liveon-removebg-preview.png" alt="">
+                </div>
+                <div class="center">
+                    <ul class="cen-ul">
+                        <li class="list"><a href="../../Page/Home/home.html">HOME</a></li>
+                        <li class="list"><a href="../Home/about.html">ABOUT</a></li>
+                        <li>
+                            <button class="service list"><a href="">SERVICES<i class="fa-solid fa-caret-down"></i></a>
+                                <div class="sub-service">
+                                    <ul>
+                                        <li><a class="sub-service1" href="../../Page/Appoinment/appoinment.html"
+                                                target="_blank">Appoinment</a>
+                                        </li>
+                                        <li><a class="sub-service1"
+                                                href="../../Page/Accesssories/accessories.html">Accesssories</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </button>
+                        </li>
+                        <li class="list"><a href="">PARTENERS</a></li>
+                    </ul>
+                </div>
+                <div class="user">
+                    <ul>
+                        <!-- <li><i class="fa-solid fa-location-dot"></i></li> -->
+                        <li><i class="fa-solid fa-bell"></i></li>
+                        <li><a href="../../Page/Dashboard/wishlist.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a href="../../Page/Home/profile.html"><img class="profile" src="../../assets/New_collection/profile-cover.jpg" alt="profile image"></a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+        </div>
+        <!-- This is profile update section-->
+        <div class="user-container">
 
-                </div>
-                <!-- This is searchbar -->
-                <div class="search-bar">
-                    <span class="fa-solid fa-magnifying-glass"></span>
-                    <input type="search" placeholder="Search here">
-                </div>
-                <!-- This is user profile -->
-                <div class="call-item">
-                    <a href="../../Page/Contact/contact.html">
-                        <span class="fa-solid fa-headset"></span>
-                        <div class="em-list">
-                            <p class="bp-item">Call us 24/7</p>
-                            <p>444-92728056</p>
-                        </div>
-                    </a>
-                </div>
-                <!-- <div class="user-war">
-                    <img src="../../assets/Images/image-emily.jpg" alt="">
-                    <div>
-                        <h4>Yogi</h4>
-                        <small>Customer_ID</small>
+            <div class="information">
+                <form id="form">
+                    <!-- This is image uplode   -->
+                    <!-- <div class="pro-file">
+                        
+                    </div> -->
+                    <!-- This is First name  -->
+                    <div class="first-name" id="align-num">
+                        <label class="more">First Name</label>
+                        <input class="name" id="user-firstname" type="text" pattern=^[a-zA-Z]{3,20}$
+                            title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                            name="user name" placeholder="First Name" value="" required="true" disabled>
+
                     </div>
-                </div> -->
-            </div>
-            <!-- This is profile update section-->
-            <div class="user-condainer">
-                <div class="head-item">
-                    <img src="" alt="">
-                    <input type="file">
-                </div>
-                <div class="information">
-                    <form id="form">
-                        <!-- This is First name  -->
-                        <div class="first-name" id="align-num">
-                            <label class="more"> First Name</label>
-                            <input class="name" id="user-firstname" type="text" pattern="[A-Za-z]{1,32}"
-                                name="user name" title="First name connot contain spaces" placeholder="First Name"
-                                value="" required="true" disabled>
+                    <!-- This is Last name  -->
+                    <div class="last-name" id="align-num">
+                        <label class="more">Last Name</label>
+                        <input class="name" id="user-lastname" type="text" name="user name" pattern=^[a-zA-Z]{3,20}$
+                            title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                            placeholder="Last Name" value="" required="true" disabled>
 
-                        </div>
-                        <!-- This is Last name  -->
-                        <div class="last-name" id="align-num">
-                            <label class="more"> Last Name</label>
-                            <input class="name" id="user-lastname" type="text" name="user name" pattern="[A-Za-z]{1,32}"
-                                placeholder="Last Name" value="" title="Last name connot contain spaces" required="true"
-                                disabled>
+                    </div>
+                    <!-- This is email input  -->
+                    <div class="email" id="align-num">
+                        <label class="more"> Email</label>
+                        <input class="name" id="user-email" type="email" name="user email" placeholder="name@gmail.com"
+                            value="" required="true" title="First name connot contain spaces" disabled>
 
-                        </div>
-                        <!-- This is email input  -->
-                        <div class="email" id="align-num">
-                            <label class="more"> Email</label>
-                            <input class="name" id="user-email" type="email" name="user email"
-                                placeholder="name@gmail.com" value="" required="true"
-                                title="First name connot contain spaces" disabled>
+                    </div>
 
-                        </div>
+                    <!-- This is user mobile number -->
+                    <div class="number" id="align-num">
+                        <label class="more"> Number</label>
+                        <input class="name" id="user-number" type="text" pattern="[0-9]{10}"
+                            title="PLease enter 10 digit number" name="user mobile" placeholder="+91 8923456789"
+                            required="true" disabled>
+                    </div>
 
-                        <!-- This is user mobile number -->
-                        <div class="number" id="align-num">
-                            <label class="more"> Number</label>
-                            <input class="name" id="user-number" type="text" pattern="[0-9]{10,25}" name="user mobile"
-                                placeholder="+91 8923456789" required="true" disabled>
-                        </div>
+                    <!-- This is districk -->
+                    <div class="address" id="align-num">
+                        <label class="more"> Address</label>
 
+                        <input class="name" id="user-address" type="text"
+                            pattern="^[a-zA-Z0-9!@#\$%\^&\*\(\)\-_=\+\\|\{\}\[\]:;\" name="user address"
+                            placeholder="Add Address" required="true" disabled>
 
+                    </div>
+                    <!-- This is Address input  -->
+                    <div class="address" id="align-num">
+                        <label class="more"> Pincode</label>
+                        <input class="name" id="user-pincode" type="text" pattern="[0-9]{6}" maxlength="6"
+                            name="user address" placeholder="Pincode" required="true" disabled>
 
-
-
-                        <!-- This is districk -->
-                        <div class="address" id="align-num">
-                            <label class="more"> Address</label>
-
-                            <input class="name" id="user-address" type="text" pattern="[A-za-z0-9]{6,90}"
-                                name="user address" placeholder="Add Address" required="true" disabled>
-
-                        </div>
-                        <!-- This is Address input  -->
-                        <div class="address" id="align-num">
-                            <label class="more"> Pincode</label>
-                            <input class="name" id="user-pincode" type="text" pattern="[A-za-z0-9]{6,90}"
-                                name="user address" placeholder="Pincode" required="true" disabled>
-
-                        </div>
-                        <!-- This is update button -->
-                        <div>
-                            <button type="button" id="btn" class="name">Edit</button>
-                        </div>
-                        <!-- This is delete button -->
-                        <!-- <div>
+                    </div>
+                    <!-- This is update button -->
+                    <div>
+                        <button type="submit" id="btn" class="name">Edit</button>
+                    </div>
+                    <!-- This is delete button -->
+                    <!-- <div>
                             <button type="button" class="name" onclick="clearData()">Delete</button>
                         </div> -->
-                    </form>
-                </div>
+                </form>
             </div>
-
-
         </div>
     </div>
+    </div>
 
     </div>
-    <script>
-
-        const user = JSON.parse(localStorage.getItem("profile"))
-
-        //This is for get a data in form
-        const firstName = document.getElementById("user-firstname");
-        const lastName = document.getElementById("user-lastname");
-        const email = document.getElementById("user-email");
-        // const password = document.getElementById("user-password");
-        //const confirmPassword = document.getElementById("confirm-password").value;
-        const userMobile = document.getElementById("user-number");
-        const address = document.getElementById("user-address");
-        const pincodeAddress = document.getElementById("user-pincode");
-
-        //console.log();
-        //This is for store data in localstorage
-        firstName.value = user["user_Firstname"]
-        lastName.value = user["user_lastname"]
-        email.value = user["email"]
-        userMobile.value = user["mobile"]
-        address.value = user["address1"]
-        pincodeAddress.value = user["pinaddress"]
-
-        // localStorage.setItem("profile",JSON.stringify(user))
-
-
-        const btn = document.getElementById("btn")
-
-        btn.addEventListener("click", function () {
-
-            if (btn.innerHTML == "save") {
-                btn.innerHTML = "edit"
-                firstName.setAttribute("disabled", "")
-                lastName.setAttribute("disabled", "")
-
-                userMobile.setAttribute("disabled", "")
-                address.setAttribute("disabled", "")
-                pincodeAddress.setAttribute("disabled", "")
-
-            }
-            else if (btn.innerHTML = "edit") {
-                btn.innerHTML = "save"
-                firstName.removeAttribute("disabled")
-                lastName.removeAttribute("disabled")
-
-                userMobile.removeAttribute("disabled")
-                address.removeAttribute("disabled")
-                pincodeAddress.removeAttribute("disabled")
-            }
-
-            const userid = JSON.parse(localStorage.getItem("array"))
-            // const userlist = JSON.parse(localStorage.getItem("profile"))
-            userid.find(element => {
-                if (email.value == element["email"]) {
-
-                    element["user_Firstname"] = firstName.value
-                    element["user_lastname"] = lastName.value
-                    element["mobile"] = userMobile.value
-                    element["address1"] = address.value
-                    element["pinaddress"] = pincodeAddress.value
-                    localStorage.setItem("array", JSON.stringify(userid))
-                    localStorage.setItem("profile", JSON.stringify(element))
-                }
-            })
-        })
-
-        const log = document.getElementById("log")
-
-        log.addEventListener("click", function () {
-            const som = JSON.parse(localStorage.getItem("profile"))
-
-            const erase = delete som
-            localStorage.setItem("profile", JSON.stringify(erase))
-
-
-        })
-
+    
     </script>
 
 </body>
+
 
 </html>

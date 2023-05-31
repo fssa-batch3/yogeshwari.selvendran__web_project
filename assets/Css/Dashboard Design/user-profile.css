@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&display=swap');
 *{
     margin: 0;
@@ -9,33 +10,202 @@
 }
 /* variable declarations */
 :root{
-    --main-color: #9fa417;
+    --main-color: #8441b4;
     --color-dark:#1D2231;
     --text-grey:#8390A2;
 }
-.side-item{
+/* This is header section */
+header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     display: flex;
-   flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    box-sizing: border-box;
+    box-shadow: 5px 0px 5px 0px #0000002c;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+
+.logo {
+    margin-top: 2.5%;
+}
+
+.live-on {
+    width: 7%;
+    margin-left: 5%;
+}
+
+.live {
+    width: 17%;
+}
+
+.center {
+    margin-top: 2.7%;
+    margin-right: 35%;
+}
+
+.center ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.center li {
+    padding-left: 25%;
+    font-size: 1.1em;
+    font-weight: medium;
+    cursor: pointer;
+}
+
+.center .list a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.center a:hover {
+    color: var(--hover-clr);
+    font-weight: 600;
+}
+
+.center ul li::after {
+    content: '';
+    background-color: var(--btn-color);
+    display: block;
+    height: 2px;
+    width: 0%;
+    margin: auto;
+    transition: 0.3s;
+
+}
+
+.center ul li:hover::after {
+    width: 100%;
+}
+
+.user {
+    margin-top: 2.2%;
+    margin-right: 13%;
+}
+
+.user ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user li {
+    padding: 15px;
+}
+
+.user,
+.profile {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 9px;
+}
+/* This is drop down menu nave bar */
+.service {
+    border: none;
+    background: none;
+    font-size: 1em;
+    font-weight: medium;
+    cursor: pointer;
+}
+
+.sub-service ul {
+    list-style: none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    color: white;
+    background-color: var(--white-color);
+    width: 190px;
+    height: 130px;
+    position: relative;
+    right: 50px;
+    top: 20px;
+    z-index: 3;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    display: none;
+}
+
+.cen-ul :nth-child(3) i {
+    position: relative;
+    left: 50px;
+    bottom: 22px;
+}
+
+.service:hover .sub-service ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    color: black;
+    background-color: var(--white-color);
+    width: 190px;
+    height: 130px;
+    position: absolute;
+    right: 570px;
+    top: 80px;
+    z-index: 3;
+    border-style: groove;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+/* This is side item */
+.side-item{
+    /* display: flex;
+   flex-direction: column; */
     width: 345px;
     position: fixed;
     left: 0;
     top: 0;
     height: 100%;
     background-color: var(--main-color);
-    z-index: 100;
+    z-index: 1;
 }
 .page{
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: space-between;
-    margin-top: 10%;
+    margin-top: 35%;
 }
-.page span{
-    height: 200px;
-    width: 200px;
+.page img{
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
     background-color: #fff;
+}
+.page input{
+    display: none;
+}
+.page label {
+background-color: #ffffff;
+height: 40px;
+width: 40px;
+border-radius: 30px;
+position: relative;
+bottom: 40px;
+left: 35px;
+border: solid white 0.9px;
+}
+.page label i{
+    font-size: 25px;
+    align-items: center;
+    position: relative;
+    left: 0px;
+    top: 0px;
+
 }
 .side-menu{
     margin-top: 3rem;
@@ -68,78 +238,47 @@ padding-left: 2rem;
 .main-item{
     margin-left: 345px;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    height: 90px;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+.side-menu button{
+   border: none;
+   border-radius: 30px 0px 0px 30px;
+}
+.side-menu li button{
+    width: 100%;
+    margin-bottom: 1.3rem;
+    padding-left: 0rem;
+    }
+.side-menu button{
+    display: block;
+    padding-left: 0rem;
+    color: #fff;
+    background-color:var(--main-color) ;
+    font-size: 1.1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 11rem;
+}
+.side-menu button.active:hover{
+    background: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--main-color);
+    border-radius: 30px 0px 0px 30px;
+}
+.side-menu button span:first-child{
+    font-size: 1.5rem;
+    padding-right: 1rem;
+
+}
+.user-container{
+    margin-top: 5px;
+    padding: 4rem ;
+    background: #fff;
     position: fixed;
     left: 345px;
-    width: calc(100% - 345px);
-    top: 0;
-    z-index: 100;
-}
-.logo{
-    display: flex;
-    padding-right: 1rem;
-}
-.live-on{
-    width: 30px;
-    height: 25px;
-}
-.live{
-    width:80px;
-    height: 25px;
-}
-/* .header h2{
-    color: #222;
-}
-.header label span{
-  font-size: 1.7rem;
-  padding-right: 1rem;
-} */
-.search-bar{
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    height: 40px;
-    width: 20rem;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-.search-bar span{
-    display: inline-block;
-    padding: 0rem .5rem;
-  font-size: .9rem;
-  color: var(--text-grey);
-}
-.search-bar input{
-    border: none;
-    outline: none;
-    padding: .5rem;
-    height: 80%;
-}
-.call-item a{
-    display: flex;
-    align-items: center;
-}
-.call-item a span{
-    font-size: 2.5em;
-    margin-right: 1rem;
-    color: var(--color-dark);
-}
-.em-list {
-    display: inline-block;
-color: var(--color-dark);
-}
-.user-condainer{
-    margin-top: 95px;
-    padding: 2rem 1.5rem;
-    background: #f1f5f9;
     min-height: calc(100vh - 90px);
 }
+
+
 .information{
     display: flex;
     flex-direction: column;
@@ -172,13 +311,14 @@ color: var(--color-dark);
     margin: 100px;
     gap: 40px;
  }
- button{
+#form button{
+
     padding: 1rem;
     width: 20em;
     color: #fff;
    background-color:var(--main-color);
  }
- button:hover{
+ #form button:hover{
     color: #fff;
     background-color:orange;
  }

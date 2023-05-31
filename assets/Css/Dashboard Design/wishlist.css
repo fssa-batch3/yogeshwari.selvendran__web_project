@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    cursor: pointer;
+}
+
+/* variable declarations */
+:root {
+    --heading-font: 'Barlow', sans-serif;
+    --phara-font: 'Fraunces', serif;
+    --additional-font: 'Prompt', sans-serif;
+    --primary: black;
+    --secondary-clr: #ff860f;
+    --hover-clr: #3F0071;
+    --search-nav-color: #4e3d9a;
+    --white-color: white;
+    --nav-font-size: 110%;
+    --button-font: 90%;
+    --sub-p: 150%;
+    --box-shadow: 0 4px 5px 0px #00000026;
+    --box-shadow2: 0px 0px 5px 1px #00000080;
+    --pharagraph-font-size: 20px;
+    --box-phara-font-size: 16px;
+    --text-color: #74787c;
+    --btn-color: #ff860f;
+    --btn-hover: #3F0071;
+    --h1-font: 61px;
+    --complain-hover-color: #d12616;
+}
+
+header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: auto;
+    box-sizing: border-box;
+    box-shadow: 5px 0px 5px 0px #0000002c;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+/* .logo {
+    margin-top: 2.5%;
+} */
+.live-on {
+    width: 25px;
+    /* margin-left: 5%; */
+}
+.live {
+    width: 70px;
+}
+
+.center {
+    display: flex;
+    margin-top: 1.5%;
+    margin-left: 4%;
+    /* margin-right: 35%; */
+}
+
+.center ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.center li {
+    padding-left: 25%;
+    font-size: 1.2em;
+    font-weight: medium;
+    cursor: pointer;
+}
+
+.center .list a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.center a:hover {
+    color: var(--hover-clr);
+    font-weight: 600;
+}
+
+.center ul li::after {
+    content: '';
+    background-color: var(--btn-color);
+    display: block;
+    height: 2px;
+    width: 0%;
+    margin: auto;
+    transition: 0.3s;
+
+}
+
+.center ul li:hover::after {
+    width: 100%;
+}
+
+.user {
+    margin-top: 1.6%;
+    margin-right: 5%;
+}
+
+.user ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+}
+/* Cart section */
+/* .pro-collection{
+    margin-top: 3%;
+    width: 900px;
+    border: solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+} */
+.top-head {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 5%;
+}
+
+.cart {
+    background-color: #ffffff;
+    box-shadow: var(--box-shadow);
+    border: #00000057 solid 0.05px;
+    width: 700px;
+    height: 190px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 150px;
+    margin-top: 2%;
+}
+
+.first-cart img {
+    width: 150px;
+    height: 150px;
+    background-color: var(--white-color);
+    border-radius: 6px;
+}
+
+.second-cart {
+    display: flex;
+    height: 120px;
+    width: 250px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+
+#name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.star {
+    width: 40px;
+}
+
+.removebtn button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #e65a14;
+}
+
+.removebtn button:hover {
+    background-color: #4e3d9a;
+}
+
+.removebtn i {
+    padding-right: 0px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(105deg) brightness(101%) contrast(103%);
+}
+
+.removebtn i:hover {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(105deg) brightness(101%) contrast(103%);
+}
+
+/* This is quantity incres */
+.count {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+    width: 140px;
+    height: 40px;
+    padding-right: 10px;
+
+    border: solid 0.1px rgba(0, 0, 0, 0.174);
+    border-radius: 4px;
+    box-shadow: var(--box-shadow);
+}
+
+.num {
+    padding: 2px 15px;
+    border-left: 1px rgb(0, 0, 0) solid;
+    border-right: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 1em 2em -0.9em rgba(#000, 0.7);
+    transform: scale(1);
+}
+
+.minus,
+.plus {
+    padding: 4px 15px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.collection {
+    width: 400px;
+    position: absolute;
+    top: 210px;
+    left: 950px;
+}
+
+.total1,
+.order {
+    display: flex;
+
+}
+
+.bit-collection {
+    margin-top: 25%;
+    background-color: #dec8fd;
+    border-radius: 6px;
+    box-shadow: var(--box-shadow);
+}
+.bit-collection .cont-btn{
+ margin-top: 25px;
+
+}
+.cont-btn button{
+    padding: 1em 1.1em;
+    width: 400px;
+    text-align: center;
+    font-weight: medium;
+    background-color: #6e27d1;
+    color: white;
+    border-radius: 6px;
+    border: solid 1px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.cont-btn button:hover{
+    background-color: #8f47f5;
+}
+.total1, .order{
+    display: flex;
+    justify-content: space-around;
+}
+.price h3{
+    text-align: center;
+}
+.price {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+
+}
+
+/* payment section */
+.payment-section p {
+    /* text-align: center; */
+    margin-top: 0px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+form {
+    /* margin-left: 550px;
+    margin-top: 70px; */
+}
+
+form img {
+    height: 30px;
+    width: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.form,
+label,
+input {
+    background-color: var(--white-color);
+}
+
+form label {
+    font-size: 18px;
+    font-weight: medium;
+    line-height: 20px;
+    color: #303030;
+}
+
+fieldset {
+    width: 200px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 0px;
+    border-radius: 15px;
+    border: 0.01rem solid rgba(128, 128, 128, 0.381);
+    box-shadow: var(--box-shadow);
+}
+
+.payment-section button {
+    width: 300px;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    font-size: var(--button-font);
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: rgb(14, 136, 243);
+}
+
+.back-page {
+    width: 40px;
+    margin-top: 25px;
+    margin-left: 30px;
+}

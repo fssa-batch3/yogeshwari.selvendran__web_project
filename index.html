@@ -8,33 +8,39 @@
     <title>Live On - Too Fast Too Quick</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../../assets/Icons/live-on.png">
     <link rel="stylesheet" href="./assets/Css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <a href="./Page/Home/home.html">
+            <a href="./Pages/Home/home.html">
                 <img class="live-on" src="../../assets/Icons/live-on.png" alt="">
-            <img class="live" src="../../assets/Icons/text-liveon-removebg-preview.png" alt="">
+                <img class="live" src="../../assets/Icons/text-liveon-removebg-preview.png" alt="">
             </a>
         </div>
+        <!-- <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i></label> -->
         <div class="center">
             <ul>
                 <li>
-                    <a href="./Page/Home/home.html">HOME</a>
+                    <a href="#top-home">HOME</a>
                 </li>
                 <li>
-                    <a href="">ABOUT</a>
+                    <a href="#aboutpage">ABOUT</a>
                 </li>
                 <li>
-                    <a href="../../Page/Home/services.html">SERVICES<a>
+                    <a href="#service">SERVICES<a>
 
                 </li>
                 <li>
-                    <a href="">PARTENERS</a>
+                    <a href="#partners">CUSTOMERS</a>
                 </li>
                 <!-- in this place i'm add a few feachers parteners, blog -->
             </ul>
@@ -42,59 +48,65 @@
         <div class="contact">
             <ul>
                 <li>
-                    <a href="./Page/create accound/signin.html"><button> Signin </button></a>
+                    <a href="./Page/create_accound/signin.html"><button> login </button></a>
                 </li>
-                <li>
-                    <a href="./Page/Contact/contact.html"><button> +9394959697 </button></a>
-                </li>
+                <!-- <li>
+                    <a href="./Page/create_accound/user-signup.html"><button> Signup </button></a>
+                </li> -->
 
             </ul>
         </div>
     </header>
     <!-- This is first section -->
     <main>
-        <div class="top-section">
+        <div class="top-section" id="top-home">
             <div class="left-item">
                 <h1>24/7 onspot<br> break-down support</h1><br>
-                <p>Morbi nulla tortor, dignissim est node cursus<br> euismod est arcu. Nomad at vehicula novum justo
-                    magna.</p>
-                <a href="cll.html"><button class="big-btn">GET SERVICE</button></a>
+                <p>Live-On is the perfect BIKE/CAR servicing & repairing app in India that offers end customers BIKE/CAR service or repair at their doorstep at competitive prices.</p>
+                <div class="help">
+                    <a href="./Page/Home/emergncy.html"><button class="big-btn">GET SERVICE</button></a>
+                    <a href="cll.html"><button class="big-btn">9876543210</button></a>
+                </div>
+                
             </div>
             <div class="right-item">
-                <img src="./assets/New_collection/car.gif" alt="">
+                <img src="./assets/New_collection/BG-Collection/map-and-navigation123.png" alt="">
             </div>
         </div>
         <!-- This Achivement Section -->
         <div class="achivement">
-            <h1>Grow your Business with Live-On</h1>
-            <!-- This is customers animetion -->
+            <div id="aboutpage">
+                <h1>Grow your Business with Live-On</h1>
+                <!-- This is customers animetion -->
 
-            <div class="project-counter-wrp">
-                <ul>
-                    <li>
-                        <p class="number" id="number1">+500</p>
-                        <span></span>
-                        <p>Partners on Board</p>
-                    </li>
-                    <li>
-                        <p class="number" id="number2">+10</p>
-                        <span></span>
-                        <p>Cities</p>
-                    </li>
-                    <li>
-                        <p class="number" id="number3">+1300</p>
-                        <span></span>
-                        <p>vehicle Serviced</p>
-                    </li>
-                    <li>
-                        <p class="number" id="number4">+27280</p>
-                        <span></span>
-                        <p>Roadside Support</p>
-                    </li>
-                </ul>
+                <div class="project-counter-wrp">
+                    <ul>
+                        <li>
+                            <p class="number" id="number1">+500</p>
+                            <span></span>
+                            <p>Partners on Board</p>
+                        </li>
+                        <li>
+                            <p class="number" id="number2">+10</p>
+                            <span></span>
+                            <p>Cities</p>
+                        </li>
+                        <li>
+                            <p class="number" id="number3">+1300</p>
+                            <span></span>
+                            <p>vehicle Serviced</p>
+                        </li>
+                        <li>
+                            <p class="number" id="number4">+27280</p>
+                            <span></span>
+                            <p>Roadside Support</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
+            <a href="./Page/create_accound/signin.html"></a>
             <!-- This is Second section -->
-            <div class="second-section">
+            <div class="second-section" id="service">
                 <h1>Why Chose Us?</h1>
                 <div class="item-gallary">
                     <div class="item">
@@ -123,7 +135,7 @@
 
 
             <!-- This is third section -->
-            <div class="thired-section">
+            <div class="thired-section" id="partners">
                 <h1>Happy Clients</h1>
                 <div class="customer">
                     <h3>"Trusted Vlad and our team with our branding and website - we did not disappoint."</h3>
@@ -255,93 +267,12 @@
             </div>
         </footer>
         <div class="copy-right">
-            <p>	&copy;Copyright 2023 Carservice Theme by my won design</p>
+            <p> &copy;Copyright 2023 Carservice Theme by my won design</p>
         </div>
     </div>
-    <script>
-        // $(document).ready(function(){
-        //     $(".counter").counterUp({
-        //         delay: 10,
-        //         time: 1200
-        //     });
-        // });
-        // function button() {
-        //     const name = document.getElementById("name").value
-        //     const number = document.getElementById("number").value
-        //     const email = document.getElementById("email").value
-        //     const city = document.getElementById("city").value
-        //     const chosehelp = document.getElementById("chosehelp").value
-        //     console.log(name)
-        //     console.log(number)
-        //     console.log(city)
-        //     console.log(email)
-        //     console.log(chosehelp)
-
-        //     localStorage.setItem("user-name", name)
-        //     localStorage.setItem("user-number", number)
-        //     localStorage.setItem("user-email", email)
-        //     localStorage.setItem("user-city", city)
-        //     localStorage.setItem("user-chose", chosehelp)
-
-        //     window.location.href = "./Page/Appoinment/appoinment.html"
-        // }
-
-        // const signinBtn = document.querySelector(".contact .big-btn:first-child");
-        // const contactBtn = document.querySelector(".contact .big-btn:last-child");
-
-        // signinBtn.addEventListener("click", () => {
-        //     window.location.href = "./Page/Home/signin.html";
-        // });
-
-        // contactBtn.addEventListener("click", () => {
-        //     window.location.href = "./Page/Contact/contact.html";
-        // });
-        var project = setInterval(projectDone, 10)
-        var cities = setInterval(happyCities, 10)
-        var service = setInterval(vehicle, 10)
-        var rodeside = setInterval(clients, 10)
-        let count1 = 1;
-        let count2 = 1;
-        let count3 = 1;
-        let count4 = 1;
-
-        function projectDone() {
-            count1++;
-            document.querySelector("#number1").innerHTML = count1;
-
-            if (count1 == 500) {
-                clearInterval(project)
-            }
-        }
-
-        function happyCities() {
-            count2++;
-            document.querySelector("#number2").innerHTML = count2;
-
-            if (count2 == 180) {
-                clearInterval(cities)
-            }
-        }
-
-        function vehicle() {
-            count3++;
-            document.querySelector("#number3").innerHTML = count3;
-
-            if (count3 == 1300) {
-                clearInterval(service)
-            }
-        }
-
-        function clients() {
-            count4++;
-            document.querySelector("#number4").innerHTML = count4;
-
-            if (count4 == 1500) {
-                clearInterval(rodeside)
-            }
-        }
-
-    </script>
+    <!-- <script src="./main.js"></script> -->
+    <script src="./Page/JS files/index.js"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>
